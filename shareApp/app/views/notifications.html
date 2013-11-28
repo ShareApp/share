@@ -1,0 +1,68 @@
+<div id="notifications-mask" ng-show="rootScope.notificationsFrameOpened" ng-click="rootScope.notificationsFrameOpened=false"></div>
+<button ng-show="notificationItems.length > 0" id="notification-btn" ng-click='rootScope.notificationsFrameOpened=!rootScope.notificationsFrameOpened'>{{ notificationsCounter }}
+</button>
+<div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame-container' data-snap-ignore="true">
+    <div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame' data-snap-ignore="true">
+        <div class="header">{{ 'Waiting requests' | translate }}:</div>
+        <div class="description">{{ 'Swipe right to take an action' | translate }}</div>
+        <ul>
+            <li class="separator"></li>
+            <li class="header" ng-show="notificationItems.length == 0">{{ "No notifications" | translate }}</li>
+            <li class="item" ng-repeat='item in notificationItems'>
+                <div class="mask"
+                     tap="goToShare(item)"
+                     ng-swipe-right="swiped[$index]='right';takeNotificationAction(item)"
+                     ng-swipe-left="swiped[$index]='left'"
+                     ng-class="{right:'swiped-right', left:'swiped-left'}[swiped[$index]]">
+                </div>
+                <div class="container">
+                    <div class="actions">
+                        <button class="agree-btn"
+                                ng-show='notifications.notificationIsAction(item) && notifications.notificationIsInQueue(item)'
+                                ng-click='notifications.notificationAgree(item)'>
+                        </button>
+                        <button class="disagree-btn"
+                                ng-show='notifications.notificationIsAction(item) && notifications.notificationIsInQueue(item)'
+                                ng-click='notifications.notificationDisagree(item)'>
+                        </button>
+                        <div class="info" ng-hide='notifications.notificationIsAction(item)'>{{ 'Read...' | translate }}
+                        </div>
+                        <div class="info"
+                             ng-hide='notifications.notificationIsInQueue(item) || !notifications.notificationIsAction(item)'>
+                            {{ "Decision's taken..." | translate }}
+                        </div>
+                    </div>
+                    <div class="content {{ shShare.getTypeDisplay(item.get('sharedItem').get('type')) }}-type">
+                        <span ng-hide="item.get('sharedItem').get('fromUser').id == user.currentUser.id">
+                            <fb-profile-picture
+                                    user-id="item.get('sharedItem').get('fromUser').get('facebookid')"></fb-profile-picture>
+                        </span>
+                        <span ng-hide="item.get('sharedItem').get('toUser').id == user.currentUser.id">
+                            <fb-profile-picture
+                                    user-id="item.get('sharedItem').get('toUser').get('facebookid')"></fb-profile-picture>
+                        </span>
+                        <small-share-item share="item.get('sharedItem')"></small-share-item>
+                        <div class="title-container">
+                            <div class="title">
+                                <div class="title-inner">
+                                    <span ng-bind-html="notifications.verboseNotification(item)"></span>
+                                </span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<div class='item' ng-click='notificationClick(item)'>Status: {{ getStatusDisplay(item) }}, Text: {{-->
+                <!--notifications.verboseNotification(item) }}-->
+                <!--</div>-->
+                <!--<button ng-show='notifications.notificationIsInQueue(item)'-->
+                <!--ng-click='notifications.notificationRead(item)'>Read-->
+                <!--</button>-->
+                <!--<button ng-click='goToShare(item)'>Link</button>-->
+
+                <div class="separator"></div>
+            </li>
+        </ul>
+    </div>
+</div>

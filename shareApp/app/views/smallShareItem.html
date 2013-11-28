@@ -1,0 +1,16 @@
+<div class="small-share-item-container {{ shShare.getTypeDisplay(share().get('type')) }}-type">
+    <div class="type-ico-container" ng-class="{true:'right', false:'left'}[share().get('toUser').id == user.currentUser.id]">
+        <span></span>
+    </div>
+    <a class="small-share-item img-container" href="#/sharedItem/{{ share().id }}">
+        <img ng-show="share().get('img')" class="share-cover" ng-src="{{ share().get('img').urlOrData() }}" alt="{{ share().get('text') }}" vertically-positioned-notification>
+        <span ng-hide="share().get('img')" class="text-container">
+            <span class="text" ellipsis>
+                {{ share().get('text') }}
+            </span>
+        </span>
+    </a>
+    <div ng-show="share().get('amount') > 1"class="item-counter right" ng-class="{true:'right', false:'left'}[share().get('toUser').id == user.currentUser.id]">
+        <span>{{ share().get('amount') | shortVerboseNumber }}</span>
+    </div>
+</div>

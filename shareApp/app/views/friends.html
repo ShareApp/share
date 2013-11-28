@@ -1,0 +1,16 @@
+<div id="content">
+    <!--<div id="filters-container" sh-filters ng-show="user.loggedIn"></div>-->
+    <ul id="friends-list">
+        <li class="clearfix" ng-repeat="friend in user.friendsList | parseuserfilter: query">
+            <a href="#/friends/{{ friend.id }}">
+                <div class="name">{{ friend.get('name') }}</div>
+                <fb-profile-picture user-id="friend.attributes.facebookid"></fb-profile-picture>
+            </a>
+            <ul class="friend-shares-list">
+                <li ng-repeat="share in user.friendsShares[friend.id]['items']">
+                    <small-share-item share="share"></small-share-item>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</div>

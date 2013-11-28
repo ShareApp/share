@@ -1,0 +1,1 @@
+../../shareApp/app/scripts/globals.js

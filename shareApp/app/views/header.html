@@ -1,0 +1,11 @@
+<header id="header" ng-controller="MainCtrl" ng-show="user.loggedIn">
+    <button id="menu-btn" ng-click="menuToggle()"><span class="img"></span></button>
+    <a ng-hide="activePath == '/friends'" href="#/friends" id="contact-list-btn"><span class="img"></span></a>
+    <a ng-show="activePath == '/friends'" href="#/" id="contact-list-exit-btn"><span class="img"></span></a>
+    <!--<   span>online: <span>{{ shSync.isOnline }}</span></span>-->
+
+    <div id="logo-container">
+        <a ng-href="#/" id="logo"><span class="text">Share❣</span></a>
+        <sh-notifications></sh-notifications>
+    </div>
+</header>

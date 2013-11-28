@@ -1,0 +1,63 @@
+<div id="content">
+    <div id="share-details">
+        <div class="share-item {{ share.getTypeDisplay(sharedItem.get('type')) }}-type {{ share.getStateDisplay(sharedItem.get('state')).replace(' ','-').toLowerCase() }}-state"
+             ng-class="sharedItem.get('img') && 'big'">
+            <div class="type-ico-container">
+                <div class="state-ico-container">
+                    <span></span>
+                </div>
+            </div>
+            <a class="people-ico-container left" href="#/friends/{{ sharedItem.get('fromUser').id }}">
+                <fb-profile-picture user-id="sharedItem.get('fromUser').get('facebookid')"></fb-profile-picture>
+                <span class="name">
+                    {{ sharedItem.get('fromUser').get('firstName') }}
+                </span>
+            </a>
+            <a class="people-ico-container right" href="#/friends/{{ sharedItem.get('toUser').id }}">
+                <span class="name">
+                    {{ sharedItem.get('toUser').get('firstName') }}
+                </span>
+                <fb-profile-picture user-id="sharedItem.get('toUser').get('facebookid')"></fb-profile-picture>
+            </a>
+
+            <div ng-switch on="sharedItem.get('type')" class="img-container">
+                <img ng-show="sharedItem.get('img')" src="img/low-share-top-big.png" srcset="img/high-share-top-big.png 1.5x" class="share-frame gradient"/>
+                <img ng-hide="sharedItem.get('img')" src="img/low-share-top-small.png" srcset="img/high-share-top-small.png 1.5x" class="share-frame"/>
+                <img ng-show="sharedItem.get('img')" class="share-img" ng-src="{{ sharedItem.get('img').urlOrData() }}" vertically-positioned alt="{{ sharedItem.get('text') }}"/>
+                <img ng-hide="sharedItem.get('img')" ng-switch-when="0" class="share-placeholder"
+                     ng-src="img/backgrounds/green.jpg" alt="{{ sharedItem.get('text') }}"/>
+                <img ng-hide="sharedItem.get('img')" ng-switch-when="1" class="share-placeholder"
+                     ng-src="img/backgrounds/orange.jpg" alt="{{ sharedItem.get('text') }}"/>
+                <img ng-hide="sharedItem.get('img')" ng-switch-when="2" class="share-placeholder"
+                     ng-src="img/backgrounds/purple.jpg" alt="{{ sharedItem.get('text') }}"/>
+            </div>
+            <div class="content">
+                <div class="title">
+                    <div class="amount-container">
+                        <span class="amount">x {{ sharedItem.get('amount') }}</span>
+                    </div>
+                    <div class="date-container">
+                        <span class="date">{{ sharedItem.get('date') }}</span>
+                    </div>
+                    <div class="clearfix"></div>
+                    <span class="text">{{ sharedItem.get('text') }}</span>
+                </div>
+                <div class="time">
+                    <div class="ico"></div>
+                    <div class="text">{{ sharedItem.createdAt | timedifference }}</div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <button class="btn return" ng-show="showReturn" ng-click="returnShare(sharedItem)"><span class="icon"></span><span class="text">{{ 'return' | translate }}</span></button>
+                <button class="btn demand-return" ng-show="showDemandReturn" ng-click="demandReturnShare(sharedItem)"><span class="icon"></span><span class="text">{{ 'demand return' | translate }}</span></button>
+            </div>
+        </div>
+      <fb-comments></fb-comments>
+    </div>
+</div>
+
+
+<!--<p>Amount: {{ sharedItem.get('amount') }}</p>-->
+<!---->
+<!--<button ng-show="showReturn" ng-click="returnShare(sharedItem)">return</button>-->
+<!--<button ng-show="showDemandReturn" ng-click="demandReturnShare(sharedItem)">demand return</button>-->

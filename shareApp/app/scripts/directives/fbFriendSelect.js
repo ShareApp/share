@@ -1,0 +1,26 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
+'use strict';
+
+/**
+ * Shows list of Facebook Friends and calls selectFriend() function on click.
+ */
+angular.module('shareApp')
+  .directive('fbFriendSelect', function () {
+    return {
+      template: '<input ng-model="query" autofocus="true" placeholder="{{ "Search for friend" | translate ||">' +
+        '<ul class="friends-select"><li ng-repeat="friend in user.friendsList | parseuserfilter: query"> ' +
+        '<a href="" ng-click="selectFriend(friend)">' +
+        '<fb-profile-picture user-id="friend.attributes.facebookid"></fb-profile-picture>{{ friend.attributes.name }}' +
+        '</a>' +
+        '</li></ul>',
+      restrict: 'E',
+      scope: {
+        user: '=',
+        selectFriend: '='
+      }
+    };
+  });

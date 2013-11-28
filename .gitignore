@@ -1,0 +1,6 @@
+node_modules
+cloudCode/public
+.tmp
+.directory
+.idea
+cloudCode/config/global.json

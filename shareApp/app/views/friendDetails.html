@@ -1,0 +1,80 @@
+<div id="content" on-container-scroll="fetchOlderSharesIfBottom()">
+    <div id="friend-details">
+        <div id="friend-profile">
+            <div class="inner">
+                <fb-profile-picture user-id="friend.get('facebookid')"></fb-profile-picture>
+                <div class="title">{{ friend.get('name') }}</div>
+                <div class="counter-container">
+                    <span class="counter">{{ counter }}</span> {{ counter != undefined && "shares" || " " }}
+                </div>
+            </div>
+        </div>
+        <ul id="shares">
+            <li class="share-item {{ shShare.getTypeDisplay(share.get('type')) }}-type {{ shShare.getStateDisplay(share.get('state')).replace(' ','-').toLowerCase() }}-state"
+                ng-class="share.get('img') && 'big'"
+                ng-repeat="share in userShares">
+                <div class="type-ico-container">
+                    <div class="state-ico-container">
+                        <span></span>
+                    </div>
+                </div>
+                <a class="people-ico-container left" href="#/friends/{{ share.get('fromUser').id }}">
+                    <fb-profile-picture user-id="share.get('fromUser').get('facebookid')"></fb-profile-picture>
+                <span class="name">
+                    {{ share.get('fromUser').get('firstName') }}
+                </span>
+                </a>
+                <a class="people-ico-container right" href="#/friends/{{ share.get('toUser').id }}">
+                <span class="name">
+                    {{ share.get('toUser').get('firstName') }}
+                </span>
+                    <fb-profile-picture user-id="share.get('toUser').get('facebookid')"></fb-profile-picture>
+                </a>
+
+                <div ng-switch on="share.get('type')" class="img-container">
+                    <img ng-show="share.get('img')" src="img/low-share-top-big.png" srcset="img/high-share-top-big.png 1.5x" class="share-frame gradient"/>
+                    <img ng-hide="share.get('img')" src="img/low-share-top-small.png" srcset="img/high-share-top-small.png 1.5x" class="share-frame"/>
+                    <img ng-show="share.get('img')" class="share-img" ng-src="{{ share.get('img').urlOrData() }}" vertically-positioned
+                         alt="{{ share.get('text') }}"/>
+                    <img ng-hide="share.get('img')" ng-switch-when="0" class="share-placeholder"
+                         ng-src="img/backgrounds/green.jpg" alt="{{ share.get('text') }}"/>
+                    <img ng-hide="share.get('img')" ng-switch-when="1" class="share-placeholder"
+                         ng-src="img/backgrounds/orange.jpg" alt="{{ share.get('text') }}"/>
+                    <img ng-hide="share.get('img')" ng-switch-when="2" class="share-placeholder"
+                         ng-src="img/backgrounds/purple.jpg" alt="{{ share.get('text') }}"/>
+                </div>
+                <div class="content">
+                    <div class="title">
+                        <a class="friend-name" href="#/friends/{{ share.get('fromUser').id }}">{{
+                            share.get('fromUser').get('firstName') }} </a>
+                    <span ng-switch on="share.get('type')">
+                       <span class="grayed" ng-switch-when="2">{{ 'promised to' | translate }} </span>
+                       <span class="grayed" ng-switch-default>{{ 'shared' | translate }} </span>
+                    </span>
+                        <a href="#/sharedItem/{{ share.id }}" class="thing">{{ share.get('text') }} </a><span
+                            class="grayed">{{ 'with' | translate }} </span>
+                        <a class="friend-name" href="#/friends/{{ share.get('toUser').id }}">{{
+                            share.get('toUser').get('firstName') }}</a>
+                    </div>
+                    <div class="time">
+                        <div class="ico"></div>
+                        <div class="text">{{ share.createdAt | timedifference }}</div>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--<button ng-click="fbMsgDialog()">send msg</button>-->
+<!---->
+<!--<label>-->
+<!--<input type="radio" ng-model="filterShares" value="all">-->
+<!--All shares-->
+<!--</label>-->
+<!---->
+<!--<label>-->
+<!--<input type="radio" ng-model="filterShares" value="withme">-->
+<!--Only with me-->
+<!--</label>-->

@@ -1,0 +1,10 @@
+<ul class="shares">
+    <li ng-repeat="share in user.awaitingShares">
+        <a href="#/sharedItem/{{ share.id }}">
+            <div>{{ share.get('fromUser').get('name') }} --> {{ share.get('toUser').get('name') }}</div>
+            <p>State: {{ shShare.getStateDisplay(share.get('state') }}</p>
+            <p>{{ share.get('text') }}</p>
+            <img ng-show="share.get('img')" ng-src="{{ share.get('img').urlOrData() }}" alt="{{ share.get('text') }}">
+        </a>
+    </li>
+</ul>

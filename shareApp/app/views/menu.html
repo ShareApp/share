@@ -1,0 +1,88 @@
+<nav>
+    <!--<button ng-click="user.fetchData()">{{ 'refresh!' | translate }}</button>-->
+    <ul>
+        <li>
+            <a class="close-after" href="#/share/0">
+                <i class="new-share-ico"></i>
+                <span class="text">{{ 'New Time Share❣' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <div class="separator"></div>
+        </li>
+        <li>
+            <a class="close-after" href="#/share/1">
+                <i class="new-share-ico"></i>
+                <span class="text">{{ 'New Thing Share❣' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <div class="separator"></div>
+        </li>
+        <li>
+            <a class="close-after" href="#/share/2">
+                <i class="new-share-ico"></i>
+                <span class="text">{{ 'New Promise Share❣' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <div class="separator"></div>
+        </li>
+        <li>
+          <a class="close-after" href="#">
+            <i class="home-ico"></i>
+            <span class="text">{{ 'Home' | translate }}</span>
+          </a>
+        </li>
+        <li>
+            <div class="separator"></div>
+        </li>
+        <li>
+          <a class="close-after" href="#/friends">
+            <i class="contact-list-ico"></i>
+            <span class="text">{{ 'Contact List' | translate }}</span>
+          </a>
+        </li>
+        <li>
+            <div class="separator"></div>
+        </li>
+        <li>
+            <a class="close-after" href="https://www.facebook.com/{{ user.currentUser.get('facebookid') }}/">
+                <i class="FB-ico"></i>
+                <span class="text">{{ 'My FB profile' | translate }}</span>
+            </a>
+        </li>
+        <li>
+            <div class="separator"></div>
+        </li>
+        <!--<li>-->
+            <!--<a class="close-after" href="#/awaiting">-->
+                <!--<i class="timeline-ico"></i>-->
+                <!--<span class="text">Awaiting Share❣s</span>-->
+            <!--</a>-->
+            <!--<div class="separator"></div>-->
+        <!--</li>-->
+    </ul>
+    <ul class="pull-bottom">
+        <li>
+            <div class="separator"></div>
+            <!--<a class="close-after" href="#/settings">-->
+                <!--<i class="settings-ico"></i>-->
+                <!--<span class="text">{{ 'Settings' | translate }}</span>-->
+            <!--</a>-->
+<!---->
+            <!--<div class="separator"></div>-->
+        </li>
+        <li>
+            <a href="#">
+                <i class="flag-ico"></i>
+                <span class="text">{{ "Language" | translate }}</span>
+            </a>
+            <div id="lang-switcher" lang-switcher></div>
+            <div class="separator"></div>
+        </li>
+        <li>
+            <logout></logout>
+        </li>
+    </ul>
+</nav>
