@@ -14,37 +14,24 @@ Technically speaking, it is web application created using Angular JS and Parse.c
 
 ## Getting started
 
-1. 
-~~~
+1. ~~~
 git clone git+ssh://git@github.com:ShareApp/share.git
 ~~~
-
-1.
-~~~
+1. ~~~
 cd share
 ~~~
-
-1.
-~~~
+1. ~~~
 npm install
 ~~~
-
-1.
-~~~
+1. ~~~
 bower install
 ~~~
-
-1.
-Read https://parse.com/docs/cloud_code_guide#cloud_code and install Parse Command Line Tool
-
-1.
-Set up new Parse App
+1. Read https://parse.com/docs/cloud_code_guide#cloud_code and install Parse Command Line Tool
+1. Set up new Parse App
 ~~~
 cd cloudCode;  parse new MyShareApp
 ~~~
-
-1.
-edit Makefile to set proper Parse App name
+1. edit Makefile to set proper Parse App name
 
 
 ## How it's built
