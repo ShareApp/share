@@ -14,16 +14,20 @@ Technically speaking, it is web application created using Angular JS and Parse.c
 
 ## Getting started
 
-1. ~~~
-git clone git+ssh://git@github.com:ShareApp/share.git
+1. 
 ~~~
-1. ~~~
+git clone git+ssh://git@github.com/ShareApp/share.git
+~~~
+1. 
+~~~
 cd share
 ~~~
-1. ~~~
+1. 
+~~~
 npm install
 ~~~
-1. ~~~
+1. 
+~~~
 bower install
 ~~~
 1. Read https://parse.com/docs/cloud_code_guide#cloud_code and install Parse Command Line Tool
