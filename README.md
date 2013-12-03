@@ -15,27 +15,19 @@ Technically speaking, it is web application created using Angular JS and Parse.c
 ## Getting started
 
 1. 
-~~~
-git clone git+ssh://git@github.com/ShareApp/share.git
-~~~
+```git clone git+ssh://git@github.com/ShareApp/share.git```
 1. 
-~~~
-cd share
-~~~
+```cd share```
 1. 
-~~~
-npm install
-~~~
+```npm install```
 1. 
-~~~
-bower install
-~~~
-1. Read https://parse.com/docs/cloud_code_guide#cloud_code and install Parse Command Line Tool
+```bower install```
+1. Read ```https://parse.com/docs/cloud_code_guide#cloud_code``` and install Parse Command Line Tool
 1. Set up new Parse App
-~~~
+```
 cd cloudCode;  parse new MyShareApp
-~~~
-1. edit Makefile to set proper Parse App name
+```
+1. Edit Makefile to set proper Parse App name
 
 
 ## How it's built
@@ -50,20 +42,12 @@ Main technology used in frontend is Angular JS.
 
 ## Development
 
-1. To generate inline documentation call:
-~~~
-grunt ngdocs
-~~~
-and go to 'docs' directory
+1. To generate inline documentation call ```grunt ngdocs``` and go to 'docs' directory
+1. To develop app you can simply call ```grunt server```
 
-1. To develop app you can simply call:
-~~~
-grunt server
-~~~
-
-Don't forget to:
-- every time you will change CSS sprites, you should change generated filename cloudCode/cloud/views/manifest.ejs file
-- every time you will change any HTML/CSS/JS file, you should increment version in cloudCode/cloud/views/manifest.ejs file to refresh HTML5 Application Cache
+#### Don't forget to:
+- every time you will change CSS sprites, you should change generated filename ```cloudCode/cloud/views/manifest.ejs``` file
+- every time you will change any HTML/CSS/JS file, you should increment version in ```cloudCode/cloud/views/manifest.ejs``` file to refresh HTML5 Application Cache
 
 
 
