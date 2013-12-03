@@ -5,10 +5,6 @@
  */
 'use strict';
 
-/**
- * Controller for user friend's Detail View.
- * @ngdoc object
- */
 var FriendDetailsCtrl = angular.module('shareApp')
     .controller('FriendDetailsCtrl', function ($scope, $rootScope, $state, $location, $translate, $window, shUser, shShare) {
       $scope.shShare = shShare;

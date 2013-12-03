@@ -4,12 +4,6 @@
  * License: MIT
  */
 'use strict';
-
-/**
- * @ngdoc object
- * Controller for first step of SharedItem creation.
- * It users fbFriendsSelect to choose targetUser and passes it with direction to second step's state.
- */
 var ShNewShareSelectFriendCtrl = angular.module('shareApp')
   .controller('ShNewShareSelectFriendCtrl', function ($scope, $state, $location, $translate, shUser, shShare) {
     $scope.user = shUser;

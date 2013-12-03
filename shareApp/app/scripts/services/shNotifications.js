@@ -1,19 +1,47 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
 'use strict';
+
+/**
+ * @ngdoc object
+ * @name shNotifications
+ *
+ * @description
+ * Service for managing notifications. It allows to receive new notifications and send confirmations.
+ */
 
 var shNotifications = angular.module('shareApp')
   .service('shNotifications', function shNotifications($rootScope, $q, shUser, $translate, $interpolate) {
     var notificationService = {
       /**
+       * @ngdoc property
+       * @name shNotifications#counter
+       * @propertyOf shNotifications
+       * @returns {number} number
+       *
+       * @description
        * Awaiting notification counter
-       * @type number
        */
       counter: 0,
       /**
+       * @ngdoc property
+       * @name shNotifications#saveInProgress
+       * @propertyOf shNotifications
+       * @returns {boolean} boolean
+       *
+       * @description
        * Flag which informs if Parse communication is in progress
-       * @type boolean
        */
       saveInProgress: false,
       /**
+       * @ngdoc method
+       * @name shNotifications#retrieveNotifications
+       * @methodOf shNotifications
+       *
+       * @description
        * Retrieves notifications and its counter. After applies it to appropriate variables in service.
        * Notifications are divided to
        */
@@ -80,8 +108,13 @@ var shNotifications = angular.module('shareApp')
         return deferred.promise;
       },
       /**
+       * @ngdoc method
+       * @name shNotifications#notificationRead
+       * @methodOf shNotifications
+       *
+       * @description
        * Marks notification as read and changes counter
-       * @param notification
+       * @param {Notification} notification Notification
        */
       notificationRead: function (notification) {
         notificationService.setLock();
@@ -98,10 +131,16 @@ var shNotifications = angular.module('shareApp')
         }});
       },
       /**
+       * @ngdoc method
+       * @name shNotifications#notificationAgree
+       * @methodOf shNotifications
+       *
+       * @description
        * Marks notification as agreed and read. Main workflow is triggered by this method, but
        * implemented in server-side code.
-       * @see Cloud.notifications
-       * @param notification
+       * See: {@link Cloud.notifications Cloud.notifications}.
+       *
+       * @param {Notification} notification Notification
        */
       notificationAgree: function (notification) {
         notificationService.setLock();
@@ -116,9 +155,14 @@ var shNotifications = angular.module('shareApp')
         }
       },
       /**
+       * @ngdoc method
+       * @name shNotifications#notificationDisagree
+       * @methodOf shNotifications
+       *
+       * @description
        * Marks notification as disagreed and read.
-       * @see Cloud.notifications
-       * @param notification
+       * See: {@link Cloud.notifications Cloud.notifications}.
+       * @param {Notification} notification Notification
        */
       notificationDisagree: function (notification) {
         notificationService.setLock();
@@ -133,9 +177,14 @@ var shNotifications = angular.module('shareApp')
         }
       },
       /**
+       * @ngdoc method
+       * @name shNotifications#notificationIsAction
+       * @methodOf shNotifications
+       *
+       * @description
        * Checks if notification is waiting for an action from user like taking decision
-       * @param notification
-       * @returns {boolean}
+       * @param {Notification} notification Notification
+       * @returns {boolean} Is in action
        */
       notificationIsAction: function (notification) {
         return notification.get('action') === globals.NOTIFICATION_ACTION_ENUM.CONFIRM ||
@@ -143,22 +192,33 @@ var shNotifications = angular.module('shareApp')
             notification.get('status') === globals.NOTIFICATION_STATUS_ENUM.READ);
       },
       /**
+       * @ngdoc method
+       * @name shNotifications#notificationIsInQueue
+       * @methodOf shNotifications
+       *
+       * @description
        * Checks if notification is unread
-       * @param notification
-       * @returns {boolean}
+       * @param {Notification} notification Notification
+       * @returns {boolean} is in queue
        */
       notificationIsInQueue: function (notification) {
         return notification.get('status') === globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE;
       },
       /**
+       * @ngdoc method
+       * @name shNotifications#notificationRead
+       * @methodOf shNotifications
+       *
+       * @description
        * Creates label which describes related sharedItem.
-       * @param notification
-       * @returns {string}
+       * @param {Notification} notification Notification
+       * @returns {string} verbose label
        */
       verboseNotification: function (notification) {
         if (notification.get('sharedItem') === undefined) {
           return;
         }
+        // FIXME: this method is buggy when user is using language different than english
         var sharedItem = notification.get('sharedItem'),
           fromUser = sharedItem.get('fromUser').id === shUser.currentUser.id ? "you" : sharedItem.get('fromUser').get('firstName'),
           toUser = sharedItem.get('toUser').id === shUser.currentUser.id ? "you" : sharedItem.get('toUser').get('firstName'),
@@ -213,22 +273,12 @@ var shNotifications = angular.module('shareApp')
         });
         return msg;
       },
-      /**
-       * Sets lock for Parse communication
-       */
       setLock: function () {
         notificationService.saveInProgress = true;
       },
-      /**
-       * Unsets lock for Parse communication
-       */
       unsetLock: function () {
         notificationService.saveInProgress = false;
       },
-      /**
-       * Check lock for Parse communication
-       * @returns {boolean}
-       */
       isLocked: function () {
         return notificationService.saveInProgress;
       }

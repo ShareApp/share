@@ -10,7 +10,21 @@ angular.module('shareApp')
             return false;
           };
         elm.hammer().on('tap', handler);
-
+      }
+    };
+  }]);
+angular.module('shareApp')
+  .directive('swipeDown', ['$parse', function ($parse) {
+    return function (scope, elm, attr) {
+      if (attr['swipeDown'].length > 0) {
+        var fn = $parse(attr['swipeDown']),
+          handler = function (e) {
+            safeApply(scope, function () {
+              fn(scope, {$event: e});
+            });
+            return false;
+          };
+        elm.hammer().on('swipedown', handler);
       }
     };
   }]);

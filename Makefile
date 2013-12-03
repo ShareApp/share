@@ -1,9 +1,6 @@
 deploy:
-	cd shareApp; \
-	grunt build; \
-	cd ..; \
 	rm -r cloudCode/public/*; \
-	cp -r shareApp/dist/* cloudCode/public/; \
+	grunt build; \
 	rm -rf cloudCode/public/bower_components/; \
 	cd cloudCode/; \
 	parse deploy Share\!; \

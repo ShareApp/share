@@ -31,20 +31,18 @@
 
     <script>(function(a,b,c){if(c in b&&b[c]){var d,e=a.location,f=/^(a|html)$/i;a.addEventListener("click",function(a){d=a.target;while(!f.test(d.nodeName))d=d.parentNode;"href"in d&&(d.href.indexOf("http")||~d.href.indexOf(e.host))&&(a.preventDefault(),e.href=d.href)},!1)}})(document,window.navigator,"standalone")</script>
 
-    <!-- build:css({.tmp,app}) styles/plugins.css -->
+    <!-- build:css({.tmp,shareApp/app}) styles/plugins.css -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/h5bp.css">
     <link rel="stylesheet" href="styles/nprogress.css">
     <!-- endbuild -->
 
-    <!-- build:css({.tmp,app}) styles/main.css -->
+    <!-- build:css({.tmp,shareApp/app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
 </head>
 
 <body ng-cloak>
-
-
     <div id="main-menu-container">
         <div ng-class="{closed:'closed'}[menuState]" sh-menu id="main-menu"></div>
     </div>

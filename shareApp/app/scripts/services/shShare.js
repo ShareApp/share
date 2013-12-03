@@ -1,61 +1,141 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
 'use strict';
+
+/**
+ * @ngdoc object
+ * @name shShare
+ *
+ * @description
+ * Factory which creates single Share❣. It allows to save it and perform actions.
+ */
 
 angular.module('shareApp')
   .factory('shShare', function shShare($location, $window, $rootScope, shUser) {
-
     var getToday = function () {
       var now = new Date(),
         month = now.getMonth() >= 9 ? (now.getMonth() + 1) : "0" + (now.getMonth() + 1);
       return now.getFullYear() + '-' + month + '-' + now.getDate();
     };
     var myShare = {
-      /**
-       * Currently logged user
-       */
       currentUser: shUser.currentUser,
       /**
+       * @ngdoc property
+       * @name shShare#targetUser
+       * @propertyOf shShare
+       * @returns {User} Parse.User
+       *
+       * @description
        * User who is second participant in sharing
-       * @type Parse.User
        */
       targetUser: null,
       /**
+       * @ngdoc property
+       * @name shShare#isPublic
+       * @propertyOf shShare
+       * @returns {boolean} is public
+       *
+       * @description
        * if it is public share (visible for all)
-       * @type boolean
        */
       isPublic: false,
       /**
-       * One choice from globals.SHARE_DIRECTION_ENUM
+       * @ngdoc property
+       * @name shShare#direction
+       * @propertyOf shShare
+       *
+       * @description
+       * One choice from:
+       *
+       * TO_ME: 0,
+       *
+       * TO_FRIEND: 1.
        */
       direction: 1,
       /**
-       * One choice from globals.SHARE_TYPE_ENUM
+       * @ngdoc property
+       * @name shShare#type
+       * @propertyOf shShare
+       *
+       * @description
+       * One choice from:
+       *
+       * TIME: 0,
+       *
+       * THING: 1,
+       *
+       * PROMISE: 2.
        */
       type: null,
       /**
+       * @ngdoc property
+       * @name shShare#state
+       * @propertyOf shShare
+       *
+       * @description
        * State of share.
-       * One choice from globals.SHARE_STATE_ENUM
+       * One choice from:
+       *
+       * CREATED: 0,
+       *
+       * CONFIRMED: 1,
+       *
+       * RETURNED: 2,
+       *
+       * RETURNED_NOT_CONFIRMED: 3,
+       *
+       * REJECTED: 4.
        */
       state: '',
       /**
-       * Text content of share. It can contains also image.
-       * @type string
+       * @ngdoc property
+       * @name shShare#text
+       * @propertyOf shShare
+       * @returns {string} Text
+       *
+       * @description
+       * Text content of share.
        */
       text: '',
       /**
+       * @ngdoc property
+       * @name shShare#amount
+       * @propertyOf shShare
+       * @returns {number} amount
+       *
+       * @description
        * Amount of items in share.
-       * @type number
        */
       amount: 1,
       /**
+       * @ngdoc property
+       * @name shShare#date
+       * @propertyOf shShare
+       * @returns {date} date
+       *
+       * @description
        * Date of share.
-       * @type string
        */
       date: getToday(),
       /**
+       * @ngdoc property
+       * @name shShare#img
+       * @propertyOf shShare
+       * @returns {string} img URL
+       *
+       * @description
        * URL to share image.
        */
       img: null,
       /**
+       * @ngdoc method
+       * @name shShare#setDefaults
+       * @methodOf shShare
+       *
+       * @description
        * Sets default values when user wants add another Share
        */
       setDefaults: function () {
@@ -68,7 +148,14 @@ angular.module('shareApp')
         myShare.targetUser = null;
       },
       /**
+       * @ngdoc method
+       * @name shShare#saveShare
+       * @methodOf shShare
+       *
+       * @description
        * Performs full action of create SharedItem. It's invoked after click save button.
+       *
+       * @param {Boolean} postOnFB if perform posting on FB
        */
       saveShare: function (postOnFB) {
         var SharedItem = Parse.Object.extend('SharedItem'),
@@ -137,8 +224,13 @@ angular.module('shareApp')
         });
       },
       /**
+       * @ngdoc method
+       * @name shShare#returnShare
+       * @methodOf shShare
+       *
+       * @description
        * It performs action of return share by invoking Parse.Cloud command
-       * @param sharedItem
+       * @param {sharedItem} sharedItem sharedItem object
        */
       returnShare: function (sharedItem) {
         $rootScope.$broadcast('progressBar.update', true);
@@ -150,8 +242,13 @@ angular.module('shareApp')
         }});
       },
       /**
+       * @ngdoc method
+       * @name shShare#demandReturnShare
+       * @methodOf shShare
+       *
+       * @description
        * It performs action of demand return share by invoking Parse.Cloud command
-       * @param sharedItem
+       * @param {sharedItem} sharedItem sharedItem object
        */
       demandReturnShare: function (sharedItem) {
         $rootScope.$broadcast('progressBar.update', true);
@@ -163,57 +260,71 @@ angular.module('shareApp')
         }});
       },
       /**
+       * @ngdoc method
+       * @name shShare#getStateDisplay
+       * @methodOf shShare
+       *
+       * @description
        * Creates verbose version of sharedItem state
-       * @see globals.SHARE_STATE_ENUM
-       * @param state
-       * @returns string
+       * See: {@link shShare#state state}.
+       * @param {string} state state
        */
       getStateDisplay: function (state) {
         var msg;
         switch (state) {
-        case globals.SHARE_STATE_ENUM.CREATED:
-          msg = "Created";
-          break;
-        case globals.SHARE_STATE_ENUM.CONFIRMED:
-          msg = "Confirmed";
-          break;
-        case globals.SHARE_STATE_ENUM.RETURNED:
-          msg = "Returned";
-        case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
-          msg = "Returned but not confirmed";
-          break;
-        case globals.SHARE_STATE_ENUM.REJECTED:
-          msg = "Rejected";
-          break;
-        default:
-          msg = state + "aaa";
-          break;
+          case globals.SHARE_STATE_ENUM.CREATED:
+            msg = "Created";
+            break;
+          case globals.SHARE_STATE_ENUM.CONFIRMED:
+            msg = "Confirmed";
+            break;
+          case globals.SHARE_STATE_ENUM.RETURNED:
+            msg = "Returned";
+          case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
+            msg = "Returned but not confirmed";
+            break;
+          case globals.SHARE_STATE_ENUM.REJECTED:
+            msg = "Rejected";
+            break;
+          default:
+            msg = state + "aaa";
+            break;
         }
         return msg;
       },
       /**
+       * @ngdoc method
+       * @name shShare#getTypeDisplay
+       * @methodOf shShare
+       *
+       * @description
        * Creates verbose version of sharedItem type
-       * @see globals.SHARE_TYPE_ENUM
-       * @param type
-       * @returns string
+       * See: {@link shShare#type type}.
+       * @param {string} type type
        */
       getTypeDisplay: function (type) {
         var msg;
         switch (type) {
-        case globals.SHARE_TYPE_ENUM.TIME:
-          msg = "time";
-          break;
-        case globals.SHARE_TYPE_ENUM.THING:
-          msg = "thing";
-          break;
-        case globals.SHARE_TYPE_ENUM.PROMISE:
-          msg = "promise";
-          break;
+          case globals.SHARE_TYPE_ENUM.TIME:
+            msg = "time";
+            break;
+          case globals.SHARE_TYPE_ENUM.THING:
+            msg = "thing";
+            break;
+          case globals.SHARE_TYPE_ENUM.PROMISE:
+            msg = "promise";
+            break;
         }
         return msg;
       },
       /**
+       * @ngdoc method
+       * @name shShare#uploadPhoto
+       * @methodOf shShare
+       *
+       * @description
        * Upload photo to Parse
+       * @param {Parse.File} file Parse.File object
        */
       uploadPhoto: function (file) {
         var img = new PPO.File(file.name, file);

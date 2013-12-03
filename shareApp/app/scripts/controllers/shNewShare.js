@@ -5,11 +5,6 @@
  */
 'use strict';
 
-/**
- * @ngdoc object
- * Controller for second step of SharedItem creation.
- * It assumes target Friend is chosen.
- */
 var ShNewShareCtrl = angular.module('shareApp')
   .controller('ShNewShareCtrl', function ($scope, $state, $location, $translate, $rootScope, shUser, shShare, shSync) {
     var setUsers = function () {

@@ -1,4 +1,18 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
 'use strict';
+
+/**
+ * @ngdoc object
+ * @name shSync
+ *
+ * @description
+ * Service which taking care about running tasks after going offline or going online
+ */
+
 
 var shSync = angular.module('shareApp')
   .service('shSync', function shSync($rootScope, shUser) {
@@ -33,8 +47,6 @@ var shSync = angular.module('shareApp')
 
       console.log("going online");
     }, false);
-
   });
-
 
 shSync.$inject = ['$rootScope', 'shUser'];

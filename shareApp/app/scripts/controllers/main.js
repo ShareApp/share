@@ -5,10 +5,6 @@
  */
 'use strict';
 
-/**
- * @ngdoc object
- * Controller for generic views (header, wall etc).
- */
 var MainCtrl = angular.module('shareApp')
   .controller('MainCtrl', function ($scope, $cookies, $rootScope, $state, $location, $translate, shUser, shShare, shSync) {
 

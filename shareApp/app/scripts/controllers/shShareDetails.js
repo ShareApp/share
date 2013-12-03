@@ -5,10 +5,6 @@
  */
 'use strict';
 
-/**
- * @ngdoc object
- * Controller for SharedItem Details View.
- */
 var ShShareDetailsCtrl = angular.module('shareApp')
   .controller('ShShareDetailsCtrl', function ($scope, $state, $location, $window, $translate, shUser, shShare) {
     var sharedItemId = $state.params.sharedItemId,

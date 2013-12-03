@@ -4,3 +4,5 @@ cloudCode/public
 .directory
 .idea
 cloudCode/config/global.json
+dist
+.sass-cache

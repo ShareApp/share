@@ -9,18 +9,51 @@ var mountFolder = function (connect, dir) {
 module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
   grunt.loadNpmTasks('grunt-angular-translate');
+  grunt.loadNpmTasks('grunt-docular');
+  grunt.loadNpmTasks('grunt-ngdocs');
+
 
   var yeomanConfig = {
-    app: 'app',
-    dist: 'dist'
+    app: 'shareApp/app',
+    dist: 'cloudCode/public'
   };
 
   try {
-    yeomanConfig.app = require('./bower.json').appPath || yeomanConfig.app;
+    yeomanConfig.app = require('shareApp/bower.json').appPath || yeomanConfig.app;
   } catch (e) {
   }
 
   grunt.initConfig({
+    ngdocs: {
+      options: {
+        dest: 'docs',
+        html5Mode: false,
+        startPage: '/api',
+        title: 'Share❣'
+      },
+      api: {
+        src: ['<%= yeoman.app %>/scripts/**/*.js', 'cloudCode/cloud/**/*.js'],
+        title: 'API Documentation'
+      }
+    },
+
+    docular: {
+      pkg: grunt.file.readJSON('package.json'),
+      groups: [{
+        groupTitle: 'Angular Docs', //Title used in the UI
+        groupId: 'angular', //identifier and determines directory
+        groupIcon: 'icon-book', //Icon to use for this group
+        sections: [
+          {
+            id: "api",
+            title:"Angular API",
+            scripts: ['<%= yeoman.app %>/scripts/']
+          }
+        ]
+      }],
+      showDocularDocs: false,
+      showAngularDocs: false
+    },
     yeoman: yeomanConfig,
     watch: {
       coffee: {
@@ -203,6 +236,23 @@ module.exports = function (grunt) {
       }
     },
     cssmin: {
+      dist: {
+        files: [
+          {
+            expand: true,
+            cwd: '<%= yeoman.app %>/styles',
+            src: ['{,*/}*.css', '!*.min.css'],
+            dest: '<%= yeoman.dist %>/styles'
+          }
+        ]
+      }
+      /*minify: {
+        expand: true,
+        cwd: 'release/css/',
+        src: ['*.css', '!*.min.css'],
+        dest: 'release/css/',
+        ext: '.min.css'
+      }*/
       },
     htmlmin: {
       dist: {
@@ -334,7 +384,8 @@ module.exports = function (grunt) {
   grunt.registerTask('default', [
     'jshint',
     'test',
-    'build'
+    'build',
+    'docular'
   ]);
 
 };

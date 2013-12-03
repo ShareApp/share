@@ -7,6 +7,9 @@
 
 /**
  * @ngdoc object
+ * @name shUser
+ *
+ * @description
  * Shared Object for keeping user's data and provides user-related methods.
  */
 var shUser = angular.module('shareApp')
@@ -14,51 +17,93 @@ var shUser = angular.module('shareApp')
 
     var myUser = {
       /**
+       * @ngdoc property
+       * @name shUser#friendsList
+       * @propertyOf shUser
+       * @returns {Array} Parse users
+       *
+       * @description
        * Cached list of friends, where friends are Parse.User objects.
-       * @type {!Array.<Parse.User>}
        */
       friendsList: [],
       /**
+       * @ngdoc property
+       * @name shUser#fbFriendsList
+       * @propertyOf shUser
+       * @returns {Array} FacebookUser
+       *
+       * @description
        * Cached list of facebook friends, where friends are facebook og:api user objects, which
        * keeps id and username.
        * It's used to generate friendsList.
        * Generally FacebookUser objects are not used.
-       * @type {!Array.<FacebookUser>}
        */
       fbFriendsList: [],
       /**
+       * @ngdoc property
+       * @name shUser#friendsShares
+       * @propertyOf shUser
+       * @returns {Array} SharedItem
+       *
+       * @description
        * Cached list of SharedItem matching chosen friend's connections.
-       * @type {!Array.<SharedItem>}
        */
       friendsShares: {},
+      /**
+       * @ngdoc property
+       * @name shUser#loggedIn
+       * @propertyOf shUser
+       * @returns {Boolean} Is user logged in
+       */
       loggedIn: Parse.User.current() !== null,
       /**
+       * @ngdoc property
+       * @name shUser#friendsShares
+       * @propertyOf shUser
+       * @returns {Parse.User} Parse.User
+       *
+       * @description
        * Current logged in user
-       * @type Parse.User
        */
       currentUser: Parse.User.current(),
       /**
+       * @ngdoc property
+       * @name shUser#fbuser
+       * @propertyOf shUser
+       * @returns {FacebookUser} FacebookUser
+       *
+       * @description
        * Current logged in facebook user
-       * @type FacebookUser
        */
       fbuser: null,
       /**
+       * @ngdoc property
+       * @name shUser#username
+       * @propertyOf shUser
+       * @returns {string} string
+       *
+       * @description
        * Current logged in user's username
-       * @type string
        */
       username: null,
       /**
+       * @ngdoc property
+       * @name shUser#userShares
+       * @propertyOf shUser
+       * @returns {Array} SharedItem
+       *
+       * @description
        * Cached list of SharedItem matching user filters. Must be null to distinguish if it is fetching first time.
-       * @type {!Array.<SharedItem>}
        */
       userShares: null,
       /**
-       * Cached list of SharedItem which are awaiting for confirmation..
-       * @type {!Array.<SharedItem>}
-       */
-      awaitingShares: [],
-      /**
-       * Filters defining user's wall SharedItems (myUser.userShares).
+       * @ngdoc property
+       * @name shUser#userWallFilters
+       * @propertyOf shUser
+       * @returns {object} options
+       *
+       * @description
+       * Filters defining user's wall SharedItems (shUser.userShares).
        */
       userWallFilters: {
         type: {
@@ -97,6 +142,11 @@ var shUser = angular.module('shareApp')
        },*/
 
       /**
+       * @ngdoc method
+       * @name shUser#logIn
+       * @methodOf shUser
+       *
+       * @description
        * Log in or Sign Up user using Facebook Account.
        * Reload or redirect to main page when successful.
        */
@@ -122,6 +172,11 @@ var shUser = angular.module('shareApp')
       },
 
       /**
+       * @ngdoc method
+       * @name shUser#logOut
+       * @methodOf shUser
+       *
+       * @description
        * Logout current User and redirect to main page.
        */
       logOut: function () {
@@ -132,6 +187,11 @@ var shUser = angular.module('shareApp')
       },
 
       /**
+       * @ngdoc method
+       * @name shUser#refreshParseUser
+       * @methodOf shUser
+       *
+       * @description
        * Checks if user has changed data on facebook and syncs with copy on parse.com.
        */
       refreshParseUser: function () {
@@ -154,9 +214,13 @@ var shUser = angular.module('shareApp')
       },
 
       /**
+       * @ngdoc method
+       * @name shUser#fetchFriendsShares
+       * @methodOf shUser
+       *
+       * @description
        * Fetches SharedItems for contact list.
-       * It's using Cloud Code function `getCommonShares`.
-       * @see Cloud.main#getCommonShares
+       * It's using Cloud Code function {@link Cloud.main#getCommonShares getCommonShares}.
        */
       fetchFriendsShares: function () {
         var friendsIds;
@@ -168,9 +232,6 @@ var shUser = angular.module('shareApp')
             safeApply($rootScope, function () {
               myUser.friendsShares = data;
             });
-//            myUser.friendsList.sort(function(a,b){
-//              return myUser.friendsShares[a.id]['counter'] - myUser.friendsShares[b.id]['counter']
-//            });
           },
           error: function (error) {
             console.error(error);
@@ -179,7 +240,12 @@ var shUser = angular.module('shareApp')
       },
 
       /**
-       * Maps Facebook Friends list <myUser.fbFriendsList> to Parse.User list <myUser.friendsList>.
+       * @ngdoc method
+       * @name shUser#fetchFriends
+       * @methodOf shUser
+       *
+       * @description
+       * Maps Facebook Friends list {@link shUser#fbFriendsList fbFriendsList} to {@link shUser#friendsList Parse.User} list.
        */
       fetchFriends: function () {
         var friendsFbIds;
@@ -204,26 +270,16 @@ var shUser = angular.module('shareApp')
             console.error(error);
             $rootScope.$broadcast('progressBar.update', false);
           }});
-        /*Parse.Cloud.run("getFriends", {fbFriendsList: myUser.fbFriendsList}, {
-         success: function (users) {
-         console.log('fetched parse users');
-         console.log(users);
-         $rootScope.$apply(function () {
-         myUser.friendsList = users;
-         });
-         myUser.fetchFriendsShares();
-         $rootScope.$broadcast('progressBar.update', false);
-         },
-         error: function (error) {
-         console.error(error);
-         $rootScope.$broadcast('progressBar.update', false);
-         }
-         });*/
       },
 
       /**
+       * @ngdoc method
+       * @name shUser#fetchFbFriends
+       * @methodOf shUser
+       *
+       * @description
        * Fetches Friends List from Facebook API.
-       * When done calls myUser.fetchFriends to get proper list.
+       * When done calls shUser.fetchFriends to get proper list.
        */
       fetchFbFriends: function () {
         console.log('fetching fb friends');
@@ -244,10 +300,7 @@ var shUser = angular.module('shareApp')
               var lchair = this;
               lchair.save({key: "fbfriends", data: response});
             });
-
-
           });
-
         } else {
           new Lawnchair(function () {
             var lchair = this;
@@ -259,11 +312,14 @@ var shUser = angular.module('shareApp')
             });
           });
         }
-
-
       },
 
       /**
+       * @ngdoc method
+       * @name shUser#fetchFbUserData
+       * @methodOf shUser
+       *
+       * @description
        * Fetches date about current user from FacebookApi
        */
       fetchFbUserData: function () {
@@ -302,10 +358,15 @@ var shUser = angular.module('shareApp')
       },
 
       /**
+       * @ngdoc method
+       * @name shUser#fetchUserShares
+       * @methodOf shUser
+       *
+       * @description
        * Fetches SharedItem object's for current user's wall.
-       * Respects filters from myUser.userWallFilters.
-       * @param loadPrevious notify if it should load previous shares
-       * @param loadNext notify if it should load newest shares
+       * Respects filters from shUser.userWallFilters.
+       * @param {bool} loadPrevious notify if it should load previous shares
+       * @param {bool} loadNext notify if it should load newest shares
        */
       fetchUserShares: function (loadPrevious, loadNext) {
         loadPrevious = typeof loadPrevious !== 'undefined' ? loadPrevious : false;
@@ -330,38 +391,38 @@ var shUser = angular.module('shareApp')
             }
             blankQuery = false;
             switch (s_key) {
-            case 'time':
-              types.push(globals.SHARE_TYPE_ENUM.TIME);
-              break;
-            case 'things':
-              types.push(globals.SHARE_TYPE_ENUM.THING);
-              break;
-            case 'promises':
-              types.push(globals.SHARE_TYPE_ENUM.PROMISE);
-              break;
-            case 'to_me':
-              toMe = true;
-              break;
-            case 'from_me':
-              fromMe = true;
-              break;
-            case 'returned':
-              states.push(globals.SHARE_STATE_ENUM.RETURNED);
-              break;
-            case 'rejected':
-              states.push(globals.SHARE_STATE_ENUM.REJECTED);
-              break;
-            case 'accepted':
-              states.push(globals.SHARE_STATE_ENUM.CONFIRMED);
-              break;
-            case 'awaiting':
-              states.push(globals.SHARE_STATE_ENUM.CREATED);
-              break;
-            case 'return_awaiting':
-              states.push(globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED);
-              break;
-            default:
-              break;
+              case 'time':
+                types.push(globals.SHARE_TYPE_ENUM.TIME);
+                break;
+              case 'things':
+                types.push(globals.SHARE_TYPE_ENUM.THING);
+                break;
+              case 'promises':
+                types.push(globals.SHARE_TYPE_ENUM.PROMISE);
+                break;
+              case 'to_me':
+                toMe = true;
+                break;
+              case 'from_me':
+                fromMe = true;
+                break;
+              case 'returned':
+                states.push(globals.SHARE_STATE_ENUM.RETURNED);
+                break;
+              case 'rejected':
+                states.push(globals.SHARE_STATE_ENUM.REJECTED);
+                break;
+              case 'accepted':
+                states.push(globals.SHARE_STATE_ENUM.CONFIRMED);
+                break;
+              case 'awaiting':
+                states.push(globals.SHARE_STATE_ENUM.CREATED);
+                break;
+              case 'return_awaiting':
+                states.push(globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED);
+                break;
+              default:
+                break;
             }
           });
         });
@@ -401,8 +462,6 @@ var shUser = angular.module('shareApp')
         // loading new shares should be unlimited
         if (loadNext === false) {
           query.limit(5);
-
-//          debugger;
         }
         // sets last (or first) update date of possessed share
         if (loadPrevious === true || loadNext === true) {
@@ -426,7 +485,7 @@ var shUser = angular.module('shareApp')
                 // delete item which has been created in offline mode
                 angular.forEach(results, function (resultItem, i) {
                   angular.forEach(results, function (shareItem, j) {
-                    if (resultItem.get('offlineId') === shareItem.get('offlineId')) {
+                    if (resultItem.get('offlineId') === shareItem.get('offlineId') && i !== j) {
                       myUser.userShares.splice(j, 1);
                     }
                   });
@@ -446,38 +505,15 @@ var shUser = angular.module('shareApp')
           }
         });
       },
-      /**
-       * Fetches awaiting user SharedItems
-       */
-      fetchUserAwaitingShares: function () {
-        // TODO: consider if it is not replacement of notifications feature
-        return;
-        // TODO: related to above todo: yes it is!
-        var query = new (PPO.getQueryClass())('SharedItem');
-        query.equalTo('toUser', myUser.currentUser);
-        query.containedIn('state', [globals.SHARE_STATE_ENUM.CREATED, globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED]);
-
-        query.include('fromUser');
-        query.include('toUser');
-        query.descending('updatedAt');
-
-        query.find({
-          success: function (results) {
-            $rootScope.$broadcast('progressBar.update', false);
-            safeApply($rootScope, function () {
-              myUser.awaitingShares = results;
-            });
-          },
-          error: function (error) {
-            console.error(error);
-            logIn
-          }
-        });
-      },
 
       /**
+       * @ngdoc method
+       * @name shUser#fetchData
+       * @methodOf shUser
+       *
+       * @description
        * Used to fetch all user's data.
-       * Called always when myUser object is created.
+       * Called always when shUser object is created.
        */
       fetchData: function () {
         $rootScope.$broadcast('progressBar.update', true);
@@ -486,7 +522,6 @@ var shUser = angular.module('shareApp')
           myUser.fetchFbFriends();
           myUser.fetchFbUserData();
           myUser.fetchUserShares();
-          myUser.fetchUserAwaitingShares();
         };
         if (navigator.onLine) {
           FB.getLoginStatus(function (response) {
@@ -507,9 +542,7 @@ var shUser = angular.module('shareApp')
     };
     return myUser;
   }).run(function (shUser) {
-    /**
-     * fetch data for new user
-     */
+    //fetch data for new user
     if (shUser.loggedIn) {
       shUser.fetchData();
     } else {

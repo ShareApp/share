@@ -190,7 +190,7 @@ body {
               padding-left: 10px;
               @include shadows-font();
               display: inline-block;
-              vertical-align: middle;
+              vertical-align: top;
               height: 45px;
             }
             @import "menu/*.png";
@@ -240,10 +240,10 @@ body {
                 &.contact-list-ico {
                   @include menu-sprite(small-contact-list);
                 }
-                &.home {
+                &.home-ico {
                   @include menu-sprite(small-home);
                 }
-                &.FB {
+                &.FB-ico {
                   @include menu-sprite(small-FB);
                 }
                 &.flag-ico {
@@ -420,6 +420,7 @@ body {
         border-width: 0;
         color: white;
         font-weight: bold;
+        outline: none;
       }
     }
 

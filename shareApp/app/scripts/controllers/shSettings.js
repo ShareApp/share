@@ -5,11 +5,6 @@
  */
 'use strict';
 
-/**
- * @ngdoc object
- * Controller for settings panel.
- * It users fbFriendsSelect to choose targetUser and passes it with direction to second step's state.
- */
 var ShSettingsCtrl = angular.module('shareApp')
   .controller('ShSettingsCtrl', function ($scope, $state, $location, $rootScope, $translate, shUser) {
     var saveCallback = function () {
