@@ -129,7 +129,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
-        url: 'http://stefania.lan:<%= connect.options.port %>'
+        url: 'http://share.test:<%= connect.options.port %>'
       }
     },
     clean: {
