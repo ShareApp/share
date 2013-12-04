@@ -27,17 +27,20 @@ Technically speaking, it is web application created using Angular JS and Parse.c
 ```
 cd cloudCode;  parse new MyShareApp
 ```
-1. Edit Makefile to set proper Parse App name
+1. Create ```parse_app_name.txt``` file in root directory and put there Parse App name
+
+## Deployment
+
+After doing Getting started section you can easily deploy your app to Parse by calling ```make``` in root directory.
 
 
 ## How it's built
 
 It's completely JavaScript application. 
-It uses Parse.com as a backend service, where data are stored and several server functions are implemented like image scaling or notification creating,
+It uses Parse.com as a backend service, where data are stored and several server functions are implemented like images scaling or notifications creating,
 To learn more about Parse.com see JavaScript guid https://www.parse.com/docs/js_guide.
 
-Main technology used in frontend is Angular JS. 
-
+Main technology used in frontend is Angular JS. We use also Hammer.js to bind swipe events and Lawnchair to provide offline support.
 
 
 ## Development

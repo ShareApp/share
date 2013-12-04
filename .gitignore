@@ -6,3 +6,4 @@ cloudCode/public
 cloudCode/config/global.json
 dist
 .sass-cache
+parse_app_name.txt
