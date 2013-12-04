@@ -7,6 +7,7 @@ app.use(express.cookieParser('SECRET 12345'));
 app.use(express.cookieSession());
 app.use(express.bodyParser());
 var Buffer = require('buffer').Buffer;
+var settings = require('settings/settings');
 
 var parseExpressCookieSession = require('parse-express-cookie-session');
 app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
@@ -16,15 +17,7 @@ app.get('/share.appcache', function (req, res) {
   /**
    * Generates dynamic HTML5 Cache Manifest. It is used for get facebook profile photos and shares photos.
    */
-  var FBappId;
-  if (req.headers['host'] === "share-test.parseapp.com") {
-    FBappId = '222033201286057';
-  } else if (req.headers['host'] === "share.hiddendata.co") {
-    FBappId = '1474663289424777';
-  } else {
-    FBappId = '142693092598273';
-  }
-
+  var FBappId = settings.FBappId;
   var sharedItemPublicQuery = new Parse.Query("SharedItem");
   sharedItemPublicQuery.equalTo('isPublic', true);
 

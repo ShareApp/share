@@ -39,18 +39,20 @@ module.exports = function (grunt) {
 
     docular: {
       pkg: grunt.file.readJSON('package.json'),
-      groups: [{
-        groupTitle: 'Angular Docs', //Title used in the UI
-        groupId: 'angular', //identifier and determines directory
-        groupIcon: 'icon-book', //Icon to use for this group
-        sections: [
-          {
-            id: "api",
-            title:"Angular API",
-            scripts: ['<%= yeoman.app %>/scripts/']
-          }
-        ]
-      }],
+      groups: [
+        {
+          groupTitle: 'Angular Docs', //Title used in the UI
+          groupId: 'angular', //identifier and determines directory
+          groupIcon: 'icon-book', //Icon to use for this group
+          sections: [
+            {
+              id: "api",
+              title: "Angular API",
+              scripts: ['<%= yeoman.app %>/scripts/']
+            }
+          ]
+        }
+      ],
       showDocularDocs: false,
       showAngularDocs: false
     },
@@ -84,11 +86,11 @@ module.exports = function (grunt) {
     i18nextract: {
 
       default_options: {
-        lang: ['en_EN', 'pl_PL','ja_JP'],
+        lang: ['en_EN', 'pl_PL', 'ja_JP'],
         src: ['app/views/*.html', 'app/scripts/*/*.js', 'app/scripts/app.js', 'app/scripts/globals.js', ],
-        prefix:   'lang_',
-        suffix:   '.js',
-        dest:     'app/i18n'
+        prefix: 'lang_',
+        suffix: '.js',
+        dest: 'app/i18n'
       }
     },
     connect: {
@@ -247,13 +249,13 @@ module.exports = function (grunt) {
         ]
       }
       /*minify: {
-        expand: true,
-        cwd: 'release/css/',
-        src: ['*.css', '!*.min.css'],
-        dest: 'release/css/',
-        ext: '.min.css'
-      }*/
-      },
+       expand: true,
+       cwd: 'release/css/',
+       src: ['*.css', '!*.min.css'],
+       dest: 'release/css/',
+       ext: '.min.css'
+       }*/
+    },
     htmlmin: {
       dist: {
         files: [
