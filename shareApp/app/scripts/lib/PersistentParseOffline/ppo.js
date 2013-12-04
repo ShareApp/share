@@ -3,6 +3,29 @@
  * (c) 2013 HiddenData & VorskiImagineering http://share.url
  * License: MIT
  */
+
+/**
+ * @ngdoc overview
+ * @name PersistentParseOffline
+ *
+ * @description
+  It allows store data obtained from Parse.com and make it available without Internet access. It uses Lawnchair as a backend to store data and is really similiar to Parse.com JS SDK api.
+ PPO plugin uses two method to store uploaded file. It tries to use webkitPersistentStorage and if it is not available then save base64 data via Lawnchair. Feel free to take a look at document code in shareApp/app/scripts/lib/PersistentParseOffline/ppo.js.
+
+ It uses two adapters:
+
+  - for online mode, ParseAdapter:
+    - saves data to local storage
+    - saves results of CloudCode functions
+  - for offline mode, LawnchairAdapter:
+    - obtains data from local storage
+    - saves execution of CloudCode funtions to changelog
+    - saves Parse.Object.save() to changelog
+
+ After turning Internet on, there is a synchronization.
+
+ Remember, if you want to use PPO plugin you have to replace every Parse.Query call with PPO.Query.
+ */
 (function (root) {
   root.PPO = root.PPO || {};
   root.PPO.VERSION = "js0.0.1";

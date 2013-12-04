@@ -5,7 +5,12 @@
  */
 'use strict';
 
+
 /**
+ * @ngdoc directive
+ * @name fblogin
+ *
+ * @description
  * Creates widget for login action.
  */
 var fblogin = angular.module('shareApp')

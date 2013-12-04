@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name fbFriendSelect
+ *
+ * @description
  * Shows list of Facebook Friends and calls selectFriend() function on click.
  */
 angular.module('shareApp')

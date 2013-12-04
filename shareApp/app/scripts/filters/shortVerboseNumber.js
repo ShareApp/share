@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc filter
+ * @name shortVerboseNumber
+ *
+ * @description
  * Converts big numbers to verbose representation
  */
 angular.module('shareApp')

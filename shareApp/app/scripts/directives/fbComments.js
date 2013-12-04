@@ -5,7 +5,12 @@
  */
 'use strict';
 
+
 /**
+ * @ngdoc directive
+ * @name fbComments
+ *
+ * @description
  * Shows Facebook comments widget to current URL
  */
 angular.module('shareApp')

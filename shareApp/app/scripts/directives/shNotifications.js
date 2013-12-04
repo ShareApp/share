@@ -5,6 +5,13 @@
  */
 'use strict';
 
+/**
+ * @ngdoc directive
+ * @name shNotifications
+ *
+ * @description
+ * Creates widget with notifications.
+ */
 angular.module('shareApp')
   .directive('shNotifications', function () {
     return {
@@ -28,18 +35,18 @@ angular.module('shareApp')
           $scope.getStatusDisplay = function (item) {
             var msg;
             switch (item.get('status')) {
-            case globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE:
-              msg = "In queue";
-              break;
-            case globals.NOTIFICATION_STATUS_ENUM.READ:
-              msg = "Read";
-              break;
-            case globals.NOTIFICATION_STATUS_ENUM.ACCEPTED:
-              msg = "Agreed";
-              break;
-            case globals.NOTIFICATION_STATUS_ENUM.REJECTED:
-              msg = "Disagreed";
-              break;
+              case globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE:
+                msg = "In queue";
+                break;
+              case globals.NOTIFICATION_STATUS_ENUM.READ:
+                msg = "Read";
+                break;
+              case globals.NOTIFICATION_STATUS_ENUM.ACCEPTED:
+                msg = "Agreed";
+                break;
+              case globals.NOTIFICATION_STATUS_ENUM.REJECTED:
+                msg = "Disagreed";
+                break;
             }
             return msg;
           };
@@ -48,10 +55,7 @@ angular.module('shareApp')
               shNotifications.notificationRead(item);
             }
           };
-          /**
-           * Moves to SharedItem details page
-           * @param notification
-           */
+          // Moves to SharedItem details page
           $scope.goToShare = function (notification) {
             $rootScope.notificationsFrameOpened = false;
             $location.path('/sharedItem/' + notification.get('sharedItem').id);

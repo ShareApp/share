@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name shFilters
+ *
+ * @description
  * Creates widget with filter switches for stream of SharedItems.
  */
 angular.module('shareApp')

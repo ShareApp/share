@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name smallShareItem
+ *
+ * @description
  * Shows thumbnail of sharedItem
  */
 angular.module('shareApp')

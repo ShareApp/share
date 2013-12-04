@@ -10,3 +10,4 @@ parse_app_name.txt
 settings/settings.js
 settings/settings_test.js
 settings/settings_local.js
+docs/build

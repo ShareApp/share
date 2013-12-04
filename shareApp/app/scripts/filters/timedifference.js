@@ -6,7 +6,11 @@
 'use strict';
 
 /**
- * Angular filter didn't manage objects' attributes, so we need custom filter to query users.
+ * @ngdoc filter
+ * @name timedifference
+ *
+ * @description
+ * Angular filter which applies moment.js library to date objects.
  */
 angular.module('shareApp')
   .filter('timedifference', ['$translate', function ($translate) {

@@ -3,6 +3,14 @@
  * (c) 2013 HiddenData & VorskiImagineering http://share.url
  * License: MIT
  */
+
+/**
+ * @ngdoc object
+ * @name ExpressApp
+ *
+ * @description
+ * Express application which can be launched only in Parse.com cloud.
+ */
 var express = require('express');
 var app = express();
 
@@ -18,14 +26,17 @@ var parseExpressCookieSession = require('parse-express-cookie-session');
 app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
 
 
+/**
+ * @ngdoc method
+ * @name ExpressApp.appcache
+ * @methodOf ExpressApp
+ * @description
+ * Generates dynamic HTML5 Cache Manifest. It is used for get facebook profile photos and shares photos.
+ */
 app.get('/share.appcache', function (req, res) {
-  /**
-   * Generates dynamic HTML5 Cache Manifest. It is used for get facebook profile photos and shares photos.
-   */
   var FBappId = settings.FBappId;
   var sharedItemPublicQuery = new Parse.Query("SharedItem");
   sharedItemPublicQuery.equalTo('isPublic', true);
-
   var query = sharedItemPublicQuery;
 
   if (req.cookies['fbsr_' + FBappId]) {
@@ -33,7 +44,6 @@ app.get('/share.appcache', function (req, res) {
     var payload = (cookie.split(".")[1]);
     var buffer = new Buffer(payload, 'base64').toString('utf8');
     var data = JSON.parse(buffer);
-
     var userId = data['user_id'];
     var sharedItemFromQuery = new Parse.Query("SharedItem"),
       sharedItemToQuery = new Parse.Query("SharedItem"),

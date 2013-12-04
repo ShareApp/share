@@ -26,35 +26,16 @@ module.exports = function (grunt) {
   grunt.initConfig({
     ngdocs: {
       options: {
-        dest: 'docs',
+        dest: 'docs/build/',
         html5Mode: false,
         startPage: '/api',
-        title: 'Share❣'
+        title: 'Share❣',
+        titleLink: "/api"
       },
       api: {
-        src: ['<%= yeoman.app %>/scripts/**/*.js', 'cloudCode/cloud/**/*.js'],
+        src: ['docs/src/api/*.ngdoc', '<%= yeoman.app %>/scripts/**/*.js', 'cloudCode/cloud/**/*.js'],
         title: 'API Documentation'
       }
-    },
-
-    docular: {
-      pkg: grunt.file.readJSON('package.json'),
-      groups: [
-        {
-          groupTitle: 'Angular Docs', //Title used in the UI
-          groupId: 'angular', //identifier and determines directory
-          groupIcon: 'icon-book', //Icon to use for this group
-          sections: [
-            {
-              id: "api",
-              title: "Angular API",
-              scripts: ['<%= yeoman.app %>/scripts/']
-            }
-          ]
-        }
-      ],
-      showDocularDocs: false,
-      showAngularDocs: false
     },
     yeoman: yeomanConfig,
     watch: {

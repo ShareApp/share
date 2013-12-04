@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc filter
+ * @name slugify
+ *
+ * @description
  * Converts string to url-safe.
  */
 angular.module('shareApp')

@@ -6,7 +6,7 @@
 'use strict';
 
 /**
- * @ngdoc object
+ * @ngdoc service
  * @name shSync
  *
  * @description

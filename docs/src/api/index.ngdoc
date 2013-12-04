@@ -1,0 +1,135 @@
+@ngdoc overview
+@name API Reference
+@description
+
+# Share API Docs
+Welcome to the Share API docs page.
+
+## Index
+
+This module is provided by default and contains the core components of AngularJS.
+
+<table class="definition-table spaced">
+  <tr>
+    <td>Controllers</td>
+    <td>
+      <p>
+        Share controllers:
+      </p>
+      <p>
+          {@link MainCtrl MainCtrl},
+          {@link FriendDetailsCtrl FriendDetailsCtrl},
+          {@link ShNewShareCtrl ShNewShareCtrl},
+          {@link ShNewShareSelectFriendCtrl ShNewShareSelectFriendCtrl},
+          {@link ShShareDetailsCtrl ShShareDetailsCtrl  }
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Services</td>
+    <td>
+      <p>
+        Share services:
+      </p>
+      <p>
+          {@link shNotifications shNotifications},
+          {@link shShare shShare},
+          {@link shSync shSync},
+          {@link shUser shUser},
+      </p>
+    </td>
+  </tr>
+  <tr>
+    <td>Libs</td>
+    <td>
+      <p>
+        Share libs:
+      </p>
+      <p>
+          {@link PersistentParseOffline PersistentParseOffline}
+      </p>
+    </td>
+  </tr>
+ <tr>
+    <td>Directives</td>
+    <td>
+      <p>
+        Share directives:
+      </p>
+      <p>
+          {@link datePickerFallback datePickerFallback},
+          {@link ellipsis ellipsis},
+          {@link fbComments fbComments},
+          {@link fbFriendSelect fbFriendSelect},
+          {@link fbProfilePicture fbProfilePicture},
+          {@link langSwitcher langSwitcher},
+          {@link fblogin fblogin},
+          {@link logout logout},
+          {@link scrollAfterFocus scrollAfterFocus},
+          {@link shFilters shFilters},
+          {@link shMenu shMenu},
+          {@link shNotifications shNotifications},
+          {@link smallShareItem smallShareItem},
+          {@link onScrollBottom onScrollBottom},
+          {@link onContainerScroll onContainerScroll},
+          {@link swipeDown swipeDown},
+          {@link tap tap},
+          {@link verticallyPositioned verticallyPositioned},
+          {@link verticallyPositionedNotification verticallyPositionedNotification},
+      </p>
+    </td>
+  </tr>
+ 
+ <tr>
+    <td>Filters</td>
+    <td>
+      <p>
+        Share filters:
+      </p>
+      <p>
+          {@link parseuserfilter parseuserfilter},
+          {@link parseusersorter parseusersorter},
+          {@link shortVerboseNumber shortVerboseNumber},
+          {@link slugify slugify},
+          {@link timedifference timedifference},
+          {@link langSwitcher langSwitcher},
+          {@link login login},
+          {@link logout logout},
+          {@link scrollAfterFocus scrollAfterFocus},
+          {@link datePickershFilters shFilters},
+          {@link shMenu shMenu},
+          {@link shNotifications shNotifications},
+          {@link smallShareItem smallShareItem},
+          {@link onScrollBottom onScrollBottom},
+          {@link onContainerScroll onContainerScroll},
+          {@link swipeDown swipeDown},
+          {@link tap tap},
+          {@link verticallyPositioned verticallyPositioned},
+          {@link verticallyPositionedNotification verticallyPositionedNotification},
+      </p>
+    </td>
+  </tr>
+ <tr>
+    <td>Cloud</td>
+    <td>
+      <p>
+        Share cloud functions:
+      </p>
+      <p>
+          {@link ExpressApp ExpressApp},
+          {@link Cloud#userAfterSave Cloud#userAfterSave},
+          {@link Cloud#returnShare Cloud#returnShare},
+          {@link Cloud#getCommonShares Cloud#getCommonShares},
+          {@link Cloud#getFriends Cloud#getFriends},
+          {@link Cloud#onShareCreated Cloud#onShareCreated},
+          {@link Cloud#onShareConfirmed Cloud#onShareConfirmed},
+          {@link Cloud#onShareReturnedRequest Cloud#onShareReturnedRequest},
+          {@link Cloud#onShareReturned Cloud#onShareReturned},
+          {@link Cloud#beforeNotificationSave Cloud#beforeNotificationSave},
+          {@link Cloud#beforeNotificationSave Cloud#beforeNotificationSave},
+          {@link Cloud#beforeNotificationSave Cloud#beforeNotificationSave}
+      </p>
+    </td>
+  </tr>
+ 
+</table>

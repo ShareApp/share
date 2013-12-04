@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name fbProfilePicture
+ *
+ * @description
  * Shows Image with User's Facebook Profile picture.
  */
 angular.module('shareApp')

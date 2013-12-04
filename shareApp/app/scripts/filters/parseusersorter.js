@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc filter
+ * @name parseusersorter
+ *
+ * @description
  * Filtering can be performed by three parameters: frequent, alphabetically and recent
  */
 angular.module('shareApp')

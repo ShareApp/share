@@ -3,6 +3,14 @@
  * (c) 2013 HiddenData & VorskiImagineering http://share.url
  * License: MIT
  */
+
+/**
+ * @ngdoc directive
+ * @name tap
+ *
+ * @description
+ * Tap event handler via Hammer.js
+ */
 angular.module('shareApp')
   .directive('tap', ['$parse', function ($parse) {
     return function (scope, elm, attr) {
@@ -18,6 +26,14 @@ angular.module('shareApp')
       }
     };
   }]);
+
+/**
+ * @ngdoc directive
+ * @name swipeDown
+ *
+ * @description
+ * swipeDown event handler via Hammer.js
+ */
 angular.module('shareApp')
   .directive('swipeDown', ['$parse', function ($parse) {
     return function (scope, elm, attr) {
@@ -34,6 +50,13 @@ angular.module('shareApp')
     };
   }]);
 
+/**
+ * @ngdoc directive
+ * @name onScrollBottom
+ *
+ * @description
+ * Call function on scroll bottom.
+ */
 angular.module('shareApp')
   .directive('onScrollBottom', ['$parse', function ($parse) {
     return function (scope, elm, attr) {
@@ -59,6 +82,13 @@ angular.module('shareApp')
   }]);
 
 
+/**
+ * @ngdoc directive
+ * @name onContainerScroll
+ *
+ * @description
+ * Call function on scroll bottom element with id 'container'.
+ */
 angular.module('shareApp')
   .directive('onContainerScroll', ['$parse', function ($parse) {
     return function (scope, elm, attr) {

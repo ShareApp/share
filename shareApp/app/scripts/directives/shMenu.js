@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name shMenu
+ *
+ * @description
  * Creates widget with sliding menu using snap.js lib.
  */
 angular.module('shareApp')

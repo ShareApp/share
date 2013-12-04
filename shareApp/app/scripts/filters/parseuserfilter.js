@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc filter
+ * @name parseuserfilter
+ *
+ * @description
  * Angular filter didn't manage objects' attributes, so we need custom filter to query users.
  */
 angular.module('shareApp')

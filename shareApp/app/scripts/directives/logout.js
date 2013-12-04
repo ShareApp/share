@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name logout
+ *
+ * @description
  * Creates widget for logout action.
  */
 var logout = angular.module('shareApp')

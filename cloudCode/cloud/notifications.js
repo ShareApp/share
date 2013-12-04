@@ -8,10 +8,15 @@
 var globals = require('cloud/globals').globals;
 
 /**
+ * @ngdoc method
+ * @name Cloud#onShareCreated
+ * @methodOf Cloud
+ *
+ * @description
  * Creates single notification for user who received shared item.
  * It's something like reminder about not confirmed incoming share..
- * @param sharedItem
- * @param saveFun generic method to save notification and return response.
+ * @param {sharedItem} sharedItem sharedItem
+ * @param {function} saveFun generic method to save notification and return response.
  */
 var onShareCreated = function (sharedItem, saveFun) {
   if (sharedItem.get('state') !== globals.SHARE_STATE_ENUM.CREATED) {
@@ -28,10 +33,15 @@ var onShareCreated = function (sharedItem, saveFun) {
 };
 
 /**
+ * @ngdoc method
+ * @name Cloud#onShareConfirmed
+ * @methodOf Cloud
+ *
+ * @description
  * Creates single notification for user who sent shared item.
  * It's information that recipient has confirmed share or add share.
- * @param sharedItem
- * @param saveFun generic method to save notification and return response.
+ * @param {sharedItem} sharedItem sharedItem
+ * @param {function} saveFun generic method to save notification and return response.
  */
 var onShareConfirmed = function (sharedItem, saveFun) {
   if (sharedItem.get('state') !== globals.SHARE_STATE_ENUM.CONFIRMED) {
@@ -48,10 +58,15 @@ var onShareConfirmed = function (sharedItem, saveFun) {
 };
 
 /**
+ * @ngdoc method
+ * @name Cloud#onShareReturnedRequest
+ * @methodOf Cloud
+ *
+ * @description
  * Creates single notification for user who received shared item.
  * It's something like reminder about not confirmed return.
- * @param sharedItem
- * @param saveFun generic method to save notification and return response.
+ * @param {sharedItem} sharedItem sharedItem
+ * @param {function} saveFun generic method to save notification and return response.
  */
 var onShareReturnedRequest = function (sharedItem, saveFun) {
   if (sharedItem.get('state') !== globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED) {
@@ -67,9 +82,14 @@ var onShareReturnedRequest = function (sharedItem, saveFun) {
 };
 
 /**
+ * @ngdoc method
+ * @name Cloud#onShareReturned
+ * @methodOf Cloud
+ *
+ * @description
  * Creates single notification for user who shared item. Notification inform about returning share.
- * @param sharedItem
- * @param saveFun generic method to save notification and return response.
+ * @param {sharedItem} sharedItem sharedItem
+ * @param {function} saveFun generic method to save notification and return response.
  */
 var onShareReturned = function (sharedItem, saveFun) {
   if (sharedItem.get('state') !== globals.SHARE_STATE_ENUM.RETURNED) {
@@ -85,10 +105,13 @@ var onShareReturned = function (sharedItem, saveFun) {
 };
 
 /**
+ * @ngdoc method
+ * @name Cloud#beforeNotificationSave
+ * @methodOf Cloud
+ *
+ * @description
  * Checks if notification status has changed. If yes that status of related sharedItem is changed.
  * In other words, this method accept or reject action on sharedItem which is either share or return.
- * @param request
- * @param response
  */
 exports.beforeNotificationSave = function (request, response) {
   Parse.Cloud.useMasterKey();
@@ -161,11 +184,15 @@ exports.beforeNotificationSave = function (request, response) {
 
 var Image = require("parse-image");
 
+
 /**
+ * @ngdoc method
+ * @name Cloud#beforeNotificationSave
+ * @methodOf Cloud
+ *
+ * @description
  * Saves previous sharedItem state due to Parse bug that Parse.Object.changedAttributes doesn't work
  * properly in Parse.Cloud.afterSave method. Also this method scales image to 460px of width.
- * @param request
- * @param response
  */
 exports.beforeSharedItemSave = function (request, response) {
   Parse.Cloud.useMasterKey();
@@ -212,10 +239,15 @@ exports.beforeSharedItemSave = function (request, response) {
       });
 };
 
+
 /**
+ * @ngdoc method
+ * @name Cloud#beforeNotificationSave
+ * @methodOf Cloud
+ *
+ * @description
  * Triggers proper function with 'onShare' prefix depends on sharedItem state.
  * This method is invoked after sharedItem save
- * @param request Parse.Cloud.AfterSaveRequest
  */
 exports.afterSharedItemSave = function (request) {
   var newObj = request.object,

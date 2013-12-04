@@ -6,6 +6,10 @@
 'use strict';
 
 /**
+ * @ngdoc directive
+ * @name langSwitcher
+ *
+ * @description
  * Creates switcher for localization files.
  */
 angular.module('shareApp')

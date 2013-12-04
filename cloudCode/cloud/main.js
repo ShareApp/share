@@ -5,38 +5,25 @@
  */
 'use strict';
 
+/**
+ * @ngdoc object
+ * @name Cloud
+ *
+ * @description
+ * List of CloudCode functions.
+ */
 require('cloud/app.js');
 
 var globals = require('cloud/globals').globals;
 
-Parse.Cloud.define("inviteFromFacebook", function (request, response) {
-  var Mandrill = require('mandrill');
-  Mandrill.initialize('6_nCFBTzNCpZxGlWcww5kg');
-  Mandrill.sendEmail({
-    message: {
-      subject: "Share! invitation",
-      html: '<a href="http://onet.pl">Click here</a>Using Cloud Code and Mandrill is great!',
-      from_email: "parse@cloudcode.com",
-      from_name: "Share!",
-      to: [
-        {
-          email: request.params.email,
-          name: request.params.name
-        }
-      ]
-    },
-    async: true
-  }, {
-    success: function (httpResponse) {
-      response.success("Email sent!");
-    },
-    error: function (httpResponse) {
-      response.error("Uh oh, something went wrong");
-    }
-  });
-});
-
-
+/**
+ * @ngdoc method
+ * @name Cloud#userAfterSave
+ * @methodOf Cloud
+ *
+ * @description
+ * It rewrites fake users to real user after his signing up.
+ */
 Parse.Cloud.afterSave("_User", function (request) {
   var facebookId = request.object.get("facebookid"),
     userquery = new Parse.Query('_User'),
@@ -122,6 +109,14 @@ Parse.Cloud.beforeSave("Notification", notifications.beforeNotificationSave);
 Parse.Cloud.afterSave("SharedItem", notifications.afterSharedItemSave);
 Parse.Cloud.beforeSave("SharedItem", notifications.beforeSharedItemSave);
 
+/**
+ * @ngdoc method
+ * @name Cloud#returnShare
+ * @methodOf Cloud
+ *
+ * @description
+ * Performs action of returning share.
+ */
 Parse.Cloud.define("returnShare", function (request, response) {
   console.log("returningshare ");
   var sharedItemId = request.params.id,
@@ -171,7 +166,14 @@ Parse.Cloud.define("returnShare", function (request, response) {
   });
 });
 
-
+/**
+ * @ngdoc method
+ * @name Cloud#getCommonShares
+ * @methodOf Cloud
+ *
+ * @description
+ * Gets Shares current user and friendsIds list in parameters.
+ */
 Parse.Cloud.define("getCommonShares", function (request, response) {
   var friendsQuery = new Parse.Query("_User"),
     sharedItemFromQuery,
@@ -222,6 +224,14 @@ Parse.Cloud.define("getCommonShares", function (request, response) {
   });
 });
 
+/**
+ * @ngdoc method
+ * @name Cloud#getFriends
+ * @methodOf Cloud
+ *
+ * @description
+ * Gets sorted friends list.
+ */
 Parse.Cloud.define("getFriends", function (request, response) {
   var friendsQuery = new Parse.Query("_User"),
     results = [],

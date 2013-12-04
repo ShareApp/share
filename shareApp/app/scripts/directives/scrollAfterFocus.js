@@ -3,6 +3,14 @@
  * (c) 2013 HiddenData & VorskiImagineering http://share.url
  * License: MIT
  */
+
+/**
+ * @ngdoc directive
+ * @name scrollAfterFocus
+ *
+ * @description
+ * Moves to widget when it get focus
+ */
 angular.module('shareApp')
   .directive('scrollAfterFocus', ["$window", function ($window) {
     return {

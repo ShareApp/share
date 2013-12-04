@@ -6,7 +6,7 @@
 'use strict';
 
 /**
- * @ngdoc object
+ * @ngdoc service
  * @name shUser
  *
  * @description
@@ -122,26 +122,6 @@ var shUser = angular.module('shareApp')
         }
       },
       /**
-       * Filters defining visible friends
-       */
-      /*userFriendFilters: {
-       type: {
-       things: false,
-       time: false,
-       promises: false
-       },
-       direction: {
-       to_me: false,
-       from_me: false
-       },
-       state: {
-       returned: false,
-       accepted: false,
-       awaiting: false
-       }
-       },*/
-
-      /**
        * @ngdoc method
        * @name shUser#logIn
        * @methodOf shUser
@@ -220,7 +200,7 @@ var shUser = angular.module('shareApp')
        *
        * @description
        * Fetches SharedItems for contact list.
-       * It's using Cloud Code function {@link Cloud.main#getCommonShares getCommonShares}.
+       * It's using Cloud Code function {@link Cloud#getCommonShares getCommonShares}.
        */
       fetchFriendsShares: function () {
         var friendsIds;
