@@ -4,6 +4,14 @@
  * License: MIT
  */
 'use strict';
+
+/**
+ * @ngdoc object
+ * @name ShNewShareSelectFriendCtrl
+ *
+ * @description
+ * Controller for selecting friend for new Share
+ */
 var ShNewShareSelectFriendCtrl = angular.module('shareApp')
   .controller('ShNewShareSelectFriendCtrl', function ($scope, $state, $location, $translate, shUser, shShare) {
     $scope.user = shUser;
@@ -18,7 +26,6 @@ var ShNewShareSelectFriendCtrl = angular.module('shareApp')
         $scope.share.direction = globals.SHARE_DIRECTION_ENUM.TO_ME;
       }
     };
-
 
     // TODO: probably there is better way to construct path...
     $scope.createShareStep1 = function () {

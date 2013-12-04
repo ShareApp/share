@@ -5,6 +5,13 @@
  */
 'use strict';
 
+/**
+ * @ngdoc object
+ * @name ShNewShareCtrl
+ *
+ * @description
+ * Controller for creating new Share
+ */
 var ShNewShareCtrl = angular.module('shareApp')
   .controller('ShNewShareCtrl', function ($scope, $state, $location, $translate, $rootScope, shUser, shShare, shSync) {
     var setUsers = function () {
@@ -24,9 +31,7 @@ var ShNewShareCtrl = angular.module('shareApp')
     $scope.isOnline = shSync.isOnline;
     setUsers();
 
-    /**
-     * Set targetUser from state (url).
-     */
+    // Set targetUser from state (url).
     $scope.$watch('user.friendsList', function () {
       angular.forEach(shUser.friendsList, function (friend) {
         if (friend.id === $state.params.targetId) {
@@ -36,17 +41,11 @@ var ShNewShareCtrl = angular.module('shareApp')
       });
     });
 
-    /**
-     * Set type and direction for new SharedItem from state (url).
-     * @type {int}
-     */
+    // Set type and direction for new SharedItem from state (url).
     $scope.share.direction = parseInt($state.params.direction, 10);
     $scope.share.type = parseInt($state.params.type, 10);
 
-    /**
-     * Upload photo to Parse
-     * @returns {boolean}
-     */
+    // Upload photo to Parse
     $scope.uploadPhoto = function (files) {
       if (files.length > 0) {
         var file = files[0];

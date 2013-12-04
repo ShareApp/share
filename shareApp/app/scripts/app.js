@@ -11,7 +11,6 @@
 var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui.router', 'ngTouch', 'ngSanitize'])
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
 
-
     $stateProvider
       .state('index', {
         url: '/',
@@ -185,8 +184,6 @@ function initApp() {
       });
     }
   });
-
-
   window.snapper = new Snap({
     element: document.getElementById('container'),
     disable: "right",

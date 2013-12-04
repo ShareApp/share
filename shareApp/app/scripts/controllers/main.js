@@ -5,17 +5,23 @@
  */
 'use strict';
 
+/**
+ * @ngdoc object
+ * @name MainCtrl
+ *
+ * @description
+ * Main Share controller. It makes miscellaneous work.
+ */
+
 var MainCtrl = angular.module('shareApp')
   .controller('MainCtrl', function ($scope, $cookies, $rootScope, $state, $location, $translate, shUser, shShare, shSync) {
 
-    /**
-     * Only logged users can use application.
-     */
+    //Only logged users can use application.
     $scope.$watch(function () {
       return $location.path();
     }, function (newValue) {
       if (!shUser.loggedIn && newValue !== '/login') {
-        safeApply($scope, function(){
+        safeApply($scope, function () {
           $location.path('/login').replace();
         });
       }
@@ -25,10 +31,7 @@ var MainCtrl = angular.module('shareApp')
     $scope.shShare = shShare;
     $scope.shSync = shSync;
 
-    /**
-     * Set available languages.
-     * @type {Array}
-     */
+    // Set available languages.
     $rootScope.languages = [
       {
         name: 'polski',
@@ -53,20 +56,18 @@ var MainCtrl = angular.module('shareApp')
 
     // DEBUG ONLY
     $rootScope.isOnline = $cookies.isOnline !== "false";
-    $rootScope.$watch("isOnline", function(val, prevVal){
+    $rootScope.$watch("isOnline", function (val, prevVal) {
       navigator.amIOnline = val;
       $cookies.isOnline = Boolean(val).toString();
-      if(prevVal !== val && val === true) {
+      if (prevVal !== val && val === true) {
         $rootScope.$broadcast('progressBar.update', true);
-        PPO.synchronize().then(function(){
+        PPO.synchronize().then(function () {
           $rootScope.$broadcast('progressBar.update', false);
         });
       }
     });
 
-    /**
-     * Watch for language changes.
-     */
+    // Watch for language changes.
     $rootScope.$watch('currentLanguage', function (newValue, oldValue) {
       if (newValue !== oldValue) {
         $rootScope.$broadcast('progressBar.update', true);
@@ -76,9 +77,7 @@ var MainCtrl = angular.module('shareApp')
       }
     });
 
-    /**
-     * Progress bar  listener.
-     */
+    // Progress bar listener.
     $scope.$on('progressBar.update', function (event, isLoading) {
       if (isLoading === true) {
         NProgress.start();
@@ -87,9 +86,7 @@ var MainCtrl = angular.module('shareApp')
       }
     });
 
-    /**
-     * Events emit on every location change.
-     */
+    // Events emit on every location change.
     $scope.$on('$locationChangeStart', function () {
       $scope.$broadcast('progressBar.update', true);
     });
@@ -100,13 +97,26 @@ var MainCtrl = angular.module('shareApp')
     $rootScope.activePath = $location.path();
 
     /**
-     * Functions which are taking care about fetching newer and older shares that retrieved previously
+     * @ngdoc method
+     * @name MainCtrl#fetchNewSharesIfTop
+     * @methodOf MainCtrl
+     *
+     * @description
+     * Function which is taking care about fetching newer  shares that retrieved previously
      */
     $scope.fetchNewSharesIfTop = function () {
       if (angular.element("#container").scrollTop() === 0) {
         shUser.fetchUserShares(false, true);
       }
     };
+    /**
+     * @ngdoc method
+     * @name MainCtrl#fetchOlderSharesIfBottom
+     * @methodOf MainCtrl
+     *
+     * @description
+     * Function which is taking care about fetching older shares that retrieved previously
+     */
     $scope.fetchOlderSharesIfBottom = function () {
       var currentScroll = angular.element("#container").scrollTop() + angular.element(window).height(),
         currentHeight = angular.element("#content-container").height() + angular.element("#header-container").height();

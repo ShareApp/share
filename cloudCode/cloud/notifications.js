@@ -1,3 +1,8 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
 'use strict';
 
 var globals = require('cloud/globals').globals;

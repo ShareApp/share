@@ -5,6 +5,9 @@
  */
 'use strict';
 
+/*
+  DEPRECATED
+ */
 var ShSettingsCtrl = angular.module('shareApp')
   .controller('ShSettingsCtrl', function ($scope, $state, $location, $rootScope, $translate, shUser) {
     var saveCallback = function () {

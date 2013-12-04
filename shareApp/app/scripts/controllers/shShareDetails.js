@@ -5,6 +5,13 @@
  */
 'use strict';
 
+/**
+ * @ngdoc object
+ * @name ShShareDetailsCtrl
+ *
+ * @description
+ * Controller for displaying Share details
+ */
 var ShShareDetailsCtrl = angular.module('shareApp')
   .controller('ShShareDetailsCtrl', function ($scope, $state, $location, $window, $translate, shUser, shShare) {
     var sharedItemId = $state.params.sharedItemId,
@@ -17,9 +24,7 @@ var ShShareDetailsCtrl = angular.module('shareApp')
 
     sharedItemQuery.include('fromUser', 'toUser');
 
-    /**
-     * Fetch SharedItem and update scope.
-     */
+    // Fetch SharedItem and update scope.
     sharedItemQuery.get(sharedItemId, {
       success: function (sharedItem) {
         safeApply($scope, function () {
@@ -35,8 +40,13 @@ var ShShareDetailsCtrl = angular.module('shareApp')
     });
 
     /**
+     * @ngdoc method
+     * @name ShShareDetailsCtrl#returnShare
+     * @methodOf ShShareDetailsCtrl
+     *
+     * @description
      * Set SharedItem returned and waiting for party confirmation.
-     * @param sharedItem
+     * @param {sharedItem} sharedItem sharedItem object
      */
     $scope.returnShare = function (sharedItem) {
       if ($window.confirm($translate('Are you sure?')) === true) {
@@ -46,15 +56,18 @@ var ShShareDetailsCtrl = angular.module('shareApp')
     };
 
     /**
+     * @ngdoc method
+     * @name ShShareDetailsCtrl#demandReturnShare
+     * @methodOf ShShareDetailsCtrl
+     *
+     * @description
      * Inform party that you want your SharedItem back.
-     * @param sharedItem
+     * @param {sharedItem} sharedItem sharedItem object
      */
     $scope.demandReturnShare = function (sharedItem) {
       shShare.demandReturnShare(sharedItem);
       $window.alert($translate("You've just asked for a return."));
     };
-
-
   });
 
 ShShareDetailsCtrl.$inject = ['$scope', '$state', '$location', '$window', '$translate', 'shUser', 'shShare'];

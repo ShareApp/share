@@ -1,3 +1,8 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
 (function (root) {
   root.PPO = root.PPO || {};
   root.PPO.VERSION = "js0.0.1";

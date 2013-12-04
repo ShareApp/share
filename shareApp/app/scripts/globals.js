@@ -1,3 +1,8 @@
+/**
+ * @license Share❣ v0.0.1
+ * (c) 2013 HiddenData & VorskiImagineering http://share.url
+ * License: MIT
+ */
 var globals = {
   SHARE_STATE_ENUM: {
     CREATED: 0,
