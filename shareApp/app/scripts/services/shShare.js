@@ -17,8 +17,9 @@ angular.module('shareApp')
   .factory('shShare', function shShare($location, $window, $rootScope, shUser) {
     var getToday = function () {
       var now = new Date(),
-        month = now.getMonth() >= 9 ? (now.getMonth() + 1) : "0" + (now.getMonth() + 1);
-      return now.getFullYear() + '-' + month + '-' + now.getDate();
+        month = now.getMonth() >= 9 ? (now.getMonth() + 1) : "0" + (now.getMonth() + 1),
+        day = now.getDate() > 9 ? now.getDate() : "0" + now.getDate();
+      return now.getFullYear() + '-' + month + '-' + day;
     };
     var myShare = {
       currentUser: shUser.currentUser,
@@ -272,23 +273,23 @@ angular.module('shareApp')
       getStateDisplay: function (state) {
         var msg;
         switch (state) {
-          case globals.SHARE_STATE_ENUM.CREATED:
-            msg = "Created";
-            break;
-          case globals.SHARE_STATE_ENUM.CONFIRMED:
-            msg = "Confirmed";
-            break;
-          case globals.SHARE_STATE_ENUM.RETURNED:
-            msg = "Returned";
-          case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
-            msg = "Returned but not confirmed";
-            break;
-          case globals.SHARE_STATE_ENUM.REJECTED:
-            msg = "Rejected";
-            break;
-          default:
-            msg = state + "aaa";
-            break;
+        case globals.SHARE_STATE_ENUM.CREATED:
+          msg = "Created";
+          break;
+        case globals.SHARE_STATE_ENUM.CONFIRMED:
+          msg = "Confirmed";
+          break;
+        case globals.SHARE_STATE_ENUM.RETURNED:
+          msg = "Returned";
+        case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
+          msg = "Returned but not confirmed";
+          break;
+        case globals.SHARE_STATE_ENUM.REJECTED:
+          msg = "Rejected";
+          break;
+        default:
+          msg = state + "aaa";
+          break;
         }
         return msg;
       },
@@ -305,15 +306,15 @@ angular.module('shareApp')
       getTypeDisplay: function (type) {
         var msg;
         switch (type) {
-          case globals.SHARE_TYPE_ENUM.TIME:
-            msg = "time";
-            break;
-          case globals.SHARE_TYPE_ENUM.THING:
-            msg = "thing";
-            break;
-          case globals.SHARE_TYPE_ENUM.PROMISE:
-            msg = "promise";
-            break;
+        case globals.SHARE_TYPE_ENUM.TIME:
+          msg = "time";
+          break;
+        case globals.SHARE_TYPE_ENUM.THING:
+          msg = "thing";
+          break;
+        case globals.SHARE_TYPE_ENUM.PROMISE:
+          msg = "promise";
+          break;
         }
         return msg;
       },
