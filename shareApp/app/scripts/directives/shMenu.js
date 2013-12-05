@@ -53,6 +53,7 @@ angular.module('shareApp')
         });
         scope.menuToggle = function () {
           console.log("menu toggling");
+          console.log(window.snapper.state().state);
           if (window.snapper.state().state === "closed") {
             scope.menuOpen();
           } else {

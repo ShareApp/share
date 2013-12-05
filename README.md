@@ -29,7 +29,7 @@ parse new cloudCode
 ```
 1. Create ```parse_app_name.txt``` file in root directory and put there Parse App name
 1. Move ```settings/settings_example.js``` to ```settings/settings.js``` and edit it.
-1. Ensure that ```cloudCode/cloud/settings.js``` is symbolic link to ```settings/settings.js```.
+1. Ensure that ```cloudCode/cloud/settings.js``` and ```shareApp/settings.js``` is symbolic link to ```settings/settings.js```.
 1. Add ```127.0.0.1       share.test``` to your ```/etc/hosts``` file. This is because Facebook API needs domain to work.
 
 

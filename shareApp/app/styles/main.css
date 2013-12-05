@@ -1,5 +1,5 @@
 /* line 298, icons/*.png */
-.icons-sprite, #main-menu-container #main-menu nav ul li #lang-switcher button, #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd), #main-menu-container #main-menu nav ul li #lang-switcher button.active, #header-container #header #menu-btn .img, #header-container #header #logo-container #logo, #header-container #header #logo-container #notification-btn, #header-container #header #contact-list-btn .img, #header-container #header #contact-list-exit-btn .img, #filters-container #filters-btn .magnifying-glass-ico, #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn, #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn, #friend-select .inner .header .share-direction.right, #friend-select .inner .header .share-direction.left, #friend-select .inner .header .search-container .ico, .small-share-item-container.promise-type .type-ico-container, .small-share-item-container.thing-type .type-ico-container, .small-share-item-container.time-type .type-ico-container, .share-item.promise-type .type-ico-container, .share-item.thing-type .type-ico-container, .share-item.time-type .type-ico-container, .share-item.confirmed-state .state-ico-container, .share-item.rejected-state .state-ico-container, .share-item.created-state .state-ico-container, .share-item.returned-but-not-confirmed-state .state-ico-container, .share-item.returned-state .state-ico-container, .share-item .content .time .ico, .toolbar .btn.photo .icon, .toolbar .btn.txt .icon, .toolbar .btn.search .icon, .toolbar .btn.close .icon, .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon, .new-share-container .new-share, .new-share-container .new-share-time, .new-share-container .new-share-thing, .new-share-container .new-share-promise {
+.icons-sprite, #main-menu-container #main-menu nav ul li #lang-switcher button, #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd), #main-menu-container #main-menu nav ul li #lang-switcher button.active, #header-container #header #menu-btn .img, #header-container #header #logo-container #logo, #header-container #header #logo-container #notification-btn, #header-container #header #contact-list-btn .img, #header-container #header #contact-list-exit-btn .img, #filters-container #filters-btn .magnifying-glass-ico, #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn, #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn, #friend-select .inner .header .share-direction.right, #friend-select .inner .header .share-direction.left, #friend-select .inner .header .search-container .ico, .small-share-item-container.promise-type .type-ico-container, .small-share-item-container.thing-type .type-ico-container, .small-share-item-container.time-type .type-ico-container, .share-item.promise-type .type-ico-container, .share-item.thing-type .type-ico-container, .share-item.time-type .type-ico-container, .share-item.confirmed-state .state-ico-container, .share-item.rejected-state .state-ico-container, .share-item.created-state .state-ico-container, .share-item.returned-but-not-confirmed-state .state-ico-container, .share-item.returned-state .state-ico-container, .share-item .content .time .ico, .toolbar .btn.photo .icon, .toolbar .btn.txt .icon, .toolbar .btn.search .icon, .toolbar .btn.close .icon, .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon, .new-share-container .new-share, .new-share-container .new-share-thing, .new-share-container .new-share-time, .new-share-container .new-share-promise {
   background: url('../img/icons-s9f648458d9.png') no-repeat;
 }
 
@@ -1972,16 +1972,16 @@ body {
   border-radius: 50%;
 }
 /* line 1672, main.scss */
-.new-share-container .new-share-time {
+.new-share-container .new-share-thing {
   bottom: 95px;
   left: 0;
-  background-position: 0 0;
+  background-position: 0 -73px;
 }
 /* line 1678, main.scss */
-.new-share-container .new-share-thing {
+.new-share-container .new-share-time {
   bottom: 80px;
   left: 85px;
-  background-position: 0 -73px;
+  background-position: 0 0;
 }
 /* line 1684, main.scss */
 .new-share-container .new-share-promise {

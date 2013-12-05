@@ -52,14 +52,21 @@ var FriendDetailsCtrl = angular.module('shareApp')
         return;
       }
       $rootScope.$broadcast('progressBar.update', true);
-      if ($scope.filterShares === "all") {
+
+      // specific case when we are visiting own profile paeg
+      if($scope.friend.id === shUser.currentUser.id) {
         sharedItemFromQuery.equalTo('fromUser', $scope.friend);
         sharedItemToQuery.equalTo('toUser', $scope.friend);
       } else {
-        sharedItemFromQuery.equalTo('fromUser', $scope.friend);
-        sharedItemFromQuery.equalTo('toUser', shUser.currentUser);
-        sharedItemToQuery.equalTo('toUser', $scope.friend);
-        sharedItemToQuery.equalTo('fromUser', shUser.currentUser);
+        if ($scope.filterShares === "all") {
+          sharedItemFromQuery.equalTo('fromUser', $scope.friend);
+          sharedItemToQuery.equalTo('toUser', $scope.friend);
+        } else {
+          sharedItemFromQuery.equalTo('fromUser', $scope.friend);
+          sharedItemFromQuery.equalTo('toUser', shUser.currentUser);
+          sharedItemToQuery.equalTo('toUser', $scope.friend);
+          sharedItemToQuery.equalTo('fromUser', shUser.currentUser);
+        }
       }
 
       query = (PPO.getQueryClass()).or(sharedItemFromQuery, sharedItemToQuery);

@@ -67,4 +67,9 @@ app.get('/share.appcache', function (req, res) {
   });
 });
 
+// redirect for /sharedItem/12313 url. Facebook needs it to connect comments.
+app.get('/sharedItem/:id', function (req, res) {
+  res.redirect(301, "/#" + req.path);
+});
+
 app.listen();

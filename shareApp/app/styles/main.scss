@@ -1669,16 +1669,16 @@ body {
     border-radius: 50%;
   }
 
-  .new-share-time {
+  .new-share-thing {
     bottom: 95px;
     left: 0;
-    @include icons-sprite(time-ico);
+    @include icons-sprite(thing-ico);
   }
 
-  .new-share-thing {
+  .new-share-time {
     bottom: 80px;
     left: 85px;
-    @include icons-sprite(thing-ico);
+    @include icons-sprite(time-ico);
   }
 
   .new-share-promise {
