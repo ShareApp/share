@@ -1,6 +1,13 @@
-define(function (require, exports, module) {
+function settings(_exports) {
+  exports = _exports || exports;
   exports.ParseApplicationId = "REPLACE";
   exports.ParsejavaScriptKey = "REPLACE";
-  // FBappId for share.test domain
   exports.FBappId = "REPLACE";
-});
+}
+if (typeof define === 'undefined') {
+  settings();
+} else {
+  define(function (require, exports, module) {
+    settings(exports);
+  });
+}

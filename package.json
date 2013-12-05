@@ -28,8 +28,6 @@
     "connect-livereload": "~0.2.0",
     "grunt-google-cdn": "~0.2.0",
     "grunt-ngmin": "~0.0.2",
-    "docular": "git+https://github.com/gitsome/docular.git",
-    "grunt-docular": "git+https://github.com/gitsome/grunt-docular.git",
     "grunt-ngdocs": "~0.1.7"
   },
   "engines": {

@@ -19,16 +19,17 @@ Technically speaking, it is web application created using Angular JS and Parse.c
 1. 
 ```cd share```
 1. 
-```npm install```
+```npm install --dev```
 1. 
 ```bower install```
 1. Read ```https://parse.com/docs/cloud_code_guide#cloud_code``` and install Parse Command Line Tool
 1. Set up new Parse App
 ```
-cd cloudCode;  parse new MyShareApp
+parse new cloudCode
 ```
 1. Create ```parse_app_name.txt``` file in root directory and put there Parse App name
 1. Move ```settings/settings_example.js``` to ```settings/settings.js``` and edit it.
+1. Ensure that ```cloudCode/cloud/settings.js``` is symbolic link to ```settings/settings.js```.
 1. Add ```127.0.0.1       share.test``` to your ```/etc/hosts``` file. This is because Facebook API needs domain to work.
 
 

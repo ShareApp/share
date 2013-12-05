@@ -50,6 +50,22 @@ angular.module('shareApp')
     };
   }]);
 
+angular.module('shareApp')
+  .directive('onContainerSwipeDown', ['$parse', function ($parse) {
+    return function (scope, elm, attr) {
+      if (attr['onContainerSwipeDown'].length > 0) {
+        var fn = $parse(attr['onContainerSwipeDown']),
+          handler = function (e) {
+            safeApply(scope, function () {
+              fn(scope, {$event: e});
+            });
+            return false;
+          };
+        angular.element("#container").hammer().on('swipedown', handler);
+      }
+    };
+  }]);
+
 /**
  * @ngdoc directive
  * @name onScrollBottom

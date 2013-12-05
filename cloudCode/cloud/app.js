@@ -20,11 +20,10 @@ app.use(express.cookieParser('SECRET 12345'));
 app.use(express.cookieSession());
 app.use(express.bodyParser());
 var Buffer = require('buffer').Buffer;
-var settings = require('settings/settings');
+var settings = require('cloud/settings.js');
 
 var parseExpressCookieSession = require('parse-express-cookie-session');
 app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
-
 
 /**
  * @ngdoc method
