@@ -20,9 +20,10 @@ angular.module('shareApp')
       scope: {
         share: "&share"
       },
-      controller: ['$scope', '$element', '$attrs', '$location', 'shShare',
-        function ($scope, $element, $attrs, $location, shShare) {
+      controller: ['$scope', '$element', '$attrs', '$location', 'shShare', 'shUser',
+        function ($scope, $element, $attrs, $location, shShare, shUser) {
           $scope.shShare = shShare;
+          $scope.shUser = shUser;
         }]
     };
   });

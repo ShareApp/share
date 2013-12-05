@@ -1,5 +1,5 @@
 <div class="small-share-item-container {{ shShare.getTypeDisplay(share().get('type')) }}-type">
-    <div class="type-ico-container" ng-class="{true:'right', false:'left'}[share().get('toUser').id == user.currentUser.id]">
+    <div class="type-ico-container" ng-class="{true:'right', false:'left'}[share().get('toUser').id == shUser.currentUser.id]">
         <span></span>
     </div>
     <a class="small-share-item img-container" href="#/sharedItem/{{ share().id }}">
@@ -10,7 +10,7 @@
             </span>
         </span>
     </a>
-    <div ng-show="share().get('amount') > 1"class="item-counter right" ng-class="{true:'right', false:'left'}[share().get('toUser').id == user.currentUser.id]">
+    <div ng-show="share().get('amount') > 1"class="item-counter right">
         <span>{{ share().get('amount') | shortVerboseNumber }}</span>
     </div>
 </div>
