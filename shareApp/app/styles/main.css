@@ -16,7 +16,7 @@
 }
 
 /* base site */
-/* line 123, main.scss */
+/* line 119, main.scss */
 body {
   font-family: 'Neucha', cursive;
   font-size: 10px;
@@ -25,20 +25,20 @@ body {
 }
 
 @media (max-width: 460px) {
-  /* line 131, main.scss */
+  /* line 127, main.scss */
   body {
     font-size: 9px;
     line-height: 14px;
   }
 }
 @media (max-width: 340px) {
-  /* line 138, main.scss */
+  /* line 134, main.scss */
   body {
     font-size: 8px;
     line-height: 12px;
   }
 }
-/* line 144, main.scss */
+/* line 140, main.scss */
 #main-menu-container {
   position: absolute;
   top: 0;
@@ -48,7 +48,7 @@ body {
   width: auto;
   height: auto;
 }
-/* line 152, main.scss */
+/* line 148, main.scss */
 #main-menu-container #main-menu {
   position: absolute;
   top: 0;
@@ -68,25 +68,25 @@ body {
   left: 0;
   z-index: 1;
 }
-/* line 171, main.scss */
+/* line 167, main.scss */
 #main-menu-container #main-menu.closed {
   display: none;
 }
-/* line 174, main.scss */
+/* line 170, main.scss */
 #main-menu-container #main-menu nav {
   height: 100%;
 }
-/* line 176, main.scss */
+/* line 172, main.scss */
 #main-menu-container #main-menu nav ul {
   list-style: none;
   padding: 15px 0;
   margin: 0;
 }
-/* line 180, main.scss */
+/* line 176, main.scss */
 #main-menu-container #main-menu nav ul li {
   white-space: nowrap;
 }
-/* line 182, main.scss */
+/* line 178, main.scss */
 #main-menu-container #main-menu nav ul li a {
   color: white;
   font-size: 2.6em;
@@ -95,7 +95,7 @@ body {
   height: 45px;
   display: inline-block;
 }
-/* line 189, main.scss */
+/* line 185, main.scss */
 #main-menu-container #main-menu nav ul li a .text {
   padding-left: 10px;
   font-family: 'Shadows Into Light Two', cursive;
@@ -107,7 +107,7 @@ body {
 #main-menu-container #main-menu nav ul li a .menu-sprite, #main-menu-container #main-menu nav ul li a i.new-share-ico, #main-menu-container #main-menu nav ul li a i.contact-list-ico, #main-menu-container #main-menu nav ul li a i.home-ico, #main-menu-container #main-menu nav ul li a i.FB-ico, #main-menu-container #main-menu nav ul li a i.flag-ico, #main-menu-container #main-menu nav ul li a i.logout-ico, #main-menu-container #main-menu nav ul li a i.exit-ico {
   background: url('../img/menu-s6f15ff3e7e.png') no-repeat;
 }
-/* line 197, main.scss */
+/* line 193, main.scss */
 #main-menu-container #main-menu nav ul li a i {
   vertical-align: middle;
   margin-left: 20px;
@@ -115,89 +115,89 @@ body {
   width: 60px;
   display: inline-block;
 }
-/* line 203, main.scss */
+/* line 199, main.scss */
 #main-menu-container #main-menu nav ul li a i.new-share-ico {
   background-position: 0 -431px;
 }
-/* line 206, main.scss */
+/* line 202, main.scss */
 #main-menu-container #main-menu nav ul li a i.contact-list-ico {
   background-position: 0 -159px;
 }
-/* line 209, main.scss */
+/* line 205, main.scss */
 #main-menu-container #main-menu nav ul li a i.home-ico {
   background-position: 0 0;
 }
-/* line 212, main.scss */
+/* line 208, main.scss */
 #main-menu-container #main-menu nav ul li a i.FB-ico {
   background-position: 0 -45px;
 }
-/* line 215, main.scss */
+/* line 211, main.scss */
 #main-menu-container #main-menu nav ul li a i.flag-ico {
   background-position: 0 -341px;
 }
-/* line 218, main.scss */
+/* line 214, main.scss */
 #main-menu-container #main-menu nav ul li a i.logout-ico {
   background-position: 0 -296px;
 }
-/* line 221, main.scss */
+/* line 217, main.scss */
 #main-menu-container #main-menu nav ul li a i.exit-ico {
   background-position: 0 -386px;
 }
 @media (max-width: 460px), (max-height: 700px) {
-  /* line 182, main.scss */
+  /* line 178, main.scss */
   #main-menu-container #main-menu nav ul li a {
     height: 30px;
     margin-top: -10px;
     margin-bottom: 5px;
   }
-  /* line 229, main.scss */
+  /* line 225, main.scss */
   #main-menu-container #main-menu nav ul li a .text {
     padding-left: 0;
     height: 22px;
   }
-  /* line 233, main.scss */
+  /* line 229, main.scss */
   #main-menu-container #main-menu nav ul li a i {
     height: 22px;
     width: 30px;
     margin-left: 10px;
   }
-  /* line 237, main.scss */
+  /* line 233, main.scss */
   #main-menu-container #main-menu nav ul li a i.new-share-ico {
     background-position: 0 -250px;
   }
-  /* line 240, main.scss */
+  /* line 236, main.scss */
   #main-menu-container #main-menu nav ul li a i.contact-list-ico {
     background-position: 0 -90px;
   }
-  /* line 243, main.scss */
+  /* line 239, main.scss */
   #main-menu-container #main-menu nav ul li a i.home-ico {
     background-position: 0 -204px;
   }
-  /* line 246, main.scss */
+  /* line 242, main.scss */
   #main-menu-container #main-menu nav ul li a i.FB-ico {
     background-position: 0 -273px;
   }
-  /* line 249, main.scss */
+  /* line 245, main.scss */
   #main-menu-container #main-menu nav ul li a i.flag-ico {
     background-position: 0 -136px;
   }
-  /* line 252, main.scss */
+  /* line 248, main.scss */
   #main-menu-container #main-menu nav ul li a i.logout-ico {
     background-position: 0 -113px;
   }
-  /* line 255, main.scss */
+  /* line 251, main.scss */
   #main-menu-container #main-menu nav ul li a i.exit-ico {
     background-position: 0 -227px;
   }
 }
-/* line 262, main.scss */
+/* line 258, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher {
   display: inline-block;
   vertical-align: top;
   margin-top: 5px;
   margin-right: 5px;
 }
-/* line 267, main.scss */
+/* line 263, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button {
   padding-top: 6px;
   margin-left: 15px;
@@ -208,22 +208,22 @@ body {
   text-transform: uppercase;
   color: white;
 }
-/* line 277, main.scss */
+/* line 273, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
   background-position: 0 -1211px;
 }
-/* line 280, main.scss */
+/* line 276, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button.active {
   background-position: 0 -1085px;
   color: #373334;
 }
 @media (max-width: 460px), (max-height: 700px) {
-  /* line 262, main.scss */
+  /* line 258, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher {
     margin-top: -5px;
     margin-bottom: 5px;
   }
-  /* line 288, main.scss */
+  /* line 284, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button {
     margin-left: 5px;
   }
@@ -232,25 +232,25 @@ body {
 #main-menu-container #main-menu nav ul .separators-sprite, #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator, #main-menu-container #main-menu nav #filters-container .filters-inner ul li .separator, #filters-container .filters-inner #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav ul #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #main-menu-container #main-menu nav ul .separator, #main-menu-container #main-menu nav ul #login .inner .separator, #login .inner #main-menu-container #main-menu nav ul .separator, #main-menu-container #main-menu nav ul #login .inner .separator-rev, #login .inner #main-menu-container #main-menu nav ul .separator-rev, #main-menu-container #main-menu nav ul .toolbar .separator, .toolbar #main-menu-container #main-menu nav ul .separator {
   background: url('../img/separators-s68128a025d.png') no-repeat;
 }
-/* line 299, main.scss */
+/* line 295, main.scss */
 #main-menu-container #main-menu nav ul li .separator {
   background-position: 0 -38px;
   height: 30px;
   background-size: 100% 157px;
 }
-/* line 303, main.scss */
+/* line 299, main.scss */
 #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator {
   background-position: 0 -68px;
   height: 30px;
   background-size: 100% 157px;
 }
-/* line 307, main.scss */
+/* line 303, main.scss */
 #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator {
   background-position: 0 -97px;
   height: 30px;
   background-size: 100% 157px;
 }
-/* line 311, main.scss */
+/* line 307, main.scss */
 #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator {
   background-position: 0 -127px;
   height: 30px;
@@ -261,28 +261,28 @@ body {
   #main-menu-container #main-menu nav ul .small-separators-sprite, #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator {
     background: url('../img/small-separators-s8b06f7d3fb.png') no-repeat;
   }
-  /* line 323, main.scss */
+  /* line 319, main.scss */
   #main-menu-container #main-menu nav ul li .separator {
     background-position: 0 -45px;
     width: 100%;
     height: 15px;
     background-size: 100% 70px;
   }
-  /* line 327, main.scss */
+  /* line 323, main.scss */
   #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator {
     background-position: 0 0;
     width: 100%;
     height: 15px;
     background-size: 100% 70px;
   }
-  /* line 331, main.scss */
+  /* line 327, main.scss */
   #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator {
     background-position: 0 -15px;
     width: 100%;
     height: 15px;
     background-size: 100% 70px;
   }
-  /* line 335, main.scss */
+  /* line 331, main.scss */
   #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator {
     background-position: 0 -30px;
     width: 100%;
@@ -290,20 +290,20 @@ body {
     background-size: 100% 70px;
   }
 }
-/* line 341, main.scss */
+/* line 337, main.scss */
 #main-menu-container #main-menu nav ul.pull-bottom {
   position: absolute;
   bottom: 10px;
 }
 
-/* line 350, main.scss */
+/* line 346, main.scss */
 #header-container {
   top: 0;
   left: 0;
   width: 100%;
   min-width: 300px;
 }
-/* line 355, main.scss */
+/* line 351, main.scss */
 #header-container #header {
   top: 0;
   height: 70px;
@@ -313,11 +313,11 @@ body {
   text-align: center;
   box-shadow: #E8DDC4 0px 5px 15px;
 }
-/* line 363, main.scss */
+/* line 359, main.scss */
 #header-container #header > * {
   vertical-align: top;
 }
-/* line 366, main.scss */
+/* line 362, main.scss */
 #header-container #header #menu-btn {
   background-color: transparent;
   border-width: 0;
@@ -326,31 +326,31 @@ body {
   float: left;
 }
 @media (max-width: 460px) {
-  /* line 366, main.scss */
+  /* line 362, main.scss */
   #header-container #header #menu-btn {
     padding: 20px 3px;
   }
 }
-/* line 375, main.scss */
+/* line 371, main.scss */
 #header-container #header #menu-btn .img {
   width: 40px;
   height: 30px;
   display: block;
   background-position: 0 -1378px;
 }
-/* line 382, main.scss */
+/* line 378, main.scss */
 #header-container #header #logo-container {
   width: 175px;
   height: 70px;
   display: block;
   margin: 0 auto;
 }
-/* line 387, main.scss */
+/* line 383, main.scss */
 #header-container #header #logo-container > * {
   vertical-align: top;
   display: inline-block;
 }
-/* line 391, main.scss */
+/* line 387, main.scss */
 #header-container #header #logo-container #logo {
   background-position: 0 -367px;
   width: 132px;
@@ -360,12 +360,12 @@ body {
   overflow: hidden;
   display: inline-block;
 }
-/* line 399, main.scss */
+/* line 395, main.scss */
 #header-container #header #logo-container #logo .text {
   display: block;
   margin-left: -200px;
 }
-/* line 404, main.scss */
+/* line 400, main.scss */
 #header-container #header #logo-container #notifications-mask {
   position: absolute;
   z-index: 99;
@@ -374,7 +374,7 @@ body {
   width: 100%;
   height: 100%;
 }
-/* line 412, main.scss */
+/* line 408, main.scss */
 #header-container #header #logo-container #notification-btn {
   display: inline-block;
   width: 35px;
@@ -388,7 +388,7 @@ body {
   font-weight: bold;
   outline: none;
 }
-/* line 427, main.scss */
+/* line 423, main.scss */
 #header-container #header #contact-list-btn {
   float: right;
   background-color: transparent;
@@ -397,19 +397,19 @@ body {
   margin: 0;
 }
 @media (max-width: 460px) {
-  /* line 427, main.scss */
+  /* line 423, main.scss */
   #header-container #header #contact-list-btn {
     padding: 15px 2px;
   }
 }
-/* line 436, main.scss */
+/* line 432, main.scss */
 #header-container #header #contact-list-btn .img {
   width: 60px;
   height: 42px;
   display: block;
   background-position: 0 -910px;
 }
-/* line 443, main.scss */
+/* line 439, main.scss */
 #header-container #header #contact-list-exit-btn {
   float: right;
   background-color: transparent;
@@ -418,12 +418,12 @@ body {
   margin: 0;
 }
 @media (max-width: 460px) {
-  /* line 443, main.scss */
+  /* line 439, main.scss */
   #header-container #header #contact-list-exit-btn {
     padding: 21px 4px;
   }
 }
-/* line 452, main.scss */
+/* line 448, main.scss */
 #header-container #header #contact-list-exit-btn .img {
   width: 31px;
   height: 30px;
@@ -431,7 +431,7 @@ body {
   background-position: 0 -618px;
 }
 
-/* line 462, main.scss */
+/* line 458, main.scss */
 #container {
   position: absolute;
   top: 0;
@@ -448,7 +448,7 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 477, main.scss */
+/* line 473, main.scss */
 #container #menu-mask {
   position: absolute;
   z-index: 9999;
@@ -458,7 +458,7 @@ body {
   height: 100%;
 }
 
-/* line 488, main.scss */
+/* line 484, main.scss */
 #content-container {
   min-width: 300px;
   background: transparent url("../img/backgrounds/low-yellow.png") repeat top left;
@@ -469,12 +469,12 @@ body {
   padding-top: 5px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 488, main.scss */
+  /* line 484, main.scss */
   #content-container {
     background-image: url("../img/backgrounds/high-yellow.png");
   }
 }
-/* line 500, main.scss */
+/* line 496, main.scss */
 #content-container #content {
   position: relative;
   left: 0;
@@ -484,11 +484,11 @@ body {
 
 /* end base site */
 /* timeline */
-/* line 514, main.scss */
+/* line 510, main.scss */
 #filters-container {
   margin: 15px 20px;
 }
-/* line 516, main.scss */
+/* line 512, main.scss */
 #filters-container #filters-mask {
   position: fixed;
   z-index: 99;
@@ -498,7 +498,7 @@ body {
   height: 200%;
   background-color: rgba(0, 0, 0, 0.75);
 }
-/* line 525, main.scss */
+/* line 521, main.scss */
 #filters-container .filters-inner {
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
   position: absolute;
@@ -510,16 +510,16 @@ body {
   height: 720px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 525, main.scss */
+  /* line 521, main.scss */
   #filters-container .filters-inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 539, main.scss */
+/* line 535, main.scss */
 #filters-container .filters-inner.active {
   display: block;
 }
-/* line 542, main.scss */
+/* line 538, main.scss */
 #filters-container .filters-inner ul {
   list-style: none;
   margin: 5px 10px;
@@ -529,19 +529,19 @@ body {
 #filters-container .filters-inner ul .filters-sprite, #filters-container .filters-inner ul li label .checkbox, #filters-container .filters-inner ul li input[type=checkbox]:checked + label .checkbox, #filters-container .filters-inner ul li input[type='checkbox']:checked .checkbox, #filters-container .filters-inner ul li label[for='things-checkbox'] .ico, #filters-container .filters-inner ul li label[for='time-checkbox'] .ico, #filters-container .filters-inner ul li label[for='promises-checkbox'] .ico, #filters-container .filters-inner ul li label[for='to-me-checkbox'] .ico, #filters-container .filters-inner ul li label[for='from-me-checkbox'] .ico, #filters-container .filters-inner ul li label[for='returned-checkbox'] .ico, #filters-container .filters-inner ul li label[for='accepted-checkbox'] .ico, #filters-container .filters-inner ul li label[for='rejected-checkbox'] .ico, #filters-container .filters-inner ul li label[for='awaiting-checkbox'] .ico, #filters-container .filters-inner ul li label[for='return-awaiting-checkbox'] .ico {
   background: url('../img/filters-s1a5b116cd9.png') no-repeat;
 }
-/* line 549, main.scss */
+/* line 545, main.scss */
 #filters-container .filters-inner ul li input[type='checkbox'] {
   visibility: hidden;
   height: 0;
   width: 0;
 }
-/* line 555, main.scss */
+/* line 551, main.scss */
 #filters-container .filters-inner ul li label .ico {
   height: 52px;
   width: 52px;
   display: inline-block;
 }
-/* line 560, main.scss */
+/* line 556, main.scss */
 #filters-container .filters-inner ul li label .text {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -551,7 +551,7 @@ body {
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 567, main.scss */
+/* line 563, main.scss */
 #filters-container .filters-inner ul li label .checkbox {
   width: 50px;
   height: 42px;
@@ -560,11 +560,11 @@ body {
   margin-right: 10px;
   background-position: 0 -571px;
 }
-/* line 577, main.scss */
+/* line 573, main.scss */
 #filters-container .filters-inner ul li input[type=checkbox]:checked + label .checkbox {
   background-position: 0 -529px;
 }
-/* line 581, main.scss */
+/* line 577, main.scss */
 #filters-container .filters-inner ul li input[type='checkbox']:checked .checkbox {
   background-position: 0 -529px;
 }
@@ -572,54 +572,54 @@ body {
 #filters-container .filters-inner ul li .separators-sprite, #filters-container .filters-inner #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav #filters-container .filters-inner ul li .separator, #filters-container .filters-inner #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator, #main-menu-container #main-menu nav #filters-container .filters-inner ul li:nth-child(2n+2) .separator, #filters-container .filters-inner #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator, #main-menu-container #main-menu nav #filters-container .filters-inner ul li:nth-child(2n+3) .separator, #filters-container .filters-inner #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator, #main-menu-container #main-menu nav #filters-container .filters-inner ul li:nth-child(2n+4) .separator, #filters-container .filters-inner ul li .separator, #filters-container .filters-inner ul li #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #filters-container .filters-inner ul li .separator, #filters-container .filters-inner ul li #login .inner .separator, #login .inner #filters-container .filters-inner ul li .separator, #filters-container .filters-inner ul li #login .inner .separator-rev, #login .inner #filters-container .filters-inner ul li .separator-rev, #filters-container .filters-inner ul li .toolbar .separator, .toolbar #filters-container .filters-inner ul li .separator {
   background: url('../img/separators-s68128a025d.png') no-repeat;
 }
-/* line 586, main.scss */
+/* line 582, main.scss */
 #filters-container .filters-inner ul li .separator {
   width: 100%;
   height: 20px;
   background-size: 100% 157px;
   background-position: 0 0;
 }
-/* line 594, main.scss */
+/* line 590, main.scss */
 #filters-container .filters-inner ul li label[for='things-checkbox'] .ico {
   background-position: 0 -158px;
 }
-/* line 599, main.scss */
+/* line 595, main.scss */
 #filters-container .filters-inner ul li label[for='time-checkbox'] .ico {
   background-position: 0 -104px;
 }
-/* line 604, main.scss */
+/* line 600, main.scss */
 #filters-container .filters-inner ul li label[for='promises-checkbox'] .ico {
   background-position: 0 -426px;
 }
-/* line 609, main.scss */
+/* line 605, main.scss */
 #filters-container .filters-inner ul li label[for='to-me-checkbox'] .ico {
   background-position: 0 -314px;
 }
-/* line 614, main.scss */
+/* line 610, main.scss */
 #filters-container .filters-inner ul li label[for='from-me-checkbox'] .ico {
   background-position: 0 -370px;
 }
-/* line 619, main.scss */
+/* line 615, main.scss */
 #filters-container .filters-inner ul li label[for='returned-checkbox'] .ico {
   background-position: 0 -210px;
 }
-/* line 624, main.scss */
+/* line 620, main.scss */
 #filters-container .filters-inner ul li label[for='accepted-checkbox'] .ico {
   background-position: 0 -262px;
 }
-/* line 629, main.scss */
+/* line 625, main.scss */
 #filters-container .filters-inner ul li label[for='rejected-checkbox'] .ico {
   background-position: 0 -52px;
 }
-/* line 634, main.scss */
+/* line 630, main.scss */
 #filters-container .filters-inner ul li label[for='awaiting-checkbox'] .ico {
   background-position: 0 -477px;
 }
-/* line 639, main.scss */
+/* line 635, main.scss */
 #filters-container .filters-inner ul li label[for='return-awaiting-checkbox'] .ico {
   background-position: 0 0;
 }
-/* line 646, main.scss */
+/* line 642, main.scss */
 #filters-container #filters-btn {
   width: 100%;
   height: 62px;
@@ -629,12 +629,12 @@ body {
   text-align: left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 646, main.scss */
+  /* line 642, main.scss */
   #filters-container #filters-btn {
     background-image: url("../img/high-search.png");
   }
 }
-/* line 657, main.scss */
+/* line 653, main.scss */
 #filters-container #filters-btn .text {
   font-size: 2.4em;
   line-height: 0.8em;
@@ -646,7 +646,7 @@ body {
   font-family: 'Shadows Into Light Two', cursive;
   font-weight: bold;
 }
-/* line 668, main.scss */
+/* line 664, main.scss */
 #filters-container #filters-btn .magnifying-glass-ico {
   background-position: 0 -578px;
   display: block;
@@ -657,7 +657,7 @@ body {
   margin-top: 5px;
 }
 
-/* line 682, main.scss */
+/* line 678, main.scss */
 #shares {
   list-style: none;
   margin: 0;
@@ -665,7 +665,7 @@ body {
   display: block;
 }
 
-/* line 689, main.scss */
+/* line 685, main.scss */
 #no-shares {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -675,43 +675,43 @@ body {
 
 /* end timeline */
 /* friends list */
-/* line 698, main.scss */
+/* line 694, main.scss */
 #friends-list {
   list-style: none;
   margin: 0;
   padding: 0 0 0 30px;
 }
-/* line 702, main.scss */
+/* line 698, main.scss */
 #friends-list > li > a {
   text-decoration: none;
 }
-/* line 706, main.scss */
+/* line 702, main.scss */
 #friends-list > li {
   padding: 10px 0;
 }
-/* line 708, main.scss */
+/* line 704, main.scss */
 #friends-list > li .profile-picture-container {
   width: 65px;
   height: 65px;
 }
-/* line 714, main.scss */
+/* line 710, main.scss */
 #friends-list .name {
   color: black;
   font-size: 2.4em;
   margin-bottom: 2px;
 }
-/* line 719, main.scss */
+/* line 715, main.scss */
 #friends-list .profile-picture-container {
   float: left;
   margin-top: 10px;
 }
-/* line 724, main.scss */
+/* line 720, main.scss */
 #friends-list .friend-shares-list {
   display: block;
   list-style: none;
   padding-left: 80px;
 }
-/* line 728, main.scss */
+/* line 724, main.scss */
 #friends-list .friend-shares-list li {
   vertical-align: top;
   display: inline-block;
@@ -720,7 +720,7 @@ body {
 
 /* end friends list */
 /* notifications */
-/* line 740, main.scss */
+/* line 736, main.scss */
 #notifications-frame-container {
   overflow: hidden;
   top: 60px;
@@ -731,13 +731,13 @@ body {
   z-index: 999;
 }
 @media (min-width: 550px) {
-  /* line 740, main.scss */
+  /* line 736, main.scss */
   #notifications-frame-container {
     width: 500px;
     margin-left: -250px;
   }
 }
-/* line 752, main.scss */
+/* line 748, main.scss */
 #notifications-frame-container:before {
   content: "";
   height: 100px;
@@ -747,12 +747,12 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 752, main.scss */
+  /* line 748, main.scss */
   #notifications-frame-container:before {
     background-image: url("../img/high-notifications-top.png");
   }
 }
-/* line 764, main.scss */
+/* line 760, main.scss */
 #notifications-frame-container:after {
   height: 40px;
   width: 100%;
@@ -762,30 +762,30 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 764, main.scss */
+  /* line 760, main.scss */
   #notifications-frame-container:after {
     background-image: url("../img/high-notifications-bottom.png");
   }
 }
-/* line 776, main.scss */
+/* line 772, main.scss */
 #notifications-frame-container #notifications-frame {
   margin-top: -60px;
   background: transparent url("../img/backgrounds/low-white.png") no-repeat;
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 776, main.scss */
+  /* line 772, main.scss */
   #notifications-frame-container #notifications-frame {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 785, main.scss */
+/* line 781, main.scss */
 #notifications-frame-container #notifications-frame .header {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 788, main.scss */
+/* line 784, main.scss */
 #notifications-frame-container #notifications-frame .description {
   line-height: 1.2em;
   font-size: 1.5em;
@@ -796,7 +796,7 @@ body {
 #notifications-frame-container #notifications-frame .separators-sprite, #notifications-frame-container #notifications-frame #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav ul li #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+2) #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+3) #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+4) #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #filters-container .filters-inner ul li .separator, #filters-container .filters-inner ul li #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #login .inner .separator, #login .inner #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #login .inner .separator-rev, #login .inner #notifications-frame-container #notifications-frame .separator-rev, #notifications-frame-container #notifications-frame .toolbar .separator, .toolbar #notifications-frame-container #notifications-frame .separator {
   background: url('../img/separators-s68128a025d.png') no-repeat;
 }
-/* line 793, main.scss */
+/* line 789, main.scss */
 #notifications-frame-container #notifications-frame .separator {
   width: 100%;
   height: 20px;
@@ -805,7 +805,7 @@ body {
   background-position: 0 0;
 }
 @media (max-width: 460px), (max-height: 700px) {
-  /* line 801, main.scss */
+  /* line 797, main.scss */
   #notifications-frame-container #notifications-frame .separator {
     width: 100%;
     height: 10px;
@@ -817,20 +817,20 @@ body {
     background: url('../img/small-separators-s8b06f7d3fb.png') no-repeat;
   }
 }
-/* line 809, main.scss */
+/* line 805, main.scss */
 #notifications-frame-container #notifications-frame ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 813, main.scss */
+/* line 809, main.scss */
 #notifications-frame-container #notifications-frame ul li.item {
   display: block;
   width: 100%;
   white-space: nowrap;
   position: relative;
 }
-/* line 818, main.scss */
+/* line 814, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .mask {
   display: block;
   width: 100%;
@@ -840,7 +840,7 @@ body {
   left: 0;
   z-index: 1005;
 }
-/* line 828, main.scss */
+/* line 824, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-right,
 #notifications-frame-container #notifications-frame ul li.item .swiped-right + .container {
   -webkit-transform: translate3d(150px, 0, 0);
@@ -849,7 +849,7 @@ body {
   -o-transform: translate3d(150px, 0, 0);
   transform: translate3d(150px, 0, 0);
 }
-/* line 832, main.scss */
+/* line 828, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-left,
 #notifications-frame-container #notifications-frame ul li.item .swiped-left + .container {
   -webkit-transform: translate3d(0, 0, 0);
@@ -858,7 +858,7 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 835, main.scss */
+/* line 831, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container {
   padding: 0 7px;
   -webkit-transition: all 0.1s linear;
@@ -866,88 +866,88 @@ body {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 839, main.scss */
+/* line 835, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions {
   float: left;
   margin-left: -150px;
   width: 150px;
 }
-/* line 843, main.scss */
+/* line 839, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button {
   border-width: 0;
   margin: 25px 10px 0 10px;
 }
-/* line 846, main.scss */
+/* line 842, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
   background-position: 0 -674px;
   width: 44px;
   height: 33px;
 }
-/* line 851, main.scss */
+/* line 847, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
   background-position: 0 -618px;
   width: 31px;
   height: 30px;
 }
-/* line 857, main.scss */
+/* line 853, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions .info {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   margin-top: 25px;
 }
-/* line 862, main.scss */
+/* line 858, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content {
   margin-top: 18px;
   text-align: left;
   min-height: 70px;
 }
-/* line 867, main.scss */
+/* line 863, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .profile-picture-container,
 #notifications-frame-container #notifications-frame ul li.item .container .content .small-share-item {
   border-color: #FFFFFF;
 }
-/* line 870, main.scss */
+/* line 866, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content small-share-item {
   margin-top: -8px;
 }
-/* line 874, main.scss */
+/* line 870, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content small-share-item,
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   display: block;
   float: left;
 }
-/* line 38, main.scss */
+/* line 34, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .friend-name {
   text-decoration: none;
   font-style: normal;
   color: black;
 }
-/* line 44, main.scss */
+/* line 40, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content.promise-type .thing {
   color: #C08FE1;
 }
-/* line 49, main.scss */
+/* line 45, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content.thing-type .thing {
   color: #EB9C75;
 }
-/* line 54, main.scss */
+/* line 50, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content.time-type .thing {
   color: #4FBCA7;
 }
-/* line 58, main.scss */
+/* line 54, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .title {
   word-break: break-all;
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 61, main.scss */
+/* line 57, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .title span, #notifications-frame-container #notifications-frame ul li.item .container .content .title a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 881, main.scss */
+/* line 877, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container {
   word-break: normal;
   white-space: normal;
@@ -956,13 +956,13 @@ body {
   display: inline;
   margin-top: 4px;
 }
-/* line 888, main.scss */
+/* line 884, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 892, main.scss */
+/* line 888, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title > .title-inner {
   display: table-cell;
   vertical-align: middle;
@@ -972,7 +972,7 @@ body {
 
 /* end notifications */
 /* select friend */
-/* line 911, main.scss */
+/* line 907, main.scss */
 #friend-select {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -980,7 +980,7 @@ body {
   padding: 0;
   margin: 40px auto 0 auto;
 }
-/* line 73, main.scss */
+/* line 69, main.scss */
 #friend-select:after {
   height: 85px;
   max-width: 460px;
@@ -991,12 +991,12 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 73, main.scss */
+  /* line 69, main.scss */
   #friend-select:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
-/* line 86, main.scss */
+/* line 82, main.scss */
 #friend-select:before {
   height: 60px;
   max-width: 460px;
@@ -1007,35 +1007,35 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 86, main.scss */
+  /* line 82, main.scss */
   #friend-select:before {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 914, main.scss */
+/* line 910, main.scss */
 #friend-select .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 914, main.scss */
+  /* line 910, main.scss */
   #friend-select .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 916, main.scss */
+/* line 912, main.scss */
 #friend-select .inner input {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   font-size: 2em;
 }
-/* line 921, main.scss */
+/* line 917, main.scss */
 #friend-select .inner .header {
   text-align: center;
   height: 74px;
 }
-/* line 925, main.scss */
+/* line 921, main.scss */
 #friend-select .inner .header .share-direction {
   width: 74px;
   height: 74px;
@@ -1043,22 +1043,22 @@ body {
   padding: 0;
   border-width: 0;
 }
-/* line 926, main.scss */
+/* line 922, main.scss */
 #friend-select .inner .header .share-direction.right {
   background-position: 0 -146px;
 }
-/* line 929, main.scss */
+/* line 925, main.scss */
 #friend-select .inner .header .share-direction.left {
   background-position: 0 -220px;
 }
-/* line 938, main.scss */
+/* line 934, main.scss */
 #friend-select .inner .header .search-container {
   display: block;
   overflow: hidden;
   margin: 0 0 0 3%;
   position: relative;
 }
-/* line 943, main.scss */
+/* line 939, main.scss */
 #friend-select .inner .header .search-container .ico {
   position: absolute;
   left: 4%;
@@ -1069,7 +1069,7 @@ body {
   display: b0lock;
   z-index: 300;
 }
-/* line 953, main.scss */
+/* line 949, main.scss */
 #friend-select .inner .header .search-container input.search {
   width: 70%;
   padding: 0 3% 0 23%;
@@ -1079,7 +1079,7 @@ body {
   background: transparent url("../img/search-friend.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 964, main.scss */
+/* line 960, main.scss */
 #friend-select .inner #friends-sorting {
   position: relative;
   width: 100%;
@@ -1089,7 +1089,7 @@ body {
 #friend-select .inner #friends-sorting .friends-sorting-sprite, #friend-select .inner #friends-sorting .item, #friend-select .inner #friends-sorting .item.active {
   background: url('../img/friends-sorting-s26aa3708f0.png') no-repeat;
 }
-/* line 969, main.scss */
+/* line 965, main.scss */
 #friend-select .inner #friends-sorting .item {
   background-size: 100% 90px;
   background-position: 0 -45px;
@@ -1103,23 +1103,23 @@ body {
   text-align: center;
   display: inline-block;
 }
-/* line 982, main.scss */
+/* line 978, main.scss */
 #friend-select .inner #friends-sorting .item.active {
   color: white;
   background-position: 0 0;
   background-size: 100% 90px;
 }
-/* line 989, main.scss */
+/* line 985, main.scss */
 #friend-select .inner .friend-select-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 993, main.scss */
+/* line 989, main.scss */
 #friend-select .inner .friend-select-list li {
   height: 80px;
 }
-/* line 995, main.scss */
+/* line 991, main.scss */
 #friend-select .inner .friend-select-list li a {
   display: block;
   font-family: 'Shadows Into Light Two', cursive;
@@ -1128,37 +1128,37 @@ body {
   text-decoration: none;
   color: black;
 }
-/* line 1000, main.scss */
+/* line 996, main.scss */
 #friend-select .inner .friend-select-list li a fb-profile-picture {
   float: left;
   margin-right: 12px;
   height: 73px;
 }
-/* line 1005, main.scss */
+/* line 1001, main.scss */
 #friend-select .inner .friend-select-list li a .title-container {
   display: block;
   width: 100%;
 }
-/* line 1008, main.scss */
+/* line 1004, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 1012, main.scss */
+/* line 1008, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper .title {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1019, main.scss */
+/* line 1015, main.scss */
 #friend-select .inner .friend-select-list li a.selected {
   background-color: rgba(100, 0, 100, 0.5);
 }
-/* line 1023, main.scss */
+/* line 1019, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container {
   display: inline-block;
 }
-/* line 1026, main.scss */
+/* line 1022, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container img {
   width: 65px;
   height: 65px;
@@ -1166,11 +1166,11 @@ body {
 
 /* end select friend */
 /* new share */
-/* line 1041, main.scss */
+/* line 1037, main.scss */
 #new-share .content {
   padding: 0 25px;
 }
-/* line 1043, main.scss */
+/* line 1039, main.scss */
 #new-share .content input, #new-share .content textarea, #new-share .content label {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1178,22 +1178,22 @@ body {
   background-color: transparent;
   border-width: 0;
 }
-/* line 1048, main.scss */
+/* line 1044, main.scss */
 #new-share .content label[for=id_amount] {
   float: right;
 }
-/* line 1051, main.scss */
+/* line 1047, main.scss */
 #new-share .content input[name=amount] {
   float: right;
   width: 40px;
   text-align: center;
 }
-/* line 1056, main.scss */
+/* line 1052, main.scss */
 #new-share .content input[name=date] {
   width: 160px;
   float: left;
 }
-/* line 1060, main.scss */
+/* line 1056, main.scss */
 #new-share .content textarea {
   line-height: 1.4em;
   line-height: 1.4em;
@@ -1202,64 +1202,64 @@ body {
   margin: 0;
   resize: vertical;
 }
-/* line 1069, main.scss */
+/* line 1065, main.scss */
 #new-share .toolbar {
   padding: 0 15px 10px 15px;
 }
 
 /* end new share */
 /* share details */
-/* line 1078, main.scss */
+/* line 1074, main.scss */
 #share-details {
   margin-top: 20px;
 }
-/* line 1080, main.scss */
+/* line 1076, main.scss */
 #share-details .content {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
 }
-/* line 1084, main.scss */
+/* line 1080, main.scss */
 #share-details .content .amount-container {
   float: right;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 1089, main.scss */
+/* line 1085, main.scss */
 #share-details .content .amount-container > span {
   border-bottom: 1px solid #DDD9CD;
 }
-/* line 1093, main.scss */
+/* line 1089, main.scss */
 #share-details .content .date-container {
   float: left;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 1100, main.scss */
+/* line 1096, main.scss */
 #share-details .toolbar {
   padding: 0 15px 10px 15px;
 }
-/* line 1103, main.scss */
+/* line 1099, main.scss */
 #share-details .fb-comments {
   text-align: center;
 }
-/* line 1106, main.scss */
+/* line 1102, main.scss */
 #share-details .fb-comments, #share-details .fb-comments span, #share-details .fb-comments.fb_iframe_widget span iframe {
   width: 100% !important;
 }
 
 /* end share details */
 /* friend details */
-/* line 1119, main.scss */
+/* line 1113, main.scss */
 #friend-details #friend-profile {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
   max-width: 460px;
   padding: 0;
 }
-/* line 73, main.scss */
+/* line 69, main.scss */
 #friend-details #friend-profile:after {
   height: 85px;
   max-width: 460px;
@@ -1270,12 +1270,12 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 73, main.scss */
+  /* line 69, main.scss */
   #friend-details #friend-profile:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
-/* line 86, main.scss */
+/* line 82, main.scss */
 #friend-details #friend-profile:before {
   height: 60px;
   max-width: 460px;
@@ -1286,28 +1286,28 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 86, main.scss */
+  /* line 82, main.scss */
   #friend-details #friend-profile:before {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 1121, main.scss */
+/* line 1115, main.scss */
 #friend-details #friend-profile .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1121, main.scss */
+  /* line 1115, main.scss */
   #friend-details #friend-profile .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 1124, main.scss */
+/* line 1118, main.scss */
 #friend-details #friend-profile .profile-picture-container {
   float: left;
   margin-right: 10px;
 }
-/* line 1128, main.scss */
+/* line 1122, main.scss */
 #friend-details #friend-profile .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1315,27 +1315,27 @@ body {
   margin-top: 10px;
   display: inline-block;
 }
-/* line 1133, main.scss */
+/* line 1127, main.scss */
 #friend-details #friend-profile .counter-container {
   color: #959796;
   font-size: 2em;
   margin-top: 5px;
 }
-/* line 1137, main.scss */
+/* line 1131, main.scss */
 #friend-details #friend-profile .counter-container .counter {
   font-size: 1.1em;
 }
 
 /* end friend details */
 /* login */
-/* line 1148, main.scss */
+/* line 1142, main.scss */
 #login {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
   max-width: 460px;
   padding: 0;
 }
-/* line 73, main.scss */
+/* line 69, main.scss */
 #login:after {
   height: 85px;
   max-width: 460px;
@@ -1346,12 +1346,12 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 73, main.scss */
+  /* line 69, main.scss */
   #login:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
-/* line 86, main.scss */
+/* line 82, main.scss */
 #login:before {
   height: 60px;
   max-width: 460px;
@@ -1362,24 +1362,24 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 86, main.scss */
+  /* line 82, main.scss */
   #login:before {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 1150, main.scss */
+/* line 1144, main.scss */
 #login .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
   text-align: center;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1150, main.scss */
+  /* line 1144, main.scss */
   #login .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 1153, main.scss */
+/* line 1147, main.scss */
 #login .inner .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1389,13 +1389,13 @@ body {
   color: #666666;
   font-size: 3.2em;
 }
-/* line 1160, main.scss */
+/* line 1154, main.scss */
 #login .inner .logo {
   display: inline-block;
   margin: 10px auto 30px auto;
   max-width: 90%;
 }
-/* line 1164, main.scss */
+/* line 1158, main.scss */
 #login .inner .logo img {
   width: 100%;
 }
@@ -1403,7 +1403,7 @@ body {
 #login .inner .separators-sprite, #login .inner #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav ul li #login .inner .separator, #login .inner #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+2) #login .inner .separator, #login .inner #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+3) #login .inner .separator, #login .inner #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+4) #login .inner .separator, #login .inner #filters-container .filters-inner ul li .separator, #filters-container .filters-inner ul li #login .inner .separator, #login .inner #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame #login .inner .separator, #login .inner .separator, #login .inner .separator-rev, #login .inner .toolbar .separator, .toolbar #login .inner .separator {
   background: url('../img/separators-s68128a025d.png') no-repeat;
 }
-/* line 1169, main.scss */
+/* line 1163, main.scss */
 #login .inner .separator {
   width: 100%;
   height: 20px;
@@ -1412,7 +1412,7 @@ body {
   margin-bottom: 10px;
   background-position: 0 0;
 }
-/* line 1178, main.scss */
+/* line 1172, main.scss */
 #login .inner .separator-rev {
   width: 100%;
   height: 20px;
@@ -1421,28 +1421,39 @@ body {
   margin-bottom: 10px;
   background-position: 0 -19px;
 }
-/* line 1186, main.scss */
-#login .inner button {
-  background: transparent;
+/* line 1180, main.scss */
+#login .inner button.login-btn {
+  background-image: url("../img/fb-background.jpg");
+  background-repeat: repeat no-repeat;
+  background-size: 6px 100%;
   border-width: 0;
   margin-top: 10px;
   max-width: 80%;
+  margin: 0;
+  padding: 4px 10px 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "lucida grande", tahoma, verdana, arial, sans-serif;
+  color: white;
+  font-size: 20px;
+  line-height: 20px;
+  border-radius: 3px;
 }
-/* line 1191, main.scss */
-#login .inner button img {
-  width: 100%;
+/* line 1194, main.scss */
+#login .inner button.login-btn img {
+  height: 100%;
+  padding-right: 10px;
+  margin-top: -4px;
 }
 
 /* end login */
 /* misc */
-/* line 1202, main.scss */
+/* line 1207, main.scss */
 .profile-picture-container {
   display: inline-block;
   border: 4px solid #F0F2F1;
   border-radius: 45%;
   overflow: hidden;
 }
-/* line 1207, main.scss */
+/* line 1212, main.scss */
 .profile-picture-container img {
   display: block;
   border-radius: 45%;
@@ -1450,21 +1461,21 @@ body {
   height: 65px;
 }
 
-/* line 1215, main.scss */
+/* line 1220, main.scss */
 .small-share-item-container {
   position: relative;
   height: 100px;
   width: 90px;
 }
-/* line 1219, main.scss */
+/* line 1224, main.scss */
 .small-share-item-container .left {
   left: 0px;
 }
-/* line 1222, main.scss */
+/* line 1227, main.scss */
 .small-share-item-container .right {
   left: 55px;
 }
-/* line 1225, main.scss */
+/* line 1230, main.scss */
 .small-share-item-container .item-counter {
   width: 28px;
   height: 10px;
@@ -1482,7 +1493,7 @@ body {
   text-align: center;
   overflow: hidden;
 }
-/* line 1242, main.scss */
+/* line 1247, main.scss */
 .small-share-item-container .type-ico-container {
   width: 39px;
   height: 39px;
@@ -1490,19 +1501,19 @@ body {
   top: -12px;
   z-index: 31;
 }
-/* line 1250, main.scss */
+/* line 1255, main.scss */
 .small-share-item-container.promise-type .type-ico-container {
   background-position: 0 -539px;
 }
-/* line 1255, main.scss */
+/* line 1260, main.scss */
 .small-share-item-container.thing-type .type-ico-container {
   background-position: 0 -501px;
 }
-/* line 1260, main.scss */
+/* line 1265, main.scss */
 .small-share-item-container.time-type .type-ico-container {
   background-position: 0 -463px;
 }
-/* line 1264, main.scss */
+/* line 1269, main.scss */
 .small-share-item-container .small-share-item {
   overflow: hidden;
   display: inline-block;
@@ -1518,14 +1529,14 @@ body {
   margin-top: 8px;
   margin-left: 9px;
 }
-/* line 1279, main.scss */
+/* line 1284, main.scss */
 .small-share-item-container .small-share-item img {
   display: block;
   max-width: 100%;
   margin: 0 auto 0 auto;
   visibility: hidden;
 }
-/* line 1285, main.scss */
+/* line 1290, main.scss */
 .small-share-item-container .small-share-item .text-container {
   width: 56px;
   padding: 5px 7px 3px 7px;
@@ -1533,7 +1544,7 @@ body {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1292, main.scss */
+/* line 1297, main.scss */
 .small-share-item-container .small-share-item .text {
   display: block;
   max-height: 60px;
@@ -1543,12 +1554,12 @@ body {
   word-break: break-word;
 }
 
-/* line 1303, main.scss */
+/* line 1308, main.scss */
 .grayed {
   color: #9D9D9D;
 }
 
-/* line 1307, main.scss */
+/* line 1312, main.scss */
 .share-item {
   margin: 0 auto 20px auto;
   position: relative;
@@ -1556,7 +1567,7 @@ body {
   max-width: 460px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
-/* line 1313, main.scss */
+/* line 1318, main.scss */
 .share-item .type-ico-container {
   width: 73px;
   height: 73px;
@@ -1566,19 +1577,19 @@ body {
   top: -5px;
   z-index: 3;
 }
-/* line 1323, main.scss */
+/* line 1328, main.scss */
 .share-item.promise-type .type-ico-container {
   background-position: 0 -294px;
 }
-/* line 1328, main.scss */
+/* line 1333, main.scss */
 .share-item.thing-type .type-ico-container {
   background-position: 0 -73px;
 }
-/* line 1333, main.scss */
+/* line 1338, main.scss */
 .share-item.time-type .type-ico-container {
   background-position: 0 0;
 }
-/* line 1337, main.scss */
+/* line 1342, main.scss */
 .share-item .state-ico-container {
   width: 26px;
   height: 26px;
@@ -1587,27 +1598,27 @@ body {
   top: -8px;
   z-index: 4;
 }
-/* line 1346, main.scss */
+/* line 1351, main.scss */
 .share-item.confirmed-state .state-ico-container {
   background-position: 0 -858px;
 }
-/* line 1351, main.scss */
+/* line 1356, main.scss */
 .share-item.rejected-state .state-ico-container {
   background-position: 0 -437px;
 }
-/* line 1356, main.scss */
+/* line 1361, main.scss */
 .share-item.created-state .state-ico-container {
   background-position: 0 -884px;
 }
-/* line 1361, main.scss */
+/* line 1366, main.scss */
 .share-item.returned-but-not-confirmed-state .state-ico-container {
   background-position: 0 -411px;
 }
-/* line 1366, main.scss */
+/* line 1371, main.scss */
 .share-item.returned-state .state-ico-container {
   background-position: 0 -648px;
 }
-/* line 1370, main.scss */
+/* line 1375, main.scss */
 .share-item .people-ico-container {
   font-family: 'Shadows Into Light Two', cursive;
   position: absolute;
@@ -1615,7 +1626,7 @@ body {
   text-decoration: none;
   z-index: 10;
 }
-/* line 1376, main.scss */
+/* line 1381, main.scss */
 .share-item .people-ico-container .name {
   color: white;
   font-size: 2.6em;
@@ -1624,17 +1635,17 @@ body {
   vertical-align: top;
   display: inline-block;
 }
-/* line 1385, main.scss */
+/* line 1390, main.scss */
 .share-item .people-ico-container.left {
   top: 40px;
   left: 30px;
 }
-/* line 1389, main.scss */
+/* line 1394, main.scss */
 .share-item .people-ico-container.right {
   top: 40px;
   right: 30px;
 }
-/* line 1394, main.scss */
+/* line 1399, main.scss */
 .share-item .img-container {
   width: 100%;
   min-height: 130px;
@@ -1642,7 +1653,7 @@ body {
   position: relative;
   max-height: 309px;
 }
-/* line 1400, main.scss */
+/* line 1405, main.scss */
 .share-item .img-container .share-img {
   display: block;
   max-width: 100%;
@@ -1650,13 +1661,13 @@ body {
   visibility: hidden;
   z-index: 0;
 }
-/* line 1407, main.scss */
+/* line 1412, main.scss */
 .share-item .img-container .share-placeholder {
   display: block;
   width: 100%;
   height: 130px;
 }
-/* line 1412, main.scss */
+/* line 1417, main.scss */
 .share-item .img-container .share-frame {
   position: absolute;
   top: 0;
@@ -1665,51 +1676,51 @@ body {
   height: 100%;
   z-index: 2;
 }
-/* line 1419, main.scss */
+/* line 1424, main.scss */
 .share-item .img-container .share-frame.gradient {
   background-image: linear-gradient(#000000 30px, transparent 150px);
   background-image: -webkit-linear-gradient(black 30px, transparent 150px);
 }
-/* line 38, main.scss */
+/* line 34, main.scss */
 .share-item .friend-name {
   text-decoration: none;
   font-style: normal;
   color: black;
 }
-/* line 44, main.scss */
+/* line 40, main.scss */
 .share-item.promise-type .thing {
   color: #C08FE1;
 }
-/* line 49, main.scss */
+/* line 45, main.scss */
 .share-item.thing-type .thing {
   color: #EB9C75;
 }
-/* line 54, main.scss */
+/* line 50, main.scss */
 .share-item.time-type .thing {
   color: #4FBCA7;
 }
-/* line 58, main.scss */
+/* line 54, main.scss */
 .share-item .title {
   word-break: break-all;
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 61, main.scss */
+/* line 57, main.scss */
 .share-item .title span, .share-item .title a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 1427, main.scss */
+/* line 1432, main.scss */
 .share-item .content {
   padding: 15px 25px 10px 25px;
   z-index: 9;
 }
-/* line 1430, main.scss */
+/* line 1435, main.scss */
 .share-item .content .time {
   margin-top: 10px;
 }
-/* line 1432, main.scss */
+/* line 1437, main.scss */
 .share-item .content .time .ico {
   background-position: 0 -1333px;
   display: inline-block;
@@ -1717,7 +1728,7 @@ body {
   height: 15px;
   width: 15px;
 }
-/* line 1439, main.scss */
+/* line 1444, main.scss */
 .share-item .content .time .text {
   margin-left: 3px;
   margin-top: 2px;
@@ -1727,13 +1738,13 @@ body {
   display: inline-block;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1307, main.scss */
+  /* line 1312, main.scss */
   .share-item {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
 
-/* line 1456, main.scss */
+/* line 1461, main.scss */
 .share-item:after {
   height: 85px;
   max-width: 460px;
@@ -1744,24 +1755,24 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1456, main.scss */
+  /* line 1461, main.scss */
   .share-item:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
 
-/* line 1470, main.scss */
+/* line 1475, main.scss */
 .toolbar {
   text-align: center;
   padding: 0;
 }
-/* line 1474, main.scss */
+/* line 1479, main.scss */
 .toolbar .btn,
 .toolbar .file-input-container {
   border-width: 0;
   margin: 0;
 }
-/* line 1479, main.scss */
+/* line 1484, main.scss */
 .toolbar .btn {
   height: 55px;
   color: white;
@@ -1771,7 +1782,7 @@ body {
   font-size: 2.4em;
   white-space: nowrap;
 }
-/* line 1485, main.scss */
+/* line 1490, main.scss */
 .toolbar .btn .icon {
   height: 33px;
   width: 47px;
@@ -1780,84 +1791,84 @@ body {
   margin-left: 7px;
   margin-top: 2px;
 }
-/* line 1493, main.scss */
+/* line 1498, main.scss */
 .toolbar .btn .text {
   vertical-align: middle;
   display: inline-block;
   margin: 2px 10px;
 }
-/* line 1499, main.scss */
+/* line 1504, main.scss */
 .toolbar .btn.photo {
   float: left;
   margin-left: 10px;
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1504, main.scss */
+/* line 1509, main.scss */
 .toolbar .btn.photo .icon {
   width: 47px;
   background-position: 0 -1018px;
 }
-/* line 1509, main.scss */
+/* line 1514, main.scss */
 .toolbar .btn.txt {
   float: right;
   margin-right: 10px;
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1514, main.scss */
+/* line 1519, main.scss */
 .toolbar .btn.txt .icon {
   width: 36px;
   background-position: 0 -1116px;
 }
-/* line 1519, main.scss */
+/* line 1524, main.scss */
 .toolbar .btn.search {
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1522, main.scss */
+/* line 1527, main.scss */
 .toolbar .btn.search .icon {
   width: 34px;
   background-position: 0 -1051px;
 }
-/* line 1527, main.scss */
+/* line 1532, main.scss */
 .toolbar .btn.close {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1530, main.scss */
+/* line 1535, main.scss */
 .toolbar .btn.close .icon {
   margin-top: 2px;
   height: 30px;
   width: 31px;
   background-position: 0 -1348px;
 }
-/* line 1537, main.scss */
+/* line 1542, main.scss */
 .toolbar .btn.return {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
 }
-/* line 1540, main.scss */
+/* line 1545, main.scss */
 .toolbar .btn.demand-return {
   background: transparent url("../img/green-btn.png") no-repeat top left;
 }
-/* line 1543, main.scss */
+/* line 1548, main.scss */
 .toolbar .btn.return, .toolbar .btn.demand-return {
   background-size: 100% 100%;
 }
-/* line 1545, main.scss */
+/* line 1550, main.scss */
 .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon {
   margin-top: 2px;
   height: 27px;
   width: 31px;
   background-position: 0 -1151px;
 }
-/* line 1557, main.scss */
+/* line 1562, main.scss */
 .toolbar .file-input-container {
   float: left;
   margin-left: 10px;
   position: relative;
 }
-/* line 1562, main.scss */
+/* line 1567, main.scss */
 .toolbar .file-input-container input {
   opacity: 0;
   width: 130px;
@@ -1867,7 +1878,7 @@ body {
   text-align: right;
   z-index: 2;
 }
-/* line 1571, main.scss */
+/* line 1576, main.scss */
 .toolbar .file-input-container .file-input {
   cursor: pointer;
   position: absolute;
@@ -1881,7 +1892,7 @@ body {
 .toolbar .separators-sprite, .toolbar #main-menu-container #main-menu nav ul li .separator, #main-menu-container #main-menu nav ul li .toolbar .separator, .toolbar #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+2) .toolbar .separator, .toolbar #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+3) .toolbar .separator, .toolbar #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator, #main-menu-container #main-menu nav ul li:nth-child(2n+4) .toolbar .separator, .toolbar #filters-container .filters-inner ul li .separator, #filters-container .filters-inner ul li .toolbar .separator, .toolbar #notifications-frame-container #notifications-frame .separator, #notifications-frame-container #notifications-frame .toolbar .separator, .toolbar #login .inner .separator, #login .inner .toolbar .separator, .toolbar #login .inner .separator-rev, #login .inner .toolbar .separator-rev, .toolbar .separator {
   background: url('../img/separators-s68128a025d.png') no-repeat;
 }
-/* line 1582, main.scss */
+/* line 1587, main.scss */
 .toolbar .separator {
   width: 100%;
   height: 20px;
@@ -1892,18 +1903,18 @@ body {
 
 /* end misc */
 /* I have no idea what is it below */
-/* line 1595, main.scss */
+/* line 1600, main.scss */
 .friends-select {
   height: 150px;
   overflow: scroll;
 }
 
-/* line 1600, main.scss */
+/* line 1605, main.scss */
 .ng-cloak {
   display: none;
 }
 
-/* line 1604, main.scss */
+/* line 1609, main.scss */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -1913,7 +1924,7 @@ body {
   background: rgba(0, 0, 0, 0.5);
 }
 
-/* line 1613, main.scss */
+/* line 1618, main.scss */
 .modal-content {
   position: fixed;
   top: 20px;
@@ -1925,7 +1936,7 @@ body {
 
 /* end of I have no idea */
 /* new share */
-/* line 1626, main.scss */
+/* line 1631, main.scss */
 .new-share-container {
   width: 70px;
   height: 50px;
@@ -1936,31 +1947,31 @@ body {
   z-index: 99;
   text-indent: -9999em;
 }
-/* line 1637, main.scss */
+/* line 1642, main.scss */
 .new-share-container .hide {
   position: absolute;
   display: none;
 }
-/* line 1642, main.scss */
+/* line 1647, main.scss */
 .new-share-container:hover {
   height: 150px;
   width: 150px;
 }
-/* line 1647, main.scss */
+/* line 1652, main.scss */
 .new-share-container:hover .hide {
   display: block;
 }
-/* line 1651, main.scss */
+/* line 1656, main.scss */
 .new-share-container > span {
   display: block;
 }
-/* line 1655, main.scss */
+/* line 1660, main.scss */
 .new-share-container > span > a {
   display: block;
   width: 73px;
   height: 73px;
 }
-/* line 1661, main.scss */
+/* line 1666, main.scss */
 .new-share-container .new-share {
   position: absolute;
   bottom: 0;
@@ -1971,19 +1982,19 @@ body {
   height: 60px;
   border-radius: 50%;
 }
-/* line 1672, main.scss */
+/* line 1677, main.scss */
 .new-share-container .new-share-thing {
   bottom: 95px;
   left: 0;
   background-position: 0 -73px;
 }
-/* line 1678, main.scss */
+/* line 1683, main.scss */
 .new-share-container .new-share-time {
   bottom: 80px;
   left: 85px;
   background-position: 0 0;
 }
-/* line 1684, main.scss */
+/* line 1689, main.scss */
 .new-share-container .new-share-promise {
   bottom: 0;
   left: 100px;
