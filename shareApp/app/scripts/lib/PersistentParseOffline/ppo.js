@@ -305,26 +305,6 @@
             }
           }
           promise.resolve(mappedObjList);
-
-          /*obj.data.forEach(function(jsonObj, idx) {
-           var mappedObj;
-           mappedObj = new Parse.Object(jsonObj);
-           obj.data[idx] = mappedObj;
-           */
-          /*if (self._include.length > 0) {
-           self._include.forEach(function (incName) {
-           console.log(mappedObj);
-           console.log(incName);
-           var incQuery = new PPO.Query(mappedObj.get(incName).className);
-           incQuery.get(mappedObj.get(incName).id, {
-           success: function (relObj) {
-           obj.data[idx].set(incName,relObj);
-           }
-           })
-           });
-           }*/
-          /*
-           });*/
         });
       });
       return promise;

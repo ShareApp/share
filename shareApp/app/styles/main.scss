@@ -152,7 +152,6 @@ body {
     bottom: 0;
     left: auto;
     width: auto;
-    //max-width: 70%;
     overflow: auto;
     -webkit-transition: width 0.3s ease;
     -moz-transition: width 0.3s ease;
@@ -1182,19 +1181,18 @@ body {
       background-repeat: repeat no-repeat;
       background-size: 6px 100%;
       border-width: 0;
-      margin-top: 10px;
       max-width: 80%;
       margin: 0;
-      padding: 4px 10px 0 0;
+      padding: 0px 10px 0 0;
       font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
       color: white;
-      font-size: 20px;
-      line-height: 20px;
+      font-size: 14px;
+      line-height: 30px;
       border-radius: 3px;
       img {
-        height: 100%;
-        padding-right: 10px;
-        margin-top: -4px;
+        height: 32px;
+        padding: 0 10px 0 0;
+        float: left;
       }
     }
   }
@@ -1553,10 +1551,6 @@ body {
         width: 31px;
         @include icons-sprite(return-white);
       }
-      //background-color: transparent;
-      //color: #979998;
-      //border: 1px solid black;
-      //border-radius: 20px;
     }
   }
   .file-input-container {
@@ -1595,36 +1589,6 @@ body {
 
 /* end misc */
 
-/* I have no idea what is it below */
-
-.friends-select {
-  height: 150px;
-  overflow: scroll;
-}
-
-.ng-cloak {
-  display: none;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(black, 0.5%);
-}
-
-.modal-content {
-  position: fixed;
-  top: 20px;
-  width: 100%;
-  text-align: center;
-  font-size: 5em;
-  color: white;
-}
-
-/* end of I have no idea */
 
 /* new share */
 
