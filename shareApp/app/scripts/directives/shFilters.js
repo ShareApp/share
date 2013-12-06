@@ -19,24 +19,39 @@ angular.module('shareApp')
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
         var setVerboseFilters = function () {
-          var checkedItems = element.find("input[type='checkbox']:checked + label").find(".text");
-          if (checkedItems.length != 0) {
-            var verboseFilters = "";
-            for (var i = 0; i < checkedItems.length; i = i + 1) {
-              verboseFilters += checkedItems.eq(i).text();
-              if (i + 1 != checkedItems.length) {
-                verboseFilters += ", ";
-              }
+          var checkedItems = element.find("input[type='checkbox']:checked");
+          // check if all selected items are "all activities"
+          var isAll = element.find("input[type='checkbox'][data-include-to-all]").length === element.find("input[type='checkbox'][data-include-to-all]:checked").length;
+          var verboseFilters = "";
+          if (isAll || checkedItems.length === 0) {
+            verboseFilters = $translate("All activities");
+            if (isAll) {
+              verboseFilters += ", ";
             }
-            scope.verboseFilters = verboseFilters;
-          } else {
-            scope.verboseFilters = $translate("All activities");
+            checkedItems = checkedItems.not('[data-include-to-all]');
           }
+          for (var i = 0; i < checkedItems.length; i = i + 1) {
+            var label = checkedItems.eq(i).next("label").find(".text").text();
+            verboseFilters += label;
+            if (i + 1 != checkedItems.length) {
+              verboseFilters += ", ";
+            }
+          }
+          scope.verboseFilters = verboseFilters;
         };
         setVerboseFilters();
 
+        scope.setOnlyOneUser = function (el, value) {
+          if (value === true) {
+            if (el === 'to_me') {
+              scope.user.userWallFilters.direction.from_me = false;
+            } else {
+              scope.user.userWallFilters.direction.to_me = false;
+            }
+          }
+        };
         scope.filtersSearch = function () {
-          safeApply(scope, function(){
+          safeApply(scope, function () {
             scope.filtersOpened = false;
             setVerboseFilters();
             scope.user.fetchUserShares();

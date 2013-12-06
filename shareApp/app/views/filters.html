@@ -5,17 +5,17 @@
 <div class="filters-inner" ng-show="filtersOpened">
     <ul>
         <li>
-            <input id="things-checkbox" type="checkbox" ng-model="user.userWallFilters.type.things"/>
+            <input id="things-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.type.things"/>
             <label for="things-checkbox"><span class="ico"></span><span class="text">{{ 'Things' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="time-checkbox" type="checkbox" ng-model="user.userWallFilters.type.time"/>
+            <input id="time-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.type.time"/>
             <label for="time-checkbox"><span class="ico"></span><span class="text">{{ 'Time' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="promises-checkbox" type="checkbox" ng-model="user.userWallFilters.type.promises"/>
+            <input id="promises-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.type.promises"/>
             <label for="promises-checkbox"><span class="ico"></span><span class="text">{{ 'Promises' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
@@ -23,12 +23,12 @@
             <div class="separator"></div>
         </li>
         <li>
-            <input id="to-me-checkbox" type="checkbox" ng-model="user.userWallFilters.direction.to_me"/>
+            <input id="to-me-checkbox" type="checkbox" ng-change="setOnlyOneUser('to_me', user.userWallFilters.direction.to_me)" ng-model="user.userWallFilters.direction.to_me"/>
             <label for="to-me-checkbox"><span class="ico"></span><span class="text">{{ 'To me' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="from-me-checkbox" type="checkbox" ng-model="user.userWallFilters.direction.from_me"/>
+            <input id="from-me-checkbox" type="checkbox" ng-change="setOnlyOneUser('from_me', user.userWallFilters.direction.from_me)" ng-model="user.userWallFilters.direction.from_me"/>
             <label for="from-me-checkbox"><span class="ico"></span><span class="text">{{ 'From me' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
@@ -36,27 +36,27 @@
             <div class="separator"></div>
         </li>
         <li>
-            <input id="returned-checkbox" type="checkbox" ng-model="user.userWallFilters.state.returned"/>
+            <input id="returned-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.state.returned"/>
             <label for="returned-checkbox"><span class="ico"></span><span class="text">{{ 'Returned' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="accepted-checkbox" type="checkbox" ng-model="user.userWallFilters.state.accepted"/>
+            <input id="accepted-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.state.accepted"/>
             <label for="accepted-checkbox"><span class="ico"></span><span class="text">{{ 'Accepted' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="rejected-checkbox" type="checkbox" ng-model="user.userWallFilters.state.rejected"/>
+            <input id="rejected-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.state.rejected"/>
             <label for="rejected-checkbox"><span class="ico"></span><span class="text">{{ 'Rejected' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="awaiting-checkbox" type="checkbox" ng-model="user.userWallFilters.state.awaiting"/>
+            <input id="awaiting-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.state.awaiting"/>
             <label for="awaiting-checkbox"><span class="ico"></span><span class="text">{{ 'Awaiting' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>
         <li>
-            <input id="return-awaiting-checkbox" type="checkbox" ng-model="user.userWallFilters.state.return_awaiting"/>
+            <input id="return-awaiting-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.state.return_awaiting"/>
             <label for="return-awaiting-checkbox"><span class="ico"></span><span class="text">{{ 'Return awaiting' | translate }}</span><span
                     class="checkbox"></span></label>
         </li>

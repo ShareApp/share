@@ -107,18 +107,20 @@ var shUser = angular.module('shareApp')
        */
       userWallFilters: {
         type: {
-          things: false,
-          time: false,
-          promises: false
+          things: true,
+          time: true,
+          promises: true
         },
         direction: {
           to_me: false,
           from_me: false
         },
         state: {
-          returned: false,
-          accepted: false,
-          awaiting: false
+          returned: true,
+          accepted: true,
+          rejected: true,
+          awaiting: true,
+          return_awaiting: true
         }
       },
       /**
