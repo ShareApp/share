@@ -9,6 +9,8 @@ var getPositionImgFun = function (elm, attr) {
       return;
     }
     elm.css("visibility", "hidden").css("display", "block");
+    elm.css("maxWidth", "100%");
+    elm.css("height", "auto");
     var container = elm.parent(".img-container");
     // fill up container with img
     if (container.width() > elm.width()) {
@@ -17,7 +19,7 @@ var getPositionImgFun = function (elm, attr) {
       elm.width(container.width());
       elm.height(container.width() / width * height);
     }
-    // move img top if img is higher than container        \
+    // move img top if img is higher than container
     if (container.height() < elm.height()) {
       var diff = elm.height() / 2 - container.height() / 2;
       elm.css("marginTop", -diff);
@@ -51,11 +53,13 @@ angular.module('shareApp')
   .directive('verticallyPositioned', ["$window", function ($window) {
     return {
       priority: 98,
+      scope: {
+        src: '='
+      },
       link: function postLink(scope, elm, attr) {
-
-        scope.$watch("src", function (value) {
-          elm.one("load", getPositionImgFun(elm, attr));
-        });
+//        scope.$watch("src", function (value) {
+        elm.on("load", getPositionImgFun(elm, attr));
+//        });
         angular.element($window).on("resize", getPositionImgFun(elm, attr));
       }
     };

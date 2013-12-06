@@ -1,6 +1,22 @@
 @import "compass/css3/transform";
 @import "compass/css3/transition";
-@import "icons/*.png";
+@import "retina-sprite-mixins";
+
+$icons-normal: sprite-map("icons/normal/*.png");
+$icons-retina: sprite-map("icons/retina/*.png");
+
+$menu-normal: sprite-map("menu/normal/*.png");
+$menu-retina: sprite-map("menu/retina/*.png");
+
+$separators-normal: sprite-map("separators/normal/*.png");
+$separators-retina: sprite-map("separators/retina/*.png");
+
+$filters-normal: sprite-map("filters/normal/*.png");
+$filters-retina: sprite-map("filters/retina/*.png");
+
+$friends-sorting-normal: sprite-map("friends-sorting/normal/*.png");
+$friends-sorting-retina: sprite-map("friends-sorting/retina/*.png");
+
 
 @font-face {
   font-family: 'Shadows Into Light Two';
@@ -179,7 +195,7 @@ body {
             font-size: 2.6em;
             line-height: 1.4em;
             text-decoration: none;
-            height: 45px;
+            height: 30px;
             display: inline-block;
             .text {
               padding-left: 10px;
@@ -188,68 +204,30 @@ body {
               vertical-align: top;
               height: 45px;
             }
-            @import "menu/*.png";
             i {
               vertical-align: middle;
               margin-left: 20px;
-              height: 45px;
-              width: 60px;
               display: inline-block;
               &.new-share-ico {
-                @include menu-sprite(new-share);
+                @include retina-sprite-background(new-share,$menu-normal,$menu-retina);
               }
               &.contact-list-ico {
-                @include menu-sprite(contact-list);
+                @include retina-sprite-background(contact-list,$menu-normal,$menu-retina);
               }
               &.home-ico {
-                @include menu-sprite(home);
+                @include retina-sprite-background(home,$menu-normal,$menu-retina);
               }
               &.FB-ico {
-                @include menu-sprite(FB);
+                @include retina-sprite-background(FB,$menu-normal,$menu-retina);
               }
               &.flag-ico {
-                @include menu-sprite(flag);
+                @include retina-sprite-background(flag,$menu-normal,$menu-retina);
               }
               &.logout-ico {
-                @include menu-sprite(logout);
+                @include retina-sprite-background(logout,$menu-normal,$menu-retina);
               }
               &.exit-ico {
-                @include menu-sprite(exit);
-              }
-            }
-            @media (max-width: 460px), (max-height: 700px) {
-              height: 30px;
-              margin-top: -10px;
-              margin-bottom: 5px;
-              .text {
-                padding-left: 0;
-                height: 22px;
-              }
-              i {
-                height: 22px;
-                width: 30px;
-                margin-left: 10px;
-                &.new-share-ico {
-                  @include menu-sprite(small-new-share);
-                }
-                &.contact-list-ico {
-                  @include menu-sprite(small-contact-list);
-                }
-                &.home-ico {
-                  @include menu-sprite(small-home);
-                }
-                &.FB-ico {
-                  @include menu-sprite(small-FB);
-                }
-                &.flag-ico {
-                  @include menu-sprite(small-flag);
-                }
-                &.logout-ico {
-                  @include menu-sprite(small-logout);
-                }
-                &.exit-ico {
-                  @include menu-sprite(small-exit);
-                }
+                @include retina-sprite-background(exit,$menu-normal,$menu-retina);
               }
             }
 
@@ -263,17 +241,16 @@ body {
               padding-top: 6px;
               margin-left: 15px;
               border-width: 0;
-              @include icons-sprite(lang-border-1);
-              height: 32px;
-              width: 40px;
+
+              @include retina-sprite-background(lang-border-1,$icons-normal,$icons-retina);
               text-transform: uppercase;
               color: white;
 
               &:nth-child(odd) {
-                @include icons-sprite(lang-border-2);
+                @include retina-sprite-background(lang-border-2,$icons-normal,$icons-retina);
               }
               &.active {
-                @include icons-sprite(lang-border-active);
+                @include retina-sprite-background(lang-border-active,$icons-normal,$icons-retina);
                 color: #373334;
               }
             }
@@ -286,51 +263,25 @@ body {
             }
           }
         }
-        @import "separators/*.png";
-        @mixin menu-separator-mixin {
-          height: 30px;
-          background-size: 100% image-height(sprite-path($separators-sprites));
-        }
         li .separator {
-          @include separators-sprite(menu-1);
-          @include menu-separator-mixin;
+          @include retina-sprite-background(menu-1,$separators-normal,$separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
         }
         li:nth-child(2n+2) .separator {
-          @include separators-sprite(menu-2);
-          @include menu-separator-mixin;
+          @include retina-sprite-background(menu-2,$separators-normal,$separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
         }
         li:nth-child(2n+3) .separator {
-          @include separators-sprite(menu-3);
-          @include menu-separator-mixin;
+          @include retina-sprite-background(menu-3,$separators-normal,$separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
         }
         li:nth-child(2n+4) .separator {
-          @include separators-sprite(menu-4);
-          @include menu-separator-mixin;
-        }
-
-        @media (max-width: 460px) and (max-height: 700px) {
-          @import "small-separators/*.png";
-          @mixin menu-small-separator-mixin {
-            width: 100%;
-            height: 15px;
-            background-size: 100% image-height(sprite-path($small-separators-sprites));
-          }
-          li .separator {
-            @include small-separators-sprite(menu-1);
-            @include menu-small-separator-mixin;
-          }
-          li:nth-child(2n+2) .separator {
-            @include small-separators-sprite(menu-2);
-            @include menu-small-separator-mixin;
-          }
-          li:nth-child(2n+3) .separator {
-            @include small-separators-sprite(menu-3);
-            @include menu-small-separator-mixin;
-          }
-          li:nth-child(2n+4) .separator {
-            @include small-separators-sprite(menu-4);
-            @include menu-small-separator-mixin;
-          }
+          @include retina-sprite-background(menu-4,$separators-normal,$separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
         }
 
         &.pull-bottom {
@@ -349,7 +300,7 @@ body {
   min-width: 300px;
   #header {
     top: 0;
-    height: 70px;
+    height: 47px;
     left: 0;
     width: 100%;
     background-color: white;
@@ -361,22 +312,20 @@ body {
     #menu-btn {
       background-color: transparent;
       border-width: 0;
-      padding: 20px 15px 20px 15px;
+      padding: 13px 15px;
       @media (max-width: 460px) {
-        padding: 20px 3px;
+        padding: 12px 3px;
       }
       margin: 0;
       float: left;
       .img {
-        width: 40px;
-        height: 30px;
         display: block;
-        @include icons-sprite(menu-btn);
+        @include retina-sprite-background(menu-btn,$icons-normal,$icons-retina);
       }
     }
     #logo-container {
-      width: 175px;
-      height: 70px;
+      width: 115px;
+      height: 29px;
       display: block;
       margin: 0 auto;
       > * {
@@ -384,11 +333,8 @@ body {
         display: inline-block;
       }
       #logo {
-        @include icons-sprite(logo);
-        width: 132px;
-        height: 45px;
-        margin: 0;
-        margin: 12px 0;
+        @include retina-sprite-background(logo,$icons-normal,$icons-retina);
+        margin: 8px 0;
         overflow: hidden;
         display: inline-block;
         .text {
@@ -406,12 +352,10 @@ body {
       }
       #notification-btn {
         display: inline-block;
-        width: 35px;
-        height: 33px;
-        margin: 17px 0;
+        margin: 13px 0;
         text-align: center;
-        font-size: 1.6em;
-        @include icons-sprite(notification-btn);
+        font-size: 1.2em;
+        @include retina-sprite-background(notification-btn,$icons-normal,$icons-retina);
         border-width: 0;
         color: white;
         font-weight: bold;
@@ -423,16 +367,14 @@ body {
       float: right;
       background-color: transparent;
       border-width: 0;
-      padding: 15px 15px 15px 15px;
+      padding: 11px 12px;
       @media (max-width: 460px) {
-        padding: 15px 2px;
+        padding: 12px 2px;
       }
       margin: 0;
       .img {
-        width: 60px;
-        height: 42px;
         display: block;
-        @include icons-sprite(contact-list-btn);
+        @include retina-sprite-background(contact-list-btn,$icons-normal,$icons-retina);
       }
     }
     #contact-list-exit-btn {
@@ -445,10 +387,8 @@ body {
       }
       margin: 0;
       .img {
-        width: 31px;
-        height: 30px;
         display: block;
-        @include icons-sprite(black-exit);
+        @include retina-sprite-background(black-exit,$icons-normal,$icons-retina);
       }
     }
   }
@@ -538,7 +478,6 @@ body {
       list-style: none;
       margin: 5px 10px;
       padding: 0;
-      @import "filters/*.png";
 
       li {
         input[type='checkbox'] {
@@ -560,79 +499,85 @@ body {
             margin-left: 10px;
           }
           .checkbox {
-            width: 50px;
-            height: 42px;
             display: inline-block;
             float: right;
             margin-right: 10px;
-            @include filters-sprite(unchecked);
+            @include retina-sprite-background(unchecked,$filters-normal,$filters-retina);
           }
         }
         input[type=checkbox]:checked + label {
           .checkbox {
-            @include filters-sprite(checked);
+            @include retina-sprite-background(checked,$filters-normal,$filters-retina);
           }
         }
         input[type='checkbox']:checked .checkbox {
-          @include filters-sprite(checked);
+          @include retina-sprite-background(checked,$filters-normal,$filters-retina);
         }
 
-        @import "separators/*.png";
         .separator {
+          @include retina-sprite-background(standard,$separators-normal,$separators-retina);
           width: 100%;
-          height: 20px;
-          background-size: 100% image-height(sprite-path($separators-sprites));
-          @include separators-sprite(standard);
+          background-size: 100% image-height(sprite-path($separators-normal));
         }
 
         label[for='things-checkbox'] {
           .ico {
-            @include filters-sprite(things);
+            @include retina-sprite-background(things,$filters-normal,$filters-retina);
+
           }
         }
         label[for='time-checkbox'] {
           .ico {
-            @include filters-sprite(time);
+            @include retina-sprite-background(time,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='promises-checkbox'] {
           .ico {
-            @include filters-sprite(promises);
+            @include retina-sprite-background(promises,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='to-me-checkbox'] {
           .ico {
-            @include filters-sprite(to-me);
+            @include retina-sprite-background(to-me,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='from-me-checkbox'] {
           .ico {
-            @include filters-sprite(from-me);
+            @include retina-sprite-background(from-me,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='returned-checkbox'] {
           .ico {
-            @include filters-sprite(returned);
+            @include retina-sprite-background(returned,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='accepted-checkbox'] {
           .ico {
-            @include filters-sprite(accepted);
+            @include retina-sprite-background(accepted,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='rejected-checkbox'] {
           .ico {
-            @include filters-sprite(rejected);
+            @include retina-sprite-background(rejected,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='awaiting-checkbox'] {
           .ico {
-            @include filters-sprite(awaiting);
+            @include retina-sprite-background(awaiting,$filters-normal,$filters-retina);
+            
           }
         }
         label[for='return-awaiting-checkbox'] {
           .ico {
-            @include filters-sprite(return-awaiting);
+            @include retina-sprite-background(return-awaiting,$filters-normal,$filters-retina);
+            
           }
         }
       }
@@ -640,19 +585,19 @@ body {
   }
   #filters-btn {
     width: 100%;
-    height: 62px;
+    height: 42px;
     background: white url("../img/low-search.png") top left no-repeat;
     @media (-webkit-min-device-pixel-ratio: 1.5),
     (min-resolution: 144dpi) {
       background-image: url("../img/high-search.png");
     }
-    background-size: 100% 62px;
+    background-size: 100% 42px;
     border-width: 0;
     text-align: left;
     .text {
       font-size: 2.4em;
       line-height: 0.8em;
-      margin-top: 12px;
+      margin-top: 8px;
       margin-left: 5px;
       float: left;
       color: #707070;
@@ -661,10 +606,8 @@ body {
       font-weight: bold;
     }
     .magnifying-glass-ico {
-      @include icons-sprite(magnifying-glass);
+      @include retina-sprite-background(magnifying-glass,$icons-normal,$icons-retina);
       display: block;
-      width: 35px;
-      height: 35px;
       float: left;
       margin-left: 10px;
       margin-top: 5px;
@@ -701,8 +644,8 @@ body {
   > li {
     padding: 10px 0;
     .profile-picture-container {
-      width: 65px;
-      height: 65px;
+      width: 44px;
+      height: 44px;
     }
   }
 
@@ -784,22 +727,11 @@ body {
       @include footnote;
       color: #9C9E9D;
     }
-    @import "separators/*.png";
     .separator {
+      @include retina-sprite-background(standard,$separators-normal,$separators-retina);
       width: 100%;
-      height: 20px;
-      background-size: 100% image-height(sprite-path($separators-sprites));
+      background-size: 100% image-height(sprite-path($separators-normal));
       margin-top: 15px;
-      @include separators-sprite(standard);
-    }
-    @media (max-width: 460px), (max-height: 700px) {
-      .separator {
-        @import "small-separators/*.png";
-        width: 100%;
-        height: 10px;
-        background-size: 100% image-height(sprite-path($small-separators-sprites));
-        @include small-separators-sprite(standard);
-      }
     }
     ul {
       margin: 0;
@@ -839,14 +771,10 @@ body {
               border-width: 0;
               margin: 25px 10px 0 10px;
               &.agree-btn {
-                @include icons-sprite(confirm);
-                width: 44px;
-                height: 33px;
+                @include retina-sprite-background(confirm, $icons-normal, $icons-retina);
               }
               &.disagree-btn {
-                @include icons-sprite(black-exit);
-                width: 31px;
-                height: 30px;
+                @include retina-sprite-background(black-exit,$icons-normal,$icons-retina);
               }
             }
             .info {
@@ -855,20 +783,20 @@ body {
             }
           }
           .content {
-            margin-top: 18px;
             text-align: left;
             min-height: 70px;
             .profile-picture-container,
             .small-share-item {
               border-color: #FFFFFF;
             }
-            small-share-item {
-              margin-top: -8px;
+            fb-profile-picture {
+              margin-top: 8px;
             }
             small-share-item,
             fb-profile-picture, {
               display: block;
               float: left;
+              margin-right: 10px;
             }
 
             @include share-title;
@@ -879,7 +807,6 @@ body {
               vertical-align: top;
               height: 100%;
               display: inline;
-              margin-top: 4px;
               > .title {
                 word-break: break-word;
                 display: table;
@@ -919,13 +846,11 @@ body {
 
       .share-direction {
         &.right {
-          @include icons-sprite(target-right-arrow);
+          @include retina-sprite-background(target-right-arrow, $icons-normal, $icons-retina);
         }
         &.left {
-          @include icons-sprite(target-left-arrow);
+          @include retina-sprite-background(target-left-arrow, $icons-normal, $icons-retina);
         }
-        width: 74px;
-        height: 74px;
         float: left;
         padding: 0;
         border-width: 0;
@@ -938,10 +863,8 @@ body {
         .ico {
           position: absolute;
           left: 4%;
-          top: 20px;
-          width: 36px;
-          height: 40px;
-          @include icons-sprite(magnifying-glass);
+          top: 14px;
+          @include retina-sprite-background(magnifying-glass, $icons-normal, $icons-retina);
           display: b0lock;
           z-index: 300;
         }
@@ -950,34 +873,32 @@ body {
           padding: 0 3% 0 23%;
           margin: 6px auto 0 auto;
           border-width: 0;
-          height: 60px;
+          height: 40px;
           background: transparent url("../img/search-friend.png") no-repeat top left;
           background-size: 100% 100%;
         }
       }
     }
     #friends-sorting {
-      @import "friends-sorting/*.png";
       position: relative;
       width: 100%;
       margin: 7px 0;
       .item {
-        background-size: 100% image-height(sprite-path($friends-sorting-sprites));
-        @include friends-sorting-sprite(empty-border);
+        @include retina-sprite-background(empty-border, $friends-sorting-normal, $friends-sorting-retina);
+        background-size: 100% image-height(sprite-path($friends-sorting-normal));
         @include shadows-font;
         color: black;
-        font-size: 2.2em;
-        height: 33px;
-        padding: 12px 2% 0 2%;
-        width: 28%;
+        width: 33.3%;
+        font-size: 2.0em;
+        line-height: 1.6em;
         margin: 0;
         text-align: center;
 
         display: inline-block;
         &.active {
           color: white;
-          @include friends-sorting-sprite(filled-border);
-          background-size: 100% image-height(sprite-path($friends-sorting-sprites));
+          @include retina-sprite-background(filled-border, $friends-sorting-normal, $friends-sorting-retina);
+          background-size: 100% image-height(sprite-path($friends-sorting-normal));
         }
       }
     }
@@ -995,7 +916,8 @@ body {
           fb-profile-picture {
             float: left;
             margin-right: 12px;
-            height: 73px;
+            height: 44px;
+            margin-top: 13px;
           }
           .title-container {
             display: block;
@@ -1019,8 +941,8 @@ body {
           display: inline-block;
 
           img {
-            width: 65px;
-            height: 65px;
+            width: 44px;
+            height: 44px;
           }
         }
       }
@@ -1062,7 +984,7 @@ body {
     }
   }
   .toolbar {
-    padding: 0 15px 10px 15px;
+    padding: 0 25px 10px 25px;
   }
 }
 
@@ -1120,7 +1042,7 @@ body {
     }
     .title {
       @include big-text;
-      margin-top: 10px;
+      margin-top: -5px;
       display: inline-block;
     }
     .counter-container {
@@ -1158,23 +1080,19 @@ body {
         width: 100%;
       }
     }
-    @import "separators/*.png";
     .separator {
+      @include retina-sprite-background(standard,$separators-normal,$separators-retina);
       width: 100%;
-      height: 20px;
-      background-size: 100% image-height(sprite-path($separators-sprites));
+      background-size: 100% image-height(sprite-path($separators-normal));
       margin-top: 15px;
       margin-bottom: 10px;
-      @include separators-sprite(standard);
-
     }
     .separator-rev {
+      @include retina-sprite-background(standard-2,$separators-normal,$separators-retina);
       width: 100%;
-      height: 20px;
-      background-size: 100% image-height(sprite-path($separators-sprites));
+      background-size: 100% image-height(sprite-path($separators-normal));
       margin-top: 15px;
       margin-bottom: 10px;
-      @include separators-sprite(standard-2);
     }
     button.login-btn {
       background-image: url("../img/fb-background.jpg");
@@ -1210,58 +1128,56 @@ body {
   img {
     display: block;
     border-radius: 45%;
-    width: 65px;
-    height: 65px;
+    width: 44px;
+    height: 44px;
   }
 }
 
 .small-share-item-container {
   position: relative;
-  height: 100px;
-  width: 90px;
+  height: 67px;
+  width: 60px;
   .left {
     left: 0px;
   }
   .right {
-    left: 55px;
+    left: 40px;
   }
   .item-counter {
-    width: 28px;
-    height: 10px;
+    width: 20px;
+    height: 12px;
     position: absolute;
-    top: 67px;
+    top: 45px;
     z-index: 31;
-    border: 3px solid white;
+    border: 2px solid white;
     border-radius: 45%;
     background-color: black;
     color: white;
-    font-size: 1.9em;
+    font-size: 1.8em;
     letter-spacing: -1px;
     line-height: 16px;
-    padding: 9px 0;
+    padding: 4px 0;
     text-align: center;
     overflow: hidden;
   }
   .type-ico-container {
-    width: 39px;
-    height: 39px;
     position: absolute;
-    top: -12px;
+    top: 0;
     z-index: 31;
   }
   &.promise-type {
     .type-ico-container {
-      @include icons-sprite(small-promise-ico);
+      @include retina-sprite-background(small-promise-ico, $icons-normal, $icons-retina);
     }
   }
   &.thing-type {
     .type-ico-container {
-      @include icons-sprite(small-thing-ico);
+      @include retina-sprite-background(small-thing-ico, $icons-normal, $icons-retina);
     }
   }
   &.time-type {
     .type-ico-container {
-      @include icons-sprite(small-time-ico);
+      @include retina-sprite-background(small-time-ico, $icons-normal, $icons-retina);
     }
   }
   .small-share-item {
@@ -1273,8 +1189,8 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     text-decoration: none;
-    width: 65px;
-    height: 65px;
+    width: 44px;
+    height: 44px;
     text-align: center;
     margin-top: 8px;
     margin-left: 9px;
@@ -1286,15 +1202,15 @@ body {
       visibility: hidden;
     }
     .text-container {
-      width: 56px;
-      padding: 5px 7px 3px 7px;
-      height: 60px;
+      width: 38px;
+      padding: 3px 4px 2px 4px;
+      height: 40px;
       display: table-cell;
       vertical-align: middle;
     }
     .text {
       display: block;
-      max-height: 60px;
+      max-height: 40px;
       color: black;
       text-decoration: none;
       font-size: 1.9em;
@@ -1314,60 +1230,58 @@ body {
   max-width: 460px;
 
   .type-ico-container {
-    width: 73px;
-    height: 73px;
+    width: 49px;
+    height: 49px;
     position: absolute;
     left: 50%;
-    margin-left: -39px;
-    top: -5px;
+    margin-left: -26px;
+    top: -3px;
     z-index: 3;
   }
   &.promise-type {
     .type-ico-container {
-      @include icons-sprite(promise-ico);
+      @include retina-sprite-background(promise-ico,$icons-normal,$icons-retina);
     }
   }
   &.thing-type {
     .type-ico-container {
-      @include icons-sprite(thing-ico);
+      @include retina-sprite-background(thing-ico,$icons-normal,$icons-retina);
     }
   }
   &.time-type {
     .type-ico-container {
-      @include icons-sprite(time-ico);
+      @include retina-sprite-background(time-ico,$icons-normal,$icons-retina);
     }
   }
   .state-ico-container {
-    width: 26px;
-    height: 26px;
     position: absolute;
-    right: -5px;
-    top: -8px;
+    right: -2px;
+    top: -3px;
     z-index: 4;
   }
   &.confirmed-state {
     .state-ico-container {
-      @include icons-sprite(small-accepted);
+      @include retina-sprite-background(small-accepted, $icons-normal, $icons-retina);
     }
   }
   &.rejected-state {
     .state-ico-container {
-      @include icons-sprite(small-rejected);
+      @include retina-sprite-background(small-rejected, $icons-normal, $icons-retina);
     }
   }
   &.created-state {
     .state-ico-container {
-      @include icons-sprite(small-awaiting);
+      @include retina-sprite-background(small-awaiting, $icons-normal, $icons-retina);
     }
   }
   &.returned-but-not-confirmed-state {
     .state-ico-container {
-      @include icons-sprite(small-return-awaiting);
+      @include retina-sprite-background(small-return-awaiting, $icons-normal, $icons-retina);
     }
   }
   &.returned-state {
     .state-ico-container {
-      @include icons-sprite(small-returned);
+      @include retina-sprite-background(small-returned, $icons-normal, $icons-retina);
     }
   }
   .people-ico-container {
@@ -1380,18 +1294,18 @@ body {
       color: white;
       font-size: 2.6em;
       line-height: 0em;
-      margin-top: 38px;
+      margin-top: 26px;
       vertical-align: top;
       display: inline-block;
     }
 
     &.left {
       top: 40px;
-      left: 30px;
+      left: 15px;
     }
     &.right {
       top: 40px;
-      right: 30px;
+      right: 15px;
     }
   }
   .img-container {
@@ -1433,15 +1347,13 @@ body {
     .time {
       margin-top: 10px;
       .ico {
-        @include icons-sprite(clock);
+        @include retina-sprite-background(clock, $icons-normal, $icons-retina);
         display: inline-block;
         vertical-align: top;
-        height: 15px;
-        width: 15px;
       }
       .text {
         margin-left: 3px;
-        margin-top: 2px;
+        margin-top: -1px;
         color: #9d9d9d;
         font-size: 1.6em;
         vertical-align: top;
@@ -1480,14 +1392,12 @@ body {
 
   }
   .btn {
-    height: 55px;
+    height: 40px;
     color: white;
-    padding: 8px 6px;
     @include big-text;
+    line-height: 1em;
     white-space: nowrap;
     .icon {
-      height: 33px;
-      width: 47px;
       display: inline-block;
       vertical-align: middle;
       margin-left: 7px;
@@ -1505,8 +1415,7 @@ body {
       background: transparent url("../img/orange-btn.png") no-repeat top left;
       background-size: 100% 100%;
       .icon {
-        width: 47px;
-        @include icons-sprite(camera-white);
+        @include retina-sprite-background(camera-white, $icons-normal, $icons-retina);
       }
     }
     &.txt {
@@ -1515,16 +1424,14 @@ body {
       background: transparent url("../img/green-btn.png") no-repeat top left;
       background-size: 100% 100%;
       .icon {
-        width: 36px;
-        @include icons-sprite(pen-white);
+        @include retina-sprite-background(pen-white, $icons-normal, $icons-retina);
       }
     }
     &.search {
       background: transparent url("../img/green-btn.png") no-repeat top left;
       background-size: 100% 100%;
       .icon {
-        width: 34px;
-        @include icons-sprite(magnifying-glass-white);
+        @include retina-sprite-background(magnifying-glass-white, $icons-normal, $icons-retina);
       }
     }
     &.close {
@@ -1532,9 +1439,7 @@ body {
       background-size: 100% 100%;
       .icon {
         margin-top: 2px;
-        height: 30px;
-        width: 31px;
-        @include icons-sprite(exit);
+        @include retina-sprite-background(exit, $icons-normal, $icons-retina);
       }
     }
     &.return {
@@ -1547,9 +1452,7 @@ body {
       background-size: 100% 100%;
       .icon {
         margin-top: 2px;
-        height: 27px;
-        width: 31px;
-        @include icons-sprite(return-white);
+        @include retina-sprite-background(return-white, $icons-normal, $icons-retina);
       }
     }
   }
@@ -1561,7 +1464,7 @@ body {
     input {
       opacity: 0;
       width: 130px;
-      height: 60px;
+      height: 40px;
       cursor: pointer;
       position: relative;
       text-align: right;
@@ -1576,14 +1479,15 @@ body {
       z-index: 1;
       margin: 0;
     }
+    .text {
+      margin-top: 8px;
+    }
   }
-  @import "separators/*.png";
   .separator {
+    @include retina-sprite-background(standard,$separators-normal,$separators-retina);
     width: 100%;
-    height: 20px;
-    background-size: 100% image-height(sprite-path($separators-sprites));
+    background-size: 100% image-height(sprite-path($separators-normal));
     margin-top: 15px;
-    @include separators-sprite(standard);
   }
 }
 
@@ -1623,37 +1527,33 @@ body {
 
   > span > a {
     display: block;
-    width: 73px;
-    height: 73px;
   }
 
   .new-share {
     position: absolute;
     bottom: 0;
     cursor: context-menu;
-    @include icons-sprite(new-share);
+    @include retina-sprite-background(new-share, $icons-normal, $icons-retina);
     background-color: #000;
-    width: 60px;
-    height: 60px;
     border-radius: 50%;
   }
 
   .new-share-thing {
     bottom: 95px;
     left: 0;
-    @include icons-sprite(thing-ico);
+    @include retina-sprite-background(thing-ico, $icons-normal, $icons-retina);
   }
 
   .new-share-time {
     bottom: 80px;
     left: 85px;
-    @include icons-sprite(time-ico);
+    @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
   }
 
   .new-share-promise {
     bottom: 0;
     left: 100px;
-    @include icons-sprite(promise-ico);
+    @include retina-sprite-background(promise-ico, $icons-normal, $icons-retina);
   }
 }
 
