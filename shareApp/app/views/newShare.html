@@ -19,7 +19,8 @@
             <div ng-switch on="share.type" class="img-container">
                 <img ng-show="share.img" src="img/low-share-top-big.png" srcset="img/high-share-top-big.png 1.5x" class="share-frame gradient"/>
                 <img ng-hide="share.img" src="img/low-share-top-small.png" srcset="img/high-share-top-small.png 1.5x" class="share-frame"/>
-                <img ng-show="share.img" class="share-img" ng-src="{{ share.img.urlOrData() }}" vertically-positioned alt="{{ share.text }}"/>
+                <img ng-show="share.img" class="share-img" ng-src="{{ share.img.urlOrData() }}" vertically-positioned preloader alt="{{ share.text }}"/>
+                <div class='preloader-container'><div class='preloader'></div></div>
                 <img ng-hide="share.img" ng-switch-when="0" class="share-placeholder" ng-src="img/backgrounds/green.jpg" alt="{{ share.text }}"/>
                 <img ng-hide="share.img" ng-switch-when="1" class="share-placeholder" ng-src="img/backgrounds/orange.jpg" alt="{{ share.text }}"/>
                 <img ng-hide="share.img" ng-switch-when="2" class="share-placeholder" ng-src="img/backgrounds/purple.jpg" alt="{{ share.text }}"/>

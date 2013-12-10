@@ -329,10 +329,9 @@ angular.module('shareApp')
        */
       uploadPhoto: function (file) {
         var img = new PPO.File(file.name, file);
-        $rootScope.$broadcast('progressBar.update', true);
         myShare.img = img;
+        safeApply($rootScope);
         return img.save().then(function (obj) {
-          $rootScope.$broadcast('progressBar.update', false);
           safeApply($rootScope);
         }, function (e) {
           console.log(e);

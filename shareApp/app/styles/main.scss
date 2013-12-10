@@ -17,7 +17,6 @@ $filters-retina: sprite-map("filters/retina/*.png");
 $friends-sorting-normal: sprite-map("friends-sorting/normal/*.png");
 $friends-sorting-retina: sprite-map("friends-sorting/retina/*.png");
 
-
 @font-face {
   font-family: 'Shadows Into Light Two';
   src: url('fonts/ShadowsIntoLightTwo-Regular.eot');
@@ -209,25 +208,25 @@ body {
               margin-left: 20px;
               display: inline-block;
               &.new-share-ico {
-                @include retina-sprite-background(new-share,$menu-normal,$menu-retina);
+                @include retina-sprite-background(new-share, $menu-normal, $menu-retina);
               }
               &.contact-list-ico {
-                @include retina-sprite-background(contact-list,$menu-normal,$menu-retina);
+                @include retina-sprite-background(contact-list, $menu-normal, $menu-retina);
               }
               &.home-ico {
-                @include retina-sprite-background(home,$menu-normal,$menu-retina);
+                @include retina-sprite-background(home, $menu-normal, $menu-retina);
               }
               &.FB-ico {
-                @include retina-sprite-background(FB,$menu-normal,$menu-retina);
+                @include retina-sprite-background(FB, $menu-normal, $menu-retina);
               }
               &.flag-ico {
-                @include retina-sprite-background(flag,$menu-normal,$menu-retina);
+                @include retina-sprite-background(flag, $menu-normal, $menu-retina);
               }
               &.logout-ico {
-                @include retina-sprite-background(logout,$menu-normal,$menu-retina);
+                @include retina-sprite-background(logout, $menu-normal, $menu-retina);
               }
               &.exit-ico {
-                @include retina-sprite-background(exit,$menu-normal,$menu-retina);
+                @include retina-sprite-background(exit, $menu-normal, $menu-retina);
               }
             }
 
@@ -242,15 +241,15 @@ body {
               margin-left: 15px;
               border-width: 0;
 
-              @include retina-sprite-background(lang-border-1,$icons-normal,$icons-retina);
+              @include retina-sprite-background(lang-border-1, $icons-normal, $icons-retina);
               text-transform: uppercase;
               color: white;
 
               &:nth-child(odd) {
-                @include retina-sprite-background(lang-border-2,$icons-normal,$icons-retina);
+                @include retina-sprite-background(lang-border-2, $icons-normal, $icons-retina);
               }
               &.active {
-                @include retina-sprite-background(lang-border-active,$icons-normal,$icons-retina);
+                @include retina-sprite-background(lang-border-active, $icons-normal, $icons-retina);
                 color: #373334;
               }
             }
@@ -264,22 +263,22 @@ body {
           }
         }
         li .separator {
-          @include retina-sprite-background(menu-1,$separators-normal,$separators-retina);
+          @include retina-sprite-background(menu-1, $separators-normal, $separators-retina);
           background-size: 100% image-height(sprite-path($separators-normal));
           width: 100%;
         }
         li:nth-child(2n+2) .separator {
-          @include retina-sprite-background(menu-2,$separators-normal,$separators-retina);
+          @include retina-sprite-background(menu-2, $separators-normal, $separators-retina);
           background-size: 100% image-height(sprite-path($separators-normal));
           width: 100%;
         }
         li:nth-child(2n+3) .separator {
-          @include retina-sprite-background(menu-3,$separators-normal,$separators-retina);
+          @include retina-sprite-background(menu-3, $separators-normal, $separators-retina);
           background-size: 100% image-height(sprite-path($separators-normal));
           width: 100%;
         }
         li:nth-child(2n+4) .separator {
-          @include retina-sprite-background(menu-4,$separators-normal,$separators-retina);
+          @include retina-sprite-background(menu-4, $separators-normal, $separators-retina);
           background-size: 100% image-height(sprite-path($separators-normal));
           width: 100%;
         }
@@ -320,7 +319,7 @@ body {
       float: left;
       .img {
         display: block;
-        @include retina-sprite-background(menu-btn,$icons-normal,$icons-retina);
+        @include retina-sprite-background(menu-btn, $icons-normal, $icons-retina);
       }
     }
     #logo-container {
@@ -333,7 +332,7 @@ body {
         display: inline-block;
       }
       #logo {
-        @include retina-sprite-background(logo,$icons-normal,$icons-retina);
+        @include retina-sprite-background(logo, $icons-normal, $icons-retina);
         margin: 8px 0;
         overflow: hidden;
         display: inline-block;
@@ -355,7 +354,7 @@ body {
         margin: 13px 0;
         text-align: center;
         font-size: 1.2em;
-        @include retina-sprite-background(notification-btn,$icons-normal,$icons-retina);
+        @include retina-sprite-background(notification-btn, $icons-normal, $icons-retina);
         border-width: 0;
         color: white;
         font-weight: bold;
@@ -374,7 +373,7 @@ body {
       margin: 0;
       .img {
         display: block;
-        @include retina-sprite-background(contact-list-btn,$icons-normal,$icons-retina);
+        @include retina-sprite-background(contact-list-btn, $icons-normal, $icons-retina);
       }
     }
     #contact-list-exit-btn {
@@ -388,7 +387,7 @@ body {
       margin: 0;
       .img {
         display: block;
-        @include retina-sprite-background(black-exit,$icons-normal,$icons-retina);
+        @include retina-sprite-background(black-exit, $icons-normal, $icons-retina);
       }
     }
   }
@@ -502,82 +501,82 @@ body {
             display: inline-block;
             float: right;
             margin-right: 10px;
-            @include retina-sprite-background(unchecked,$filters-normal,$filters-retina);
+            @include retina-sprite-background(unchecked, $filters-normal, $filters-retina);
           }
         }
         input[type=checkbox]:checked + label {
           .checkbox {
-            @include retina-sprite-background(checked,$filters-normal,$filters-retina);
+            @include retina-sprite-background(checked, $filters-normal, $filters-retina);
           }
         }
         input[type='checkbox']:checked .checkbox {
-          @include retina-sprite-background(checked,$filters-normal,$filters-retina);
+          @include retina-sprite-background(checked, $filters-normal, $filters-retina);
         }
 
         .separator {
-          @include retina-sprite-background(standard,$separators-normal,$separators-retina);
+          @include retina-sprite-background(standard, $separators-normal, $separators-retina);
           width: 100%;
           background-size: 100% image-height(sprite-path($separators-normal));
         }
 
         label[for='things-checkbox'] {
           .ico {
-            @include retina-sprite-background(things,$filters-normal,$filters-retina);
+            @include retina-sprite-background(things, $filters-normal, $filters-retina);
 
           }
         }
         label[for='time-checkbox'] {
           .ico {
-            @include retina-sprite-background(time,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(time, $filters-normal, $filters-retina);
+
           }
         }
         label[for='promises-checkbox'] {
           .ico {
-            @include retina-sprite-background(promises,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(promises, $filters-normal, $filters-retina);
+
           }
         }
         label[for='to-me-checkbox'] {
           .ico {
-            @include retina-sprite-background(to-me,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(to-me, $filters-normal, $filters-retina);
+
           }
         }
         label[for='from-me-checkbox'] {
           .ico {
-            @include retina-sprite-background(from-me,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(from-me, $filters-normal, $filters-retina);
+
           }
         }
         label[for='returned-checkbox'] {
           .ico {
-            @include retina-sprite-background(returned,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(returned, $filters-normal, $filters-retina);
+
           }
         }
         label[for='accepted-checkbox'] {
           .ico {
-            @include retina-sprite-background(accepted,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(accepted, $filters-normal, $filters-retina);
+
           }
         }
         label[for='rejected-checkbox'] {
           .ico {
-            @include retina-sprite-background(rejected,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(rejected, $filters-normal, $filters-retina);
+
           }
         }
         label[for='awaiting-checkbox'] {
           .ico {
-            @include retina-sprite-background(awaiting,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(awaiting, $filters-normal, $filters-retina);
+
           }
         }
         label[for='return-awaiting-checkbox'] {
           .ico {
-            @include retina-sprite-background(return-awaiting,$filters-normal,$filters-retina);
-            
+            @include retina-sprite-background(return-awaiting, $filters-normal, $filters-retina);
+
           }
         }
       }
@@ -606,7 +605,7 @@ body {
       font-weight: bold;
     }
     .magnifying-glass-ico {
-      @include retina-sprite-background(magnifying-glass,$icons-normal,$icons-retina);
+      @include retina-sprite-background(magnifying-glass, $icons-normal, $icons-retina);
       display: block;
       float: left;
       margin-left: 10px;
@@ -728,7 +727,7 @@ body {
       color: #9C9E9D;
     }
     .separator {
-      @include retina-sprite-background(standard,$separators-normal,$separators-retina);
+      @include retina-sprite-background(standard, $separators-normal, $separators-retina);
       width: 100%;
       background-size: 100% image-height(sprite-path($separators-normal));
       margin-top: 15px;
@@ -774,7 +773,7 @@ body {
                 @include retina-sprite-background(confirm, $icons-normal, $icons-retina);
               }
               &.disagree-btn {
-                @include retina-sprite-background(black-exit,$icons-normal,$icons-retina);
+                @include retina-sprite-background(black-exit, $icons-normal, $icons-retina);
               }
             }
             .info {
@@ -883,22 +882,23 @@ body {
       position: relative;
       width: 100%;
       margin: 7px 0;
+      text-align: center;
       .item {
         @include retina-sprite-background(empty-border, $friends-sorting-normal, $friends-sorting-retina);
         background-size: 100% image-height(sprite-path($friends-sorting-normal));
         @include shadows-font;
         color: black;
-        width: 33.3%;
+        max-width: 25%;
         font-size: 2.0em;
         line-height: 1.6em;
         margin: 0;
         text-align: center;
-
         display: inline-block;
         &.active {
           color: white;
           @include retina-sprite-background(filled-border, $friends-sorting-normal, $friends-sorting-retina);
           background-size: 100% image-height(sprite-path($friends-sorting-normal));
+          max-width: 25%;
         }
       }
     }
@@ -1026,6 +1026,13 @@ body {
 
 }
 
+fb-comments {
+  a {
+    color: red !important;
+  }
+  color: red !important;
+}
+
 /* end share details */
 
 /* friend details */
@@ -1081,14 +1088,14 @@ body {
       }
     }
     .separator {
-      @include retina-sprite-background(standard,$separators-normal,$separators-retina);
+      @include retina-sprite-background(standard, $separators-normal, $separators-retina);
       width: 100%;
       background-size: 100% image-height(sprite-path($separators-normal));
       margin-top: 15px;
       margin-bottom: 10px;
     }
     .separator-rev {
-      @include retina-sprite-background(standard-2,$separators-normal,$separators-retina);
+      @include retina-sprite-background(standard-2, $separators-normal, $separators-retina);
       width: 100%;
       background-size: 100% image-height(sprite-path($separators-normal));
       margin-top: 15px;
@@ -1240,17 +1247,17 @@ body {
   }
   &.promise-type {
     .type-ico-container {
-      @include retina-sprite-background(promise-ico,$icons-normal,$icons-retina);
+      @include retina-sprite-background(promise-ico, $icons-normal, $icons-retina);
     }
   }
   &.thing-type {
     .type-ico-container {
-      @include retina-sprite-background(thing-ico,$icons-normal,$icons-retina);
+      @include retina-sprite-background(thing-ico, $icons-normal, $icons-retina);
     }
   }
   &.time-type {
     .type-ico-container {
-      @include retina-sprite-background(time-ico,$icons-normal,$icons-retina);
+      @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
     }
   }
   .state-ico-container {
@@ -1319,7 +1326,28 @@ body {
       max-width: 100%;
       margin: 0 auto 0 auto;
       visibility: hidden;
+      z-index: 1;
+      position: relative;
+    }
+    .preloader-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: black;
       z-index: 0;
+      top: 0;
+      left: 0;
+      display: none;
+      .preloader {
+        width: 66px;
+        height: 66px;
+        background-image: url("../img/ajax-loader.gif");
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-left: -33px;
+        margin-top: -33px;
+      }
     }
     .share-placeholder {
       display: block;
@@ -1484,7 +1512,7 @@ body {
     }
   }
   .separator {
-    @include retina-sprite-background(standard,$separators-normal,$separators-retina);
+    @include retina-sprite-background(standard, $separators-normal, $separators-retina);
     width: 100%;
     background-size: 100% image-height(sprite-path($separators-normal));
     margin-top: 15px;
@@ -1492,7 +1520,6 @@ body {
 }
 
 /* end misc */
-
 
 /* new share */
 

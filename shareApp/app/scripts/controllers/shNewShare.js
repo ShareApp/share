@@ -49,9 +49,7 @@ var ShNewShareCtrl = angular.module('shareApp')
     $scope.uploadPhoto = function (files) {
       if (files.length > 0) {
         var file = files[0];
-        $rootScope.$broadcast('progressBar.update', true);
         shShare.uploadPhoto(file).then(function () {
-          $rootScope.$broadcast('progressBar.update', false);
         });
       }
     };

@@ -5,9 +5,9 @@
  */
 var getPositionImgFun = function (elm, attr) {
   var positionImg = function () {
-    if (!attr.ngSrc) {
-      return;
-    }
+//    if (!attr.ngSrc) {
+//      return;
+//    }
     elm.css("visibility", "hidden").css("display", "block");
     elm.css("maxWidth", "100%");
     elm.css("height", "auto");
@@ -26,7 +26,7 @@ var getPositionImgFun = function (elm, attr) {
       elm.css("marginLeft", "0");
       elm.css("maxWidth", "100%");
     } else {
-      //    if img is lower than container ex. wide img
+      // if img is lower than container ex. wide img
       var width = elm.width();
       var height = elm.height();
       elm.height(container.height());
@@ -39,8 +39,7 @@ var getPositionImgFun = function (elm, attr) {
     elm.css("display", "none").css("visibility", "visible").fadeIn();
   };
   return positionImg;
-}
-
+};
 
 /**
  * @ngdoc directive
@@ -57,9 +56,7 @@ angular.module('shareApp')
         src: '='
       },
       link: function postLink(scope, elm, attr) {
-//        scope.$watch("src", function (value) {
         elm.on("load", getPositionImgFun(elm, attr));
-//        });
         angular.element($window).on("resize", getPositionImgFun(elm, attr));
       }
     };
