@@ -13,16 +13,24 @@
  * Filtering can be performed by three parameters: frequent, alphabetically and recent
  */
 angular.module('shareApp')
-  .filter('parseusersorter', ['shUser', function (shUser) {
+  .filter('parseusersorter', ['shUser', 'shSync', function (shUser, shSync) {
     return function (data, query) {
       var users = data.slice();
+      // we can share to fakeUser only when online (need to save user after selecting it)
+      users = users.filter(function(u){
+        return u.get('fakeUser') !== true || shSync.isOnline;
+      });
       if (query === "frequent") {
         users.sort(function (a, b) {
           return b.get('sharesCounter') - a.get('sharesCounter');
         });
       } else if (query === "alphabetically") {
         users.sort(function (a, b) {
-          return a.get('name') > b.get('name');
+          if(a.get('name') < b.get('name')) {
+            return -1;
+          } else {
+            return 1;
+          }
         });
       } else if (query === "recent") {
         users.sort(function (a, b) {

@@ -241,6 +241,28 @@ var shUser = angular.module('shareApp')
             safeApply($rootScope, function () {
               myUser.friendsList = myUser.friendsList.concat(users);
             });
+
+            // generates users which are not in Share, but we can share to them
+            var User = Parse.Object.extend('User');
+            var fakeUsers = [];
+            myUser.fbFriendsList.forEach(function (item) {
+              if (users.filter(function (u) {
+                return u.get('facebookid') == item['id']
+              }).length != 0) {
+                return;
+              }
+              var user = new User();
+              user.set('facebookid', item['id']);
+              user.set('name', item['name']);
+              user.set('firstName', item['name'].split(" ")[0]);
+              user.set('fakeUser', true);
+              user.set('objectId', item['id']);
+              fakeUsers.push(user);
+            });
+            safeApply($rootScope, function () {
+              myUser.friendsList = myUser.friendsList.concat(fakeUsers);
+            });
+
             // results of cloud functions are not stored in structured storage, so we need to store it manually
             angular.forEach(users, function (user) {
               PPO.saveObjToStorage(user);
@@ -373,38 +395,38 @@ var shUser = angular.module('shareApp')
             }
             blankQuery = false;
             switch (s_key) {
-              case 'time':
-                types.push(globals.SHARE_TYPE_ENUM.TIME);
-                break;
-              case 'things':
-                types.push(globals.SHARE_TYPE_ENUM.THING);
-                break;
-              case 'promises':
-                types.push(globals.SHARE_TYPE_ENUM.PROMISE);
-                break;
-              case 'to_me':
-                toMe = true;
-                break;
-              case 'from_me':
-                fromMe = true;
-                break;
-              case 'returned':
-                states.push(globals.SHARE_STATE_ENUM.RETURNED);
-                break;
-              case 'rejected':
-                states.push(globals.SHARE_STATE_ENUM.REJECTED);
-                break;
-              case 'accepted':
-                states.push(globals.SHARE_STATE_ENUM.CONFIRMED);
-                break;
-              case 'awaiting':
-                states.push(globals.SHARE_STATE_ENUM.CREATED);
-                break;
-              case 'return_awaiting':
-                states.push(globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED);
-                break;
-              default:
-                break;
+            case 'time':
+              types.push(globals.SHARE_TYPE_ENUM.TIME);
+              break;
+            case 'things':
+              types.push(globals.SHARE_TYPE_ENUM.THING);
+              break;
+            case 'promises':
+              types.push(globals.SHARE_TYPE_ENUM.PROMISE);
+              break;
+            case 'to_me':
+              toMe = true;
+              break;
+            case 'from_me':
+              fromMe = true;
+              break;
+            case 'returned':
+              states.push(globals.SHARE_STATE_ENUM.RETURNED);
+              break;
+            case 'rejected':
+              states.push(globals.SHARE_STATE_ENUM.REJECTED);
+              break;
+            case 'accepted':
+              states.push(globals.SHARE_STATE_ENUM.CONFIRMED);
+              break;
+            case 'awaiting':
+              states.push(globals.SHARE_STATE_ENUM.CREATED);
+              break;
+            case 'return_awaiting':
+              states.push(globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED);
+              break;
+            default:
+              break;
             }
           });
         });

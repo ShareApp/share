@@ -31,9 +31,27 @@ var ShNewShareSelectFriendCtrl = angular.module('shareApp')
     $scope.createShareStep1 = function () {
       $location.path('/share/' + $scope.share.targetUser.id + '/' + $scope.share.direction + '/' + $scope.share.type);
     };
-    $scope.selectFriend = function (target) {
-      $scope.share.targetUser = target;
-      $scope.createShareStep1();
+    $scope.selectFriend = function (targetUser) {
+      var callback = function (targetUser) {
+        $scope.share.targetUser = targetUser;
+        $scope.createShareStep1();
+      };
+      if (targetUser.get('fakeUser') === true && targetUser.id === targetUser.get('facebookid')) {
+        // creating user which we want to create share
+        Parse.User.signUp(Math.random().toString(36).substring(2), Math.random().toString(36).substring(2), {
+          facebookid: targetUser.get('facebookid'),
+          name: targetUser.get('name'),
+          firstName: targetUser.get('name').split(" ")[0],
+          fakeUser: true
+        }).then(function (user) {
+            shUser.friendsList = shUser.friendsList.filter(function (u) {
+              return u.get('facebookid') !== targetUser.get('facebookid');
+            }).concat([user]);
+            callback(user);
+          });
+      } else {
+        callback(targetUser);
+      }
     };
   });
 

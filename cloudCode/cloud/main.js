@@ -188,7 +188,7 @@ Parse.Cloud.define("getCommonShares", function (request, response) {
         response.success(friends);
       } else {
         friends.forEach(function (friend, idx) {
-          results[friend.id] = {}
+          results[friend.id] = {};
           sharedItemFromQuery = new Parse.Query("SharedItem");
           sharedItemToQuery = new Parse.Query("SharedItem");
 
