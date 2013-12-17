@@ -47,6 +47,26 @@ var MainCtrl = angular.module('shareApp')
         name: 'japoński',
         value: 'ja_JP',
         abbr: "jp"
+      },
+      {
+        name: 'russian',
+        value: 'ru_RU',
+        abbr: "ru"
+      },
+      {
+        name: 'italian',
+        value: 'it_IT',
+        abbr: "it"
+      },
+      {
+        name: 'turkish',
+        value: 'tr_TR',
+        abbr: "tr"
+      },
+      {
+        name: 'spanish',
+        value: 'es_ES',
+        abbr: "es"
       }
     ];
     if (!$translate.uses()) {

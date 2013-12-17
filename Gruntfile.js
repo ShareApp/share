@@ -67,7 +67,7 @@ module.exports = function (grunt) {
     i18nextract: {
 
       default_options: {
-        lang: ['en_EN', 'pl_PL', 'ja_JP'],
+        lang: ['en_EN', 'pl_PL', 'ja_JP', 'es_ES', 'it_IT', 'ru_RU', 'tr_TR'],
         src: ['app/views/*.html', 'app/scripts/*/*.js', 'app/scripts/app.js', 'app/scripts/globals.js', ],
         prefix: 'lang_',
         suffix: '.js',
