@@ -42,7 +42,7 @@ angular.module('shareApp')
        * @description
        * if it is public share (visible for all)
        */
-      isPublic: false,
+      isPublic: true,
       /**
        * @ngdoc property
        * @name shShare#direction
@@ -143,7 +143,7 @@ angular.module('shareApp')
         myShare.direction = 1;
         myShare.text = '';
         myShare.amount = 1;
-        myShare.isPublic = false;
+        myShare.isPublic = true;
         myShare.date = getToday();
         myShare.img = null;
         myShare.targetUser = null;

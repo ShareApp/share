@@ -27,7 +27,7 @@ var ShNewShareCtrl = angular.module('shareApp')
     shShare.direction = $state.params.direction;
     $scope.user = shUser;
     $scope.share = shShare;
-    $scope.postOnFB = false;
+    $scope.postOnFB = true;
     $scope.isOnline = shSync.isOnline;
     setUsers();
 
