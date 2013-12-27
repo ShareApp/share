@@ -15,7 +15,7 @@
 angular.module('shareApp')
   .directive('smallShareItem', function () {
     return {
-      templateUrl: "views/smallShareItem.html",
+      templateUrl: '/views/smallShareItem.html',
       restrict: 'E',
       scope: {
         share: "&share"

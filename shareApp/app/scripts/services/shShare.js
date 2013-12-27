@@ -14,7 +14,7 @@
  */
 
 angular.module('shareApp')
-  .factory('shShare', function shShare($location, $window, $rootScope, shUser) {
+  .factory('shShare', ['$location', '$window', '$rootScope', 'shUser', 'shSync', function shShare($location, $window, $rootScope, shUser, shSync) {
     var getToday = function () {
       var now = new Date(),
         month = now.getMonth() >= 9 ? (now.getMonth() + 1) : "0" + (now.getMonth() + 1),
@@ -205,7 +205,7 @@ angular.module('shareApp')
               $location.path('');
               shUser.fetchFriends();
             };
-            if (postOnFB === true) {
+            if (postOnFB === true && shSync.isOnline === true) {
               FB.ui({
                 method: 'feed',
                 link: 'http://' + $window.location.host + '/#/sharedItem/' + sharedItem.id,
@@ -339,4 +339,4 @@ angular.module('shareApp')
       }};
 
     return myShare;
-  });
+  }]);

@@ -15,7 +15,7 @@
 angular.module('shareApp')
   .directive('shFilters', ['$translate', function ($translate) {
     return {
-      templateUrl: 'views/filters.html',
+      templateUrl: '/views/filters.html',
       restrict: 'A',
       link: function postLink(scope, element, attrs) {
         var setVerboseFilters = function () {

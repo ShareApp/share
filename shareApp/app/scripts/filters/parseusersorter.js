@@ -50,6 +50,6 @@ angular.module('shareApp')
           }
         });
       }
-      return users;
+      return users.slice(0, 20);
     };
   }]);

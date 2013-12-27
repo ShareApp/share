@@ -15,7 +15,7 @@
 angular.module('shareApp')
   .directive('shNotifications', function () {
     return {
-      templateUrl: "views/notifications.html",
+      templateUrl: '/views/notifications.html',
       restrict: 'E',
       controller: ['$scope', '$element', '$attrs', '$location', '$rootScope', 'shUser', 'shShare', 'shNotifications',
         function ($scope, $element, $attrs, $location, $rootScope, shUser, shShare, shNotifications) {
@@ -60,6 +60,14 @@ angular.module('shareApp')
             $rootScope.notificationsFrameOpened = false;
             $location.path('/sharedItem/' + notification.get('sharedItem').id);
           };
+
+          $scope.isTouchDevice = function () {
+            console.log(111);
+            console.log(!!('ontouchstart' in window) || !!('onmsgesturechange' in window));
+            return !!('ontouchstart' in window) // works on most browsers
+              || !!('onmsgesturechange' in window); // works on ie10
+          };
+
         }],
       scope: {
         item: '@'

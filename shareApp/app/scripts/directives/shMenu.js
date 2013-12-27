@@ -15,7 +15,7 @@
 angular.module('shareApp')
   .directive('shMenu', ['$rootScope', function ($rootScope) {
     return {
-      templateUrl: 'views/menu.html',
+      templateUrl: '/views/menu.html',
       restrict: 'A',
       link: function postLink(scope, element) {
         /*
