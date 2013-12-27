@@ -10,15 +10,14 @@
         <ul>
             <li class="separator"></li>
             <li class="header" ng-show="notificationItems.length == 0">{{ "No notifications" | translate }}</li>
-            <li class="item" ng-repeat='item in notificationItems'>
+            <li class="item" ng-repeat='item in notificationItems'
+                ng-mouseover="swiped[$index] = isTouchDevice() ? swiped[$index] : 'right'; !isTouchDevice() && takeNotificationAction(item)"
+                ng-mouseout="swiped[$index] = isTouchDevice() ? swiped[$index] : 'left'"
+                    >
                 <div class="mask"
                      tap="goToShare(item)"
-                     ng-swipe-right="swiped[$index] = isTouchDevice() ? 'right' : swiped[$index];isTouchDevice() || takeNotificationAction(item)"
-                     ng-mouseover="swiped[$index] = isTouchDevice() ? swiped[$index] : 'right';!isTouchDevice() || takeNotificationAction(item)"
-
+                     ng-swipe-right="swiped[$index] = isTouchDevice() ? 'right' : swiped[$index]; isTouchDevice() && takeNotificationAction(item)"
                      ng-swipe-left="swiped[$index] = isTouchDevice() ? 'left' : swiped[$index]"
-                     ng-mouseout="swiped[$index] = isTouchDevice() ? swiped[$index] : 'left'"
-
                      ng-class="{right:'swiped-right', left:'swiped-left'}[swiped[$index]]">
                 </div>
                 <div class="container">
