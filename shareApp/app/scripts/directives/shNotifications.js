@@ -35,22 +35,23 @@ angular.module('shareApp')
           $scope.getStatusDisplay = function (item) {
             var msg;
             switch (item.get('status')) {
-              case globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE:
-                msg = "In queue";
-                break;
-              case globals.NOTIFICATION_STATUS_ENUM.READ:
-                msg = "Read";
-                break;
-              case globals.NOTIFICATION_STATUS_ENUM.ACCEPTED:
-                msg = "Agreed";
-                break;
-              case globals.NOTIFICATION_STATUS_ENUM.REJECTED:
-                msg = "Disagreed";
-                break;
+            case globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE:
+              msg = "In queue";
+              break;
+            case globals.NOTIFICATION_STATUS_ENUM.READ:
+              msg = "Read";
+              break;
+            case globals.NOTIFICATION_STATUS_ENUM.ACCEPTED:
+              msg = "Agreed";
+              break;
+            case globals.NOTIFICATION_STATUS_ENUM.REJECTED:
+              msg = "Disagreed";
+              break;
             }
             return msg;
           };
           $scope.takeNotificationAction = function (item) {
+            console.log($scope.swiped);
             if (item.get('action') === globals.NOTIFICATION_ACTION_ENUM.INFO) {
               shNotifications.notificationRead(item);
             }
@@ -62,11 +63,19 @@ angular.module('shareApp')
           };
 
           $scope.isTouchDevice = function () {
-            console.log(111);
-            console.log(!!('ontouchstart' in window) || !!('onmsgesturechange' in window));
-            return !!('ontouchstart' in window) // works on most browsers
-              || !!('onmsgesturechange' in window); // works on ie10
+            return !!('ontouchstart' in window)
+              || !!('onmsgesturechange' in window);
           };
+          $scope.confirmAll = function (notifications) {
+            $rootScope.$broadcast('progressBar.update', true);
+            shNotifications.confirmAll(notifications).then(function () {
+              $rootScope.$broadcast('progressBar.update', false);
+              $scope.$apply();
+            }, function () {
+              $rootScope.$broadcast('progressBar.update', false);
+              $scope.$apply();
+            });
+          }
 
         }],
       scope: {

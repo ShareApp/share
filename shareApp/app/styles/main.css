@@ -250,7 +250,7 @@ body {
   margin-left: 15px;
   border-width: 0;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1181px;
   height: 21px;
   width: 25px;
@@ -261,7 +261,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 239, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -646px;
     height: 21px;
     width: 26px;
@@ -271,7 +271,7 @@ body {
 /* line 248, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1202px;
   height: 21px;
   width: 25px;
@@ -280,7 +280,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 248, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -787px;
     height: 21px;
     width: 26px;
@@ -290,7 +290,7 @@ body {
 /* line 251, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button.active {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1080px;
   height: 21px;
   width: 25px;
@@ -300,7 +300,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 251, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button.active {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -605px;
     height: 21px;
     width: 26px;
@@ -447,7 +447,7 @@ body {
 #header-container #header #menu-btn .img {
   display: block;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1263px;
   height: 19px;
   width: 26px;
@@ -456,7 +456,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 320, main.scss */
   #header-container #header #menu-btn .img {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -909px;
     height: 19px;
     width: 26px;
@@ -478,7 +478,7 @@ body {
 /* line 334, main.scss */
 #header-container #header #logo-container #logo {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -662px;
   height: 29px;
   width: 88px;
@@ -490,7 +490,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 334, main.scss */
   #header-container #header #logo-container #logo {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -245px;
     height: 30px;
     width: 88px;
@@ -518,7 +518,7 @@ body {
   text-align: center;
   font-size: 1.2em;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1282px;
   height: 22px;
   width: 23px;
@@ -531,7 +531,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 352, main.scss */
   #header-container #header #logo-container #notification-btn {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -847px;
     height: 22px;
     width: 24px;
@@ -556,7 +556,7 @@ body {
 #header-container #header #contact-list-btn .img {
   display: block;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -735px;
   height: 27px;
   width: 39px;
@@ -565,7 +565,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 374, main.scss */
   #header-container #header #contact-list-btn .img {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -422px;
     height: 27px;
     width: 39px;
@@ -590,7 +590,7 @@ body {
 #header-container #header #contact-list-exit-btn .img {
   display: block;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1118px;
   height: 20px;
   width: 21px;
@@ -599,7 +599,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 388, main.scss */
   #header-container #header #contact-list-exit-btn .img {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -626px;
     height: 20px;
     width: 21px;
@@ -1024,7 +1024,7 @@ body {
 /* line 607, main.scss */
 #filters-container #filters-btn .magnifying-glass-ico {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -838px;
   height: 27px;
   width: 24px;
@@ -1037,7 +1037,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 607, main.scss */
   #filters-container #filters-btn .magnifying-glass-ico {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -373px;
     height: 27px;
     width: 24px;
@@ -1144,6 +1144,7 @@ body {
 #notifications-frame-container:after {
   height: 40px;
   width: 100%;
+  padding-bottom: 40px;
   content: "";
   display: block;
   background: transparent url("../img/low-notifications-bottom.png") no-repeat top left;
@@ -1155,32 +1156,32 @@ body {
     background-image: url("../img/high-notifications-bottom.png");
   }
 }
-/* line 713, main.scss */
+/* line 714, main.scss */
 #notifications-frame-container #notifications-frame {
   margin-top: -60px;
   background: transparent url("../img/backgrounds/low-white.png") no-repeat;
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 713, main.scss */
+  /* line 714, main.scss */
   #notifications-frame-container #notifications-frame {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 722, main.scss */
+/* line 723, main.scss */
 #notifications-frame-container #notifications-frame .header {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 725, main.scss */
+/* line 726, main.scss */
 #notifications-frame-container #notifications-frame .description {
   line-height: 1.2em;
   font-size: 1.5em;
   font-family: Arial;
   color: #9C9E9D;
 }
-/* line 729, main.scss */
+/* line 730, main.scss */
 #notifications-frame-container #notifications-frame .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s26ac5467ea.png');
@@ -1188,12 +1189,15 @@ body {
   height: 13px;
   width: 262px;
   background-color: transparent;
-  width: 100%;
-  background-size: 100% 105px;
+  width: 100% !important;
+  padding: 0;
+  margin: 0;
+  background-size: 100% 105px !important;
   margin-top: 15px;
+  position: relative;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 729, main.scss */
+  /* line 730, main.scss */
   #notifications-frame-container #notifications-frame .separator {
     background-image: url('../img/separators/retina-sf29b077aac.png');
     background-position: 0 0;
@@ -1202,20 +1206,22 @@ body {
     background-size: 262px auto;
   }
 }
-/* line 735, main.scss */
+/* line 739, main.scss */
 #notifications-frame-container #notifications-frame ul {
   margin: 0;
   padding: 0;
   list-style: none;
 }
-/* line 739, main.scss */
+/* line 743, main.scss */
 #notifications-frame-container #notifications-frame ul li.item {
+  margin: 0;
+  padding: 0;
   display: block;
   width: 100%;
   white-space: nowrap;
   position: relative;
 }
-/* line 744, main.scss */
+/* line 750, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .mask {
   display: block;
   width: 100%;
@@ -1225,7 +1231,7 @@ body {
   left: 0;
   z-index: 1005;
 }
-/* line 754, main.scss */
+/* line 760, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-right,
 #notifications-frame-container #notifications-frame ul li.item .swiped-right + .container {
   -webkit-transform: translate3d(150px, 0, 0);
@@ -1234,7 +1240,7 @@ body {
   -o-transform: translate3d(150px, 0, 0);
   transform: translate3d(150px, 0, 0);
 }
-/* line 758, main.scss */
+/* line 764, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-left,
 #notifications-frame-container #notifications-frame ul li.item .swiped-left + .container {
   -webkit-transform: translate3d(0, 0, 0);
@@ -1243,7 +1249,7 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 761, main.scss */
+/* line 767, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container {
   padding: 0 7px;
   -webkit-transition: all 0.1s linear;
@@ -1251,77 +1257,77 @@ body {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 765, main.scss */
+/* line 771, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions {
   float: left;
   margin-left: -150px;
   width: 150px;
 }
-/* line 769, main.scss */
+/* line 775, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button {
   border-width: 0;
   margin: 25px 10px 0 10px;
 }
-/* line 772, main.scss */
+/* line 778, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1241px;
   height: 22px;
   width: 29px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 772, main.scss */
+  /* line 778, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -825px;
     height: 22px;
     width: 30px;
     background-size: 88px auto;
   }
 }
-/* line 775, main.scss */
+/* line 781, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1118px;
   height: 20px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 775, main.scss */
+  /* line 781, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -626px;
     height: 20px;
     width: 21px;
     background-size: 88px auto;
   }
 }
-/* line 779, main.scss */
+/* line 785, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions .info {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   margin-top: 25px;
 }
-/* line 784, main.scss */
+/* line 790, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content {
   text-align: left;
   min-height: 70px;
 }
-/* line 788, main.scss */
+/* line 794, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .profile-picture-container,
 #notifications-frame-container #notifications-frame ul li.item .container .content .small-share-item {
   border-color: #FFFFFF;
 }
-/* line 791, main.scss */
+/* line 797, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   margin-top: 8px;
 }
-/* line 795, main.scss */
+/* line 801, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content small-share-item,
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   display: block;
@@ -1358,7 +1364,7 @@ body {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 803, main.scss */
+/* line 809, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container {
   word-break: normal;
   white-space: normal;
@@ -1366,13 +1372,13 @@ body {
   height: 100%;
   display: inline;
 }
-/* line 809, main.scss */
+/* line 815, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 813, main.scss */
+/* line 819, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title > .title-inner {
   display: table-cell;
   vertical-align: middle;
@@ -1382,7 +1388,7 @@ body {
 
 /* end notifications */
 /* select friend */
-/* line 832, main.scss */
+/* line 838, main.scss */
 #friend-select {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -1422,87 +1428,87 @@ body {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 835, main.scss */
+/* line 841, main.scss */
 #friend-select .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 835, main.scss */
+  /* line 841, main.scss */
   #friend-select .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 837, main.scss */
+/* line 843, main.scss */
 #friend-select .inner input {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   font-size: 2em;
 }
-/* line 842, main.scss */
+/* line 848, main.scss */
 #friend-select .inner .header {
   text-align: center;
   height: 74px;
 }
-/* line 846, main.scss */
+/* line 852, main.scss */
 #friend-select .inner .header .share-direction {
   float: left;
   padding: 0;
   border-width: 0;
 }
-/* line 847, main.scss */
+/* line 853, main.scss */
 #friend-select .inner .header .share-direction.right {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -466px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 847, main.scss */
+  /* line 853, main.scss */
   #friend-select .inner .header .share-direction.right {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -98px;
     height: 50px;
     width: 50px;
     background-size: 88px auto;
   }
 }
-/* line 850, main.scss */
+/* line 856, main.scss */
 #friend-select .inner .header .share-direction.left {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -515px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 850, main.scss */
+  /* line 856, main.scss */
   #friend-select .inner .header .share-direction.left {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -49px;
     height: 50px;
     width: 50px;
     background-size: 88px auto;
   }
 }
-/* line 857, main.scss */
+/* line 863, main.scss */
 #friend-select .inner .header .search-container {
   display: block;
   overflow: hidden;
   margin: 0 0 0 3%;
   position: relative;
 }
-/* line 862, main.scss */
+/* line 868, main.scss */
 #friend-select .inner .header .search-container .ico {
   position: absolute;
   left: 4%;
   top: 14px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -838px;
   height: 27px;
   width: 24px;
@@ -1511,16 +1517,16 @@ body {
   z-index: 300;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 862, main.scss */
+  /* line 868, main.scss */
   #friend-select .inner .header .search-container .ico {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -373px;
     height: 27px;
     width: 24px;
     background-size: 88px auto;
   }
 }
-/* line 870, main.scss */
+/* line 876, main.scss */
 #friend-select .inner .header .search-container input.search {
   width: 70%;
   padding: 0 3% 0 23%;
@@ -1530,14 +1536,14 @@ body {
   background: transparent url("../img/search-friend.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 881, main.scss */
+/* line 887, main.scss */
 #friend-select .inner #friends-sorting {
   position: relative;
   width: 100%;
   margin: 7px 0;
   text-align: center;
 }
-/* line 886, main.scss */
+/* line 892, main.scss */
 #friend-select .inner #friends-sorting .item {
   background-repeat: no-repeat;
   background-image: url('../img/friends-sorting/normal-s3929cf2e59.png');
@@ -1556,7 +1562,7 @@ body {
   display: inline-block;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 886, main.scss */
+  /* line 892, main.scss */
   #friend-select .inner #friends-sorting .item {
     background-image: url('../img/friends-sorting/retina-s180bfc220e.png');
     background-position: 0 -30px;
@@ -1565,7 +1571,7 @@ body {
     background-size: 119px auto;
   }
 }
-/* line 897, main.scss */
+/* line 903, main.scss */
 #friend-select .inner #friends-sorting .item.active {
   color: white;
   background-repeat: no-repeat;
@@ -1578,7 +1584,7 @@ body {
   max-width: 25%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 897, main.scss */
+  /* line 903, main.scss */
   #friend-select .inner #friends-sorting .item.active {
     background-image: url('../img/friends-sorting/retina-s180bfc220e.png');
     background-position: 0 0;
@@ -1587,17 +1593,17 @@ body {
     background-size: 119px auto;
   }
 }
-/* line 905, main.scss */
+/* line 911, main.scss */
 #friend-select .inner .friend-select-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 909, main.scss */
+/* line 915, main.scss */
 #friend-select .inner .friend-select-list li {
   height: 80px;
 }
-/* line 911, main.scss */
+/* line 917, main.scss */
 #friend-select .inner .friend-select-list li a {
   display: block;
   font-family: 'Shadows Into Light Two', cursive;
@@ -1606,38 +1612,38 @@ body {
   text-decoration: none;
   color: black;
 }
-/* line 916, main.scss */
+/* line 922, main.scss */
 #friend-select .inner .friend-select-list li a fb-profile-picture {
   float: left;
   margin-right: 12px;
   height: 44px;
   margin-top: 13px;
 }
-/* line 922, main.scss */
+/* line 928, main.scss */
 #friend-select .inner .friend-select-list li a .title-container {
   display: block;
   width: 100%;
 }
-/* line 925, main.scss */
+/* line 931, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 929, main.scss */
+/* line 935, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper .title {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 936, main.scss */
+/* line 942, main.scss */
 #friend-select .inner .friend-select-list li a.selected {
   background-color: rgba(100, 0, 100, 0.5);
 }
-/* line 940, main.scss */
+/* line 946, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container {
   display: inline-block;
 }
-/* line 943, main.scss */
+/* line 949, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container img {
   width: 44px;
   height: 44px;
@@ -1645,11 +1651,11 @@ body {
 
 /* end select friend */
 /* new share */
-/* line 958, main.scss */
+/* line 964, main.scss */
 #new-share .content {
   padding: 0 25px;
 }
-/* line 960, main.scss */
+/* line 966, main.scss */
 #new-share .content input, #new-share .content textarea, #new-share .content label {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1657,22 +1663,22 @@ body {
   background-color: transparent;
   border-width: 0;
 }
-/* line 965, main.scss */
+/* line 971, main.scss */
 #new-share .content label[for=id_amount] {
   float: right;
 }
-/* line 968, main.scss */
+/* line 974, main.scss */
 #new-share .content input[name=amount] {
   float: right;
   width: 40px;
   text-align: center;
 }
-/* line 973, main.scss */
+/* line 979, main.scss */
 #new-share .content input[name=date] {
   width: 160px;
   float: left;
 }
-/* line 977, main.scss */
+/* line 983, main.scss */
 #new-share .content textarea {
   line-height: 1.4em;
   line-height: 1.4em;
@@ -1681,66 +1687,66 @@ body {
   margin: 0;
   resize: vertical;
 }
-/* line 986, main.scss */
+/* line 992, main.scss */
 #new-share .toolbar {
   padding: 0 25px 10px 25px;
 }
 
 /* end new share */
 /* share details */
-/* line 995, main.scss */
+/* line 1001, main.scss */
 #share-details {
   margin-top: 20px;
 }
-/* line 997, main.scss */
+/* line 1003, main.scss */
 #share-details .content {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
 }
-/* line 1001, main.scss */
+/* line 1007, main.scss */
 #share-details .content .amount-container {
   float: right;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 1006, main.scss */
+/* line 1012, main.scss */
 #share-details .content .amount-container > span {
   border-bottom: 1px solid #DDD9CD;
 }
-/* line 1010, main.scss */
+/* line 1016, main.scss */
 #share-details .content .date-container {
   float: left;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 1017, main.scss */
+/* line 1023, main.scss */
 #share-details .toolbar {
   padding: 0 15px 10px 15px;
 }
-/* line 1020, main.scss */
+/* line 1026, main.scss */
 #share-details .fb-comments {
   text-align: center;
 }
-/* line 1023, main.scss */
+/* line 1029, main.scss */
 #share-details .fb-comments, #share-details .fb-comments span, #share-details .fb-comments.fb_iframe_widget span iframe {
   width: 100% !important;
 }
 
-/* line 1029, main.scss */
+/* line 1035, main.scss */
 fb-comments {
   color: red !important;
 }
-/* line 1030, main.scss */
+/* line 1036, main.scss */
 fb-comments a {
   color: red !important;
 }
 
 /* end share details */
 /* friend details */
-/* line 1041, main.scss */
+/* line 1047, main.scss */
 #friend-details #friend-profile {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -1779,23 +1785,23 @@ fb-comments a {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 1043, main.scss */
+/* line 1049, main.scss */
 #friend-details #friend-profile .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1043, main.scss */
+  /* line 1049, main.scss */
   #friend-details #friend-profile .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 1046, main.scss */
+/* line 1052, main.scss */
 #friend-details #friend-profile .profile-picture-container {
   float: left;
   margin-right: 10px;
 }
-/* line 1050, main.scss */
+/* line 1056, main.scss */
 #friend-details #friend-profile .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1803,20 +1809,20 @@ fb-comments a {
   margin-top: -5px;
   display: inline-block;
 }
-/* line 1055, main.scss */
+/* line 1061, main.scss */
 #friend-details #friend-profile .counter-container {
   color: #959796;
   font-size: 2em;
   margin-top: 5px;
 }
-/* line 1059, main.scss */
+/* line 1065, main.scss */
 #friend-details #friend-profile .counter-container .counter {
   font-size: 1.1em;
 }
 
 /* end friend details */
 /* login */
-/* line 1070, main.scss */
+/* line 1076, main.scss */
 #login {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -1855,19 +1861,19 @@ fb-comments a {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 1072, main.scss */
+/* line 1078, main.scss */
 #login .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
   text-align: center;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1072, main.scss */
+  /* line 1078, main.scss */
   #login .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 1075, main.scss */
+/* line 1081, main.scss */
 #login .inner .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1877,17 +1883,17 @@ fb-comments a {
   color: #666666;
   font-size: 3.2em;
 }
-/* line 1082, main.scss */
+/* line 1088, main.scss */
 #login .inner .logo {
   display: inline-block;
   margin: 10px auto 30px auto;
   max-width: 90%;
 }
-/* line 1086, main.scss */
+/* line 1092, main.scss */
 #login .inner .logo img {
   width: 100%;
 }
-/* line 1090, main.scss */
+/* line 1096, main.scss */
 #login .inner .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s26ac5467ea.png');
@@ -1901,7 +1907,7 @@ fb-comments a {
   margin-bottom: 10px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1090, main.scss */
+  /* line 1096, main.scss */
   #login .inner .separator {
     background-image: url('../img/separators/retina-sf29b077aac.png');
     background-position: 0 0;
@@ -1910,7 +1916,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1097, main.scss */
+/* line 1103, main.scss */
 #login .inner .separator-rev {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s26ac5467ea.png');
@@ -1924,7 +1930,7 @@ fb-comments a {
   margin-bottom: 10px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1097, main.scss */
+  /* line 1103, main.scss */
   #login .inner .separator-rev {
     background-image: url('../img/separators/retina-sf29b077aac.png');
     background-position: 0 -13px;
@@ -1933,7 +1939,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1104, main.scss */
+/* line 1110, main.scss */
 #login .inner button.login-btn {
   background-image: url("../img/fb-background.jpg");
   background-repeat: repeat no-repeat;
@@ -1948,7 +1954,7 @@ fb-comments a {
   line-height: 30px;
   border-radius: 3px;
 }
-/* line 1117, main.scss */
+/* line 1123, main.scss */
 #login .inner button.login-btn img {
   height: 32px;
   padding: 0 10px 0 0;
@@ -1957,14 +1963,14 @@ fb-comments a {
 
 /* end login */
 /* misc */
-/* line 1130, main.scss */
+/* line 1136, main.scss */
 .profile-picture-container {
   display: inline-block;
   border: 4px solid #F0F2F1;
   border-radius: 45%;
   overflow: hidden;
 }
-/* line 1135, main.scss */
+/* line 1141, main.scss */
 .profile-picture-container img {
   display: block;
   border-radius: 45%;
@@ -1972,21 +1978,21 @@ fb-comments a {
   height: 44px;
 }
 
-/* line 1143, main.scss */
+/* line 1149, main.scss */
 .small-share-item-container {
   position: relative;
   height: 67px;
   width: 60px;
 }
-/* line 1147, main.scss */
+/* line 1153, main.scss */
 .small-share-item-container .left {
   left: 0px;
 }
-/* line 1150, main.scss */
+/* line 1156, main.scss */
 .small-share-item-container .right {
   left: 40px;
 }
-/* line 1153, main.scss */
+/* line 1159, main.scss */
 .small-share-item-container .item-counter {
   width: 20px;
   height: 12px;
@@ -2004,70 +2010,70 @@ fb-comments a {
   text-align: center;
   overflow: hidden;
 }
-/* line 1170, main.scss */
+/* line 1176, main.scss */
 .small-share-item-container .type-ico-container {
   position: absolute;
   top: 0;
   z-index: 31;
 }
-/* line 1176, main.scss */
+/* line 1182, main.scss */
 .small-share-item-container.promise-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -812px;
   height: 26px;
   width: 26px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1176, main.scss */
+  /* line 1182, main.scss */
   .small-share-item-container.promise-type .type-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -325px;
     height: 26px;
     width: 26px;
     background-size: 88px auto;
   }
 }
-/* line 1181, main.scss */
+/* line 1187, main.scss */
 .small-share-item-container.thing-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -787px;
   height: 25px;
   width: 25px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1181, main.scss */
+  /* line 1187, main.scss */
   .small-share-item-container.thing-type .type-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -300px;
     height: 26px;
     width: 26px;
     background-size: 88px auto;
   }
 }
-/* line 1186, main.scss */
+/* line 1192, main.scss */
 .small-share-item-container.time-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -762px;
   height: 25px;
   width: 26px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1186, main.scss */
+  /* line 1192, main.scss */
   .small-share-item-container.time-type .type-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -274px;
     height: 26px;
     width: 26px;
     background-size: 88px auto;
   }
 }
-/* line 1190, main.scss */
+/* line 1196, main.scss */
 .small-share-item-container .small-share-item {
   overflow: hidden;
   display: inline-block;
@@ -2083,14 +2089,14 @@ fb-comments a {
   margin-top: 8px;
   margin-left: 9px;
 }
-/* line 1205, main.scss */
+/* line 1211, main.scss */
 .small-share-item-container .small-share-item img {
   display: block;
   max-width: 100%;
   margin: 0 auto 0 auto;
   visibility: hidden;
 }
-/* line 1211, main.scss */
+/* line 1217, main.scss */
 .small-share-item-container .small-share-item .text-container {
   width: 38px;
   padding: 3px 4px 2px 4px;
@@ -2098,7 +2104,7 @@ fb-comments a {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1218, main.scss */
+/* line 1224, main.scss */
 .small-share-item-container .small-share-item .text {
   display: block;
   max-height: 40px;
@@ -2108,12 +2114,12 @@ fb-comments a {
   word-break: break-word;
 }
 
-/* line 1229, main.scss */
+/* line 1235, main.scss */
 .grayed {
   color: #9D9D9D;
 }
 
-/* line 1233, main.scss */
+/* line 1239, main.scss */
 .share-item {
   margin: 0 auto 20px auto;
   position: relative;
@@ -2121,7 +2127,7 @@ fb-comments a {
   max-width: 460px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
-/* line 1239, main.scss */
+/* line 1245, main.scss */
 .share-item .type-ico-container {
   width: 49px;
   height: 49px;
@@ -2131,166 +2137,166 @@ fb-comments a {
   top: -3px;
   z-index: 3;
 }
-/* line 1249, main.scss */
+/* line 1255, main.scss */
 .share-item.promise-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -613px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1249, main.scss */
+  /* line 1255, main.scss */
   .share-item.promise-type .type-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -196px;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1254, main.scss */
+/* line 1260, main.scss */
 .share-item.thing-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -564px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1254, main.scss */
+  /* line 1260, main.scss */
   .share-item.thing-type .type-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -148px;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1259, main.scss */
+/* line 1265, main.scss */
 .share-item.time-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -417px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1259, main.scss */
+  /* line 1265, main.scss */
   .share-item.time-type .type-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 0;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1263, main.scss */
+/* line 1269, main.scss */
 .share-item .state-ico-container {
   position: absolute;
   right: -2px;
   top: -3px;
   z-index: 4;
 }
-/* line 1270, main.scss */
+/* line 1276, main.scss */
 .share-item.confirmed-state .state-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1101px;
   height: 17px;
   width: 17px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1270, main.scss */
+  /* line 1276, main.scss */
   .share-item.confirmed-state .state-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -524px;
     height: 18px;
     width: 18px;
     background-size: 88px auto;
   }
 }
-/* line 1275, main.scss */
+/* line 1281, main.scss */
 .share-item.rejected-state .state-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1012px;
   height: 17px;
   width: 17px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1275, main.scss */
+  /* line 1281, main.scss */
   .share-item.rejected-state .state-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -466px;
     height: 18px;
     width: 18px;
     background-size: 88px auto;
   }
 }
-/* line 1280, main.scss */
+/* line 1286, main.scss */
 .share-item.created-state .state-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1063px;
   height: 17px;
   width: 17px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1280, main.scss */
+  /* line 1286, main.scss */
   .share-item.created-state .state-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -565px;
     height: 18px;
     width: 18px;
     background-size: 88px auto;
   }
 }
-/* line 1285, main.scss */
+/* line 1291, main.scss */
 .share-item.returned-but-not-confirmed-state .state-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1046px;
   height: 17px;
   width: 17px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1285, main.scss */
+  /* line 1291, main.scss */
   .share-item.returned-but-not-confirmed-state .state-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -483px;
     height: 18px;
     width: 18px;
     background-size: 88px auto;
   }
 }
-/* line 1290, main.scss */
+/* line 1296, main.scss */
 .share-item.returned-state .state-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1029px;
   height: 17px;
   width: 17px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1290, main.scss */
+  /* line 1296, main.scss */
   .share-item.returned-state .state-ico-container {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -448px;
     height: 18px;
     width: 18px;
     background-size: 88px auto;
   }
 }
-/* line 1294, main.scss */
+/* line 1300, main.scss */
 .share-item .people-ico-container {
   font-family: 'Shadows Into Light Two', cursive;
   position: absolute;
@@ -2298,7 +2304,7 @@ fb-comments a {
   text-decoration: none;
   z-index: 10;
 }
-/* line 1300, main.scss */
+/* line 1306, main.scss */
 .share-item .people-ico-container .name {
   color: white;
   font-size: 2.6em;
@@ -2307,17 +2313,17 @@ fb-comments a {
   vertical-align: top;
   display: inline-block;
 }
-/* line 1309, main.scss */
+/* line 1315, main.scss */
 .share-item .people-ico-container.left {
   top: 40px;
   left: 15px;
 }
-/* line 1313, main.scss */
+/* line 1319, main.scss */
 .share-item .people-ico-container.right {
   top: 40px;
   right: 15px;
 }
-/* line 1318, main.scss */
+/* line 1324, main.scss */
 .share-item .img-container {
   width: 100%;
   min-height: 130px;
@@ -2325,7 +2331,7 @@ fb-comments a {
   position: relative;
   max-height: 309px;
 }
-/* line 1324, main.scss */
+/* line 1330, main.scss */
 .share-item .img-container .share-img {
   display: block;
   max-width: 100%;
@@ -2334,7 +2340,7 @@ fb-comments a {
   z-index: 1;
   position: relative;
 }
-/* line 1332, main.scss */
+/* line 1338, main.scss */
 .share-item .img-container .preloader-container {
   position: absolute;
   width: 100%;
@@ -2345,7 +2351,7 @@ fb-comments a {
   left: 0;
   display: none;
 }
-/* line 1341, main.scss */
+/* line 1347, main.scss */
 .share-item .img-container .preloader-container .preloader {
   width: 66px;
   height: 66px;
@@ -2356,13 +2362,13 @@ fb-comments a {
   margin-left: -33px;
   margin-top: -33px;
 }
-/* line 1352, main.scss */
+/* line 1358, main.scss */
 .share-item .img-container .share-placeholder {
   display: block;
   width: 100%;
   height: 130px;
 }
-/* line 1357, main.scss */
+/* line 1363, main.scss */
 .share-item .img-container .share-frame {
   position: absolute;
   top: 0;
@@ -2371,7 +2377,7 @@ fb-comments a {
   height: 100%;
   z-index: 2;
 }
-/* line 1364, main.scss */
+/* line 1370, main.scss */
 .share-item .img-container .share-frame.gradient {
   background-image: linear-gradient(#000000 30px, transparent 150px);
   background-image: -webkit-linear-gradient(black 30px, transparent 150px);
@@ -2406,20 +2412,20 @@ fb-comments a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 1372, main.scss */
+/* line 1378, main.scss */
 .share-item .content {
   padding: 15px 25px 10px 25px;
   z-index: 9;
 }
-/* line 1375, main.scss */
+/* line 1381, main.scss */
 .share-item .content .time {
   margin-top: 10px;
 }
-/* line 1377, main.scss */
+/* line 1383, main.scss */
 .share-item .content .time .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
-  background-position: 0 -1344px;
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-position: 0 -1366px;
   height: 10px;
   width: 10px;
   background-color: transparent;
@@ -2427,16 +2433,16 @@ fb-comments a {
   vertical-align: top;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1377, main.scss */
+  /* line 1383, main.scss */
   .share-item .content .time .ico {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -928px;
     height: 10px;
     width: 10px;
     background-size: 88px auto;
   }
 }
-/* line 1382, main.scss */
+/* line 1388, main.scss */
 .share-item .content .time .text {
   margin-left: 3px;
   margin-top: -1px;
@@ -2446,13 +2452,13 @@ fb-comments a {
   display: inline-block;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1233, main.scss */
+  /* line 1239, main.scss */
   .share-item {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
 
-/* line 1399, main.scss */
+/* line 1405, main.scss */
 .share-item:after {
   height: 85px;
   max-width: 460px;
@@ -2463,24 +2469,24 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1399, main.scss */
+  /* line 1405, main.scss */
   .share-item:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
 
-/* line 1413, main.scss */
+/* line 1419, main.scss */
 .toolbar {
   text-align: center;
   padding: 0;
 }
-/* line 1417, main.scss */
+/* line 1423, main.scss */
 .toolbar .btn,
 .toolbar .file-input-container {
   border-width: 0;
   margin: 0;
 }
-/* line 1422, main.scss */
+/* line 1428, main.scss */
 .toolbar .btn {
   height: 40px;
   color: white;
@@ -2489,160 +2495,189 @@ fb-comments a {
   font-size: 2.4em;
   line-height: 1em;
   white-space: nowrap;
+  cursor: pointer;
 }
-/* line 1428, main.scss */
+/* line 1435, main.scss */
 .toolbar .btn .icon {
   display: inline-block;
   vertical-align: middle;
   margin-left: 7px;
   margin-top: 2px;
 }
-/* line 1434, main.scss */
+/* line 1441, main.scss */
 .toolbar .btn .text {
   vertical-align: middle;
   display: inline-block;
   margin: 2px 10px;
 }
-/* line 1440, main.scss */
+/* line 1447, main.scss */
 .toolbar .btn.photo {
   float: left;
   margin-left: 10px;
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1445, main.scss */
+/* line 1452, main.scss */
 .toolbar .btn.photo .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -713px;
   height: 22px;
   width: 31px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1445, main.scss */
+  /* line 1452, main.scss */
   .toolbar .btn.photo .icon {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -400px;
     height: 22px;
     width: 32px;
     background-size: 88px auto;
   }
 }
-/* line 1449, main.scss */
+/* line 1456, main.scss */
 .toolbar .btn.txt {
   float: right;
   margin-right: 10px;
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1454, main.scss */
+/* line 1461, main.scss */
 .toolbar .btn.txt .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -865px;
   height: 23px;
   width: 24px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1454, main.scss */
+  /* line 1461, main.scss */
   .toolbar .btn.txt .icon {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -501px;
     height: 24px;
     width: 24px;
     background-size: 88px auto;
   }
 }
-/* line 1458, main.scss */
+/* line 1465, main.scss */
+.toolbar .btn.confirm {
+  float: right;
+  margin-right: 25px;
+  margin-top: 5px;
+  background: transparent url("../img/green-btn.png") no-repeat top left;
+  background-size: 100% 100%;
+  padding: 10px 5px 0 5px;
+}
+/* line 1472, main.scss */
+.toolbar .btn.confirm .icon {
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-position: 0 -1344px;
+  height: 22px;
+  width: 30px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 1472, main.scss */
+  .toolbar .btn.confirm .icon {
+    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-position: 0 -938px;
+    height: 22px;
+    width: 30px;
+    background-size: 88px auto;
+  }
+}
+/* line 1476, main.scss */
 .toolbar .btn.search {
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1461, main.scss */
+/* line 1479, main.scss */
 .toolbar .btn.search .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1138px;
   height: 23px;
   width: 23px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1461, main.scss */
+  /* line 1479, main.scss */
   .toolbar .btn.search .icon {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -583px;
     height: 23px;
     width: 23px;
     background-size: 88px auto;
   }
 }
-/* line 1465, main.scss */
+/* line 1483, main.scss */
 .toolbar .btn.close {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1468, main.scss */
+/* line 1486, main.scss */
 .toolbar .btn.close .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1161px;
   height: 20px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1468, main.scss */
+  /* line 1486, main.scss */
   .toolbar .btn.close .icon {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -767px;
     height: 20px;
     width: 21px;
     background-size: 88px auto;
   }
 }
-/* line 1473, main.scss */
+/* line 1491, main.scss */
 .toolbar .btn.return {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
 }
-/* line 1476, main.scss */
+/* line 1494, main.scss */
 .toolbar .btn.demand-return {
   background: transparent url("../img/green-btn.png") no-repeat top left;
 }
-/* line 1479, main.scss */
+/* line 1497, main.scss */
 .toolbar .btn.return, .toolbar .btn.demand-return {
   background-size: 100% 100%;
 }
-/* line 1481, main.scss */
+/* line 1499, main.scss */
 .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1223px;
   height: 18px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1481, main.scss */
+  /* line 1499, main.scss */
   .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -807px;
     height: 18px;
     width: 21px;
     background-size: 88px auto;
   }
 }
-/* line 1487, main.scss */
+/* line 1505, main.scss */
 .toolbar .file-input-container {
   float: left;
   margin-left: 10px;
   position: relative;
 }
-/* line 1492, main.scss */
+/* line 1510, main.scss */
 .toolbar .file-input-container input {
   opacity: 0;
   width: 130px;
@@ -2652,7 +2687,7 @@ fb-comments a {
   text-align: right;
   z-index: 2;
 }
-/* line 1501, main.scss */
+/* line 1519, main.scss */
 .toolbar .file-input-container .file-input {
   cursor: pointer;
   position: absolute;
@@ -2662,11 +2697,11 @@ fb-comments a {
   z-index: 1;
   margin: 0;
 }
-/* line 1510, main.scss */
+/* line 1528, main.scss */
 .toolbar .file-input-container .text {
   margin-top: 8px;
 }
-/* line 1514, main.scss */
+/* line 1532, main.scss */
 .toolbar .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s26ac5467ea.png');
@@ -2679,7 +2714,7 @@ fb-comments a {
   margin-top: 15px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1514, main.scss */
+  /* line 1532, main.scss */
   .toolbar .separator {
     background-image: url('../img/separators/retina-sf29b077aac.png');
     background-position: 0 0;
@@ -2691,7 +2726,7 @@ fb-comments a {
 
 /* end misc */
 /* new share */
-/* line 1526, main.scss */
+/* line 1544, main.scss */
 .new-share-container {
   width: 70px;
   height: 50px;
@@ -2702,35 +2737,35 @@ fb-comments a {
   z-index: 90;
   text-indent: -9999em;
 }
-/* line 1537, main.scss */
+/* line 1555, main.scss */
 .new-share-container .hide {
   position: absolute;
   display: none;
 }
-/* line 1542, main.scss */
+/* line 1560, main.scss */
 .new-share-container:hover {
   height: 150px;
   width: 150px;
 }
-/* line 1547, main.scss */
+/* line 1565, main.scss */
 .new-share-container:hover .hide {
   display: block;
 }
-/* line 1551, main.scss */
+/* line 1569, main.scss */
 .new-share-container > span {
   display: block;
 }
-/* line 1555, main.scss */
+/* line 1573, main.scss */
 .new-share-container > span > a {
   display: block;
 }
-/* line 1559, main.scss */
+/* line 1577, main.scss */
 .new-share-container .new-share {
   position: absolute;
   bottom: 0;
   cursor: context-menu;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -1304px;
   height: 40px;
   width: 40px;
@@ -2739,72 +2774,72 @@ fb-comments a {
   border-radius: 50%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1559, main.scss */
+  /* line 1577, main.scss */
   .new-share-container .new-share {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -869px;
     height: 40px;
     width: 40px;
     background-size: 88px auto;
   }
 }
-/* line 1568, main.scss */
+/* line 1586, main.scss */
 .new-share-container .new-share-thing {
   bottom: 95px;
   left: 0;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -564px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1568, main.scss */
+  /* line 1586, main.scss */
   .new-share-container .new-share-thing {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -148px;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1574, main.scss */
+/* line 1592, main.scss */
 .new-share-container .new-share-time {
   bottom: 80px;
   left: 85px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -417px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1574, main.scss */
+  /* line 1592, main.scss */
   .new-share-container .new-share-time {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 0;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1580, main.scss */
+/* line 1598, main.scss */
 .new-share-container .new-share-promise {
   bottom: 0;
   left: 100px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s61d5e96d13.png');
+  background-image: url('../img/icons/normal-s6e70e222bb.png');
   background-position: 0 -613px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1580, main.scss */
+  /* line 1598, main.scss */
   .new-share-container .new-share-promise {
-    background-image: url('../img/icons/retina-sfa14c90d45.png');
+    background-image: url('../img/icons/retina-s0e97069336.png');
     background-position: 0 -196px;
     height: 49px;
     width: 49px;

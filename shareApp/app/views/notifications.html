@@ -10,15 +10,16 @@
         <ul>
             <li class="separator"></li>
             <li class="header" ng-show="notificationItems.length == 0">{{ "No notifications" | translate }}</li>
-            <li class="item" ng-repeat='item in notificationItems'
-                ng-mouseover="swiped[$index] = isTouchDevice() ? swiped[$index] : 'right'; !isTouchDevice() && takeNotificationAction(item)"
-                ng-mouseout="swiped[$index] = isTouchDevice() ? swiped[$index] : 'left'"
+            <div ng-repeat='item in notificationItems'>
+            <li class="item"
+                ng-mouseover="swiped[item.id] = isTouchDevice() ? swiped[item.id] : 'right'; !isTouchDevice() && takeNotificationAction(item)"
+                ng-mouseout="swiped[item.id] = isTouchDevice() ? swiped[item.id] : 'left'"
                     >
                 <div class="mask"
                      tap="goToShare(item)"
-                     ng-swipe-right="swiped[$index] = isTouchDevice() ? 'right' : swiped[$index]; isTouchDevice() && takeNotificationAction(item)"
-                     ng-swipe-left="swiped[$index] = isTouchDevice() ? 'left' : swiped[$index]"
-                     ng-class="{right:'swiped-right', left:'swiped-left'}[swiped[$index]]">
+                     ng-swipe-right="swiped[item.id] = isTouchDevice() ? 'right' : swiped[item.id]; isTouchDevice() && takeNotificationAction(item)"
+                     ng-swipe-left="swiped[item.id] = isTouchDevice() ? 'left' : swiped[item.id]"
+                     ng-class="{right:'swiped-right', left:'swiped-left'}[swiped[item.id]]">
                 </div>
                 <div class="container">
                     <div class="actions">
@@ -57,17 +58,17 @@
                         </div>
                     </div>
                 </div>
-
-                <!--<div class='item' ng-click='notificationClick(item)'>Status: {{ getStatusDisplay(item) }}, Text: {{-->
-                <!--notifications.verboseNotification(item) }}-->
-                <!--</div>-->
-                <!--<button ng-show='notifications.notificationIsInQueue(item)'-->
-                <!--ng-click='notifications.notificationRead(item)'>Read-->
-                <!--</button>-->
-                <!--<button ng-click='goToShare(item)'>Link</button>-->
-
-                <div class="separator"></div>
             </li>
+            <li class="separator"></li>
+
+            </div>
         </ul>
+        <div class="toolbar">
+            <div class="btn confirm" ng-show="notificationItems.length > 0"
+                 ng-click="confirmAll(notificationItems)">
+                <span class="icon"></span>
+                <span class="text">{{ "Confirm all" | translate }}</span>
+            </div>
+        </div>
     </div>
 </div>

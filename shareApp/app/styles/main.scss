@@ -701,6 +701,7 @@ body {
   &:after {
     height: 40px;
     width: 100%;
+    padding-bottom: 40px;
     content: "";
     display: block;
     background: transparent url("../img/low-notifications-bottom.png") no-repeat top left;
@@ -728,15 +729,20 @@ body {
     }
     .separator {
       @include retina-sprite-background(standard, $separators-normal, $separators-retina);
-      width: 100%;
-      background-size: 100% image-height(sprite-path($separators-normal));
+      width: 100% !important;
+      padding:0;
+      margin: 0;
+      background-size: 100% image-height(sprite-path($separators-normal)) !important;
       margin-top: 15px;
+      position: relative;
     }
     ul {
       margin: 0;
       padding: 0;
       list-style: none;
       li.item {
+        margin: 0;
+        padding: 0;
         display: block;
         width: 100%;
         white-space: nowrap;
@@ -1425,6 +1431,7 @@ fb-comments {
     @include big-text;
     line-height: 1em;
     white-space: nowrap;
+    cursor: pointer;
     .icon {
       display: inline-block;
       vertical-align: middle;
@@ -1453,6 +1460,17 @@ fb-comments {
       background-size: 100% 100%;
       .icon {
         @include retina-sprite-background(pen-white, $icons-normal, $icons-retina);
+      }
+    }
+    &.confirm {
+      float: right;
+      margin-right: 25px;
+      margin-top: 5px;
+      background: transparent url("../img/green-btn.png") no-repeat top left;
+      background-size: 100% 100%;
+      padding: 10px 5px 0 5px;
+      .icon {
+        @include retina-sprite-background(confirm-white, $icons-normal, $icons-retina);
       }
     }
     &.search {

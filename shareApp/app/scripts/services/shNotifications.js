@@ -47,10 +47,10 @@ var shNotifications = angular.module('shareApp')
        */
       retrieveNotifications: function (loadNext) {
         loadNext = typeof loadNext !== 'undefined' ? loadNext : false;
-        var deferred = $q.defer();
+        var promise = new Parse.Promise();
         if (notificationService.isLocked()) {
-          deferred.resolve();
-          return deferred;
+          promise.resolve();
+          return promise;
         }
         notificationService.setLock();
         var Notification = Parse.Object.extend('Notification'),
@@ -101,11 +101,11 @@ var shNotifications = angular.module('shareApp')
             safeApply($rootScope, function () {
               notificationService.counter = counter;
               notificationService.unsetLock();
-              deferred.resolve();
+              promise.resolve();
             });
           });
         });
-        return deferred.promise;
+        return promise;
       },
       /**
        * @ngdoc method
@@ -117,6 +117,7 @@ var shNotifications = angular.module('shareApp')
        * @param {Notification} notification Notification
        */
       notificationRead: function (notification) {
+        var promise = new Parse.Promise();
         notificationService.setLock();
         if (notification.get('status') === globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE) {
           notification.set('status', globals.NOTIFICATION_STATUS_ENUM.READ);
@@ -128,7 +129,9 @@ var shNotifications = angular.module('shareApp')
         PPO.SaveObject(notification, null, {success: function (newItem) {
           notificationService.items.splice(notificationService.items.indexOf(notification), 1);
           notificationService.unsetLock();
+          promise.resolve();
         }});
+        return promise;
       },
       /**
        * @ngdoc method
@@ -143,16 +146,19 @@ var shNotifications = angular.module('shareApp')
        * @param {Notification} notification Notification
        */
       notificationAgree: function (notification) {
+        var promise = new Parse.Promise();
         notificationService.setLock();
         var decreaseCounter = (notification.get('status') === globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE);
         notification.set('status', globals.NOTIFICATION_STATUS_ENUM.ACCEPTED);
         PPO.SaveObject(notification, null, {success: function (newItem) {
           notificationService.items.splice(notificationService.items.indexOf(notification), 1);
           notificationService.unsetLock();
+          promise.resolve();
         }});
         if (decreaseCounter) {
           notificationService.counter -= 1;
         }
+        return promise;
       },
       /**
        * @ngdoc method
@@ -165,16 +171,39 @@ var shNotifications = angular.module('shareApp')
        * @param {Notification} notification Notification
        */
       notificationDisagree: function (notification) {
+        var promise = new Parse.Promise();
         notificationService.setLock();
         var decreaseCounter = (notification.get('status') === globals.NOTIFICATION_STATUS_ENUM.IN_QUEUE);
         notification.set('status', globals.NOTIFICATION_STATUS_ENUM.REJECTED);
         PPO.SaveObject(notification, null, {success: function (newItem) {
           notificationService.items.splice(notificationService.items.indexOf(notification), 1);
           notificationService.unsetLock();
+          promise.resolve();
         }});
         if (decreaseCounter) {
           notificationService.counter -= 1;
         }
+        return promise;
+      },
+      /**
+       * @ngdoc method
+       * @name shNotifications#confirmAll
+       * @methodOf shNotifications
+       *
+       * @description
+       * Marks all notification as agreed and read.
+       * See: {@link Cloud.notifications Cloud.notifications}.
+       */
+      confirmAll: function (notifications) {
+        var promises = [];
+        notifications.forEach(function(item){
+          if (notificationService.notificationIsAction(item) && notificationService.notificationIsInQueue(item)) {
+            promises.push(notificationService.notificationAgree(item));
+          } else {
+            promises.push(notificationService.notificationRead(item));
+          }
+        });
+        return Parse.Promise.when(promises);
       },
       /**
        * @ngdoc method
@@ -229,41 +258,41 @@ var shNotifications = angular.module('shareApp')
         thing = '<span class="thing">' + thing + '</span>';
 
         switch (notification.get('sharedState')) {
-          case globals.SHARE_STATE_ENUM.CREATED:
-            msg = $translate("{{ fromUser }} shared with {{ toUser }} {{ thing }}, right?", {
-              fromUser: fromUser,
-              toUser: toUser,
-              thing: thing
-            });
-            break;
-          case globals.SHARE_STATE_ENUM.CONFIRMED:
-            msg = $translate("{{ toUser }} shared with {{ fromUser }} {{ thing }}", {
-              fromUser: fromUser,
-              toUser: toUser,
-              thing: thing
-            });
-            break;
-          case globals.SHARE_STATE_ENUM.REJECTED:
-            msg = $translate("{{ toUser }} rejected that {{ fromUser }} shared {{ thing }}", {
-              fromUser: fromUser,
-              toUser: toUser,
-              thing: thing
-            });
-            break;
-          case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
-            msg = $translate("{{ fromUser }} ask {{ toUser }} about returning {{ thing }}", {
-              fromUser: fromUser,
-              toUser: toUser,
-              thing: thing
-            });
-            break;
-          case globals.SHARE_STATE_ENUM.RETURNED:
-            msg = $translate("{{ toUser }} returned {{ fromUser }} {{ thing }}", {
-              fromUser: fromUser,
-              toUser: toUser,
-              thing: thing
-            });
-            break;
+        case globals.SHARE_STATE_ENUM.CREATED:
+          msg = $translate("{{ fromUser }} shared with {{ toUser }} {{ thing }}, right?", {
+            fromUser: fromUser,
+            toUser: toUser,
+            thing: thing
+          });
+          break;
+        case globals.SHARE_STATE_ENUM.CONFIRMED:
+          msg = $translate("{{ toUser }} shared with {{ fromUser }} {{ thing }}", {
+            fromUser: fromUser,
+            toUser: toUser,
+            thing: thing
+          });
+          break;
+        case globals.SHARE_STATE_ENUM.REJECTED:
+          msg = $translate("{{ toUser }} rejected that {{ fromUser }} shared {{ thing }}", {
+            fromUser: fromUser,
+            toUser: toUser,
+            thing: thing
+          });
+          break;
+        case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
+          msg = $translate("{{ fromUser }} ask {{ toUser }} about returning {{ thing }}", {
+            fromUser: fromUser,
+            toUser: toUser,
+            thing: thing
+          });
+          break;
+        case globals.SHARE_STATE_ENUM.RETURNED:
+          msg = $translate("{{ toUser }} returned {{ fromUser }} {{ thing }}", {
+            fromUser: fromUser,
+            toUser: toUser,
+            thing: thing
+          });
+          break;
         }
         // FIXME: little hack for variable replacement in angular-translate's keys
         msg = $interpolate(msg)({
