@@ -47,7 +47,7 @@
                     <input onchange="angular.element(this).scope().uploadPhoto(this.files)" type="file" accept="image/*;capture=camera">
                     <div class="btn photo file-input"><span class="icon"></span><span class="text">{{ 'Photo' | translate }}</span></div>
                 </div>
-                <button class="btn txt" ng-click="share.saveShare(postOnFB)"><span class="text">{{ 'Share❣' | translate }}</span></button>
+                <button class="btn txt" ng-click="saving || share.saveShare(postOnFB); saving=true"><span class="text">{{ 'Share❣' | translate }}</span></button>
             </div>
         </div>
     </div>

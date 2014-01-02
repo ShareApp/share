@@ -28,22 +28,6 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
           }
         }
       })
-      .state('awaiting', {
-        url: '/awaiting',
-        views: {
-          'header': {
-            templateUrl: '/views/header.html',
-            controller: 'MainCtrl'
-          },
-          'main': {
-            templateUrl: '/views/sharesListAwaiting.html',
-            controller: 'MainCtrl'
-          },
-          'footer': {
-            templateUrl: '/views/newShareButtons.html'
-          }
-        }
-      })
       .state('friends', {
         url: '/friends',
         views: {

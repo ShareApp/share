@@ -326,4 +326,4 @@ var shNotifications = angular.module('shareApp')
     return notificationService;
   });
 
-shNotifications.$inject = ['$rootScope', '$q', 'shUser', '$translate', '$interpolate', '$sce'];
+shNotifications.$inject = ['$rootScope', '$q', 'shUser', '$translate', '$interpolate'];

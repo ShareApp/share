@@ -14,7 +14,7 @@
  */
 
 angular.module('shareApp')
-  .factory('shShare', ['$location', '$window', '$rootScope', 'shUser', 'shSync', function shShare($location, $window, $rootScope, shUser, shSync) {
+  .factory('shShare', ['$location', '$window', '$rootScope', 'shUser', 'shSync', '$translate', '$interpolate', function shShare($location, $window, $rootScope, shUser, shSync, $translate, $interpolate) {
     var getToday = function () {
       var now = new Date(),
         month = now.getMonth() >= 9 ? (now.getMonth() + 1) : "0" + (now.getMonth() + 1),
@@ -196,10 +196,13 @@ angular.module('shareApp')
             shUser.fetchUserShares(false, true);
             var caption;
             if (myShare.direction === globals.SHARE_DIRECTION_ENUM.TO_FRIEND) {
-              caption = "I've just shared you " + sharedItem.get('text');
+              caption = $translate("I've just shared you {{ item }}");
             } else {
-              caption = "You've just shared me " + sharedItem.get('text');
+              caption = $translate("You've just shared me {{ item }}");
             }
+            caption = $interpolate(caption)({
+              item: sharedItem.get('text')
+            });
             var callback = function () {
               $rootScope.$broadcast('progressBar.update', false);
               $location.path('');
@@ -213,7 +216,7 @@ angular.module('shareApp')
                 picture: (sharedItem.get('img') === null) ? "" : sharedItem.get('img').urlOrData(),
                 name: caption,
                 description: sharedItem.get('text'),
-                caption: "Click to redirect to Share!"
+                caption: $translate("Click to redirect to Share!")
               }, callback);
             } else {
               callback();

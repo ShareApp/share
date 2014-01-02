@@ -55,7 +55,6 @@ angular.module('shareApp')
             scope.filtersOpened = false;
             setVerboseFilters();
             scope.user.fetchUserShares();
-            scope.user.fetchUserAwaitingShares();
           });
         };
       }
