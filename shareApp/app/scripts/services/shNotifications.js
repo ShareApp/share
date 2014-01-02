@@ -154,6 +154,8 @@ var shNotifications = angular.module('shareApp')
           notificationService.items.splice(notificationService.items.indexOf(notification), 1);
           notificationService.unsetLock();
           promise.resolve();
+        }, error:function(e){
+          console.log(e);
         }});
         if (decreaseCounter) {
           notificationService.counter -= 1;
@@ -197,7 +199,7 @@ var shNotifications = angular.module('shareApp')
       confirmAll: function (notifications) {
         var promises = [];
         notifications.forEach(function(item){
-          if (notificationService.notificationIsAction(item) && notificationService.notificationIsInQueue(item)) {
+          if (item.get('action') === globals.NOTIFICATION_ACTION_ENUM.CONFIRM) {
             promises.push(notificationService.notificationAgree(item));
           } else {
             promises.push(notificationService.notificationRead(item));

@@ -489,7 +489,7 @@ var shUser = angular.module('shareApp')
                 // delete item which has been created in offline mode
                 angular.forEach(results, function (resultItem, i) {
                   angular.forEach(results, function (shareItem, j) {
-                    if (resultItem.get('offlineId') === shareItem.get('offlineId') && i !== j) {
+                    if (resultItem.get('offlineId') !== undefined && resultItem.get('offlineId') === shareItem.get('offlineId') && i !== j) {
                       myUser.userShares.splice(j, 1);
                     }
                   });
