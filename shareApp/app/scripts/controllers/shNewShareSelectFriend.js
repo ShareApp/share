@@ -16,6 +16,7 @@ var ShNewShareSelectFriendCtrl = angular.module('shareApp')
   .controller('ShNewShareSelectFriendCtrl', function ($scope, $state, $location, $translate, shUser, shShare) {
     $scope.user = shUser;
     $scope.share = shShare;
+    $scope.visibleFriends = 10;
     $scope.sorting = 'frequent';
     $scope.share.type = parseInt($state.params.type, 10);
     shShare.setDefaults();
@@ -51,6 +52,14 @@ var ShNewShareSelectFriendCtrl = angular.module('shareApp')
           });
       } else {
         callback(targetUser);
+      }
+    };
+    // lazy loading
+    $scope.loadMoreFriends = function () {
+      var currentScroll = angular.element("#container").scrollTop() + angular.element(window).height(),
+        currentHeight = angular.element("#content-container").height() + angular.element("#header-container").height();
+      if (currentScroll >= currentHeight) {
+        $scope.visibleFriends += 10;
       }
     };
   });
