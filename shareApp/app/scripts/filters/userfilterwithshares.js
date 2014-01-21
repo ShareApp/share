@@ -17,7 +17,7 @@ angular.module('shareApp')
     return function (users) {
       var out = [], i;
       for (i = 0; i < users.length; i += 1) {
-        if (users[i].id in shUser.friendsShares && shUser.friendsShares[users[i].id].items.length != 0) {
+        if (users[i].id in shUser.friendsShares) {
           out.push(users[i]);
         }
       }

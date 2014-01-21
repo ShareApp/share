@@ -188,7 +188,6 @@ Parse.Cloud.define("getCommonShares", function (request, response) {
         response.success(friends);
       } else {
         friends.forEach(function (friend, idx) {
-          results[friend.id] = {};
           sharedItemFromQuery = new Parse.Query("SharedItem");
           sharedItemToQuery = new Parse.Query("SharedItem");
 
@@ -203,7 +202,10 @@ Parse.Cloud.define("getCommonShares", function (request, response) {
           query.limit(5);
           query.find({
             success: function (sharedItems) {
-              results[friend.id]['items'] = sharedItems;
+              if(sharedItems.length != 0) {
+                results[friend.id] = {};
+                results[friend.id]['items'] = sharedItems;
+              }
               finished = finished + 1;
               if (finished === friends.length) {
                 response.success(results);
@@ -257,7 +259,7 @@ Parse.Cloud.define("getFriends", function (request, response) {
           var query = Parse.Query.or(sharedItemFromQuery, sharedItemToQuery);
           query.find({
             success: function (data) {
-              // FIXME: there is no better way to attribute counter to object
+              // there is no better way to attribute counter to object
               friends[idx].attributes.sharesCounter = data.length;
               finished = finished + 1;
               if (finished === friends.length) {

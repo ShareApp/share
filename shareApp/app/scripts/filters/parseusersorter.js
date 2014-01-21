@@ -20,6 +20,11 @@ angular.module('shareApp')
       users = users.filter(function(u){
         return u.get('fakeUser') !== true || shSync.isOnline;
       });
+      if(query === "frequent" || query === "recent") {
+        users = users.filter(function(u){
+          return  (u.id in shUser.friendsShares);
+        });
+      }
       if (query === "frequent") {
         users.sort(function (a, b) {
           return b.get('sharesCounter') - a.get('sharesCounter');
