@@ -1,7 +1,7 @@
 <div id="content" on-container-scroll="loadMoreFriends();">
     <!--<div id="filters-container" sh-filters ng-show="user.loggedIn"></div>-->
     <ul id="friends-list">
-        <li class="clearfix" ng-repeat="friend in user.friendsList | parseuserfilter: query| slice:0:visibleFriends">
+        <li class="clearfix" ng-repeat="friend in user.friendsList | userfilterwithshares | parseuserfilter: query| slice:0:visibleFriends">
             <a href="#/friends/{{ friend.id }}">
                 <div class="name">{{ friend.get('name') }}</div>
                 <fb-profile-picture user-id="friend.attributes.facebookid"></fb-profile-picture>
