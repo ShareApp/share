@@ -144,6 +144,15 @@ var MainCtrl = angular.module('shareApp')
         shUser.fetchUserShares(true, false);
       }
     };
+    // lazy loading for friends view
+    $scope.visibleFriends = 10;
+    $scope.loadMoreFriends = function () {
+      var currentScroll = angular.element("#container").scrollTop() + angular.element(window).height(),
+        currentHeight = angular.element("#content-container").height() + angular.element("#header-container").height();
+      if (currentScroll >= currentHeight) {
+        $scope.visibleFriends += 10;
+      }
+    };
 
   });
 

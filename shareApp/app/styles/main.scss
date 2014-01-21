@@ -168,19 +168,14 @@ body {
     left: auto;
     width: auto;
     overflow: auto;
-    -webkit-transition: width 0.3s ease;
-    -moz-transition: width 0.3s ease;
-    -ms-transition: width 0.3s ease;
-    -o-transition: width 0.3s ease;
-    transition: width 0.3s ease;
     height: 100%;
     background: #373334;
     overflow-x: hidden;
     left: 0;
     z-index: 1;
-    &.closed {
-      display: none;
-    }
+//    &.closed {
+//      display: none;
+//    }
     nav {
       height: 100%;
       ul {
@@ -233,8 +228,6 @@ body {
           }
           #lang-switcher {
             display: inline-block;
-            vertical-align: top;
-            margin-top: 5px;
             margin-right: 5px;
             button {
               padding-top: 6px;
@@ -313,7 +306,7 @@ body {
       border-width: 0;
       padding: 13px 15px;
       @media (max-width: 460px) {
-        padding: 12px 3px;
+        padding: 13px 7px;
       }
       margin: 0;
       float: left;
@@ -368,7 +361,7 @@ body {
       border-width: 0;
       padding: 11px 12px;
       @media (max-width: 460px) {
-        padding: 12px 2px;
+        padding: 11px 8px;
       }
       margin: 0;
       .img {
@@ -380,9 +373,9 @@ body {
       float: right;
       background-color: transparent;
       border-width: 0;
-      padding: 21px 30px 21px 29px;
+      padding: 14px 15px;
       @media (max-width: 460px) {
-        padding: 21px 4px;
+        padding: 14px 8px;
       }
       margin: 0;
       .img {
@@ -403,11 +396,6 @@ body {
   height: auto;
   z-index: 2;
   overflow: auto;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
   #menu-mask {
     position: absolute;
     z-index: 9999;
@@ -446,7 +434,8 @@ body {
 /* timeline */
 
 #filters-container {
-  margin: 15px 20px;
+  max-width: 460px;
+  margin: 15px auto;
   #filters-mask {
     position: fixed;
     z-index: 99;
@@ -1135,7 +1124,7 @@ fb-comments {
 
 .profile-picture-container {
   display: inline-block;
-  border: 4px solid #F0F2F1;
+  border: 2.5px solid #F0F2F1;
   border-radius: 45%;
   overflow: hidden;
   img {
@@ -1193,11 +1182,13 @@ fb-comments {
       @include retina-sprite-background(small-time-ico, $icons-normal, $icons-retina);
     }
   }
+
   .small-share-item {
     overflow: hidden;
     display: inline-block;
-    border: 4px solid #F0F2F1;
+    border: 2.5px solid #F0F2F1;
     border-radius: 45%;
+
     background-color: #F0F2F1;
     background-position: center center;
     background-repeat: no-repeat;
@@ -1207,8 +1198,9 @@ fb-comments {
     text-align: center;
     margin-top: 8px;
     margin-left: 9px;
-
     img {
+      border-radius: 45%;
+
       display: block;
       max-width: 100%;
       margin: 0 auto 0 auto;
@@ -1543,27 +1535,18 @@ fb-comments {
 
 .new-share-container {
 
-  width: 70px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   position: fixed;
-  bottom: 20px;
-  left: 20px;
+  bottom: 0px;
+  left: 0px;
   font-size: 2em;
   z-index: 90;
   text-indent: -9999em;
 
-  .hide {
-    position: absolute;
-    display: none;
-  }
-
   &:hover {
     height: 150px;
     width: 150px;
-  }
-
-  &:hover .hide {
-    display: block;
   }
 
   > span {
@@ -1572,32 +1555,50 @@ fb-comments {
 
   > span > a {
     display: block;
+    width: 100%;
+    height: 100%;
   }
 
   .new-share {
     position: absolute;
-    bottom: 0;
+    bottom: 20px;
+    left: 20px;
     cursor: context-menu;
     @include retina-sprite-background(new-share, $icons-normal, $icons-retina);
     background-color: #000;
     border-radius: 50%;
+    z-index: 91;
+  }
+  .shoot {
+    @include transition(all 0.25s ease);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    opacity: 0;
+  }
+  &:hover {
+    .shoot {
+      opacity: 1;
+    }
+    .new-share-thing {
+      @include translate3d(20px, -115px, 0);
+    }
+    .new-share-time {
+      @include translate3d(105px, -100px, 0);
+    }
+    .new-share-promise {
+      @include translate3d(120px, -20px, 0);
+    }
   }
 
   .new-share-thing {
-    bottom: 95px;
-    left: 0;
     @include retina-sprite-background(thing-ico, $icons-normal, $icons-retina);
+    opacity: 0;
   }
-
   .new-share-time {
-    bottom: 80px;
-    left: 85px;
     @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
   }
-
   .new-share-promise {
-    bottom: 0;
-    left: 100px;
     @include retina-sprite-background(promise-ico, $icons-normal, $icons-retina);
   }
 }

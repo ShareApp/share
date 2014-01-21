@@ -44,16 +44,16 @@
 
 <body ng-cloak>
     <div id="main-menu-container">
-        <div ng-class="{closed:'closed'}[menuState]" sh-menu id="main-menu"></div>
+        <div ng-class="{false:'closed'}[menuOpened]" sh-menu id="main-menu"></div>
     </div>
 
-    <div id="container">
+    <div id="container" ng-class="{true: 'menu-opened', false: ''}[menuOpened]">
         <!-- FOR TESTING PURPOSE ONLY -->
         <!--<button style="font-size: 20px;" ng-click="isOnline=!isOnline">{{ isOnline ? "Go offline!":"Go online!" }}</button>-->
-        <div id="menu-mask" ng-show="menuOpened"></div>
-        <div id="header-container" ui-view="header" data-snap-ignore="true">
+        <div id="menu-mask" ng-click="closeMenu()" ng-show="menuOpened"></div>
+        <div id="header-container" ui-view="header">
         </div>
-        <div id="content-container" ui-view="main" data-snap-ignore="true">
+        <div id="content-container" ui-view="main">
         </div>
     </div>
 
@@ -99,7 +99,6 @@
     <script src="scripts/lib/PersistentParseOffline/ppo.js"></script>
     <script src="scripts/lib/nprogress.js"></script>
     <script src="scripts/lib/jquery.dateentry.min.js"></script>
-    <script src="scripts/lib/snap.min.js"></script>
     <script src="scripts/lib/hammer.min.js"></script>
     <script src="scripts/lib/jquery.hammer.min.js"></script>
     <script src="scripts/lib/jquery.dotdotdot.js"></script>

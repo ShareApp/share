@@ -61,7 +61,7 @@ angular.module('shareApp')
             $rootScope.notificationsFrameOpened = false;
             $location.path('/sharedItem/' + notification.get('sharedItem').id);
           };
-
+5
           $scope.isTouchDevice = function () {
             return !!('ontouchstart' in window)
               || !!('onmsgesturechange' in window);

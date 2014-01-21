@@ -168,12 +168,6 @@ function initApp() {
       });
     }
   });
-  window.snapper = new Snap({
-    element: document.getElementById('container'),
-    disable: "right",
-    hyperextensible: false,
-    maxPosition: 600
-  });
 }
 
 

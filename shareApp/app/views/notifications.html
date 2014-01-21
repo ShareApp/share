@@ -3,8 +3,8 @@
 <button ng-show="notificationItems.length > 0" id="notification-btn"
         ng-click='rootScope.notificationsFrameOpened=!rootScope.notificationsFrameOpened'>{{ notificationsCounter }}
 </button>
-<div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame-container' data-snap-ignore="true">
-    <div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame' data-snap-ignore="true">
+<div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame-container'>
+    <div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame'>
         <div class="header">{{ 'Waiting requests' | translate }}:</div>
         <div class="description">{{ 'Swipe right to take an action' | translate }}</div>
         <ul>

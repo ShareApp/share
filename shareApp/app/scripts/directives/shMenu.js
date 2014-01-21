@@ -10,7 +10,7 @@
  * @name shMenu
  *
  * @description
- * Creates widget with sliding menu using snap.js lib.
+ * Creates widget with sliding menu.
  */
 angular.module('shareApp')
   .directive('shMenu', ['$rootScope', function ($rootScope) {
@@ -30,67 +30,38 @@ angular.module('shareApp')
           if (bottomList.width() > topList.width()) {
             topList.width(bottomList.width());
           }
-          window.snapper.settings({
-            maxPosition: topList.width()
-          });
+          var container = angular.element("#container")
+
           if ($rootScope.menuOpened === true) {
-            window.snapper.open('left');
+            // if menu is extremely wide, leave a little space to go out from menu
+            var width = Math.min(container.width() * 0.9, topList.width());
+            console.log(width);
+            container.css('left', width);
+          } else {
+            container.css('left', 0);
           }
           var listsHeight = topList.height() + bottomList.height() + 40;
           nav.height(Math.max(element.height() - 20, listsHeight));
         };
 
-        element.find("ul a").bind('click', function () {
-          window.snapper.close();
-        });
-
         angular.element(document).ready(setMenuSize);
         angular.element(window).resize(setMenuSize);
-        $rootScope.$watch('currentLanguage', function(newLang, prevLang){
-          if(newLang !== undefined && prevLang !== undefined) {
+        $rootScope.$watch('currentLanguage', function (newLang, prevLang) {
+          if (newLang !== undefined && prevLang !== undefined) {
             setTimeout(setMenuSize, 100);
           }
         });
-        scope.menuToggle = function () {
-          console.log("menu toggling");
-          console.log(window.snapper.state().state);
-          if (window.snapper.state().state === "closed") {
-            scope.menuOpen();
-          } else {
-            scope.menuClose();
-          }
-        };
-        scope.menuOpen = function () {
-          console.log("menu opening");
-          element.removeClass("closed");
-          window.snapper.open('left');
-          setMenuSize();
-        };
-        scope.menuClose = function () {
-          console.log("menu closing");
-          window.snapper.close();
-        };
 
-        window.snapper.on("animated", function () {
-          if (window.snapper.state().state === 'closed') {
-            element.addClass("closed");
-          } else {
-            element.removeClass("closed");
-          }
-        });
-        window.snapper.on("animating", function () {
-          element.removeClass("closed");
-        });
-        element.addClass("closed");
-
-        window.snapper.on("open", function () {
-          safeApply($rootScope, function(){$rootScope.menuOpened = true;});
-          console.log("menu opened");
-        });
-        window.snapper.on("close", function () {
-          safeApply($rootScope, function(){$rootScope.menuOpened = false;});
-          console.log("menu closed");
-        });
+        $rootScope.toggleMenu = function () {
+          $rootScope.menuOpened = !$rootScope.menuOpened;
+        };
+        $rootScope.openMenu = function () {
+          $rootScope.menuOpened = true;
+        };
+        $rootScope.closeMenu = function () {
+          $rootScope.menuOpened = false;
+        };
+        $rootScope.$watch('menuOpened', setMenuSize);
       }
     };
   }]);
