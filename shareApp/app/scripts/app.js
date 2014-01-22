@@ -171,6 +171,14 @@ function initApp() {
 }
 
 
+if (window.applicationCache) {
+    applicationCache.addEventListener('updateready', function() {
+        if (confirm('An update is available. Reload now?')) {
+            window.location.reload();
+        }
+    });
+}
+
 if (navigator.onLine === true) {
   window.fbAsyncInit = initApp;
 } else {

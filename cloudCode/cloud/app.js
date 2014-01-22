@@ -33,6 +33,9 @@ app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
  * Generates dynamic HTML5 Cache Manifest. It is used for get facebook profile photos and shares photos.
  */
 app.get('/share.appcache', function (req, res) {
+  // TODO: files is empty due to decision that images should not be cached that way. Probably need to change it to saving in local storage.
+  res.render('manifest', { now: new Date, files: [] });
+  return;
   var FBappId = settings.FBappId;
   var sharedItemPublicQuery = new Parse.Query("SharedItem");
   sharedItemPublicQuery.equalTo('isPublic', true);
