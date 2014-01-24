@@ -52,6 +52,11 @@ angular.module('shareApp')
           }
         });
 
+        // close after took an action
+        element.on('click', function () {
+          $rootScope.menuOpened = false;
+        });
+
         $rootScope.toggleMenu = function () {
           $rootScope.menuOpened = !$rootScope.menuOpened;
         };

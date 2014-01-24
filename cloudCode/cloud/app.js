@@ -34,6 +34,7 @@ app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
  */
 app.get('/share.appcache', function (req, res) {
   // TODO: files is empty due to decision that images should not be cached that way. Probably need to change it to saving in local storage.
+  res.type('text/cache-manifest');
   res.render('manifest', { now: new Date, files: [] });
   return;
   var FBappId = settings.FBappId;
@@ -57,7 +58,6 @@ app.get('/share.appcache', function (req, res) {
   }
   query.include(['fromUser', 'toUser']);
 
-  res.type('text/cache-manifest');
   query.notEqualTo('img', null);
   var files = [];
   query.find(function (result) {
@@ -66,6 +66,7 @@ app.get('/share.appcache', function (req, res) {
       files.push("https://graph.facebook.com/" + item.get('fromUser').get('facebookid') + "/picture?width=65&height=65");
       files.push("https://graph.facebook.com/" + item.get('toUser').get('facebookid') + "/picture?width=65&height=65");
     });
+    res.type('text/cache-manifest');
     res.render('manifest', { now: new Date, files: files });
   });
 });
@@ -76,3 +77,4 @@ app.get('/sharedItem/:id', function (req, res) {
 });
 
 app.listen();
+
