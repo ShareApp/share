@@ -317,12 +317,18 @@ body {
     }
     #logo-container {
       width: 115px;
-      height: 29px;
+      height: 47px;
       display: block;
       margin: 0 auto;
+      position: relative;
       > * {
         vertical-align: top;
         display: inline-block;
+      }
+      .info {
+        position: absolute;
+        bottom: -3px;
+        left: 68px;
       }
       #logo {
         @include retina-sprite-background(logo, $icons-normal, $icons-retina);

@@ -144,6 +144,7 @@ app.$inject = ['$stateProvider', '$urlRouterProvider', '$translateProvider'];
 
 function initApp() {
   require(["settings.js", "moment"], function (settings) {
+    window.debug = settings.debug;
     window.FBappId = settings.FBappId;
     /**
      * Initialize Parse.com

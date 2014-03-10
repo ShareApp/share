@@ -3,6 +3,7 @@ function settings(_exports) {
   exports.ParseApplicationId = "REPLACE";
   exports.ParsejavaScriptKey = "REPLACE";
   exports.FBappId = "REPLACE";
+  exports.debug = true;
 }
 if (typeof define === 'undefined') {
   settings();
