@@ -173,11 +173,11 @@ function initApp() {
 
 if (window.applicationCache) {
   if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
-    if (confirm('An update is available. Reload now?')) {
+    if (confirm('An update is available. Reload?')) {
       window.location.reload();
     }
   } else {
-    applicationCache.addEventListener('updateready', function () {
+    window.applicationCache.addEventListener('updateready', function () {
       if (confirm('An update is available. Reload now?')) {
         window.location.reload();
       }

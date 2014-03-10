@@ -53,15 +53,21 @@ angular.module('shareApp')
 angular.module('shareApp')
   .directive('onContainerSwipeDown', ['$parse', function ($parse) {
     return function (scope, elm, attr) {
+      var lastUsed = new Date();
       if (attr['onContainerSwipeDown'].length > 0) {
         var fn = $parse(attr['onContainerSwipeDown']),
           handler = function (e) {
-            safeApply(scope, function () {
-              fn(scope, {$event: e});
-            });
+            var now = new Date();
+            // to eliminate frequently triggered event
+            if ((now - lastUsed) > 200) {
+              lastUsed = now;
+              safeApply(scope, function () {
+                fn(scope, {$event: e});
+              });
+            }
             return false;
           };
-        angular.element("#container").hammer().on('swipedown', handler);
+        angular.element("#container").hammer().on('dragdown', handler);
       }
     };
   }]);

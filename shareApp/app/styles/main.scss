@@ -408,7 +408,6 @@ body {
 }
 
 #content-container {
-  min-width: 300px;
   background: transparent url("../img/backgrounds/low-yellow.png") repeat top left;
   @media (-webkit-min-device-pixel-ratio: 1.5),
   (min-resolution: 144dpi) {
@@ -1014,9 +1013,11 @@ body {
   }
   .fb-comments {
     text-align: center;
+    display: block;
+    margin-top: 20px;
   }
   .fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
-    width: 100% !important;
+//    width: 100% !important;
   }
 
 }
@@ -1229,7 +1230,7 @@ fb-comments {
 }
 
 .share-item {
-  margin: 0 auto 20px auto;
+  margin: 20px auto 0 auto;
   position: relative;
   background-size: 100%;
   max-width: 460px;
@@ -1326,6 +1327,7 @@ fb-comments {
       visibility: hidden;
       z-index: 1;
       position: relative;
+      pointer-events: none;
     }
     .preloader-container {
       position: absolute;
@@ -1359,6 +1361,7 @@ fb-comments {
       width: 100%;
       height: 100%;
       z-index: 2;
+      pointer-events: none;
       &.gradient {
         background-image: linear-gradient(black 30px, transparent 150px);
         background-image: -webkit-linear-gradient(black 30px, transparent 150px);
