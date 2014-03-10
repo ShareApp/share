@@ -30,6 +30,7 @@ var MainCtrl = angular.module('shareApp')
     $rootScope.user = shUser;
     $scope.shShare = shShare;
     $scope.shSync = shSync;
+    $scope.debug = window.debug;
 
     // Set available languages.
     $rootScope.languages = [
