@@ -320,15 +320,12 @@ body {
       height: 47px;
       display: block;
       margin: 0 auto;
-      position: relative;
       > * {
         vertical-align: top;
         display: inline-block;
       }
       .info {
-        position: absolute;
-        bottom: -3px;
-        left: 68px;
+        margin-top: -13px;
       }
       #logo {
         @include retina-sprite-background(logo, $icons-normal, $icons-retina);

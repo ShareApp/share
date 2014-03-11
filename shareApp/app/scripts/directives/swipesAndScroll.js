@@ -72,6 +72,28 @@ angular.module('shareApp')
     };
   }]);
 
+angular.module('shareApp')
+  .directive('onContainerSwipeUp', ['$parse', function ($parse) {
+    return function (scope, elm, attr) {
+      var lastUsed = new Date();
+      if (attr['onContainerSwipeUp'].length > 0) {
+        var fn = $parse(attr['onContainerSwipeUp']),
+          handler = function (e) {
+            var now = new Date();
+            // to eliminate frequently triggered event
+            if ((now - lastUsed) > 200) {
+              lastUsed = now;
+              safeApply(scope, function () {
+                fn(scope, {$event: e});
+              });
+            }
+            return false;
+          };
+        angular.element("#container").hammer().on('dragup', handler);
+      }
+    };
+  }]);
+
 /**
  * @ngdoc directive
  * @name onScrollBottom

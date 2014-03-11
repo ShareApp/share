@@ -16,15 +16,15 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/sharesList.html',
+            templateUrl: 'views/sharesList.html',
             controller: 'MainCtrl'
           },
           'footer': {
-            templateUrl: '/views/newShareButtons.html'
+            templateUrl: 'views/newShareButtons.html'
           }
         }
       })
@@ -32,15 +32,15 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/friends',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/friends.html',
+            templateUrl: 'views/friends.html',
             controller: 'MainCtrl'
           },
           'footer': {
-            templateUrl: '/views/newShareButtons.html'
+            templateUrl: 'views/newShareButtons.html'
           }
         }
       })
@@ -48,15 +48,15 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/friends/:userId',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/friendDetails.html',
+            templateUrl: 'views/friendDetails.html',
             controller: 'FriendDetailsCtrl'
           },
           'footer': {
-            templateUrl: '/views/newShareButtons.html'
+            templateUrl: 'views/newShareButtons.html'
           }
         }
       })
@@ -64,11 +64,11 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/share/:type',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/newShareSelectFriend.html',
+            templateUrl: 'views/newShareSelectFriend.html',
             controller: 'ShNewShareSelectFriendCtrl'
           }
         }
@@ -77,11 +77,11 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/share/:targetId/:direction/:type',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/newShare.html',
+            templateUrl: 'views/newShare.html',
             controller: 'ShNewShareCtrl'
           }
         }
@@ -90,15 +90,15 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/sharedItem/:sharedItemId',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/shareDetails.html',
+            templateUrl: 'views/shareDetails.html',
             controller: 'ShShareDetailsCtrl'
           },
           'footer': {
-            templateUrl: '/views/newShareButtons.html'
+            templateUrl: 'views/newShareButtons.html'
           }
         }
       })
@@ -106,7 +106,7 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/login',
         views: {
           'main': {
-            templateUrl: '/views/login.html',
+            templateUrl: 'views/login.html',
             controller: 'MainCtrl'
           }
         }
@@ -115,15 +115,15 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         url: '/settings',
         views: {
           'header': {
-            templateUrl: '/views/header.html',
+            templateUrl: 'views/header.html',
             controller: 'MainCtrl'
           },
           'main': {
-            templateUrl: '/views/settings.html',
+            templateUrl: 'views/settings.html',
             controller: 'ShSettingsCtrl'
           },
           'footer': {
-            templateUrl: '/views/newShareButtons.html'
+            templateUrl: 'views/newShareButtons.html'
           }
         }
       });
