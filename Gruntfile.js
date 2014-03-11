@@ -68,10 +68,10 @@ module.exports = function (grunt) {
 
       default_options: {
         lang: ['en_EN', 'pl_PL', 'ja_JP', 'es_ES', 'it_'],
-        src: ['app/views/*.html', 'app/scripts/*/*.js', 'app/scripts/app.js', 'app/scripts/globals.js', ],
+        src: ['<%= yeoman.app %>/views/*.html', '<%= yeoman.app %>/scripts/*/*.js', '<%= yeoman.app %>/scripts/app.js', '<%= yeoman.app %>/scripts/globals.js', ],
         prefix: 'lang_',
         suffix: '.js',
-        dest: 'app/i18n'
+        dest: '<%= yeoman.app %>/i18n'
       }
     },
     connect: {
