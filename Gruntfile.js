@@ -67,7 +67,7 @@ module.exports = function (grunt) {
     i18nextract: {
 
       default_options: {
-        lang: ['en_EN', 'pl_PL', 'ja_JP', 'es_ES', 'it_'],
+        lang: ['en_EN', 'pl_PL', 'ja_JP', 'it_IT', 'ru_RU', 'tr_TR', 'es_ES'],
         src: ['<%= yeoman.app %>/views/*.html', '<%= yeoman.app %>/scripts/*/*.js', '<%= yeoman.app %>/scripts/app.js', '<%= yeoman.app %>/scripts/globals.js', ],
         prefix: 'lang_',
         suffix: '.js',

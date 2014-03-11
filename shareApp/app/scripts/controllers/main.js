@@ -50,14 +50,14 @@ var MainCtrl = angular.module('shareApp')
         abbr: "jp"
       },
       {
-        name: 'russian',
-        value: 'ru_RU',
-        abbr: "ru"
-      },
-      {
         name: 'italian',
         value: 'it_IT',
         abbr: "it"
+      },
+      {
+        name: 'russian',
+        value: 'ru_RU',
+        abbr: "ru"
       },
       {
         name: 'turkish',
