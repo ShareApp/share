@@ -29,27 +29,11 @@ angular.module('shareApp')
 
 /**
  * @ngdoc directive
- * @name swipeDown
+ * @name onContainerSwipeDown
  *
  * @description
- * swipeDown event handler via Hammer.js
+ * swipeDown event handler via Hammer.js attached to element with id=container
  */
-angular.module('shareApp')
-  .directive('swipeDown', ['$parse', function ($parse) {
-    return function (scope, elm, attr) {
-      if (attr['swipeDown'].length > 0) {
-        var fn = $parse(attr['swipeDown']),
-          handler = function (e) {
-            safeApply(scope, function () {
-              fn(scope, {$event: e});
-            });
-            return false;
-          };
-        elm.hammer().on('swipedown', handler);
-      }
-    };
-  }]);
-
 angular.module('shareApp')
   .directive('onContainerSwipeDown', ['$parse', function ($parse) {
     return function (scope, elm, attr) {
@@ -72,6 +56,15 @@ angular.module('shareApp')
     };
   }]);
 
+
+
+/**
+ * @ngdoc directive
+ * @name onContainerSwipeUp
+ *
+ * @description
+ * swipeUp event handler via Hammer.js attached to element with id=container
+ */
 angular.module('shareApp')
   .directive('onContainerSwipeUp', ['$parse', function ($parse) {
     return function (scope, elm, attr) {
@@ -96,42 +89,10 @@ angular.module('shareApp')
 
 /**
  * @ngdoc directive
- * @name onScrollBottom
- *
- * @description
- * Call function on scroll bottom.
- */
-angular.module('shareApp')
-  .directive('onScrollBottom', ['$parse', function ($parse) {
-    return function (scope, elm, attr) {
-      var fn = $parse(attr['onScrollBottom']),
-        handler = function (event) {
-          safeApply(scope, function () {
-            fn(scope, {$event: event});
-          });
-        };
-      var onScroll = function () {
-        if (angular.element(this).scrollTop() +
-          angular.element(this).innerHeight() + 20
-          >= angular.element(this)[0].scrollHeight) {
-          handler();
-        }
-      };
-
-      elm.bind('scroll', onScroll);
-      elm.on("$destroy", function () {
-        elm.unbind('scroll', onScroll);
-      });
-    };
-  }]);
-
-
-/**
- * @ngdoc directive
  * @name onContainerScroll
  *
  * @description
- * Call function on scroll bottom element with id 'container'.
+ * Call function on scroll bottom element with id=container.
  */
 angular.module('shareApp')
   .directive('onContainerScroll', ['$parse', function ($parse) {
