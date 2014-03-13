@@ -14,17 +14,21 @@
  */
 angular.module('shareApp')
   .filter('parseuserfilter', function () {
-    return function (users, query) {
-      if (query === undefined) {
-        return users;
-      }
-      query = query.toLowerCase();
-      var out = [], i;
-      for (i = 0; i < users.length; i += 1) {
-        if (users[i].attributes.name.toLowerCase().indexOf(query) !== -1) {
-          out.push(users[i]);
+    return function (users, filterQuery, sorting) {
+      if (filterQuery !== undefined) {
+        filterQuery = filterQuery.toLowerCase();
+        var out = [], i;
+        for (i = 0; i < users.length; i += 1) {
+          if (users[i].attributes.name.toLowerCase().indexOf(filterQuery) !== -1) {
+            out.push(users[i]);
+          }
         }
+        users = out;
       }
-      return out;
-    };
-  });
+      if (sorting == "frequent") {
+        users = users.slice(0, 10)
+      }
+      return users;
+    }
+  })
+;
