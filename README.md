@@ -58,5 +58,9 @@ Main technology used in frontend is Angular JS. We use also Hammer.js to bind sw
 
 
 
+## Directory Structure
 
-
+ * cloudCode - ??
+ * docs - ??
+ * settings - ??
+ * shareApp - ??
