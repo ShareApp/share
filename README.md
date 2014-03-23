@@ -12,7 +12,30 @@ Just snap a photo, choose the person from your contacts and Share❣ will rememb
 Technically speaking, it is web application created using Angular JS and Parse.com cloud.
 
 
+## How it's built
+
+It's completely JavaScript application. 
+It uses Parse.com as a backend service, where data are stored and several server functions are implemented like images scaling or notifications creating,
+To learn more about Parse.com see JavaScript guid https://www.parse.com/docs/js_guide.
+
+Main technology used in frontend is Angular JS. We use also Hammer.js to bind swipe events and Lawnchair to provide offline support.
+
 ## Getting started
+
+### Install github client
+ * see github documentation https://help.github.com/articles/set-up-git
+ 
+### Install npm
+ ?? why is this needed
+ * windows - 
+ * mac/osx
+ * linux
+
+### Install bower
+ ?? why is this needed
+
+
+### Download Share❣ and start coding! 
 
 1. 
 ```git clone git+ssh://git@github.com/ShareApp/share.git```
@@ -37,14 +60,6 @@ parse new cloudCode
 
 After doing Getting started section you can easily deploy your app to Parse by calling ```make``` in root directory.
 
-
-## How it's built
-
-It's completely JavaScript application. 
-It uses Parse.com as a backend service, where data are stored and several server functions are implemented like images scaling or notifications creating,
-To learn more about Parse.com see JavaScript guid https://www.parse.com/docs/js_guide.
-
-Main technology used in frontend is Angular JS. We use also Hammer.js to bind swipe events and Lawnchair to provide offline support.
 
 
 ## Development
