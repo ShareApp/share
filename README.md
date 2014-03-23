@@ -18,7 +18,23 @@ It's completely JavaScript application.
 It uses Parse.com as a backend service, where data are stored and several server functions are implemented like images scaling or notifications creating,
 To learn more about Parse.com see JavaScript guid https://www.parse.com/docs/js_guide.
 
-Main technology used in frontend is Angular JS. We use also Hammer.js to bind swipe events and Lawnchair to provide offline support.
+
+### Front-end Libraries and frameworks used
+Main technology used in frontend is Angular JS. 
+
+ * AngularJS
+ * Hammer.js to bind swipe events
+ * Lawnchair to provide offline support.
+ 
+
+### Technologies used for build process
+ * (npm)[https://github.com/npm/npm] - used for??
+ * (bower)[???] - used for??
+ * (grunt)[???] - 
+
+## parse.com and angular.js
+
+How is this put together???
 
 ## Getting started
 
