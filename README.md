@@ -25,10 +25,11 @@ Main technology used in frontend is Angular JS. We use also Hammer.js to bind sw
 ### Install github client
  * see github documentation https://help.github.com/articles/set-up-git
  
-### Install npm
+### Install npm (node package manager)[https://github.com/npm/npm]
  ?? why is this needed
  * windows - 
- * mac/osx
+ * mac/osx - requires installation of a package manager such as (mac ports)[http://www.macports.org/]
+ ** port install npm
  * linux
 
 ### Install bower
