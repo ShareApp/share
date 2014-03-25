@@ -34,8 +34,12 @@
             <div class="content">
                 <div class="title">
                     <a class="friend-name" href="#/friends/{{ share.get('fromUser').id }}">{{ share.get('fromUser').get('firstName') }} </a>
-                    <span ng-switch on="share.get('type')" >
-                       <span class="grayed" ng-switch-when="2">{{ 'promised to' | translate }} </span>
+                    <span ng-switch on="share.get('state')" >
+                       <span class="grayed" ng-switch-when="0">{{ 'created a share' | translate }} </span>
+                       <span class="grayed" ng-switch-when="1">{{ 'shared' | translate }} </span>
+                       <span class="grayed" ng-switch-when="2">{{ 'returned' | translate }} </span>
+                       <span class="grayed" ng-switch-when="3">{{ 'requested return' | translate }} </span>
+                       <span class="grayed" ng-switch-when="4">{{ 'rejected a share' | translate }} </span>
                        <span class="grayed" ng-switch-default>{{ 'shared' | translate }} </span>
                     </span>
                     <a href="#/sharedItem/{{ share.id }}" class="thing">{{ share.get('text') }} </a><span class="grayed">{{ 'with' | translate }} </span>

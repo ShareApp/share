@@ -32,7 +32,8 @@
 
   var PPO = root.PPO;
   var Parse = root.Parse || {},
-    Lawnchair = root.Lawnchair || {};
+    Lawnchair = root.Lawnchair || {},
+    lchair = new Lawnchair({adapter: 'webkit-sqlite'});
 
   // MONKEY PATCHING
   Parse.File.prototype.urlOrData = function () {
@@ -203,8 +204,6 @@
         mappedObjList = [];
 
       promise = new Parse.Promise(mappedObjList);
-      new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-        var lchair = this;
         var mapObject = function (obj) {
           // fetching related objects
           Parse._objectEach(obj.attributes, function (v, k) {
@@ -306,7 +305,7 @@
           }
           promise.resolve(mappedObjList);
         });
-      });
+
       return promise;
     },
 
@@ -404,8 +403,6 @@
             console.log('Error', e);
           });
         } else {
-          new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-            var lchair = this;
             var saveFile = function () {
               var promise = new Parse.Promise();
               try {
@@ -441,7 +438,6 @@
                 });
               }
             });
-          });
         }
         return promise;
       });
@@ -459,12 +455,9 @@
       PPO.pushToChangelog({type: 'cloudRun', name: funName, arguments: Array.prototype.slice.call(arguments).slice(2)});
     }
     if (fetch === true) {
-      new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-        var lchair = this;
         lchair.get("cloud_" + funName, function (result) {
           promise.resolve(Parse._decode(null, result.data));
         });
-      });
     } else {
       promise.resolve();
     }
@@ -562,10 +555,8 @@
   ParseAdapter.cloudRun = function (fetch, modify, funName) {
     return Parse.Cloud.run.apply(this, Array.prototype.slice.call(arguments).slice(2)).then(function (result) {
       if (fetch === true) {
-        new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-          var lchair = this;
           lchair.save({key: "cloud_" + funName, data: Parse._encode(result, [])});
-        });
+
       }
     });
   };
@@ -586,8 +577,6 @@
   };
 
   PPO.pushToChangelog = function (delta) {
-    new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-      var lchair = this;
       lchair.get("changelog", function (result) {
         result = result || {};
         var changelog = result.data || [];
@@ -597,7 +586,6 @@
         });
         lchair.save({key: "changelog", data: changelog});
       });
-    });
   };
 
   PPO.synchronize = function () {
@@ -608,9 +596,6 @@
     }
 
     PPO._synchronizing = true;
-    new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-      var lchair = this;
-
       var synchronizeFile = function (value) {
         var promise = new Parse.Promise();
         var saveToParse = function (content) {
@@ -635,8 +620,6 @@
           };
           window.webkitRequestFileSystem(PERSISTENT, 55 * 1024 * 1024, onInitFs, fsErrorHandler);
         } else {
-          new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-            var lchair = this;
             lchair.get("file_" + value.name, function (file) {
               if (file) {
                 saveToParse(file.data).then(function () {
@@ -648,7 +631,6 @@
               }
 
             });
-          });
         }
         return promise;
       };
@@ -713,14 +695,11 @@
         });
       };
       executeNextTask();
-    });
     return promise;
   };
 
   PPO.saveObjToStorage = function (objToUpdate) {
     var promise = new Parse.Promise();
-    new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-      var lchair = this,
         className = objToUpdate.className;
       lchair.get("class_" + className, function (currentData) {
         var currentList = [];
@@ -739,7 +718,6 @@
           promise.resolve();
         });
       });
-    });
     return promise;
   };
 
@@ -759,13 +737,10 @@
       };
       window.webkitRequestFileSystem(PERSISTENT, 55 * 1024 * 1024, onInitFs, fsErrorHandler);
     } else {
-      new Lawnchair({adapter: 'webkit-sqlite'}, function () {
-        var lchair = this;
         lchair.get("file_" + fileObj._name, function (file) {
           if (file)
             fileObj._url_or_data = 'data:image/jpeg;base64,' + file.data;
         });
-      });
     }
   }
 
