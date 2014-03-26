@@ -118,7 +118,7 @@ Parse.Cloud.beforeSave("SharedItem", notifications.beforeSharedItemSave);
  * Performs action of returning share.
  */
 Parse.Cloud.define("returnShare", function (request, response) {
-  console.log("returningshare ");
+  console.log("returning share ");
   var sharedItemId = request.params.id,
     query = new Parse.Query("SharedItem");
   query.equalTo("objectId", sharedItemId);
@@ -133,19 +133,60 @@ Parse.Cloud.define("returnShare", function (request, response) {
       }
     });
   }
-
   query.first({success: function (sharedItem) {
     console.log("sharedITem state " + sharedItem.get('state'));
-    if ((sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED ||
-      sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED) && sharedItem.get('toUser').id === request.user.id) {
+    if (sharedItem.get('type') === globals.SHARE_TYPE_ENUM.THING &&
+      sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED &&
+      sharedItem.get('fromUser').id === request.user.id) {
+      // if it is a thing and is only confirmed and action is invoked by giver return it
       console.log("returning");
       sharedItem.set('state', globals.SHARE_STATE_ENUM.RETURNED);
       saveFun(sharedItem);
-    } else if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED && sharedItem.get('fromUser').id === request.user.id) {
+    } else if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED) {
+      console.log("returning");
+      sharedItem.set('state', globals.SHARE_STATE_ENUM.RETURNED);
+      saveFun(sharedItem);
+    }
+    response.success();
+  },
+    error: response.error
+  });
+});
+
+
+/**
+ * @ngdoc method
+ * @name Cloud#demandReturnShare
+ * @methodOf Cloud
+ *
+ * @description
+ * Performs action of demand returning share.
+ */
+Parse.Cloud.define("demandReturnShare", function (request, response) {
+  console.log("demand of returning share ");
+  var sharedItemId = request.params.id,
+    query = new Parse.Query("SharedItem");
+  query.equalTo("objectId", sharedItemId);
+  function saveFun(item) {
+    Parse.Cloud.useMasterKey();
+    item.save({
+      success: function () {
+        response.success();
+      },
+      error: function () {
+        response.error();
+      }
+    });
+  }
+  query.first({success: function (sharedItem) {
+    console.log("sharedITem state " + sharedItem.get('state'));
+    if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED) {
       console.log("demanding return");
       sharedItem.set('state', globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED);
       saveFun(sharedItem);
-    } else if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED && sharedItem.get('fromUser').id === request.user.id) {
+    }
+    else if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED &&
+      sharedItem.get('fromUser').id === request.user.id) {
       console.log("refreshing notification");
       var query = new Parse.Query("Notification");
       query.equalTo('sharedItem', sharedItem);
@@ -158,9 +199,9 @@ Parse.Cloud.define("returnShare", function (request, response) {
           saveFun(notification);
         }
       }, error: response.error});
-    } else {
-      response.success();
     }
+
+    response.success();
   },
     error: response.error
   });
@@ -202,7 +243,7 @@ Parse.Cloud.define("getCommonShares", function (request, response) {
           query.limit(5);
           query.find({
             success: function (sharedItems) {
-              if(sharedItems.length != 0) {
+              if (sharedItems.length != 0) {
                 results[friend.id] = {};
                 results[friend.id]['items'] = sharedItems;
               }

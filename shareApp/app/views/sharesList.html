@@ -1,7 +1,7 @@
 <div id="content" on-container-swipe-down="fetchNewSharesIfTop()" on-container-swipe-up="fetchOlderSharesIfBottom()" on-container-scroll="fetchNewSharesIfTop();fetchOlderSharesIfBottom();">
     <div id="filters-container" sh-filters ng-show="user.loggedIn"></div>
     <ul id="shares">
-        <li class="share-item {{ shShare.getTypeDisplay(share.get('type')) }}-type {{ shShare.getStateDisplay(share.get('state')).replace(' ','-').toLowerCase() }}-state" ng-class="share.get('img') && 'big'" ng-repeat="share in user.userShares">
+        <li class="share-item {{ shShare.getTypeDisplay(share.get('type')) }}-type {{ shShare.getStateDisplay(share.get('state')).split(' ').join('-').toLowerCase() }}-state" ng-class="share.get('img') && 'big'" ng-repeat="share in user.userShares">
             <a href="#/sharedItem/{{ share.id }}">
                 <div class="type-ico-container">
                     <div class="state-ico-container">

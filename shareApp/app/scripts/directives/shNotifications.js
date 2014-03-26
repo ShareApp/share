@@ -51,7 +51,6 @@ angular.module('shareApp')
             return msg;
           };
           $scope.takeNotificationAction = function (item) {
-            console.log($scope.swiped);
             if (item.get('action') === globals.NOTIFICATION_ACTION_ENUM.INFO) {
               shNotifications.notificationRead(item);
             }

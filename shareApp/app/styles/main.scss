@@ -325,7 +325,8 @@ body {
         display: inline-block;
       }
       .info {
-        margin-top: -13px;
+        margin-top: -10px;
+        display: inherit;
       }
       #logo {
         @include retina-sprite-background(logo, $icons-normal, $icons-retina);
@@ -347,7 +348,7 @@ body {
       }
       #notification-btn {
         display: inline-block;
-        margin: 13px 0;
+        margin: 10px 0;
         text-align: center;
         font-size: 1.2em;
         @include retina-sprite-background(notification-btn, $icons-normal, $icons-retina);

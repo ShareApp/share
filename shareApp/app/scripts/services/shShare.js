@@ -179,16 +179,14 @@ angular.module('shareApp')
         }
 
         if (myShare.direction === globals.SHARE_DIRECTION_ENUM.TO_FRIEND) {
-          // confirmation required
           sharedItem.set('fromUser', myShare.currentUser);
           sharedItem.set('toUser', myShare.targetUser);
-          sharedItem.set('state', globals.SHARE_STATE_ENUM.CREATED);
         } else {
-          // confirmation not required
           sharedItem.set('fromUser', myShare.targetUser);
           sharedItem.set('toUser', myShare.currentUser);
-          sharedItem.set('state', globals.SHARE_STATE_ENUM.CONFIRMED);
         }
+        // confirmation is always required
+        sharedItem.set('state', globals.SHARE_STATE_ENUM.CREATED);
 
         PPO.SaveObject(sharedItem, null, {
           success: function (sharedItem) {
@@ -256,7 +254,7 @@ angular.module('shareApp')
        */
       demandReturnShare: function (sharedItem) {
         $rootScope.$broadcast('progressBar.update', true);
-        PPO.RunModifyCloud("returnShare", {id: sharedItem.id}, {success: function (result) {
+        PPO.RunModifyCloud("demandReturnShare", {id: sharedItem.id}, {success: function (result) {
           $rootScope.$broadcast('progressBar.update', false);
         }, error: function (error) {
           console.log("error " + error);
@@ -284,6 +282,7 @@ angular.module('shareApp')
           break;
         case globals.SHARE_STATE_ENUM.RETURNED:
           msg = "Returned";
+          break;
         case globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED:
           msg = "Returned but not confirmed";
           break;

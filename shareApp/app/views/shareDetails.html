@@ -1,6 +1,6 @@
 <div id="content">
     <div id="share-details">
-        <div class="share-item {{ share.getTypeDisplay(sharedItem.get('type')) }}-type {{ share.getStateDisplay(sharedItem.get('state')).replace(' ','-').toLowerCase() }}-state"
+        <div class="share-item {{ share.getTypeDisplay(sharedItem.get('type')) }}-type {{ share.getStateDisplay(sharedItem.get('state')).split(' ').join('-').toLowerCase() }}-state"
              ng-class="sharedItem.get('img') && 'big'">
             <div class="type-ico-container">
                 <div class="state-ico-container">

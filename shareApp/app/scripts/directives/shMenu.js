@@ -35,7 +35,6 @@ angular.module('shareApp')
           if ($rootScope.menuOpened === true) {
             // if menu is extremely wide, leave a little space to go out from menu
             var width = Math.min(container.width() * 0.9, topList.width());
-            console.log(width);
             container.css('left', width);
           } else {
             container.css('left', 0);

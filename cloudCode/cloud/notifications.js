@@ -157,10 +157,20 @@ exports.beforeNotificationSave = function (request, response) {
             });
           } else if (newStatus === globals.NOTIFICATION_STATUS_ENUM.REJECTED) {
             newObj.get('sharedItem').fetch().then(function (sharedItem) {
-              console.log("status is rejected");
-              sharedItem.set('state', globals.SHARE_STATE_ENUM.REJECTED);
-              sharedItem.save();
-              response.success();
+              var sharedItemState = sharedItem.get('state');
+              if (sharedItemState === globals.SHARE_STATE_ENUM.CREATED) {
+                console.log("status is rejected");
+                sharedItem.set('state', globals.SHARE_STATE_ENUM.REJECTED);
+                sharedItem.save();
+                response.success();
+              } else if (sharedItemState === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED) {
+                console.log("sharedItems goes back to confirmed state (unaccepted)");
+                sharedItem.set('state', globals.SHARE_STATE_ENUM.CONFIRMED);
+                sharedItem.save();
+                response.success();
+              } else {
+                console.log("bad sharedItem state (should be created or returned_not_confirmed");
+              }
             });
           } else {
             console.log("status is not decision");
@@ -203,40 +213,40 @@ exports.beforeSharedItemSave = function (request, response) {
     response.success();
     return;
   }
-    Parse.Cloud.httpRequest({
-      url: obj.get("img").url()
+  Parse.Cloud.httpRequest({
+    url: obj.get("img").url()
 
-    }).then(function (response) {
-        var image = new Image();
-        return image.setData(response.buffer);
+  }).then(function (response) {
+      var image = new Image();
+      return image.setData(response.buffer);
 
-      }).then(function (image) {
-        var width = Math.min(460, image.width());
-        return image.scale({
-          width: width,
-          height:  width /  image.width() * image.height()
-        });
-
-      }).then(function (image) {
-        return image.setFormat("JPEG");
-
-      }).then(function (image) {
-        return image.data();
-
-      }).then(function (buffer) {
-        var base64 = buffer.toString("base64");
-        var img = obj.get('img');
-        var cropped = new Parse.File(img.name(), { base64: base64 });
-        return cropped.save();
-
-      }).then(function(cropped) {
-        obj.set("img", cropped);
-
-      }).then(function (result) {
-        response.success();
-      }, function (error) {
-        response.error(error);
+    }).then(function (image) {
+      var width = Math.min(460, image.width());
+      return image.scale({
+        width: width,
+        height: width / image.width() * image.height()
       });
+
+    }).then(function (image) {
+      return image.setFormat("JPEG");
+
+    }).then(function (image) {
+      return image.data();
+
+    }).then(function (buffer) {
+      var base64 = buffer.toString("base64");
+      var img = obj.get('img');
+      var cropped = new Parse.File(img.name(), { base64: base64 });
+      return cropped.save();
+
+    }).then(function (cropped) {
+      obj.set("img", cropped);
+
+    }).then(function (result) {
+      response.success();
+    }, function (error) {
+      response.error(error);
+    });
 };
 
 
