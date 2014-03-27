@@ -80,9 +80,15 @@ After doing Getting started section you can easily deploy your app to Parse by c
 
 
 ## Development
+#### Directory Structure
+ * cloudCode - parse.com server-side code
+ * docs - ngdocs documentation template file (docs are generated into here (see Generating documentation above) 
+ * settings - settings file shared between server & app-side
+ * shareApp - application source code
 
-1. To generate inline documentation call ```grunt ngdocs``` and go to 'docs' directory
-1. To develop app you can simply call ```grunt server```
+#### Running app on local development server
+ *  To develop app you can simply call ```grunt server```
+ *  Still requires parse.com for backend i.e. cloudCode changes must be uploaded to server.
 
 #### Don't forget to:
 - every time you will change CSS sprites, you should change generated filename ```cloudCode/cloud/views/manifest.ejs``` file
@@ -92,9 +98,6 @@ After doing Getting started section you can easily deploy your app to Parse by c
  * set in settings file
  * currently only used to put "test" string over logo
 
-## Directory Structure
+#### Generating documentation
+1. To generate inline documentation call ```grunt ngdocs``` and go to 'docs' directory
 
- * cloudCode - ??
- * docs - ??
- * settings - ??
- * shareApp - ??
