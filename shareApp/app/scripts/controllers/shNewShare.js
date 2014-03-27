@@ -10,7 +10,7 @@
  * @name ShNewShareCtrl
  *
  * @description
- * Controller for creating new Share
+ * Angular controller which manages creating new Share
  */
 var ShNewShareCtrl = angular.module('shareApp')
   .controller('ShNewShareCtrl', function ($scope, $state, $location, $translate, $rootScope, shUser, shShare, shSync) {

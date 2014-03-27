@@ -9,7 +9,7 @@
  * @name ellipsis
  *
  * @description
- * Enables jQuery dotdotdot plugin.
+ * Angular directive which enable jQuery dotdotdot plugin.
  */
 angular.module('shareApp')
   .directive('ellipsis', ['$parse', function ($parse) {

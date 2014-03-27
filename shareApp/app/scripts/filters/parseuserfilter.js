@@ -10,7 +10,7 @@
  * @name parseuserfilter
  *
  * @description
- * Angular filter didn't manage objects' attributes, so we need custom filter to query users.
+ * Angular filter which filters users based on given filterQuery
  */
 angular.module('shareApp')
   .filter('parseuserfilter', function () {

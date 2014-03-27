@@ -465,7 +465,7 @@ body {
   display: inline-block;
 }
 /* line 327, main.scss */
-#header-container #header #logo-container .info {
+#header-container #header #logo-container > .info {
   margin-top: -10px;
   display: inherit;
 }

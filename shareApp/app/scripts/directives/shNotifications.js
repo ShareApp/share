@@ -10,7 +10,7 @@
  * @name shNotifications
  *
  * @description
- * Creates widget with notifications.
+ * Angular directive which creates and manages notifications dialog.
  */
 angular.module('shareApp')
   .directive('shNotifications', function () {

@@ -10,7 +10,7 @@
  * @name smallShareItem
  *
  * @description
- * Shows thumbnail of sharedItem
+ * Angular directive which shows thumbnail of shared item
  */
 angular.module('shareApp')
   .directive('smallShareItem', function () {

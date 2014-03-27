@@ -9,7 +9,7 @@
  * @name tap
  *
  * @description
- * Tap event handler via Hammer.js
+ * Angular directive which can handle tap event handler via Hammer.js
  */
 angular.module('shareApp')
   .directive('tap', ['$parse', function ($parse) {
@@ -32,7 +32,7 @@ angular.module('shareApp')
  * @name onContainerSwipeDown
  *
  * @description
- * swipeDown event handler via Hammer.js attached to element with id=container
+ * Angular directive which can handle swipeDown event handler via Hammer.js attached to element with id=container
  */
 angular.module('shareApp')
   .directive('onContainerSwipeDown', ['$parse', function ($parse) {
@@ -56,14 +56,12 @@ angular.module('shareApp')
     };
   }]);
 
-
-
 /**
  * @ngdoc directive
  * @name onContainerSwipeUp
  *
  * @description
- * swipeUp event handler via Hammer.js attached to element with id=container
+ * Angular directive which can handle swipeUp event handler via Hammer.js attached to element with id=container
  */
 angular.module('shareApp')
   .directive('onContainerSwipeUp', ['$parse', function ($parse) {
@@ -92,7 +90,7 @@ angular.module('shareApp')
  * @name onContainerScroll
  *
  * @description
- * Call function on scroll bottom element with id=container.
+ * Angular directive which call function on scroll bottom element with id=container.
  */
 angular.module('shareApp')
   .directive('onContainerScroll', ['$parse', function ($parse) {

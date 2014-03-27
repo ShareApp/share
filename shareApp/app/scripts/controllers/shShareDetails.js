@@ -10,7 +10,7 @@
  * @name ShShareDetailsCtrl
  *
  * @description
- * Controller for displaying Share details
+ * Angular controller which manages displaying Share details
  */
 var ShShareDetailsCtrl = angular.module('shareApp')
   .controller('ShShareDetailsCtrl', function ($scope, $state, $location, $window, $translate, shUser, shShare) {

@@ -10,7 +10,7 @@
  * @name FriendDetailsCtrl
  *
  * @description
- * Controller which is responsible for displaying friend details
+ * Angular controller which is responsible for displaying friend details
  */
 var FriendDetailsCtrl = angular.module('shareApp')
   .controller('FriendDetailsCtrl', function ($scope, $rootScope, $state, $location, $translate, $window, shUser, shShare) {

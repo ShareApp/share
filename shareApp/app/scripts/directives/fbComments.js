@@ -11,7 +11,7 @@
  * @name fbComments
  *
  * @description
- * Shows Facebook comments widget to current URL
+ * Angular directive which show Facebook comments widget to current URL
  */
 angular.module('shareApp')
   .directive('fbComments', ['$location', 'shSync', function ($location, shSync) {

@@ -10,7 +10,7 @@
  * @name slugify
  *
  * @description
- * Converts string to url-safe.
+ * Angular filter which convert given string to url-safe representation.
  */
 angular.module('shareApp')
   .filter("slugify", function () {

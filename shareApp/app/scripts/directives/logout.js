@@ -10,7 +10,7 @@
  * @name logout
  *
  * @description
- * Creates widget for logout action.
+ * Angular directive which creates widget for logout action.
  */
 var logout = angular.module('shareApp')
   .directive('logout', function ($window, shUser, $translate) {

@@ -10,7 +10,7 @@
  * @name fbFriendSelect
  *
  * @description
- * Shows list of Facebook Friends and calls selectFriend() function on click.
+ * Angular directive which show list of Facebook friends.
  */
 angular.module('shareApp')
   .directive('fbFriendSelect', function () {

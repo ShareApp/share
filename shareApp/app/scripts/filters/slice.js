@@ -10,7 +10,7 @@
  * @name slice
  *
  * @description
- * Allow slicing results
+ * Angular filter which slice given array
  */
 angular.module('shareApp')
   .filter('slice', function() {

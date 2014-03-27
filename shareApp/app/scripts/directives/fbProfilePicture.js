@@ -10,7 +10,7 @@
  * @name fbProfilePicture
  *
  * @description
- * Shows Image with User's Facebook Profile picture.
+ * Angular directive which show Facebook user profile picture.
  */
 angular.module('shareApp')
   .directive('fbProfilePicture', function () {

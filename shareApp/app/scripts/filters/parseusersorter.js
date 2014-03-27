@@ -10,7 +10,7 @@
  * @name parseusersorter
  *
  * @description
- * Filtering can be performed by three parameters: frequent, alphabetically and recent
+ * Angular filter which sort users by three parameters: frequent, alphabetically and recent
  */
 angular.module('shareApp')
   .filter('parseusersorter', ['shUser', 'shSync', function (shUser, shSync) {

@@ -46,7 +46,7 @@ var getPositionImgFun = function (elm, attr) {
  * @name verticallyPositioned
  *
  * @description
- * Positions image in Share to vertical and scales it if needed.
+ * Angular directive which positions image in Share to vertical and scales it if needed.
  */
 angular.module('shareApp')
   .directive('verticallyPositioned', ["$window", function ($window) {
@@ -67,7 +67,7 @@ angular.module('shareApp')
  * @name verticallyPositionedNotification
  *
  * @description
- * Positions image in Share to vertical and scales it if needed. It works only in notification frame.
+ * Angular directive which positions image in Share to vertical and scales it if needed. It works only in notification frame.
  */
 angular.module('shareApp')
   .directive('verticallyPositionedNotification', ["$window", '$rootScope', '$timeout', function ($window, $rootScope, $timeout) {

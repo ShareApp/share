@@ -10,7 +10,7 @@
  * @name shNotifications
  *
  * @description
- * Service for managing notifications. It allows to receive new notifications and send confirmations.
+ * Service for managing notifications. It allows to receive new notifications and send confirmations to users.
  */
 
 var shNotifications = angular.module('shareApp')

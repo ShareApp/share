@@ -10,7 +10,7 @@
  * @name shFilters
  *
  * @description
- * Creates widget with filter switches for stream of SharedItems.
+ * Angular directive which creates dialog with Share list filter widget
  */
 angular.module('shareApp')
   .directive('shFilters', ['$translate', function ($translate) {

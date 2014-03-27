@@ -88,7 +88,9 @@ After doing Getting started section you can easily deploy your app to Parse by c
 - every time you will change CSS sprites, you should change generated filename ```cloudCode/cloud/views/manifest.ejs``` file
 - every time you will change any HTML/CSS/JS file, you should increment version in ```cloudCode/cloud/views/manifest.ejs``` file to refresh HTML5 Application Cache
 
-
+#### Debug mode
+ * set in settings file
+ * currently only used to put "test" string over logo
 
 ## Directory Structure
 

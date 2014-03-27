@@ -10,7 +10,7 @@
  * @name MainCtrl
  *
  * @description
- * Main Share controller. It makes miscellaneous work.
+ * Angular controller which is run at the beginning. It makes miscellaneous work.
  */
 
 var MainCtrl = angular.module('shareApp')

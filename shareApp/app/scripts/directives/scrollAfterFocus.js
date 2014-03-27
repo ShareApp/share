@@ -9,7 +9,7 @@
  * @name scrollAfterFocus
  *
  * @description
- * Moves to widget when it get focus
+ * Angular directive which scrolls page to widget which currently has focus
  */
 angular.module('shareApp')
   .directive('scrollAfterFocus', ["$window", function ($window) {

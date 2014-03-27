@@ -10,7 +10,7 @@
  * @name shMenu
  *
  * @description
- * Creates widget with sliding menu.
+ * Angular directive which creates widget with sliding menu.
  */
 angular.module('shareApp')
   .directive('shMenu', ['$rootScope', function ($rootScope) {

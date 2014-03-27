@@ -10,7 +10,7 @@
  * @name langSwitcher
  *
  * @description
- * Creates switcher for localization files.
+ * Angular directive which create language switcher.
  */
 angular.module('shareApp')
   .directive('langSwitcher', ['$rootScope', function ($rootScope) {

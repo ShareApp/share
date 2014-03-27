@@ -10,7 +10,7 @@
  * @name ShNewShareSelectFriendCtrl
  *
  * @description
- * Controller for selecting friend for new Share
+ * Angular controller which manages selecting user during process of creating new share
  */
 var ShNewShareSelectFriendCtrl = angular.module('shareApp')
   .controller('ShNewShareSelectFriendCtrl', function ($scope, $state, $location, $translate, shUser, shShare) {

@@ -10,7 +10,7 @@
  * @name shUser
  *
  * @description
- * Shared Object for keeping user's data and provides user-related methods.
+ * Service Shared Object for keeping user's data and provides user-related methods.
  */
 var shUser = angular.module('shareApp')
   .factory('shUser',function user($rootScope, $location, $window) {

@@ -9,7 +9,7 @@
  * @name datePickerFallback
  *
  * @description
- * If input type 'date' is not supported it enables jQuery plugin: dateEntry
+ * Angular directive which replace given input with jQuery plugin: dateEntry
  */
 angular.module('shareApp')
   .directive('datePickerFallback', ['$parse', function ($parse) {
