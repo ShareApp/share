@@ -87,11 +87,11 @@ This module is provided by default and contains the core components of AngularJS
         Share filters:
       </p>
       <p>
-          {@link parseuserfilter parseuserfilter},
-          {@link parseusersorter parseusersorter},
+          {@link parseUserFilter parseUserFilter},
+          {@link parseUserSorter parseUserSorter},
           {@link shortVerboseNumber shortVerboseNumber},
           {@link slugify slugify},
-          {@link timedifference timedifference},
+          {@link timeDifference timeDifference},
           {@link langSwitcher langSwitcher},
           {@link login login},
           {@link logout logout},

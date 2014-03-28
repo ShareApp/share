@@ -24,7 +24,7 @@
             </div>
 
             <ul class="friend-select-list">
-                <li ng-repeat="friend in user.friendsList | parseusersorter: sorting | parseuserfilter: query:sorting | slice:0:visibleFriends">
+                <li ng-repeat="friend in user.friendsList | parseUserSorter: sorting | parseUserFilter: query:sorting | slice:0:visibleFriends">
                     <a href="" ng-click="selectFriend(friend)">
                         <fb-profile-picture user-id="friend.attributes.facebookid"></fb-profile-picture>
                         <span class="title-container">

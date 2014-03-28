@@ -7,13 +7,13 @@
 
 /**
  * @ngdoc filter
- * @name parseuserfilter
+ * @name parseUserFilter
  *
  * @description
  * Angular filter which filters users based on given filterQuery
  */
 angular.module('shareApp')
-  .filter('parseuserfilter', function () {
+  .filter('parseUserFilter', function () {
     return function (users, filterQuery, sorting) {
       if (filterQuery !== undefined) {
         filterQuery = filterQuery.toLowerCase();

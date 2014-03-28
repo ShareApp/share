@@ -16,7 +16,7 @@ angular.module('shareApp')
   .directive('fbFriendSelect', function () {
     return {
       template: '<input ng-model="query" autofocus="true" placeholder="{{ "Search for friend" | translate ||">' +
-        '<ul class="friends-select"><li ng-repeat="friend in user.friendsList | parseuserfilter: query"> ' +
+        '<ul class="friends-select"><li ng-repeat="friend in user.friendsList | parseUserFilter: query"> ' +
         '<a href="" ng-click="selectFriend(friend)">' +
         '<fb-profile-picture user-id="friend.attributes.facebookid"></fb-profile-picture>{{ friend.attributes.name }}' +
         '</a>' +

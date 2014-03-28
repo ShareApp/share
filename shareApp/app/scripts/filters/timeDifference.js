@@ -7,13 +7,13 @@
 
 /**
  * @ngdoc filter
- * @name timedifference
+ * @name timeDifference
  *
  * @description
  * Angular filter which applies moment.js library to date objects.
  */
 angular.module('shareApp')
-  .filter('timedifference', ['$translate', function ($translate) {
+  .filter('timeDifference', ['$translate', function ($translate) {
     return function (dateStart) {
       var lang = $translate.uses();
       if (lang == "ja_JP") {

@@ -7,13 +7,13 @@
 
 /**
  * @ngdoc filter
- * @name userfilterwithshares
+ * @name userFilterWithShares
  *
  * @description
  * Angular filter which filter users list to only these who current user have shares with
  */
 angular.module('shareApp')
-  .filter('userfilterwithshares', ['shUser', function (shUser) {
+  .filter('userFilterWithShares', ['shUser', function (shUser) {
     return function (users) {
       var out = [], i;
       for (i = 0; i < users.length; i += 1) {

@@ -7,13 +7,13 @@
 
 /**
  * @ngdoc filter
- * @name parseusersorter
+ * @name parseUserSorter
  *
  * @description
  * Angular filter which sort users by three parameters: frequent, alphabetically and recent
  */
 angular.module('shareApp')
-  .filter('parseusersorter', ['shUser', 'shSync', function (shUser, shSync) {
+  .filter('parseUserSorter', ['shUser', 'shSync', function (shUser, shSync) {
     return function (data, query) {
       var users = data.slice();
       // we can share to fakeUser only when online (need to save user after selecting it)
