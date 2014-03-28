@@ -33,7 +33,7 @@
   var PPO = root.PPO;
   var Parse = root.Parse || {},
     Lawnchair = root.Lawnchair || {},
-    lchair = new Lawnchair({adapter: 'webkit-sqlite'});
+    lchair = new Lawnchair({adapter: 'dom'});
 
   // MONKEY PATCHING
   Parse.File.prototype.urlOrData = function () {
@@ -572,7 +572,8 @@
   PPO.isOnline = function () {
     'use strict';
     // FOR TESTING PURPOSE ONLY
-    // return navigator.amIOnline;
+    //
+//    return false;
     return navigator.onLine;
   };
 
