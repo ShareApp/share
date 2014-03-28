@@ -29,7 +29,7 @@ Main technology used in frontend is Angular JS.
 
 ### Technologies used for build process
  * [npm](https://github.com/npm/npm) - used for??
- * [bower](???) - used for??
+ * [bower](http://bower.io/) - used for??
  * [grunt](???) - 
 
 ## parse.com and angular.js
@@ -42,15 +42,13 @@ How is this put together???
  * see github documentation https://help.github.com/articles/set-up-git
  
 ### Install npm [node package manager](https://github.com/npm/npm)
- ?? why is this needed
- * windows - 
+ * windows -
  * mac/osx - requires installation of a package manager such as [mac ports](http://www.macports.org/)
- ** port install npm
+    * port install npm
  * linux
 
 ### Install bower
- ?? why is this needed
-
+ * npm install -g bower
 
 ### Download Share❣ and start coding! 
 
