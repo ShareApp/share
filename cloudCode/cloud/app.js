@@ -12,17 +12,17 @@
  * Express application which can be launched only in Parse.com cloud.
  */
 var express = require('express');
-var app = express();
+var Buffer = require('buffer').Buffer;
+var settings = require('cloud/settings.js');
+var parseExpressCookieSession = require('parse-express-cookie-session');
 
+var app = express();
 app.set('views', 'cloud/views');
 app.set('view engine', 'ejs');
 app.use(express.cookieParser('SECRET 12345'));
 app.use(express.cookieSession());
 app.use(express.bodyParser());
-var Buffer = require('buffer').Buffer;
-var settings = require('cloud/settings.js');
 
-var parseExpressCookieSession = require('parse-express-cookie-session');
 app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
 
 /**

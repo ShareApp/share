@@ -13,8 +13,8 @@
  * List of CloudCode functions.
  */
 require('cloud/app.js');
-
 var globals = require('cloud/globals').globals;
+var notifications = require('cloud/notifications');
 
 /**
  * @ngdoc method
@@ -26,7 +26,7 @@ var globals = require('cloud/globals').globals;
  */
 Parse.Cloud.afterSave("_User", function (request) {
   var facebookId = request.object.get("facebookid"),
-    userquery = new Parse.Query('_User'),
+    userQuery = new Parse.Query('_User'),
     currentUser = request.object,
     i,
     relations;
@@ -41,16 +41,15 @@ Parse.Cloud.afterSave("_User", function (request) {
     Notification: ['targetUser']
   };
 
-  userquery.equalTo('facebookid', facebookId);
-  userquery.equalTo('fakeUser', true);
-  userquery.find({
+  userQuery.equalTo('facebookid', facebookId);
+  userQuery.equalTo('fakeUser', true);
+  userQuery.find({
     success: function (users) {
       var model, query, setCurrentUser, errorCallback, manageModel;
 
       setCurrentUser = function (field) {
         return function (items) {
           var i, itemsLength = items.length;
-
           for (i = 0; i < itemsLength; i += 1) {
             items[i].set(field, currentUser);
             items[i].save();
@@ -65,7 +64,6 @@ Parse.Cloud.afterSave("_User", function (request) {
       manageModel = function (model) {
         relations[model].forEach(function (field) {
           var successCallback = setCurrentUser(field);
-
           query = new Parse.Query(model);
           query.containedIn(field, users);
           query.find({
@@ -102,8 +100,6 @@ Parse.Cloud.afterSave("_User", function (request) {
     }
   });
 });
-
-var notifications = require('cloud/notifications');
 
 Parse.Cloud.beforeSave("Notification", notifications.beforeNotificationSave);
 Parse.Cloud.afterSave("SharedItem", notifications.afterSharedItemSave);
@@ -181,12 +177,14 @@ Parse.Cloud.define("demandReturnShare", function (request, response) {
   query.first({success: function (sharedItem) {
     console.log("sharedITem state " + sharedItem.get('state'));
     if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED) {
+      // demand return
       console.log("demanding return");
       sharedItem.set('state', globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED);
       saveFun(sharedItem);
     }
     else if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED &&
       sharedItem.get('fromUser').id === request.user.id) {
+      // refresh demand action
       console.log("refreshing notification");
       var query = new Parse.Query("Notification");
       query.equalTo('sharedItem', sharedItem);
@@ -200,7 +198,6 @@ Parse.Cloud.define("demandReturnShare", function (request, response) {
         }
       }, error: response.error});
     }
-
     response.success();
   },
     error: response.error

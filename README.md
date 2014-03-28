@@ -57,7 +57,7 @@ How is this put together???
 1. 
 ```cd share```
 1. 
-```npm install --dev```
+```npm install```
 1. 
 ```bower install```
 1. Read ```https://parse.com/docs/cloud_code_guide#cloud_code``` and install Parse Command Line Tool
@@ -85,7 +85,7 @@ After doing Getting started section you can easily deploy your app to Parse by c
  * shareApp - application source code
 
 #### Running app on local development server
- *  To develop app you can simply call ```grunt server```
+ *  To develop app you can simply call ```node_modules/grunt-cli/bin/grunt server```
  *  Still requires parse.com for backend i.e. cloudCode changes must be uploaded to server.
 
 #### Don't forget to:
@@ -97,5 +97,5 @@ After doing Getting started section you can easily deploy your app to Parse by c
  * currently only used to put "test" string over logo
 
 #### Generating documentation
-1. To generate inline documentation call ```grunt ngdocs``` and go to 'docs' directory
+1. To generate inline documentation call ```node_modules/grunt-cli/bin/grunt ngdocs``` and go to 'docs' directory
 

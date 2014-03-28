@@ -6,6 +6,7 @@
 'use strict';
 
 var globals = require('cloud/globals').globals;
+var Image = require("parse-image");
 
 /**
  * @ngdoc method
@@ -192,7 +193,7 @@ exports.beforeNotificationSave = function (request, response) {
   }
 };
 
-var Image = require("parse-image");
+
 
 
 /**
