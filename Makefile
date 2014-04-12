@@ -1,6 +1,6 @@
 deploy:
 	rm -r cloudCode/public/*; \
-	grunt build; \
+	nodejs node_modules/grunt-cli/bin/grunt build; \
 	rm -rf cloudCode/public/bower_components/; \
 	cd cloudCode/; \
 	parse deploy `cat ../parse_app_name.txt`;

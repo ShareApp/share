@@ -59,7 +59,7 @@ How is this put together???
 1. 
 ```npm install```
 1. 
-```bower install```
+```node_modules/grunt-google-cdn/node_modules/bower/bin/bower install```
 1. Read ```https://parse.com/docs/cloud_code_guide#cloud_code``` and install Parse Command Line Tool
 1. Set up new Parse App
 ```
