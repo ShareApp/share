@@ -3,7 +3,7 @@
 # task which build application and deploy it to Parse.com
 deploy:
 	rm -r cloudCode/public/*; \
-	nodejs node_modules/grunt-cli/bin/grunt build; \
+	node_modules/grunt-cli/bin/grunt build; \
 	rm -rf cloudCode/public/bower_components/; \
 	cd cloudCode/; \
 	parse deploy `cat ../parse_app_name.txt`;
