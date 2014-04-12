@@ -6,11 +6,13 @@
 'use strict';
 
 /**
- * Share❣ is application for making sharing items/time/promises easy...
+ * app.js file is a starting point for whole Javascript engine for Share❣ application
  */
 var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui.router', 'ngTouch', 'ngSanitize'])
   .config(function ($stateProvider, $urlRouterProvider, $translateProvider) {
 
+    // following lines are definition of application routing.
+    // If you want add new view, you should add values here.
     $stateProvider
       .state('index', {
         url: '/',
@@ -173,6 +175,9 @@ function initApp() {
 
 
 if (window.applicationCache) {
+    /*
+    Force an update if applicationCache has been changed
+     */
   if (window.applicationCache.status === window.applicationCache.UPDATEREADY) {
     if (confirm('An update is available. Reload?')) {
       window.location.reload();
@@ -185,7 +190,7 @@ if (window.applicationCache) {
     });
   }
 }
-
+/* Invoke initApp method directly if in offline mode */
 if (navigator.onLine === true) {
   window.fbAsyncInit = initApp;
 } else {

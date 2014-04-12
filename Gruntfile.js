@@ -1,4 +1,4 @@
-// Generated on 2013-07-04 using generator-angular 0.3.0
+// Grunt configuration file. It manages processes of building and deploying application.
 'use strict';
 var LIVERELOAD_PORT = 35729;
 var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
@@ -8,7 +8,9 @@ var mountFolder = function (connect, dir) {
 
 module.exports = function (grunt) {
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+  // tasks related to app translations
   grunt.loadNpmTasks('grunt-angular-translate');
+  // tasks which generate relevant documentation
   grunt.loadNpmTasks('grunt-docular');
   grunt.loadNpmTasks('grunt-ngdocs');
 
@@ -24,6 +26,7 @@ module.exports = function (grunt) {
   }
 
   grunt.initConfig({
+    // configuration of task which generates documentation
     ngdocs: {
       options: {
         dest: 'docs/build/',
@@ -64,9 +67,10 @@ module.exports = function (grunt) {
         ]
       }
     },
+    // configuration for task which manages translation files
     i18nextract: {
-
       default_options: {
+        // change here to add new languages
         lang: ['en_EN', 'pl_PL', 'ja_JP', 'it_IT', 'ru_RU', 'tr_TR', 'es_ES'],
         src: ['<%= yeoman.app %>/views/*.html', '<%= yeoman.app %>/scripts/*/*.js', '<%= yeoman.app %>/scripts/app.js', '<%= yeoman.app %>/scripts/globals.js', ],
         prefix: 'lang_',
@@ -112,6 +116,7 @@ module.exports = function (grunt) {
     },
     open: {
       server: {
+        // change following line to modify domain used for local development
         url: 'http://share.test:<%= connect.options.port %>'
       }
     },
@@ -163,6 +168,7 @@ module.exports = function (grunt) {
         ]
       }
     },
+    // compass configuration
     compass: {
       options: {
         sassDir: '<%= yeoman.app %>/styles',
@@ -186,8 +192,6 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/styles/{,*/}*.css',
-            // TODO: images versioning works only with grunt-min-2.0
-            //'<%= yeoman.dist %>/img/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/styles/fonts/*'
           ]
         }
@@ -229,13 +233,6 @@ module.exports = function (grunt) {
           }
         ]
       }
-      /*minify: {
-       expand: true,
-       cwd: 'release/css/',
-       src: ['*.css', '!*.min.css'],
-       dest: 'release/css/',
-       ext: '.min.css'
-       }*/
     },
     htmlmin: {
       dist: {
@@ -360,8 +357,6 @@ module.exports = function (grunt) {
     'ngmin',
     'cssmin',
     'uglify',
-    // TODO: disabled to get Cache Manifest work
-    // 'rev',
     'usemin'
   ]);
 
