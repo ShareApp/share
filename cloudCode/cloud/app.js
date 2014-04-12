@@ -10,6 +10,9 @@
  *
  * @description
  * Express application which can be launched only in Parse.com cloud.
+ * There are some Parse.com hooks, so there is no way to run it separately on own server.
+ *
+ * As long as following methods are simple, we can rewrite it to custom server-side framework.
  */
 var express = require('express');
 var Buffer = require('buffer').Buffer;
@@ -30,45 +33,11 @@ app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
  * @name ExpressApp.appcache
  * @methodOf ExpressApp
  * @description
- * Generates dynamic HTML5 Cache Manifest. It is used for get facebook profile photos and shares photos.
+ * Generates dynamic HTML5 Cache Manifest.
  */
 app.get('/share.appcache', function (req, res) {
-  // TODO: files is empty due to decision that images should not be cached that way. Probably need to change it to saving in local storage.
   res.type('text/cache-manifest');
   res.render('manifest', { now: new Date, files: [] });
-  return;
-  var FBappId = settings.FBappId;
-  var sharedItemPublicQuery = new Parse.Query("SharedItem");
-  sharedItemPublicQuery.equalTo('isPublic', true);
-  var query = sharedItemPublicQuery;
-
-  if (req.cookies['fbsr_' + FBappId]) {
-    var cookie = req.cookies['fbsr_' + FBappId];
-    var payload = (cookie.split(".")[1]);
-    var buffer = new Buffer(payload, 'base64').toString('utf8');
-    var data = JSON.parse(buffer);
-    var userId = data['user_id'];
-    var sharedItemFromQuery = new Parse.Query("SharedItem"),
-      sharedItemToQuery = new Parse.Query("SharedItem"),
-      innerQuery = new Parse.Query("_User");
-    innerQuery.equalTo('facebookid', userId);
-    sharedItemFromQuery.matchesQuery("fromUser", innerQuery);
-    sharedItemToQuery.matchesQuery("toUser", innerQuery);
-    query = Parse.Query.or(sharedItemFromQuery, sharedItemToQuery, sharedItemPublicQuery);
-  }
-  query.include(['fromUser', 'toUser']);
-
-  query.notEqualTo('img', null);
-  var files = [];
-  query.find(function (result) {
-    Parse._.forEach(result, function (item) {
-      files.push(item.get('img').url());
-      files.push("https://graph.facebook.com/" + item.get('fromUser').get('facebookid') + "/picture?width=65&height=65");
-      files.push("https://graph.facebook.com/" + item.get('toUser').get('facebookid') + "/picture?width=65&height=65");
-    });
-    res.type('text/cache-manifest');
-    res.render('manifest', { now: new Date, files: files });
-  });
 });
 
 // redirect for /sharedItem/12313 url. Facebook needs it to connect comments.
