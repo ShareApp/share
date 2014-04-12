@@ -25,12 +25,15 @@ Main technology used in frontend is Angular JS.
  * AngularJS
  * Hammer.js to bind swipe events
  * Lawnchair to provide offline support.
+ * [SASS](http://sass-lang.com/) for stylesheets
+ * [compass SASS extension](http://compass-style.org/)
  
 
 ### Technologies used for build process
  * [npm](https://github.com/npm/npm) - used for??
  * [bower](http://bower.io/) - used for??
- * [grunt](???) - 
+ * [grunt](???) -
+ * Ruby gems - used for [SASS](http://sass-lang.com/) & [compass](http://compass-style.org/)
 
 ### Directory Structure
  * cloudCode - parse.com server-side code
@@ -57,6 +60,19 @@ How is this put together???
 ### Install bower
  * npm install -g bower
 
+### Install [SASS](http://sass-lang.com/) & [compass](http://compass-style.org/)
+Follow install instructions on [SASS Installation page](http://sass-lang.com/install)
+ * Install ruby - on OSX already installed, on Linux it depends, on Windows needs to be installed...
+ * Install sass:
+```
+gem install sass
+```
+ * Install compass
+```
+gem install compass
+```
+
+
 ### Application keys
 #### Parse.com
 Share requires parse.com back-end for development at https://www.parse.com/apps/ (free registration required)
@@ -76,7 +92,7 @@ New application settings for local testing as:
  *
  *
 
-### Download Share❣ and start coding! 
+### Download code and set-up development environment
 
 1. 
 ```git clone git+ssh://git@github.com/ShareApp/share.git```
@@ -96,12 +112,22 @@ parse new cloudCode
 1. Ensure ```cloudCode/cloud/settings.js``` and ```shareApp/app/settings.js``` are  links to ```settings/settings.js``` - this is set-up automatically on Linux/OSX on git pull as the links are in the repository, not sure how works on windows.
 1. Add ```127.0.0.1       share.test``` to your ```/etc/hosts``` file. This is because Facebook API needs domain to work.
 (for OSX need to flush the cache to make changes register - google "/etc/hosts OSX" for more info)
+1. Upload cloudCode into your parse.com app using parse deploy command as follows:
+```
+cd cloudCode
+parse deploy `cat ../parse_app_name.txt`
+```
 
 ## Development
 
+After completing Getting Started section above you are ready to start coding...
+
 #### Running app on local development server
- *  To develop app you can simply call ```node_modules/grunt-cli/bin/grunt server```
- *  Still requires parse.com for backend i.e. cloudCode changes must be uploaded to server.
+ *  to run local server:
+```
+node_modules/grunt-cli/bin/grunt server
+```
+ *  (note even local development talks to parse.com server and cloud code must have been uploaded to parse.com)
 
 #### Don't forget to:
 - every time you will change CSS sprites, you should change generated filename ```cloudCode/cloud/views/manifest.ejs``` file
