@@ -32,6 +32,13 @@ Main technology used in frontend is Angular JS.
  * [bower](http://bower.io/) - used for??
  * [grunt](???) - 
 
+### Directory Structure
+ * cloudCode - parse.com server-side code
+ * docs - ngdocs documentation template file (docs are generated into here (see Generating documentation above)
+ * settings - settings file shared between server & app-side
+ * shareApp - application source code
+
+
 ## parse.com and angular.js
 
 How is this put together???
@@ -50,6 +57,25 @@ How is this put together???
 ### Install bower
  * npm install -g bower
 
+### Application keys
+#### Parse.com
+Share requires parse.com back-end for development at https://www.parse.com/apps/ (free registration required)
+
+#### Facebook
+Share requires facebook application, either create your own at https://developers.facebook.com/
+or ask share development team to use our test application.
+
+For local testing set-up the application on the domain share.test (and add share.test to your /etc/hosts)
+
+New application settings for local testing as:
+ * namespace: empty
+ * add App on facebook with settings:
+    * canvas URL: http://share.test:9000/
+    * secure canvas URL: https://share.test:9000/
+ * app domains: share.test
+ *
+ *
+
 ### Download Share❣ and start coding! 
 
 1. 
@@ -61,28 +87,17 @@ How is this put together???
 1. 
 ```node_modules/grunt-google-cdn/node_modules/bower/bin/bower install```
 1. Read ```https://parse.com/docs/cloud_code_guide#cloud_code``` and install Parse Command Line Tool
-1. Set up new Parse App
+1. Set up new Parse App - requires parse.com account (free)
 ```
 parse new cloudCode
 ```
 1. Create ```parse_app_name.txt``` file in root directory and put there Parse App name
-1. Move ```settings/settings_example.js``` to ```settings/settings.js``` and edit it.
-1. Ensure that ```cloudCode/cloud/settings.js``` and ```shareApp/settings.js``` is symbolic link to ```settings/settings.js```.
+1. Copy ```settings/settings_example.js``` to ```settings/settings.js``` and input application keys for facebook, parse (see above)
+1. Ensure ```cloudCode/cloud/settings.js``` and ```shareApp/app/settings.js``` are  links to ```settings/settings.js``` - this is set-up automatically on Linux/OSX on git pull as the links are in the repository, not sure how works on windows.
 1. Add ```127.0.0.1       share.test``` to your ```/etc/hosts``` file. This is because Facebook API needs domain to work.
-
-
-## Deployment
-
-After doing Getting started section you can easily deploy your app to Parse by calling ```make``` in root directory.
-
-
+(for OSX need to flush the cache to make changes register - google "/etc/hosts OSX" for more info)
 
 ## Development
-#### Directory Structure
- * cloudCode - parse.com server-side code
- * docs - ngdocs documentation template file (docs are generated into here (see Generating documentation above) 
- * settings - settings file shared between server & app-side
- * shareApp - application source code
 
 #### Running app on local development server
  *  To develop app you can simply call ```node_modules/grunt-cli/bin/grunt server```
@@ -98,4 +113,9 @@ After doing Getting started section you can easily deploy your app to Parse by c
 
 #### Generating documentation
 1. To generate inline documentation call ```node_modules/grunt-cli/bin/grunt ngdocs``` and go to 'docs' directory
+
+## Deployment
+
+After doing Getting started section you can easily deploy your app to Parse by calling ```make``` in root directory.
+
 
