@@ -110,7 +110,7 @@ New application settings for local testing as:
 ```
 parse new cloudCode
 ```
-1. Create ```parse_app_name.txt``` file in root directory and put there Parse App name
+1. Create ```parse_app_name.txt``` file in root directory and put there Parse App name (used by makefile)
 1. Copy ```settings/settings_example.js``` to ```settings/settings.js``` and input application keys for facebook, parse (see above)
 1. Ensure ```cloudCode/cloud/settings.js``` and ```shareApp/app/settings.js``` are  links to ```settings/settings.js``` - this is set-up automatically on Linux/OSX on git pull as the links are in the repository, not sure how works on windows.
 1. Add ```127.0.0.1       share.test``` to your ```/etc/hosts``` file. This is because Facebook API needs domain to work.
@@ -162,7 +162,7 @@ the manifest.ejs file must be updated to add the file and increment version numb
 
 - every time you will change CSS sprites, you should change generated filename ```cloudCode/cloud/views/manifest.ejs``` file
 
-### manifest.ejs updating for offline mode - if HTML, CSS,
+### manifest.ejs updating for offline mode - if HTML, CSS, has been changed
 
 - every time you will change any HTML/CSS/JS file, you should increment version in ```cloudCode/cloud/views/manifest.ejs``` file to refresh HTML5 Application Cache
 
