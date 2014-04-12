@@ -48,7 +48,9 @@ var MainCtrl = angular.module('shareApp')
         name: 'japoński',
         value: 'ja_JP',
         abbr: "jp"
-      },
+      }/* VV2014.Apr.12 - comment out extra languages for now as we don't have
+      proper UI for many language selection so breaks menu...
+      ,
       {
         name: 'italian',
         value: 'it_IT',
@@ -68,7 +70,7 @@ var MainCtrl = angular.module('shareApp')
         name: 'spanish',
         value: 'es_ES',
         abbr: "es"
-      }
+      }*/
     ];
     if (!$translate.uses()) {
       $translate.uses("en_EN");
