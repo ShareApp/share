@@ -33,7 +33,7 @@
   var PPO = root.PPO;
   var Parse = root.Parse || {},
     Lawnchair = root.Lawnchair || {},
-    lchair = new Lawnchair({adapter: 'dom'});
+    lchair = new Lawnchair({adapter: 'webkit-sqlite'});
 
   // MONKEY PATCHING
   Parse.File.prototype.urlOrData = function () {
@@ -364,7 +364,7 @@
     if (!self._previousSave) {
       self._previousSave = self._source.then(function (base64, type) {
         var promise = new Parse.Promise();
-        if (navigator.webkitPersistentStorage !== undefined) {
+        if (false) {
           var onInitFs = function (fs) {
             var saveFile = function (fileEntry) {
               fileEntry.createWriter(function (fileWriter) {
@@ -607,7 +607,7 @@
             promise.reject();
           });
         };
-        if (navigator.webkitPersistentStorage !== undefined) {
+        if (false) {
           var onInitFs = function (fs) {
             fs.root.getFile(value.name, {}, function (fileEntry) {
               fileEntry.file(function (file) {
@@ -723,7 +723,7 @@
   };
 
   PPO._fetchFileData = function (fileObj) {
-    if (navigator.webkitPersistentStorage !== undefined) {
+    if (false) {
       var onInitFs = function (fs) {
         fs.root.getFile(fileObj._name, {}, function (fileEntry) {
           fileEntry.file(function (file) {
