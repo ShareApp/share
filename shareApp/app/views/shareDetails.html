@@ -3,9 +3,6 @@
         <div class="share-item {{ share.getTypeDisplay(sharedItem.get('type')) }}-type {{ share.getStateDisplay(sharedItem.get('state')).split(' ').join('-').toLowerCase() }}-state"
              ng-class="sharedItem.get('img') && 'big'">
             <div class="type-ico-container">
-                <div class="state-ico-container">
-                    <span></span>
-                </div>
             </div>
             <a class="people-ico-container left" href="#/friends/{{ sharedItem.get('fromUser').id }}">
                 <fb-profile-picture user-id="sharedItem.get('fromUser').get('facebookid')"></fb-profile-picture>

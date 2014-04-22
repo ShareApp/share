@@ -4,16 +4,16 @@
         <li class="share-item {{ shShare.getTypeDisplay(share.get('type')) }}-type {{ shShare.getStateDisplay(share.get('state')).split(' ').join('-').toLowerCase() }}-state" ng-class="share.get('img') && 'big'" ng-repeat="share in user.userShares">
             <a href="#/sharedItem/{{ share.id }}">
                 <div class="type-ico-container">
-                    <div class="state-ico-container">
-                        <span></span>
-                    </div>
+
                 </div>
+
             </a>
             <a class="people-ico-container left" href="#/friends/{{ share.get('fromUser').id }}">
                 <fb-profile-picture user-id="share.get('fromUser').get('facebookid')"></fb-profile-picture>
                 <span class="name">
                     {{ share.get('fromUser').get('firstName') }}
                 </span>
+
             </a>
             <a class="people-ico-container right" href="#/friends/{{ share.get('toUser').id }}">
                 <span class="name">
@@ -21,6 +21,7 @@
                 </span>
                 <fb-profile-picture user-id="share.get('toUser').get('facebookid')"></fb-profile-picture>
             </a>
+
             <a href="#/sharedItem/{{ share.id }}">
                 <div ng-switch on="share.get('type')" class="img-container">
                     <img ng-show="share.get('img')" src="img/low-share-top-big.png" srcset="img/high-share-top-big.png 1.5x" class="share-frame gradient"/>
@@ -31,16 +32,25 @@
                         <img ng-hide="share.get('img')" ng-switch-when="2" class="share-placeholder" ng-src="img/backgrounds/purple.jpg" alt="{{ share.get('text') }}"/>
                 </div>
             </a>
+
             <div class="content">
+
+
                 <div class="title">
 
                     <a href="#/sharedItem/{{ share.id }}" class="thing">{{ share.get('text') }}
                 </div>
+
+
                 <div class="time">
-                    <div class="ico"></div>
                     <div class="text">{{ share.createdAt | timeDifference }}</div>
+                    <div class="confirmed-state-indicator-container">
+                        <span></span>
+                    </div>
                 </div>
+
             </div>
+
         </li>
     </ul>
     <div id="no-shares" ng-hide="user.userShares == null || user.userShares.length">No results!</div>

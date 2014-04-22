@@ -1239,6 +1239,16 @@ fb-comments {
   background-size: 100%;
   max-width: 460px;
 
+
+  // The icon next to time indicating the share is confirmed
+  &.confirmed-state {
+    .confirmed-state-indicator-container {
+      @include retina-sprite-background(small-check, $icons-normal, $icons-retina);
+      display: inline-block;
+    }
+  }
+
+  // The big icon at top of share detail
   .type-ico-container {
     width: 49px;
     height: 49px;
@@ -1263,37 +1273,8 @@ fb-comments {
       @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
     }
   }
-  .state-ico-container {
-    position: absolute;
-    right: -2px;
-    top: -3px;
-    z-index: 4;
-  }
-  &.confirmed-state {
-    .state-ico-container {
-      @include retina-sprite-background(small-accepted, $icons-normal, $icons-retina);
-    }
-  }
-  &.rejected-state {
-    .state-ico-container {
-      @include retina-sprite-background(small-rejected, $icons-normal, $icons-retina);
-    }
-  }
-  &.created-state {
-    .state-ico-container {
-      @include retina-sprite-background(small-awaiting, $icons-normal, $icons-retina);
-    }
-  }
-  &.returned-but-not-confirmed-state {
-    .state-ico-container {
-      @include retina-sprite-background(small-return-awaiting, $icons-normal, $icons-retina);
-    }
-  }
-  &.returned-state {
-    .state-ico-container {
-      @include retina-sprite-background(small-returned, $icons-normal, $icons-retina);
-    }
-  }
+
+
   .people-ico-container {
     @include shadows-font;
     position: absolute;
