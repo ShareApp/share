@@ -239,8 +239,8 @@ body {
   margin-left: 15px;
   border-width: 0;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1181px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1191px;
   height: 21px;
   width: 25px;
   background-color: transparent;
@@ -250,7 +250,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 232, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -646px;
     height: 21px;
     width: 26px;
@@ -260,8 +260,8 @@ body {
 /* line 241, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1202px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1212px;
   height: 21px;
   width: 25px;
   background-color: transparent;
@@ -269,7 +269,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 241, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -787px;
     height: 21px;
     width: 26px;
@@ -279,7 +279,7 @@ body {
 /* line 244, main.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button.active {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -1080px;
   height: 21px;
   width: 25px;
@@ -289,7 +289,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 244, main.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button.active {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -605px;
     height: 21px;
     width: 26px;
@@ -436,8 +436,8 @@ body {
 #header-container #header #menu-btn .img {
   display: block;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1263px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1273px;
   height: 19px;
   width: 26px;
   background-color: transparent;
@@ -445,7 +445,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 313, main.scss */
   #header-container #header #menu-btn .img {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -909px;
     height: 19px;
     width: 26px;
@@ -472,7 +472,7 @@ body {
 /* line 331, main.scss */
 #header-container #header #logo-container #logo {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -662px;
   height: 29px;
   width: 88px;
@@ -484,7 +484,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 331, main.scss */
   #header-container #header #logo-container #logo {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -245px;
     height: 30px;
     width: 88px;
@@ -512,8 +512,8 @@ body {
   text-align: center;
   font-size: 1.2em;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1282px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1292px;
   height: 22px;
   width: 23px;
   background-color: transparent;
@@ -525,7 +525,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 349, main.scss */
   #header-container #header #logo-container #notification-btn {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -847px;
     height: 22px;
     width: 24px;
@@ -550,7 +550,7 @@ body {
 #header-container #header #contact-list-btn .img {
   display: block;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -735px;
   height: 27px;
   width: 39px;
@@ -559,7 +559,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 371, main.scss */
   #header-container #header #contact-list-btn .img {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -422px;
     height: 27px;
     width: 39px;
@@ -584,8 +584,8 @@ body {
 #header-container #header #contact-list-exit-btn .img {
   display: block;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1118px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1128px;
   height: 20px;
   width: 21px;
   background-color: transparent;
@@ -593,7 +593,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 385, main.scss */
   #header-container #header #contact-list-exit-btn .img {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -626px;
     height: 20px;
     width: 21px;
@@ -1013,7 +1013,7 @@ body {
 /* line 599, main.scss */
 #filters-container #filters-btn .magnifying-glass-ico {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -838px;
   height: 27px;
   width: 24px;
@@ -1026,7 +1026,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 599, main.scss */
   #filters-container #filters-btn .magnifying-glass-ico {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -373px;
     height: 27px;
     width: 24px;
@@ -1260,8 +1260,8 @@ body {
 /* line 770, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1241px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1251px;
   height: 22px;
   width: 29px;
   background-color: transparent;
@@ -1269,7 +1269,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 770, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -825px;
     height: 22px;
     width: 30px;
@@ -1279,8 +1279,8 @@ body {
 /* line 773, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1118px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1128px;
   height: 20px;
   width: 21px;
   background-color: transparent;
@@ -1288,7 +1288,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 773, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -626px;
     height: 20px;
     width: 21px;
@@ -1449,7 +1449,7 @@ body {
 /* line 845, main.scss */
 #friend-select .inner .header .share-direction.right {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -466px;
   height: 49px;
   width: 49px;
@@ -1458,7 +1458,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 845, main.scss */
   #friend-select .inner .header .share-direction.right {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -98px;
     height: 50px;
     width: 50px;
@@ -1468,7 +1468,7 @@ body {
 /* line 848, main.scss */
 #friend-select .inner .header .share-direction.left {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -515px;
   height: 49px;
   width: 49px;
@@ -1477,7 +1477,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 848, main.scss */
   #friend-select .inner .header .share-direction.left {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -49px;
     height: 50px;
     width: 50px;
@@ -1497,7 +1497,7 @@ body {
   left: 4%;
   top: 14px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -838px;
   height: 27px;
   width: 24px;
@@ -1508,7 +1508,7 @@ body {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 860, main.scss */
   #friend-select .inner .header .search-container .ico {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -373px;
     height: 27px;
     width: 24px;
@@ -1935,7 +1935,7 @@ fb-comments a {
   max-width: 80%;
   margin: 0;
   padding: 0px 10px 0 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
   color: white;
   font-size: 14px;
   line-height: 30px;
@@ -2006,7 +2006,7 @@ fb-comments a {
 /* line 1176, main.scss */
 .small-share-item-container.promise-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -812px;
   height: 26px;
   width: 26px;
@@ -2015,7 +2015,7 @@ fb-comments a {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 1176, main.scss */
   .small-share-item-container.promise-type .type-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -325px;
     height: 26px;
     width: 26px;
@@ -2025,7 +2025,7 @@ fb-comments a {
 /* line 1181, main.scss */
 .small-share-item-container.thing-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -787px;
   height: 25px;
   width: 25px;
@@ -2034,7 +2034,7 @@ fb-comments a {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 1181, main.scss */
   .small-share-item-container.thing-type .type-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -300px;
     height: 26px;
     width: 26px;
@@ -2044,7 +2044,7 @@ fb-comments a {
 /* line 1186, main.scss */
 .small-share-item-container.time-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -762px;
   height: 25px;
   width: 26px;
@@ -2053,7 +2053,7 @@ fb-comments a {
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
   /* line 1186, main.scss */
   .small-share-item-container.time-type .type-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -274px;
     height: 26px;
     width: 26px;
@@ -2115,7 +2115,27 @@ fb-comments a {
   max-width: 460px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
-/* line 1242, main.scss */
+/* line 1245, main.scss */
+.share-item.confirmed-state .confirmed-state-indicator-container {
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1118px;
+  height: 10px;
+  width: 10px;
+  background-color: transparent;
+  display: inline-block;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 1245, main.scss */
+  .share-item.confirmed-state .confirmed-state-indicator-container {
+    background-image: url('../img/icons/retina-s94cc055c79.png');
+    background-position: 0 -938px;
+    height: 10px;
+    width: 10px;
+    background-size: 88px auto;
+  }
+}
+/* line 1252, main.scss */
 .share-item .type-ico-container {
   width: 49px;
   height: 49px;
@@ -2125,166 +2145,64 @@ fb-comments a {
   top: -3px;
   z-index: 3;
 }
-/* line 1252, main.scss */
+/* line 1262, main.scss */
 .share-item.promise-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -613px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1252, main.scss */
+  /* line 1262, main.scss */
   .share-item.promise-type .type-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -196px;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1257, main.scss */
+/* line 1267, main.scss */
 .share-item.thing-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -564px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1257, main.scss */
+  /* line 1267, main.scss */
   .share-item.thing-type .type-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -148px;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1262, main.scss */
+/* line 1272, main.scss */
 .share-item.time-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -417px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1262, main.scss */
+  /* line 1272, main.scss */
   .share-item.time-type .type-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 0;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1266, main.scss */
-.share-item .state-ico-container {
-  position: absolute;
-  right: -2px;
-  top: -3px;
-  z-index: 4;
-}
-/* line 1273, main.scss */
-.share-item.confirmed-state .state-ico-container {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1101px;
-  height: 17px;
-  width: 17px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1273, main.scss */
-  .share-item.confirmed-state .state-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
-    background-position: 0 -524px;
-    height: 18px;
-    width: 18px;
-    background-size: 88px auto;
-  }
-}
 /* line 1278, main.scss */
-.share-item.rejected-state .state-ico-container {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1012px;
-  height: 17px;
-  width: 17px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1278, main.scss */
-  .share-item.rejected-state .state-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
-    background-position: 0 -466px;
-    height: 18px;
-    width: 18px;
-    background-size: 88px auto;
-  }
-}
-/* line 1283, main.scss */
-.share-item.created-state .state-ico-container {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1063px;
-  height: 17px;
-  width: 17px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1283, main.scss */
-  .share-item.created-state .state-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
-    background-position: 0 -565px;
-    height: 18px;
-    width: 18px;
-    background-size: 88px auto;
-  }
-}
-/* line 1288, main.scss */
-.share-item.returned-but-not-confirmed-state .state-ico-container {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1046px;
-  height: 17px;
-  width: 17px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1288, main.scss */
-  .share-item.returned-but-not-confirmed-state .state-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
-    background-position: 0 -483px;
-    height: 18px;
-    width: 18px;
-    background-size: 88px auto;
-  }
-}
-/* line 1293, main.scss */
-.share-item.returned-state .state-ico-container {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1029px;
-  height: 17px;
-  width: 17px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1293, main.scss */
-  .share-item.returned-state .state-ico-container {
-    background-image: url('../img/icons/retina-s0e97069336.png');
-    background-position: 0 -448px;
-    height: 18px;
-    width: 18px;
-    background-size: 88px auto;
-  }
-}
-/* line 1297, main.scss */
 .share-item .people-ico-container {
   font-family: 'Shadows Into Light Two', cursive;
   position: absolute;
@@ -2292,7 +2210,7 @@ fb-comments a {
   text-decoration: none;
   z-index: 10;
 }
-/* line 1303, main.scss */
+/* line 1284, main.scss */
 .share-item .people-ico-container .name {
   color: white;
   font-size: 2.6em;
@@ -2301,17 +2219,17 @@ fb-comments a {
   vertical-align: top;
   display: inline-block;
 }
-/* line 1312, main.scss */
+/* line 1293, main.scss */
 .share-item .people-ico-container.left {
   top: 40px;
   left: 15px;
 }
-/* line 1316, main.scss */
+/* line 1297, main.scss */
 .share-item .people-ico-container.right {
   top: 40px;
   right: 15px;
 }
-/* line 1321, main.scss */
+/* line 1302, main.scss */
 .share-item .img-container {
   width: 100%;
   min-height: 130px;
@@ -2319,7 +2237,7 @@ fb-comments a {
   position: relative;
   max-height: 309px;
 }
-/* line 1327, main.scss */
+/* line 1308, main.scss */
 .share-item .img-container .share-img {
   display: block;
   max-width: 100%;
@@ -2329,7 +2247,7 @@ fb-comments a {
   position: relative;
   pointer-events: none;
 }
-/* line 1336, main.scss */
+/* line 1317, main.scss */
 .share-item .img-container .preloader-container {
   position: absolute;
   width: 100%;
@@ -2340,7 +2258,7 @@ fb-comments a {
   left: 0;
   display: none;
 }
-/* line 1345, main.scss */
+/* line 1326, main.scss */
 .share-item .img-container .preloader-container .preloader {
   width: 66px;
   height: 66px;
@@ -2351,13 +2269,13 @@ fb-comments a {
   margin-left: -33px;
   margin-top: -33px;
 }
-/* line 1356, main.scss */
+/* line 1337, main.scss */
 .share-item .img-container .share-placeholder {
   display: block;
   width: 100%;
   height: 130px;
 }
-/* line 1361, main.scss */
+/* line 1342, main.scss */
 .share-item .img-container .share-frame {
   position: absolute;
   top: 0;
@@ -2367,7 +2285,7 @@ fb-comments a {
   z-index: 2;
   pointer-events: none;
 }
-/* line 1369, main.scss */
+/* line 1350, main.scss */
 .share-item .img-container .share-frame.gradient {
   background-image: linear-gradient(#000000 30px, transparent 150px);
   background-image: -webkit-linear-gradient(black 30px, transparent 150px);
@@ -2402,20 +2320,20 @@ fb-comments a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 1377, main.scss */
+/* line 1358, main.scss */
 .share-item .content {
-  padding: 15px 25px 10px 25px;
+  padding: 5px 25px 0px 25px;
   z-index: 9;
 }
-/* line 1380, main.scss */
+/* line 1361, main.scss */
 .share-item .content .time {
   margin-top: 10px;
 }
-/* line 1382, main.scss */
+/* line 1363, main.scss */
 .share-item .content .time .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1366px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1376px;
   height: 10px;
   width: 10px;
   background-color: transparent;
@@ -2423,16 +2341,16 @@ fb-comments a {
   vertical-align: top;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1382, main.scss */
+  /* line 1363, main.scss */
   .share-item .content .time .ico {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -928px;
     height: 10px;
     width: 10px;
     background-size: 88px auto;
   }
 }
-/* line 1387, main.scss */
+/* line 1368, main.scss */
 .share-item .content .time .text {
   margin-left: 3px;
   margin-top: -1px;
@@ -2448,7 +2366,7 @@ fb-comments a {
   }
 }
 
-/* line 1404, main.scss */
+/* line 1385, main.scss */
 .share-item:after {
   height: 85px;
   max-width: 460px;
@@ -2459,24 +2377,24 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1404, main.scss */
+  /* line 1385, main.scss */
   .share-item:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
 
-/* line 1418, main.scss */
+/* line 1399, main.scss */
 .toolbar {
   text-align: center;
   padding: 0;
 }
-/* line 1422, main.scss */
+/* line 1403, main.scss */
 .toolbar .btn,
 .toolbar .file-input-container {
   border-width: 0;
   margin: 0;
 }
-/* line 1427, main.scss */
+/* line 1408, main.scss */
 .toolbar .btn {
   height: 40px;
   color: white;
@@ -2487,72 +2405,72 @@ fb-comments a {
   white-space: nowrap;
   cursor: pointer;
 }
-/* line 1434, main.scss */
+/* line 1415, main.scss */
 .toolbar .btn .icon {
   display: inline-block;
   vertical-align: middle;
   margin-left: 7px;
   margin-top: 2px;
 }
-/* line 1440, main.scss */
+/* line 1421, main.scss */
 .toolbar .btn .text {
   vertical-align: middle;
   display: inline-block;
   margin: 2px 10px;
 }
-/* line 1446, main.scss */
+/* line 1427, main.scss */
 .toolbar .btn.photo {
   float: left;
   margin-left: 10px;
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1451, main.scss */
+/* line 1432, main.scss */
 .toolbar .btn.photo .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -713px;
   height: 22px;
   width: 31px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1451, main.scss */
+  /* line 1432, main.scss */
   .toolbar .btn.photo .icon {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -400px;
     height: 22px;
     width: 32px;
     background-size: 88px auto;
   }
 }
-/* line 1455, main.scss */
+/* line 1436, main.scss */
 .toolbar .btn.txt {
   float: right;
   margin-right: 10px;
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1460, main.scss */
+/* line 1441, main.scss */
 .toolbar .btn.txt .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -865px;
   height: 23px;
   width: 24px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1460, main.scss */
+  /* line 1441, main.scss */
   .toolbar .btn.txt .icon {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -501px;
     height: 24px;
     width: 24px;
     background-size: 88px auto;
   }
 }
-/* line 1464, main.scss */
+/* line 1445, main.scss */
 .toolbar .btn.confirm {
   float: right;
   margin-right: 25px;
@@ -2561,113 +2479,113 @@ fb-comments a {
   background-size: 100% 100%;
   padding: 10px 5px 0 5px;
 }
-/* line 1471, main.scss */
+/* line 1452, main.scss */
 .toolbar .btn.confirm .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1344px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1354px;
   height: 22px;
   width: 30px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1471, main.scss */
+  /* line 1452, main.scss */
   .toolbar .btn.confirm .icon {
-    background-image: url('../img/icons/retina-s0e97069336.png');
-    background-position: 0 -938px;
+    background-image: url('../img/icons/retina-s94cc055c79.png');
+    background-position: 0 -948px;
     height: 22px;
     width: 30px;
     background-size: 88px auto;
   }
 }
-/* line 1475, main.scss */
+/* line 1456, main.scss */
 .toolbar .btn.search {
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1478, main.scss */
+/* line 1459, main.scss */
 .toolbar .btn.search .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1138px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1148px;
   height: 23px;
   width: 23px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1478, main.scss */
+  /* line 1459, main.scss */
   .toolbar .btn.search .icon {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -583px;
     height: 23px;
     width: 23px;
     background-size: 88px auto;
   }
 }
-/* line 1482, main.scss */
+/* line 1463, main.scss */
 .toolbar .btn.close {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1485, main.scss */
+/* line 1466, main.scss */
 .toolbar .btn.close .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1161px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1171px;
   height: 20px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1485, main.scss */
+  /* line 1466, main.scss */
   .toolbar .btn.close .icon {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -767px;
     height: 20px;
     width: 21px;
     background-size: 88px auto;
   }
 }
-/* line 1490, main.scss */
+/* line 1471, main.scss */
 .toolbar .btn.return {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
 }
-/* line 1493, main.scss */
+/* line 1474, main.scss */
 .toolbar .btn.demand-return {
   background: transparent url("../img/green-btn.png") no-repeat top left;
 }
-/* line 1496, main.scss */
+/* line 1477, main.scss */
 .toolbar .btn.return, .toolbar .btn.demand-return {
   background-size: 100% 100%;
 }
-/* line 1498, main.scss */
+/* line 1479, main.scss */
 .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1223px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1233px;
   height: 18px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1498, main.scss */
+  /* line 1479, main.scss */
   .toolbar .btn.return .icon, .toolbar .btn.demand-return .icon {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -807px;
     height: 18px;
     width: 21px;
     background-size: 88px auto;
   }
 }
-/* line 1504, main.scss */
+/* line 1485, main.scss */
 .toolbar .file-input-container {
   float: left;
   margin-left: 10px;
   position: relative;
 }
-/* line 1509, main.scss */
+/* line 1490, main.scss */
 .toolbar .file-input-container input {
   opacity: 0;
   width: 130px;
@@ -2677,7 +2595,7 @@ fb-comments a {
   text-align: right;
   z-index: 2;
 }
-/* line 1518, main.scss */
+/* line 1499, main.scss */
 .toolbar .file-input-container .file-input {
   cursor: pointer;
   position: absolute;
@@ -2687,11 +2605,11 @@ fb-comments a {
   z-index: 1;
   margin: 0;
 }
-/* line 1527, main.scss */
+/* line 1508, main.scss */
 .toolbar .file-input-container .text {
   margin-top: 8px;
 }
-/* line 1531, main.scss */
+/* line 1512, main.scss */
 .toolbar .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s26ac5467ea.png');
@@ -2704,7 +2622,7 @@ fb-comments a {
   margin-top: 15px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1531, main.scss */
+  /* line 1512, main.scss */
   .toolbar .separator {
     background-image: url('../img/separators/retina-sf29b077aac.png');
     background-position: 0 0;
@@ -2716,7 +2634,7 @@ fb-comments a {
 
 /* end misc */
 /* new share */
-/* line 1543, main.scss */
+/* line 1524, main.scss */
 .new-share-container {
   width: 100px;
   height: 100px;
@@ -2727,30 +2645,30 @@ fb-comments a {
   z-index: 90;
   text-indent: -9999em;
 }
-/* line 1554, main.scss */
+/* line 1535, main.scss */
 .new-share-container:hover {
   height: 150px;
   width: 150px;
 }
-/* line 1559, main.scss */
+/* line 1540, main.scss */
 .new-share-container > span {
   display: block;
 }
-/* line 1563, main.scss */
+/* line 1544, main.scss */
 .new-share-container > span > a {
   display: block;
   width: 100%;
   height: 100%;
 }
-/* line 1569, main.scss */
+/* line 1550, main.scss */
 .new-share-container .new-share {
   position: absolute;
   bottom: 20px;
   left: 20px;
   cursor: context-menu;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
-  background-position: 0 -1304px;
+  background-image: url('../img/icons/normal-saae958e154.png');
+  background-position: 0 -1314px;
   height: 40px;
   width: 40px;
   background-color: transparent;
@@ -2759,16 +2677,16 @@ fb-comments a {
   z-index: 91;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1569, main.scss */
+  /* line 1550, main.scss */
   .new-share-container .new-share {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -869px;
     height: 40px;
     width: 40px;
     background-size: 88px auto;
   }
 }
-/* line 1579, main.scss */
+/* line 1560, main.scss */
 .new-share-container .shoot {
   -webkit-transition: all 0.25s ease;
   -moz-transition: all 0.25s ease;
@@ -2779,11 +2697,11 @@ fb-comments a {
   position: absolute;
   opacity: 0;
 }
-/* line 1587, main.scss */
+/* line 1568, main.scss */
 .new-share-container:hover .shoot {
   opacity: 1;
 }
-/* line 1590, main.scss */
+/* line 1571, main.scss */
 .new-share-container:hover .new-share-thing {
   -webkit-transform: translate3d(20px, -115px, 0);
   -moz-transform: translate3d(20px, -115px, 0);
@@ -2791,7 +2709,7 @@ fb-comments a {
   -o-transform: translate3d(20px, -115px, 0);
   transform: translate3d(20px, -115px, 0);
 }
-/* line 1593, main.scss */
+/* line 1574, main.scss */
 .new-share-container:hover .new-share-time {
   -webkit-transform: translate3d(105px, -100px, 0);
   -moz-transform: translate3d(105px, -100px, 0);
@@ -2799,7 +2717,7 @@ fb-comments a {
   -o-transform: translate3d(105px, -100px, 0);
   transform: translate3d(105px, -100px, 0);
 }
-/* line 1596, main.scss */
+/* line 1577, main.scss */
 .new-share-container:hover .new-share-promise {
   -webkit-transform: translate3d(120px, -20px, 0);
   -moz-transform: translate3d(120px, -20px, 0);
@@ -2807,10 +2725,10 @@ fb-comments a {
   -o-transform: translate3d(120px, -20px, 0);
   transform: translate3d(120px, -20px, 0);
 }
-/* line 1601, main.scss */
+/* line 1582, main.scss */
 .new-share-container .new-share-thing {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -564px;
   height: 49px;
   width: 49px;
@@ -2818,47 +2736,47 @@ fb-comments a {
   opacity: 0;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1601, main.scss */
+  /* line 1582, main.scss */
   .new-share-container .new-share-thing {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -148px;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1605, main.scss */
+/* line 1586, main.scss */
 .new-share-container .new-share-time {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -417px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1605, main.scss */
+  /* line 1586, main.scss */
   .new-share-container .new-share-time {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 0;
     height: 49px;
     width: 49px;
     background-size: 88px auto;
   }
 }
-/* line 1608, main.scss */
+/* line 1589, main.scss */
 .new-share-container .new-share-promise {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s6e70e222bb.png');
+  background-image: url('../img/icons/normal-saae958e154.png');
   background-position: 0 -613px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1608, main.scss */
+  /* line 1589, main.scss */
   .new-share-container .new-share-promise {
-    background-image: url('../img/icons/retina-s0e97069336.png');
+    background-image: url('../img/icons/retina-s94cc055c79.png');
     background-position: 0 -196px;
     height: 49px;
     width: 49px;
