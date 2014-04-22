@@ -17,6 +17,10 @@ $filters-retina: sprite-map("filters/retina/*.png");
 $friends-sorting-normal: sprite-map("friends-sorting/normal/*.png");
 $friends-sorting-retina: sprite-map("friends-sorting/retina/*.png");
 
+$thing-color: #EB9C75;
+$time-color: #4FBCA7;
+$promise-color: #C08FE1;
+
 @font-face {
   font-family: 'Shadows Into Light Two';
   src: url('fonts/ShadowsIntoLightTwo-Regular.eot');
@@ -53,17 +57,17 @@ $friends-sorting-retina: sprite-map("friends-sorting/retina/*.png");
   }
   &.promise-type {
     .thing {
-      color: #C08FE1;
+      color: $promise-color;
     }
   }
   &.thing-type {
     .thing {
-      color: #EB9C75;
+      color: $thing-color;
     }
   }
   &.time-type {
     .thing {
-      color: #4FBCA7;
+      color: $time-color;
     }
   }
   .title {
@@ -208,8 +212,14 @@ body {
               &.contact-list-ico {
                 @include retina-sprite-background(contact-list, $menu-normal, $menu-retina);
               }
-              &.home-ico {
-                @include retina-sprite-background(home, $menu-normal, $menu-retina);
+              &.timeline-ico {
+                @include retina-sprite-background(timeline, $menu-normal, $menu-retina);
+              }
+              &.me-ico {
+                @include retina-sprite-background(me, $menu-normal, $menu-retina);
+              }
+              &.help-ico {
+                @include retina-sprite-background(help, $menu-normal, $menu-retina);
               }
               &.FB-ico {
                 @include retina-sprite-background(FB, $menu-normal, $menu-retina);
@@ -373,7 +383,7 @@ body {
         @include retina-sprite-background(contact-list-btn, $icons-normal, $icons-retina);
       }
     }
-    #contact-list-exit-btn {
+    #contact-list-exit-btn  {
       float: right;
       background-color: transparent;
       border-width: 0;
@@ -384,7 +394,7 @@ body {
       margin: 0;
       .img {
         display: block;
-        @include retina-sprite-background(black-exit, $icons-normal, $icons-retina);
+        @include retina-sprite-background(timeline, $icons-normal, $icons-retina);
       }
     }
   }
@@ -704,13 +714,7 @@ body {
     }
   }
   #notifications-frame {
-    margin-top: -60px;
-    background: transparent url("../img/backgrounds/low-white.png") no-repeat;
-    @media (-webkit-min-device-pixel-ratio: 1.5),
-    (min-resolution: 144dpi) {
-      background-image: url("../img/backgrounds/high-white.png");
-    }
-    background-size: 100% 100%;
+    margin-top: -75px;
 
     .header {
       @include big-text;
@@ -729,6 +733,13 @@ body {
       position: relative;
     }
     ul {
+      background: transparent url("../img/backgrounds/low-white.png") no-repeat;
+      @media (-webkit-min-device-pixel-ratio: 1.5),
+      (min-resolution: 144dpi) {
+        background-image: url("../img/backgrounds/high-white.png");
+      }
+      background-size: 100% 100%;
+
       margin: 0;
       padding: 0;
       list-style: none;
@@ -1013,7 +1024,7 @@ body {
     }
   }
   .toolbar {
-    padding: 0 15px 10px 15px;
+    padding: 0 15px 0px 15px;
   }
   .fb-comments {
     text-align: center;
@@ -1399,15 +1410,18 @@ fb-comments {
 .toolbar {
   text-align: center;
   padding: 0;
+  margin-bottom: -65px;
   .btn,
   .file-input-container {
     border-width: 0;
     margin: 0;
 
   }
+
+  // Buttons used throughout the application
   .btn {
     height: 40px;
-    color: white;
+    color: $time-color;
     @include big-text;
     line-height: 1em;
     white-space: nowrap;
@@ -1442,15 +1456,12 @@ fb-comments {
         @include retina-sprite-background(pen-white, $icons-normal, $icons-retina);
       }
     }
+
     &.confirm {
-      float: right;
-      margin-right: 25px;
       margin-top: 5px;
-      background: transparent url("../img/green-btn.png") no-repeat top left;
-      background-size: 100% 100%;
       padding: 10px 5px 0 5px;
       .icon {
-        @include retina-sprite-background(confirm-white, $icons-normal, $icons-retina);
+        @include retina-sprite-background(confirm-green, $icons-normal, $icons-retina);
       }
     }
     &.search {
