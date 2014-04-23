@@ -140,7 +140,8 @@ angular.module('shareApp')
        * Sets default values when user wants add another Share
        */
       setDefaults: function () {
-        myShare.direction = 1;
+        myShare.direction = globals.SHARE_DIRECTION_ENUM.TO_FRIEND
+        myShare.type = globals.SHARE_TYPE_ENUM.TIME;
         myShare.text = '';
         myShare.amount = 1;
         myShare.isPublic = true;

@@ -1,44 +1,45 @@
-<div id="notifications-mask" ng-show="rootScope.notificationsFrameOpened"
+<div id="dialog-background-mask" ng-show="rootScope.notificationsFrameOpened"
      ng-click="rootScope.notificationsFrameOpened=false"></div>
 <button ng-show="notificationItems.length > 0" id="notification-btn"
         ng-click='rootScope.notificationsFrameOpened=!rootScope.notificationsFrameOpened'>{{ notificationsCounter }}
 </button>
-<div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame-container'>
-    <div ng-show='rootScope.notificationsFrameOpened' id='notifications-frame'>
+<div id='notifications-frame-container' ng-show='rootScope.notificationsFrameOpened' >
+    <div id='notifications-frame' ng-show='rootScope.notificationsFrameOpened' >
         <div class="header">{{ 'Waiting requests' | translate }}:</div>
         <div class="description">{{ 'Swipe right to take an action' | translate }}</div>
         <ul>
             <li class="separator"></li>
             <li class="header" ng-show="notificationItems.length == 0">{{ "No notifications" | translate }}</li>
             <div ng-repeat='item in notificationItems'>
-            <li class="item"
-                ng-mouseover="swiped[item.id] = isTouchDevice() ? swiped[item.id] : 'right'; !isTouchDevice() && takeNotificationAction(item)"
-                ng-mouseout="swiped[item.id] = isTouchDevice() ? swiped[item.id] : 'left'"
-                    >
-                <div class="mask"
-                     tap="goToShare(item)"
-                     ng-swipe-right="swiped[item.id] = isTouchDevice() ? 'right' : swiped[item.id]; isTouchDevice() && takeNotificationAction(item)"
-                     ng-swipe-left="swiped[item.id] = isTouchDevice() ? 'left' : swiped[item.id]"
-                     ng-class="{right:'swiped-right', left:'swiped-left'}[swiped[item.id]]">
-                </div>
-                <div class="container">
-                    <div class="actions">
-                        <button class="agree-btn"
-                                ng-show='notifications.notificationIsAction(item) && notifications.notificationIsInQueue(item)'
-                                ng-click='notifications.notificationAgree(item)'>
-                        </button>
-                        <button class="disagree-btn"
-                                ng-show='notifications.notificationIsAction(item) && notifications.notificationIsInQueue(item)'
-                                ng-click='notifications.notificationDisagree(item)'>
-                        </button>
-                        <div class="info" ng-hide='notifications.notificationIsAction(item)'>{{ 'Read...' | translate }}
-                        </div>
-                        <div class="info"
-                             ng-hide='notifications.notificationIsInQueue(item) || !notifications.notificationIsAction(item)'>
-                            {{ "Decision's taken..." | translate }}
-                        </div>
+                <li class="item"
+                    ng-mouseover="swiped[item.id] = isTouchDevice() ? swiped[item.id] : 'right'; !isTouchDevice() && takeNotificationAction(item)"
+                    ng-mouseout="swiped[item.id] = isTouchDevice() ? swiped[item.id] : 'left'"
+                        >
+                    <div class="mask"
+                         tap="goToShare(item)"
+                         ng-swipe-right="swiped[item.id] = isTouchDevice() ? 'right' : swiped[item.id]; isTouchDevice() && takeNotificationAction(item)"
+                         ng-swipe-left="swiped[item.id] = isTouchDevice() ? 'left' : swiped[item.id]"
+                         ng-class="{right:'swiped-right', left:'swiped-left'}[swiped[item.id]]">
                     </div>
-                    <div class="content {{ shShare.getTypeDisplay(item.get('sharedItem').get('type')) }}-type">
+                    <div class="container">
+                        <div class="actions">
+                            <button class="agree-btn"
+                                    ng-show='notifications.notificationIsAction(item) && notifications.notificationIsInQueue(item)'
+                                    ng-click='notifications.notificationAgree(item)'>
+                            </button>
+                            <button class="disagree-btn"
+                                    ng-show='notifications.notificationIsAction(item) && notifications.notificationIsInQueue(item)'
+                                    ng-click='notifications.notificationDisagree(item)'>
+                            </button>
+                            <div class="info" ng-hide='notifications.notificationIsAction(item)'>{{ 'Read...' |
+                                translate }}
+                            </div>
+                            <div class="info"
+                                 ng-hide='notifications.notificationIsInQueue(item) || !notifications.notificationIsAction(item)'>
+                                {{ "Decision's taken..." | translate }}
+                            </div>
+                        </div>
+                        <div class="content {{ shShare.getTypeDisplay(item.get('sharedItem').get('type')) }}-type">
                         <span ng-hide="item.get('sharedItem').get('fromUser').id == user.currentUser.id">
                             <fb-profile-picture
                                     user-id="item.get('sharedItem').get('fromUser').get('facebookid')"></fb-profile-picture>
@@ -47,19 +48,19 @@
                             <fb-profile-picture
                                     user-id="item.get('sharedItem').get('toUser').get('facebookid')"></fb-profile-picture>
                         </span>
-                        <small-share-item share="item.get('sharedItem')"></small-share-item>
-                        <div class="title-container">
-                            <div class="title">
-                                <div class="title-inner">
-                                    <span ng-bind-html="notifications.verboseNotification(item)"></span>
-                                    </span>
+                            <small-share-item share="item.get('sharedItem')"></small-share-item>
+                            <div class="title-container">
+                                <div class="title">
+                                    <div class="title-inner">
+                                        <span ng-bind-html="notifications.verboseNotification(item)"></span>
+                                        </span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </li>
-            <li class="separator"></li>
+                </li>
+                <li class="separator"></li>
 
             </div>
         </ul>

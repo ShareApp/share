@@ -1,8 +1,8 @@
-<div id="filters-mask" ng-show="filtersOpened" ng-click="filtersOpened=false"></div>
-<button id="filters-btn" ng-click="filtersOpened=true"><span class="magnifying-glass-ico"></span><span class="text">{{ verboseFilters }}</span>
+<div id="filters-mask" ng-show="rootScope.filtersOpened" ng-click="rootScope.filtersOpened=false"></div>
+<button id="filters-btn" ng-click="rootScope.filtersOpened=true"><span class="magnifying-glass-ico"></span><span class="text">{{ verboseFilters }}</span>
 </button>
 
-<div class="filters-inner" ng-show="filtersOpened">
+<div class="filters-inner" ng-show="rootScope.filtersOpened">
     <ul>
         <li>
             <input id="things-checkbox" data-include-to-all type="checkbox" ng-model="user.userWallFilters.type.things"/>

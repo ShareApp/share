@@ -156,6 +156,10 @@ body {
   }
 }
 
+.title {
+  @include big-text;
+}
+
 #main-menu-container {
   position: absolute;
   top: 0;
@@ -177,9 +181,9 @@ body {
     overflow-x: hidden;
     left: 0;
     z-index: 1;
-//    &.closed {
-//      display: none;
-//    }
+    //    &.closed {
+    //      display: none;
+    //    }
     nav {
       height: 100%;
       ul {
@@ -348,14 +352,7 @@ body {
           margin-left: -200px;
         }
       }
-      #notifications-mask {
-        position: absolute;
-        z-index: 99;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
+
       #notification-btn {
         display: inline-block;
         margin: 10px 0;
@@ -383,7 +380,7 @@ body {
         @include retina-sprite-background(contact-list-btn, $icons-normal, $icons-retina);
       }
     }
-    #contact-list-exit-btn  {
+    #contact-list-exit-btn {
       float: right;
       background-color: transparent;
       border-width: 0;
@@ -445,19 +442,32 @@ body {
 /* end base site */
 
 /* timeline */
+#dialog-background-mask {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: -90px;
+  width: 100%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.checkbox {
+  @include retina-sprite-background(unchecked, $filters-normal, $filters-retina);
+}
+input[type=checkbox]:checked + label {
+  .checkbox {
+    @include retina-sprite-background(checked, $filters-normal, $filters-retina);
+  }
+}
+input[type='checkbox']:checked .checkbox {
+  @include retina-sprite-background(checked, $filters-normal, $filters-retina);
+}
 
 #filters-container {
   max-width: 460px;
   margin: 15px auto;
-  #filters-mask {
-    position: fixed;
-    z-index: 99;
-    left: 0;
-    top: -90px;
-    width: 100%;
-    height: 200%;
-    background-color: rgba(0, 0, 0, 0.75);
-  }
+
   .filters-inner {
     background: transparent url("../img/backgrounds/low-white.png") repeat top left;
     @media (-webkit-min-device-pixel-ratio: 1.5),
@@ -503,16 +513,7 @@ body {
             display: inline-block;
             float: right;
             margin-right: 10px;
-            @include retina-sprite-background(unchecked, $filters-normal, $filters-retina);
           }
-        }
-        input[type=checkbox]:checked + label {
-          .checkbox {
-            @include retina-sprite-background(checked, $filters-normal, $filters-retina);
-          }
-        }
-        input[type='checkbox']:checked .checkbox {
-          @include retina-sprite-background(checked, $filters-normal, $filters-retina);
         }
 
         .separator {
@@ -674,7 +675,7 @@ body {
 
 /* end friends list */
 
-/* notifications */
+/* notifications pop-up (see notifications.html) */
 
 #notifications-frame-container {
   overflow: hidden;
@@ -726,7 +727,7 @@ body {
     .separator {
       @include retina-sprite-background(standard, $separators-normal, $separators-retina);
       width: 100% !important;
-      padding:0;
+      padding: 0;
       margin: 0;
       background-size: 100% image-height(sprite-path($separators-normal)) !important;
       margin-top: 15px;
@@ -919,7 +920,6 @@ body {
         height: 80px;
         a {
           display: block;
-          @include big-text;
           text-decoration: none;
           color: black;
           fb-profile-picture {
@@ -971,17 +971,24 @@ body {
       background-color: transparent;
       border-width: 0;
     }
-    label[for=id_amount] {
-      float: right;
+    input[type='checkbox'] {
+      visibility: hidden;
+      height: 0;
+      width: 0;
     }
-    input[name=amount] {
-      float: right;
-      width: 40px;
-      text-align: center;
-    }
-    input[name=date] {
-      width: 160px;
-      float: left;
+    label {
+
+      .text {
+        @include big-text;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .checkbox {
+        display: inline-block;
+        margin-right: 10px;
+      }
     }
     textarea {
       line-height: 1.4em;
@@ -1032,7 +1039,7 @@ body {
     margin-top: 20px;
   }
   .fb-comments, .fb-comments span, .fb-comments.fb_iframe_widget span iframe {
-//    width: 100% !important;
+    //    width: 100% !important;
   }
 
 }
@@ -1244,12 +1251,36 @@ fb-comments {
   color: #9D9D9D;
 }
 
+/* Big icons - used in timeline, share details and create pop-up dialog*/
+.type-ico-container {
+  width: 49px;
+  height: 49px;
+}
+
+.promise-type {
+  .type-ico-container {
+    @include retina-sprite-background(promise-ico, $icons-normal, $icons-retina);
+  }
+}
+
+.thing-type {
+  .type-ico-container {
+    @include retina-sprite-background(thing-ico, $icons-normal, $icons-retina);
+  }
+}
+
+.time-type {
+  .type-ico-container {
+    @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
+  }
+}
+
+/* Used both in timeline display of shares and in share detail */
 .share-item {
   margin: 20px auto 0 auto;
   position: relative;
   background-size: 100%;
   max-width: 460px;
-
 
   // The icon next to time indicating the share is confirmed
   &.confirmed-state {
@@ -1261,30 +1292,12 @@ fb-comments {
 
   // The big icon at top of share detail
   .type-ico-container {
-    width: 49px;
-    height: 49px;
     position: absolute;
     left: 50%;
     margin-left: -26px;
     top: -3px;
     z-index: 3;
   }
-  &.promise-type {
-    .type-ico-container {
-      @include retina-sprite-background(promise-ico, $icons-normal, $icons-retina);
-    }
-  }
-  &.thing-type {
-    .type-ico-container {
-      @include retina-sprite-background(thing-ico, $icons-normal, $icons-retina);
-    }
-  }
-  &.time-type {
-    .type-ico-container {
-      @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
-    }
-  }
-
 
   .people-ico-container {
     @include shadows-font;
@@ -1407,6 +1420,78 @@ fb-comments {
   }
 }
 
+// Buttons used throughout the application
+.btn {
+  height: 40px;
+  color: $time-color;
+  @include big-text;
+  line-height: 1em;
+  white-space: nowrap;
+  cursor: pointer;
+  .icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 7px;
+    margin-top: 2px;
+  }
+  .text {
+    vertical-align: middle;
+    display: inline-block;
+    margin: 2px 10px;
+  }
+
+  &.photo {
+    float: left;
+    margin-left: 10px;
+    .icon {
+      @include retina-sprite-background(camera-white, $icons-normal, $icons-retina);
+    }
+  }
+  &.txt {
+    float: right;
+    margin-right: 10px;
+    .icon {
+      @include retina-sprite-background(pen-white, $icons-normal, $icons-retina);
+    }
+  }
+
+  &.confirm {
+    margin-top: 5px;
+    padding: 10px 5px 0 5px;
+    .icon {
+      @include retina-sprite-background(confirm-green, $icons-normal, $icons-retina);
+    }
+  }
+  &.search {
+    background: transparent url("../img/green-btn.png") no-repeat top left;
+    background-size: 100% 100%;
+    .icon {
+      @include retina-sprite-background(magnifying-glass-white, $icons-normal, $icons-retina);
+    }
+  }
+  &.close {
+    background: transparent url("../img/orange-btn.png") no-repeat top left;
+    background-size: 100% 100%;
+    .icon {
+      margin-top: 2px;
+      @include retina-sprite-background(exit, $icons-normal, $icons-retina);
+    }
+  }
+  &.return {
+    background: transparent url("../img/orange-btn.png") no-repeat top left;
+  }
+  &.demand-return {
+    background: transparent url("../img/green-btn.png") no-repeat top left;
+  }
+  &.return, &.demand-return {
+    background-size: 100% 100%;
+    .icon {
+      margin-top: 2px;
+      @include retina-sprite-background(return-white, $icons-normal, $icons-retina);
+    }
+  }
+}
+
 .toolbar {
   text-align: center;
   padding: 0;
@@ -1418,81 +1503,6 @@ fb-comments {
 
   }
 
-  // Buttons used throughout the application
-  .btn {
-    height: 40px;
-    color: $time-color;
-    @include big-text;
-    line-height: 1em;
-    white-space: nowrap;
-    cursor: pointer;
-    .icon {
-      display: inline-block;
-      vertical-align: middle;
-      margin-left: 7px;
-      margin-top: 2px;
-    }
-    .text {
-      vertical-align: middle;
-      display: inline-block;
-      margin: 2px 10px;
-    }
-
-    &.photo {
-      float: left;
-      margin-left: 10px;
-      background: transparent url("../img/orange-btn.png") no-repeat top left;
-      background-size: 100% 100%;
-      .icon {
-        @include retina-sprite-background(camera-white, $icons-normal, $icons-retina);
-      }
-    }
-    &.txt {
-      float: right;
-      margin-right: 10px;
-      background: transparent url("../img/green-btn.png") no-repeat top left;
-      background-size: 100% 100%;
-      .icon {
-        @include retina-sprite-background(pen-white, $icons-normal, $icons-retina);
-      }
-    }
-
-    &.confirm {
-      margin-top: 5px;
-      padding: 10px 5px 0 5px;
-      .icon {
-        @include retina-sprite-background(confirm-green, $icons-normal, $icons-retina);
-      }
-    }
-    &.search {
-      background: transparent url("../img/green-btn.png") no-repeat top left;
-      background-size: 100% 100%;
-      .icon {
-        @include retina-sprite-background(magnifying-glass-white, $icons-normal, $icons-retina);
-      }
-    }
-    &.close {
-      background: transparent url("../img/orange-btn.png") no-repeat top left;
-      background-size: 100% 100%;
-      .icon {
-        margin-top: 2px;
-        @include retina-sprite-background(exit, $icons-normal, $icons-retina);
-      }
-    }
-    &.return {
-      background: transparent url("../img/orange-btn.png") no-repeat top left;
-    }
-    &.demand-return {
-      background: transparent url("../img/green-btn.png") no-repeat top left;
-    }
-    &.return, &.demand-return {
-      background-size: 100% 100%;
-      .icon {
-        margin-top: 2px;
-        @include retina-sprite-background(return-white, $icons-normal, $icons-retina);
-      }
-    }
-  }
   .file-input-container {
     float: left;
     margin-left: 10px;
@@ -1530,10 +1540,8 @@ fb-comments {
 
 /* end misc */
 
-/* new share */
-
-.new-share-container {
-
+/* new share button & pop-up dialog... */
+.new-share-button-container {
   width: 100px;
   height: 100px;
   position: fixed;
@@ -1548,17 +1556,7 @@ fb-comments {
     width: 150px;
   }
 
-  > span {
-    display: block;
-  }
-
-  > span > a {
-    display: block;
-    width: 100%;
-    height: 100%;
-  }
-
-  .new-share {
+  .new-share-button {
     position: absolute;
     bottom: 20px;
     left: 20px;
@@ -1568,37 +1566,97 @@ fb-comments {
     border-radius: 50%;
     z-index: 91;
   }
-  .shoot {
-    @include transition(all 0.25s ease);
-    bottom: 0;
-    left: 0;
-    position: absolute;
-    opacity: 0;
-  }
-  &:hover {
-    .shoot {
-      opacity: 1;
-    }
-    .new-share-thing {
-      @include translate3d(20px, -115px, 0);
-    }
-    .new-share-time {
-      @include translate3d(105px, -100px, 0);
-    }
-    .new-share-promise {
-      @include translate3d(120px, -20px, 0);
-    }
-  }
+}
 
-  .new-share-thing {
-    @include retina-sprite-background(thing-ico, $icons-normal, $icons-retina);
-    opacity: 0;
+/* the new share pop-up dialog */
+#new-share-frame-container {
+  overflow: hidden;
+  bottom: 60px;
+  width: 94%;
+  left: 6%;
+  position: absolute;
+  z-index: 999;
+  @media (min-width: 500px) {
+    width: 450px;
+    left: 30px;
   }
-  .new-share-time {
-    @include retina-sprite-background(time-ico, $icons-normal, $icons-retina);
-  }
-  .new-share-promise {
-    @include retina-sprite-background(promise-ico, $icons-normal, $icons-retina);
+  background: transparent url("../img/create-share-popup.png") no-repeat top left;
+  background-size: 100% 100%;
+
+  #new-share-frame {
+    display: table;
+    width: 100%;
+
+    .column {
+      display: table-cell;
+      width: 30%;
+      height: 100%;
+      text-align: center;
+      .type-ico-container {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      padding: 20px 0;
+    }
+    .divider {
+      display: table-cell;
+      width: 3%;
+      vertical-align: middle;
+      background: transparent url("../img/separators/create-share-divider.png") no-repeat top left;
+      background-size: auto 100%;
+    }
+    .btn {
+      padding: 20px 5px;
+    }
+    .btn-line-bottom {
+      margin: 0 auto 5px auto;
+      width: 100%;
+      background-position: center;
+    }
+    .btn-line-top {
+      margin: 5px auto 0 auto;
+      width: 100%;
+      background-position: center;
+    }
+    .thing-type {
+      .btn {
+        color: $thing-color;
+      }
+      .btn-line-bottom {
+        @include retina-sprite-background(create-share-line-bottom-left, $separators-normal, $separators-retina);
+        background-size: 100% image-height(sprite-path($separators-normal));
+      }
+      .btn-line-top {
+        @include retina-sprite-background(create-share-line-bottom-left, $separators-normal, $separators-retina);
+        background-size: 100% image-height(sprite-path($separators-normal));
+      }
+    }
+    .time-type {
+      .btn {
+        color: $time-color;
+      }
+      .btn-line-bottom {
+        @include retina-sprite-background(create-share-line-bottom-middle, $separators-normal, $separators-retina);
+        background-size: 100% image-height(sprite-path($separators-normal));
+      }
+      .btn-line-top {
+        @include retina-sprite-background(create-share-line-bottom-middle, $separators-normal, $separators-retina);
+        background-size: 100% image-height(sprite-path($separators-normal));
+      }
+    }
+    .promise-type {
+      .btn {
+        color: $promise-color;
+      }
+      .btn-line-bottom {
+        @include retina-sprite-background(create-share-line-bottom-right, $separators-normal, $separators-retina);
+        background-size: 100% image-height(sprite-path($separators-normal));
+      }
+      .btn-line-top {
+        @include retina-sprite-background(create-share-line-bottom-right, $separators-normal, $separators-retina);
+        background-size: 100% image-height(sprite-path($separators-normal));
+      }
+    }
   }
 }
 

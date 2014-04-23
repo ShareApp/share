@@ -26,19 +26,17 @@
                 <img ng-hide="share.img" ng-switch-when="2" class="share-placeholder" ng-src="img/backgrounds/purple.jpg" alt="{{ share.text }}"/>
             </div>
             <div class="content">
-                <input required id="id_amount" scroll-after-focus type="number" name="amount" placeholder="Amount" ng-model="share.amount"/>
-                <label for="id_amount">x </label>
 
-                <input scroll-after-focus type="date" name="date" placeholder="Date" ng-model="share.date" date-picker-fallback />
                 <textarea required scroll-after-focus name="text" placeholder="Text of your share" ng-model="share.text"></textarea>
-                <label>
-                    <input scroll-after-focus type="checkbox" ng-model="share.isPublic">
-                    {{ 'Is Public?' | translate }}
+                <input id="share-public-flag-checkbox" "scroll-after-focus type="checkbox" ng-model="share.isPublic">
+                <label for="share-public-flag-checkbox">
+                    {{ 'Public' | translate }}
+                    <span class="checkbox"></span>
                 </label>
-                <br/>
-                <label ng-hide="!isOnline">
-                    <input scroll-after-focus type="checkbox" ng-model="postOnFB">
-                    {{ 'Post on FB' | translate }}
+                <input id="share-postfb-flag-checkbox" scroll-after-focus type="checkbox" ng-model="postOnFB">
+                <label for="share-postfb-flag-checkbox" ng-hide="!isOnline">
+                    {{ 'Post to Facebook' | translate }}
+                    <span class="checkbox"></span>
                 </label>
             </div>
             <div class="toolbar clearfix">

@@ -2,7 +2,7 @@
     <!--<button ng-click="user.fetchData()">{{ 'refresh!' | translate }}</button>-->
     <ul>
         <li>
-            <a class="close-after" href="#/share/1">
+            <a class="close-after" ng-click="rootScope.newShareButtonsOpened=true" >
                 <i class="new-share-ico"></i>
                 <span class="text">{{ 'New Share❣' | translate }}</span>
             </a>

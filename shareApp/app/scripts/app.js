@@ -63,7 +63,7 @@ var app = angular.module('shareApp', ['pascalprecht.translate', 'ngCookies', 'ui
         }
       })
       .state('shareSelectFriend', {
-        url: '/share/:type',
+        url: '/share/:direction/:type',
         views: {
           'header': {
             templateUrl: 'views/header.html',

@@ -1,6 +1,73 @@
-<div ng-hide="!user.loggedIn || menuOpened || filtersOpened || notificationsFrameOpened" class="new-share-container">
-    <span class="new-share">+</span>
-    <span class="new-share-thing hide shoot"><a href="#/share/1"></a></span>
-    <span class="new-share-time hide shoot"><a href="#/share/0"></a></span>
-    <span class="new-share-promise hide shoot"><a href="#/share/2"></a></span>
+<div id="dialog-background-mask" ng-show="rootScope.newShareButtonsOpened" ng-click="rootScope.newShareButtonsOpened=false"></div>
+
+<!-- <button style="position: fixed; left: 20px; top: 200px;  z-index: 90;" ng-click="$window.log('foo');">AAA</button> -->
+
+<div class="new-share-button-container"
+     ng-hide="!user.loggedIn || menuOpened || rootScope.filtersOpened || notificationsFrameOpened ">
+    <div class="new-share-button" ng-click="rootScope.newShareButtonsOpened=!rootScope.newShareButtonsOpened">+</div>
+</div>
+
+<div id='new-share-frame-container' ng-show="rootScope.newShareButtonsOpened">
+    <div id="new-share-frame">
+
+        <div class="column thing-type">
+            <a href="#/share/0/1" ng-click="rootScope.newShareButtonsOpened=false">
+            <div class="btn ">
+                <span class="text">{{ "Borrow" | translate }}</span>
+                <div class="btn-line-top"></div>
+            </div>
+            </a>
+            <div class="type-ico-container"></div>
+            <span class="title">{{ "Thing" | translate }}</span>
+            <a href="#/share/1/1" ng-click="rootScope.newShareButtonsOpened=false">
+            <div class="btn ">
+                <div class="btn-line-bottom"></div>
+                <span class="text">{{ "Lend" | translate }}</span>
+            </div>
+                </a>
+        </div>
+
+        <div class="divider"></div>
+        <div class="column time-type">
+            <a href="#/share/0/0" ng-click="rootScope.newShareButtonsOpened=false">
+
+            <div class="btn ">
+                <span class="text">{{ "Receive" | translate }}</span>
+                <div class="btn-line-top"></div>
+            </div>
+                </a>
+
+            <div class="type-ico-container"></div>
+
+            <span class="title">{{ "Time" | translate }}</span>
+
+            <a href="#/share/1/0" ng-click="rootScope.newShareButtonsOpened=false">
+            <div class="btn ">
+                <div class="btn-line-bottom"></div>
+                <span class="text">{{ "Give" | translate }}</span>
+            </div>
+            </a>
+        </div>
+        <div class="divider"></div>
+
+        <div class="column promise-type">
+            <a href="#/share/0/2" ng-click="rootScope.newShareButtonsOpened=false">
+
+            <div class="btn ">
+                <span class="text">{{ "Accept" | translate }}</span>
+                <div class="btn-line-top"></div>
+            </div>
+                </a>
+
+            <div class="type-ico-container"></div>
+            <span class="title">{{ "Promise" | translate }}</span>
+
+            <a href="#/share/1/2" ng-click="rootScope.newShareButtonsOpened=false">
+            <div class="btn ">
+                <div class="btn-line-bottom"></div>
+                <span class="text">{{ "Make" | translate }}</span>
+            </div>
+                </a>
+        </div>
+    </div>
 </div>
