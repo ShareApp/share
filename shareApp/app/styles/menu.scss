@@ -1,0 +1,146 @@
+/**
+ *The menu. used in menu.html view
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+
+#main-menu-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  #main-menu {
+    position: absolute;
+    top: 0;
+    right: auto;
+    bottom: 0;
+    left: auto;
+    width: auto;
+    overflow: auto;
+    height: 100%;
+    background: #373334;
+    overflow-x: hidden;
+    left: 0;
+    z-index: 1;
+    //    &.closed {
+    //      display: none;
+    //    }
+    nav {
+      height: 100%;
+      ul {
+        list-style: none;
+        padding: 15px 0;
+        margin: 0;
+        li {
+          white-space: nowrap;
+          a {
+            color: $white-color;
+            font-size: 2.6em;
+            line-height: 1.4em;
+            text-decoration: none;
+            height: 30px;
+            display: inline-block;
+            .text {
+              padding-left: 10px;
+              @include shadows-font();
+              display: inline-block;
+              vertical-align: top;
+              height: 45px;
+            }
+            i {
+              vertical-align: middle;
+              margin-left: 20px;
+              display: inline-block;
+              &.new-share-ico {
+                @include retina-sprite-background(new-share, $menu-normal, $menu-retina);
+              }
+              &.contact-list-ico {
+                @include retina-sprite-background(contact-list, $menu-normal, $menu-retina);
+              }
+              &.timeline-ico {
+                @include retina-sprite-background(timeline, $menu-normal, $menu-retina);
+              }
+              &.me-ico {
+                @include retina-sprite-background(me, $menu-normal, $menu-retina);
+              }
+              &.help-ico {
+                @include retina-sprite-background(help, $menu-normal, $menu-retina);
+              }
+              &.FB-ico {
+                @include retina-sprite-background(FB, $menu-normal, $menu-retina);
+              }
+              &.flag-ico {
+                @include retina-sprite-background(flag, $menu-normal, $menu-retina);
+              }
+              &.logout-ico {
+                @include retina-sprite-background(logout, $menu-normal, $menu-retina);
+              }
+              &.exit-ico {
+                @include retina-sprite-background(exit, $menu-normal, $menu-retina);
+              }
+            }
+
+          }
+          #lang-switcher {
+            display: inline-block;
+            margin-right: 5px;
+            button {
+              padding-top: 6px;
+              margin-left: 15px;
+              border-width: 0;
+
+              @include retina-sprite-background(lang-border-1, $icons-normal, $icons-retina);
+              text-transform: uppercase;
+              color: $white-color;
+
+              &:nth-child(odd) {
+                @include retina-sprite-background(lang-border-2, $icons-normal, $icons-retina);
+              }
+              &.active {
+                @include retina-sprite-background(lang-border-active, $icons-normal, $icons-retina);
+                color: #373334;
+              }
+            }
+            @media (max-width: 460px), (max-height: 700px) {
+              margin-top: -5px;
+              margin-bottom: 5px;
+              button {
+                margin-left: 5px;
+              }
+            }
+          }
+        }
+        li .separator {
+          @include retina-sprite-background(menu-1, $separators-normal, $separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
+        }
+        li:nth-child(2n+2) .separator {
+          @include retina-sprite-background(menu-2, $separators-normal, $separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
+        }
+        li:nth-child(2n+3) .separator {
+          @include retina-sprite-background(menu-3, $separators-normal, $separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
+        }
+        li:nth-child(2n+4) .separator {
+          @include retina-sprite-background(menu-4, $separators-normal, $separators-retina);
+          background-size: 100% image-height(sprite-path($separators-normal));
+          width: 100%;
+        }
+
+        &.pull-bottom {
+          position: absolute;
+          bottom: 10px;
+        }
+      }
+    }
+  }
+}

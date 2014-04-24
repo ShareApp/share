@@ -1,0 +1,107 @@
+/**
+ * Contains the mixins used throughout the code...
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+
+@mixin shadows-font {
+  font-family: 'Shadows Into Light Two', cursive;
+}
+
+@mixin big-text {
+  @include shadows-font;
+  line-height: 1.6em;
+  font-size: 2.4em;
+}
+
+@mixin footnote {
+  line-height: 1.2em;
+  font-size: 1.5em;
+  font-family: Arial;
+}
+
+@mixin share-title {
+  .friend-name {
+    text-decoration: none;
+    font-style: normal;
+    color: black;
+  }
+  &.promise-type {
+    .thing {
+      color: $promise-color;
+    }
+  }
+  &.thing-type {
+    .thing {
+      color: $thing-color;
+    }
+  }
+  &.time-type {
+    .thing {
+      color: $time-color;
+    }
+  }
+  .title {
+    word-break: break-all;
+    @include big-text;
+    span, a {
+      border-bottom: 1px solid #DDD9CD;
+      text-decoration: none;
+    }
+  }
+}
+
+@mixin item {
+  background-size: 100% 100%;
+  margin: 40px auto 0 auto;
+  max-width: 460px;
+  padding: 0;
+  &:after {
+    height: 85px;
+    max-width: 460px;
+    margin-top: -25px;
+    content: "";
+    display: block;
+    background: transparent url("../img/low-share-bottom.png") no-repeat top left;
+    background-size: 100% 100%;
+    @media (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi) {
+      background-image: url("../img/high-share-bottom.png");
+    }
+  }
+  &:before {
+    height: 60px;
+    max-width: 460px;
+    margin-top: -40px;
+    content: "";
+    display: block;
+    background: transparent url("../img/low-share-top.png") no-repeat top left;
+    background-size: 100% 100%;
+    @media (-webkit-min-device-pixel-ratio: 1.5),
+    (min-resolution: 144dpi) {
+      background-image: url("../img/high-share-top.png");
+    }
+  }
+}
+
+@mixin item-inner {
+  padding: 0 20px;
+  background: transparent url("../img/backgrounds/low-white.png") repeat top left;
+  @media (-webkit-min-device-pixel-ratio: 1.5),
+  (min-resolution: 144dpi) {
+    background-image: url("../img/backgrounds/high-white.png");
+  }
+}
+
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+}

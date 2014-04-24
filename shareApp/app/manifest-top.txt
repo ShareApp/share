@@ -1,0 +1,22 @@
+CACHE MANIFEST
+# For documentation see: http://www.w3.org/TR/offline-webapps/#offline
+# See README.md for more information
+
+# Increment following version number to update client-side cache
+# version: 185
+
+CACHE:
+scripts/core.js
+scripts/scripts.js
+scripts/modules.js
+settings.js
+styles/main.css
+styles/plugins.css
+
+http://connect.facebook.net/en_US/all.js
+http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif
+http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif
+http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif
+http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png
+http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png
+http://www.google-analytics.com/ga.js

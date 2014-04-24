@@ -1,136 +1,32 @@
 @import "compass/css3/transform";
 @import "compass/css3/transition";
+
+@import "constants";
+
 @import "retina-sprite-mixins";
 
-$icons-normal: sprite-map("icons/normal/*.png");
-$icons-retina: sprite-map("icons/retina/*.png");
+@import "mixins";
+@import "menu";
 
-$menu-normal: sprite-map("menu/normal/*.png");
-$menu-retina: sprite-map("menu/retina/*.png");
+@import "filters";
+@import "newShare-view";
 
-$separators-normal: sprite-map("separators/normal/*.png");
-$separators-retina: sprite-map("separators/retina/*.png");
 
-$filters-normal: sprite-map("filters/normal/*.png");
-$filters-retina: sprite-map("filters/retina/*.png");
-
-$friends-sorting-normal: sprite-map("friends-sorting/normal/*.png");
-$friends-sorting-retina: sprite-map("friends-sorting/retina/*.png");
-
-$thing-color: #EB9C75;
-$time-color: #4FBCA7;
-$promise-color: #C08FE1;
-
-@font-face {
-  font-family: 'Shadows Into Light Two';
-  src: url('fonts/ShadowsIntoLightTwo-Regular.eot');
-  src: url('fonts/ShadowsIntoLightTwo-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/ShadowsIntoLightTwo-Regular.woff') format('woff'), url('fonts/ShadowsIntoLightTwo-Regular.ttf') format('truetype'), url('fonts/ShadowsIntoLightTwo-Regular.svg#ShadowsIntoLightTwo-Regular') format('svg');
+.title {
+  @include big-text;
 }
 
-@font-face {
-  font-family: 'Neucha';
-  src: url('fonts/Neucha.eot');
-  src: url('fonts/Neucha.eot?#iefix') format('embedded-opentype'), url('fonts/Neucha.woff') format('woff'), url('fonts/Neucha.ttf') format('truetype'), url('fonts/Neucha.svg#Neucha') format('svg');
-}
 
-@mixin shadows-font {
-  font-family: 'Shadows Into Light Two', cursive;
+.checkbox {
+  @include retina-sprite-background(unchecked, $filters-normal, $filters-retina);
 }
-
-@mixin big-text {
-  @include shadows-font;
-  line-height: 1.6em;
-  font-size: 2.4em;
-}
-
-@mixin footnote {
-  line-height: 1.2em;
-  font-size: 1.5em;
-  font-family: Arial;
-}
-
-@mixin share-title {
-  .friend-name {
-    text-decoration: none;
-    font-style: normal;
-    color: black;
-  }
-  &.promise-type {
-    .thing {
-      color: $promise-color;
-    }
-  }
-  &.thing-type {
-    .thing {
-      color: $thing-color;
-    }
-  }
-  &.time-type {
-    .thing {
-      color: $time-color;
-    }
-  }
-  .title {
-    word-break: break-all;
-    @include big-text;
-    span, a {
-      border-bottom: 1px solid #DDD9CD;
-      text-decoration: none;
-    }
+input[type=checkbox]:checked + label {
+  .checkbox {
+    @include retina-sprite-background(checked, $filters-normal, $filters-retina);
   }
 }
-
-@mixin item {
-  background-size: 100% 100%;
-  margin: 40px auto 0 auto;
-  max-width: 460px;
-  padding: 0;
-  &:after {
-    height: 85px;
-    max-width: 460px;
-    margin-top: -25px;
-    content: "";
-    display: block;
-    background: transparent url("../img/low-share-bottom.png") no-repeat top left;
-    background-size: 100% 100%;
-    @media (-webkit-min-device-pixel-ratio: 1.5),
-    (min-resolution: 144dpi) {
-      background-image: url("../img/high-share-bottom.png");
-    }
-  }
-  &:before {
-    height: 60px;
-    max-width: 460px;
-    margin-top: -40px;
-    content: "";
-    display: block;
-    background: transparent url("../img/low-share-top.png") no-repeat top left;
-    background-size: 100% 100%;
-    @media (-webkit-min-device-pixel-ratio: 1.5),
-    (min-resolution: 144dpi) {
-      background-image: url("../img/high-share-top.png");
-    }
-  }
-}
-
-@mixin item-inner {
-  padding: 0 20px;
-  background: transparent url("../img/backgrounds/low-white.png") repeat top left;
-  @media (-webkit-min-device-pixel-ratio: 1.5),
-  (min-resolution: 144dpi) {
-    background-image: url("../img/backgrounds/high-white.png");
-  }
-}
-
-@mixin clearfix {
-  &:after {
-    content: ".";
-    display: block;
-    clear: both;
-    visibility: hidden;
-    line-height: 0;
-    height: 0;
-  }
+input[type='checkbox']:checked .checkbox {
+  @include retina-sprite-background(checked, $filters-normal, $filters-retina);
 }
 
 /* base site */
@@ -156,148 +52,6 @@ body {
   }
 }
 
-.title {
-  @include big-text;
-}
-
-#main-menu-container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  #main-menu {
-    position: absolute;
-    top: 0;
-    right: auto;
-    bottom: 0;
-    left: auto;
-    width: auto;
-    overflow: auto;
-    height: 100%;
-    background: #373334;
-    overflow-x: hidden;
-    left: 0;
-    z-index: 1;
-    //    &.closed {
-    //      display: none;
-    //    }
-    nav {
-      height: 100%;
-      ul {
-        list-style: none;
-        padding: 15px 0;
-        margin: 0;
-        li {
-          white-space: nowrap;
-          a {
-            color: white;
-            font-size: 2.6em;
-            line-height: 1.4em;
-            text-decoration: none;
-            height: 30px;
-            display: inline-block;
-            .text {
-              padding-left: 10px;
-              @include shadows-font();
-              display: inline-block;
-              vertical-align: top;
-              height: 45px;
-            }
-            i {
-              vertical-align: middle;
-              margin-left: 20px;
-              display: inline-block;
-              &.new-share-ico {
-                @include retina-sprite-background(new-share, $menu-normal, $menu-retina);
-              }
-              &.contact-list-ico {
-                @include retina-sprite-background(contact-list, $menu-normal, $menu-retina);
-              }
-              &.timeline-ico {
-                @include retina-sprite-background(timeline, $menu-normal, $menu-retina);
-              }
-              &.me-ico {
-                @include retina-sprite-background(me, $menu-normal, $menu-retina);
-              }
-              &.help-ico {
-                @include retina-sprite-background(help, $menu-normal, $menu-retina);
-              }
-              &.FB-ico {
-                @include retina-sprite-background(FB, $menu-normal, $menu-retina);
-              }
-              &.flag-ico {
-                @include retina-sprite-background(flag, $menu-normal, $menu-retina);
-              }
-              &.logout-ico {
-                @include retina-sprite-background(logout, $menu-normal, $menu-retina);
-              }
-              &.exit-ico {
-                @include retina-sprite-background(exit, $menu-normal, $menu-retina);
-              }
-            }
-
-          }
-          #lang-switcher {
-            display: inline-block;
-            margin-right: 5px;
-            button {
-              padding-top: 6px;
-              margin-left: 15px;
-              border-width: 0;
-
-              @include retina-sprite-background(lang-border-1, $icons-normal, $icons-retina);
-              text-transform: uppercase;
-              color: white;
-
-              &:nth-child(odd) {
-                @include retina-sprite-background(lang-border-2, $icons-normal, $icons-retina);
-              }
-              &.active {
-                @include retina-sprite-background(lang-border-active, $icons-normal, $icons-retina);
-                color: #373334;
-              }
-            }
-            @media (max-width: 460px), (max-height: 700px) {
-              margin-top: -5px;
-              margin-bottom: 5px;
-              button {
-                margin-left: 5px;
-              }
-            }
-          }
-        }
-        li .separator {
-          @include retina-sprite-background(menu-1, $separators-normal, $separators-retina);
-          background-size: 100% image-height(sprite-path($separators-normal));
-          width: 100%;
-        }
-        li:nth-child(2n+2) .separator {
-          @include retina-sprite-background(menu-2, $separators-normal, $separators-retina);
-          background-size: 100% image-height(sprite-path($separators-normal));
-          width: 100%;
-        }
-        li:nth-child(2n+3) .separator {
-          @include retina-sprite-background(menu-3, $separators-normal, $separators-retina);
-          background-size: 100% image-height(sprite-path($separators-normal));
-          width: 100%;
-        }
-        li:nth-child(2n+4) .separator {
-          @include retina-sprite-background(menu-4, $separators-normal, $separators-retina);
-          background-size: 100% image-height(sprite-path($separators-normal));
-          width: 100%;
-        }
-
-        &.pull-bottom {
-          position: absolute;
-          bottom: 10px;
-        }
-      }
-    }
-  }
-}
 
 #header-container {
   top: 0;
@@ -309,7 +63,7 @@ body {
     height: 47px;
     left: 0;
     width: 100%;
-    background-color: white;
+    background-color: $white-color;
     text-align: center;
     box-shadow: #E8DDC4 0px 5px 15px;
     > * {
@@ -360,7 +114,7 @@ body {
         font-size: 1.2em;
         @include retina-sprite-background(notification-btn, $icons-normal, $icons-retina);
         border-width: 0;
-        color: white;
+        color: $white-color;
         font-weight: bold;
         outline: none;
       }
@@ -452,172 +206,6 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-.checkbox {
-  @include retina-sprite-background(unchecked, $filters-normal, $filters-retina);
-}
-input[type=checkbox]:checked + label {
-  .checkbox {
-    @include retina-sprite-background(checked, $filters-normal, $filters-retina);
-  }
-}
-input[type='checkbox']:checked .checkbox {
-  @include retina-sprite-background(checked, $filters-normal, $filters-retina);
-}
-
-#filters-container {
-  max-width: 460px;
-  margin: 15px auto;
-
-  .filters-inner {
-    background: transparent url("../img/backgrounds/low-white.png") repeat top left;
-    @media (-webkit-min-device-pixel-ratio: 1.5),
-    (min-resolution: 144dpi) {
-      background-image: url("../img/backgrounds/high-white.png");
-    }
-    position: absolute;
-
-    top: -30px;
-    left: 5%;
-    width: 90%;
-    bottom: 0;
-    z-index: 999;
-    height: 720px;
-    &.active {
-      display: block;
-    }
-    ul {
-      list-style: none;
-      margin: 5px 10px;
-      padding: 0;
-
-      li {
-        input[type='checkbox'] {
-          visibility: hidden;
-          height: 0;
-          width: 0;
-        }
-        label {
-          .ico {
-            height: 52px;
-            width: 52px;
-            display: inline-block;
-          }
-          .text {
-            @include big-text;
-            display: inline-block;
-            vertical-align: top;
-            margin-top: 10px;
-            margin-left: 10px;
-          }
-          .checkbox {
-            display: inline-block;
-            float: right;
-            margin-right: 10px;
-          }
-        }
-
-        .separator {
-          @include retina-sprite-background(standard, $separators-normal, $separators-retina);
-          width: 100%;
-          background-size: 100% image-height(sprite-path($separators-normal));
-        }
-
-        label[for='things-checkbox'] {
-          .ico {
-            @include retina-sprite-background(things, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='time-checkbox'] {
-          .ico {
-            @include retina-sprite-background(time, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='promises-checkbox'] {
-          .ico {
-            @include retina-sprite-background(promises, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='to-me-checkbox'] {
-          .ico {
-            @include retina-sprite-background(to-me, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='from-me-checkbox'] {
-          .ico {
-            @include retina-sprite-background(from-me, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='returned-checkbox'] {
-          .ico {
-            @include retina-sprite-background(returned, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='accepted-checkbox'] {
-          .ico {
-            @include retina-sprite-background(accepted, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='rejected-checkbox'] {
-          .ico {
-            @include retina-sprite-background(rejected, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='awaiting-checkbox'] {
-          .ico {
-            @include retina-sprite-background(awaiting, $filters-normal, $filters-retina);
-
-          }
-        }
-        label[for='return-awaiting-checkbox'] {
-          .ico {
-            @include retina-sprite-background(return-awaiting, $filters-normal, $filters-retina);
-
-          }
-        }
-      }
-    }
-  }
-  #filters-btn {
-    width: 100%;
-    height: 42px;
-    background: white url("../img/low-search.png") top left no-repeat;
-    @media (-webkit-min-device-pixel-ratio: 1.5),
-    (min-resolution: 144dpi) {
-      background-image: url("../img/high-search.png");
-    }
-    background-size: 100% 42px;
-    border-width: 0;
-    text-align: left;
-    .text {
-      font-size: 2.4em;
-      line-height: 0.8em;
-      margin-top: 8px;
-      margin-left: 5px;
-      float: left;
-      color: #707070;
-      display: block;
-      @include shadows-font;
-      font-weight: bold;
-    }
-    .magnifying-glass-ico {
-      @include retina-sprite-background(magnifying-glass, $icons-normal, $icons-retina);
-      display: block;
-      float: left;
-      margin-left: 10px;
-      margin-top: 5px;
-
-    }
-
-  }
-}
 
 #shares {
   list-style: none;
@@ -905,7 +493,7 @@ input[type='checkbox']:checked .checkbox {
         text-align: center;
         display: inline-block;
         &.active {
-          color: white;
+          color: $white-color;
           @include retina-sprite-background(filled-border, $friends-sorting-normal, $friends-sorting-retina);
           background-size: 100% image-height(sprite-path($friends-sorting-normal));
           max-width: 25%;
@@ -961,50 +549,6 @@ input[type='checkbox']:checked .checkbox {
 
 /* end select friend */
 
-/* new share */
-
-#new-share {
-  .content {
-    padding: 0 25px;
-    input, textarea, label {
-      @include big-text;
-      background-color: transparent;
-      border-width: 0;
-    }
-    input[type='checkbox'] {
-      visibility: hidden;
-      height: 0;
-      width: 0;
-    }
-    label {
-
-      .text {
-        @include big-text;
-        display: inline-block;
-        vertical-align: middle;
-        margin-top: 10px;
-        margin-left: 10px;
-      }
-      .checkbox {
-        display: inline-block;
-        margin-right: 10px;
-      }
-    }
-    textarea {
-      line-height: 1.4em;
-      line-height: 1.4em;
-      height: 120px;
-      width: 100%;
-      margin: 0;
-      resize: vertical;
-    }
-  }
-  .toolbar {
-    padding: 0 25px 10px 25px;
-  }
-}
-
-/* end new share */
 
 /* share details */
 
@@ -1128,7 +672,7 @@ fb-comments {
       margin: 0;
       padding: 0px 10px 0 0;
       font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
-      color: white;
+      color: $white-color;
       font-size: 14px;
       line-height: 30px;
       border-radius: 3px;
@@ -1174,10 +718,10 @@ fb-comments {
     position: absolute;
     top: 45px;
     z-index: 31;
-    border: 2px solid white;
+    border: 2px solid $white-color;
     border-radius: 45%;
     background-color: black;
-    color: white;
+    color: $white-color;
     font-size: 1.8em;
     letter-spacing: -1px;
     line-height: 16px;
@@ -1306,7 +850,7 @@ fb-comments {
     text-decoration: none;
     z-index: 10;
     .name {
-      color: white;
+      color: $white-color;
       font-size: 2.6em;
       line-height: 0em;
       margin-top: 26px;
@@ -1371,10 +915,7 @@ fb-comments {
       height: 100%;
       z-index: 2;
       pointer-events: none;
-      &.gradient {
-        background-image: linear-gradient(black 30px, transparent 150px);
-        background-image: -webkit-linear-gradient(black 30px, transparent 150px);
-      }
+
     }
   }
   @include share-title;
@@ -1423,7 +964,6 @@ fb-comments {
 // Buttons used throughout the application
 .btn {
   height: 40px;
-  color: $time-color;
   @include big-text;
   line-height: 1em;
   white-space: nowrap;
@@ -1448,8 +988,9 @@ fb-comments {
     }
   }
   &.txt {
-    float: right;
-    margin-right: 10px;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
     .icon {
       @include retina-sprite-background(pen-white, $icons-normal, $icons-retina);
     }
@@ -1496,40 +1037,7 @@ fb-comments {
   text-align: center;
   padding: 0;
   margin-bottom: -65px;
-  .btn,
-  .file-input-container {
-    border-width: 0;
-    margin: 0;
 
-  }
-
-  .file-input-container {
-    float: left;
-    margin-left: 10px;
-    position: relative;
-
-    input {
-      opacity: 0;
-      width: 130px;
-      height: 40px;
-      cursor: pointer;
-      position: relative;
-      text-align: right;
-      z-index: 2;
-    }
-    .file-input {
-      cursor: pointer;
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      height: 40px;
-      z-index: 1;
-      margin: 0;
-    }
-    .text {
-      margin-top: 8px;
-    }
-  }
   .separator {
     @include retina-sprite-background(standard, $separators-normal, $separators-retina);
     width: 100%;
@@ -1624,11 +1132,9 @@ fb-comments {
       }
       .btn-line-bottom {
         @include retina-sprite-background(create-share-line-bottom-left, $separators-normal, $separators-retina);
-        background-size: 100% image-height(sprite-path($separators-normal));
       }
       .btn-line-top {
         @include retina-sprite-background(create-share-line-bottom-left, $separators-normal, $separators-retina);
-        background-size: 100% image-height(sprite-path($separators-normal));
       }
     }
     .time-type {
@@ -1637,11 +1143,9 @@ fb-comments {
       }
       .btn-line-bottom {
         @include retina-sprite-background(create-share-line-bottom-middle, $separators-normal, $separators-retina);
-        background-size: 100% image-height(sprite-path($separators-normal));
       }
       .btn-line-top {
         @include retina-sprite-background(create-share-line-bottom-middle, $separators-normal, $separators-retina);
-        background-size: 100% image-height(sprite-path($separators-normal));
       }
     }
     .promise-type {
@@ -1650,14 +1154,13 @@ fb-comments {
       }
       .btn-line-bottom {
         @include retina-sprite-background(create-share-line-bottom-right, $separators-normal, $separators-retina);
-        background-size: 100% image-height(sprite-path($separators-normal));
       }
       .btn-line-top {
         @include retina-sprite-background(create-share-line-bottom-right, $separators-normal, $separators-retina);
-        background-size: 100% image-height(sprite-path($separators-normal));
       }
     }
   }
 }
 
 /* end new share */
+

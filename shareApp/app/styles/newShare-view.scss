@@ -1,0 +1,120 @@
+/**
+ * Contains the styles used in newShare.html view for creating a new share.
+ * this is a modification of the standard share detail...
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+
+#new-share {
+  .share-placeholder {
+    height: 230px;
+  }
+
+  .file-input-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 9;
+    color: $white-color;
+
+    input {
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+      cursor: pointer;
+      position: relative;
+      text-align: right;
+      z-index: 2;
+    }
+    .file-input {
+      cursor: pointer;
+      height: 40px;
+      z-index: 1;
+      /* margin-left:auto; // VV - for some reason this is not centering this thing... no idea why... it should. ah, bugger it...
+       margin-right: auto;*/
+
+      // don't know if this is the ideal way to center this thing, but it seems to work... sigh...
+      left:50%;
+      top:50%;
+      transform:translate(-50%,-50%);
+      -webkit-transform:translate(-50%,-50%);
+
+      position: absolute;
+    }
+    .text {
+      margin-top: 8px;
+    }
+  }
+
+
+  .content {
+    padding: 0 25px;
+    input, textarea, label {
+      @include big-text;
+      background-color: transparent;
+      border-width: 0;
+    }
+    input[type='checkbox'] {
+      visibility: hidden;
+      height: 0;
+      width: 0;
+    }
+    label {
+
+      .text {
+        @include big-text;
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+      .checkbox {
+        display: inline-block;
+      }
+    }
+    textarea {
+      line-height: 1.4em;
+      line-height: 1.4em;
+      height: 60px;
+      width: 100%;
+      margin: 0;
+      resize: vertical;
+    }
+  }
+  .toolbar {
+    padding: 0 25px 10px 25px;
+  }
+
+  .share-item:after {
+    margin-top: 10px;
+  }
+
+  .shareit {
+    margin: 0 auto;
+  }
+
+  label[for='share-postfb-flag-checkbox'] {
+    float:right;
+  }
+
+    .promise-type {
+    .shareit {
+      @include retina-sprite-background(share-promise, $icons-normal, $icons-retina);
+    }
+  }
+  .thing-type {
+    .shareit {
+      @include retina-sprite-background(share-thing, $icons-normal, $icons-retina);
+    }
+  }
+  .time-type {
+    .shareit {
+      @include retina-sprite-background(share-time, $icons-normal, $icons-retina);
+    }
+  }
+
+}
+
+/* end new share */

@@ -1,0 +1,41 @@
+/**
+ * Contains the basic constants used throughout the CSS
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+
+$thing-color: #EB9C75;
+$time-color: #4FBCA7;
+$promise-color: #C08FE1;
+$white-color: #FFF;
+
+
+$icons-normal: sprite-map("icons/normal/*.png");
+$icons-retina: sprite-map("icons/retina/*.png");
+
+$menu-normal: sprite-map("menu/normal/*.png");
+$menu-retina: sprite-map("menu/retina/*.png");
+
+$separators-normal: sprite-map("separators/normal/*.png");
+$separators-retina: sprite-map("separators/retina/*.png");
+
+$filters-normal: sprite-map("filters/normal/*.png");
+$filters-retina: sprite-map("filters/retina/*.png");
+
+$friends-sorting-normal: sprite-map("friends-sorting/normal/*.png");
+$friends-sorting-retina: sprite-map("friends-sorting/retina/*.png");
+
+
+@font-face {
+  font-family: 'Shadows Into Light Two';
+  src: url('fonts/ShadowsIntoLightTwo-Regular.eot');
+  src: url('fonts/ShadowsIntoLightTwo-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/ShadowsIntoLightTwo-Regular.woff') format('woff'), url('fonts/ShadowsIntoLightTwo-Regular.ttf') format('truetype'), url('fonts/ShadowsIntoLightTwo-Regular.svg#ShadowsIntoLightTwo-Regular') format('svg');
+}
+
+@font-face {
+  font-family: 'Neucha';
+  src: url('fonts/Neucha.eot');
+  src: url('fonts/Neucha.eot?#iefix') format('embedded-opentype'), url('fonts/Neucha.woff') format('woff'), url('fonts/Neucha.ttf') format('truetype'), url('fonts/Neucha.svg#Neucha') format('svg');
+}

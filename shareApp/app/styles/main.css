@@ -1,3 +1,10 @@
+/**
+ * Contains the basic constants used throughout the CSS
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
 @font-face {
   font-family: 'Shadows Into Light Two';
   src: url("fonts/ShadowsIntoLightTwo-Regular.eot");
@@ -10,37 +17,21 @@
   src: url("fonts/Neucha.eot?#iefix") format("embedded-opentype"), url("fonts/Neucha.woff") format("woff"), url("fonts/Neucha.ttf") format("truetype"), url("fonts/Neucha.svg#Neucha") format("svg");
 }
 
-/* base site */
-/* line 138, main.scss */
-body {
-  font-family: 'Neucha', cursive;
-  font-size: 10px;
-  line-height: 16px;
-  min-width: 300px;
-}
-
-@media (max-width: 460px) {
-  /* line 146, main.scss */
-  body {
-    font-size: 9px;
-    line-height: 14px;
-  }
-}
-@media (max-width: 340px) {
-  /* line 153, main.scss */
-  body {
-    font-size: 8px;
-    line-height: 12px;
-  }
-}
-/* line 159, main.scss */
-.title {
-  font-family: 'Shadows Into Light Two', cursive;
-  line-height: 1.6em;
-  font-size: 2.4em;
-}
-
-/* line 163, main.scss */
+/**
+ * Contains the mixins used throughout the code...
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+/**
+ *The menu. used in menu.html view
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+/* line 9, menu.scss */
 #main-menu-container {
   position: absolute;
   top: 0;
@@ -50,7 +41,7 @@ body {
   width: auto;
   height: auto;
 }
-/* line 171, main.scss */
+/* line 17, menu.scss */
 #main-menu-container #main-menu {
   position: absolute;
   top: 0;
@@ -65,21 +56,21 @@ body {
   left: 0;
   z-index: 1;
 }
-/* line 187, main.scss */
+/* line 33, menu.scss */
 #main-menu-container #main-menu nav {
   height: 100%;
 }
-/* line 189, main.scss */
+/* line 35, menu.scss */
 #main-menu-container #main-menu nav ul {
   list-style: none;
   padding: 15px 0;
   margin: 0;
 }
-/* line 193, main.scss */
+/* line 39, menu.scss */
 #main-menu-container #main-menu nav ul li {
   white-space: nowrap;
 }
-/* line 195, main.scss */
+/* line 41, menu.scss */
 #main-menu-container #main-menu nav ul li a {
   color: white;
   font-size: 2.6em;
@@ -88,7 +79,7 @@ body {
   height: 30px;
   display: inline-block;
 }
-/* line 202, main.scss */
+/* line 48, menu.scss */
 #main-menu-container #main-menu nav ul li a .text {
   padding-left: 10px;
   font-family: 'Shadows Into Light Two', cursive;
@@ -96,13 +87,13 @@ body {
   vertical-align: top;
   height: 45px;
 }
-/* line 209, main.scss */
+/* line 55, menu.scss */
 #main-menu-container #main-menu nav ul li a i {
   vertical-align: middle;
   margin-left: 20px;
   display: inline-block;
 }
-/* line 213, main.scss */
+/* line 59, menu.scss */
 #main-menu-container #main-menu nav ul li a i.new-share-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -112,7 +103,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 213, main.scss */
+  /* line 59, menu.scss */
   #main-menu-container #main-menu nav ul li a i.new-share-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -240px;
@@ -121,7 +112,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 216, main.scss */
+/* line 62, menu.scss */
 #main-menu-container #main-menu nav ul li a i.contact-list-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -131,7 +122,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 216, main.scss */
+  /* line 62, menu.scss */
   #main-menu-container #main-menu nav ul li a i.contact-list-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -90px;
@@ -140,7 +131,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 219, main.scss */
+/* line 65, menu.scss */
 #main-menu-container #main-menu nav ul li a i.timeline-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -150,7 +141,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 219, main.scss */
+  /* line 65, menu.scss */
   #main-menu-container #main-menu nav ul li a i.timeline-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 0;
@@ -159,7 +150,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 222, main.scss */
+/* line 68, menu.scss */
 #main-menu-container #main-menu nav ul li a i.me-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -169,7 +160,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 222, main.scss */
+  /* line 68, menu.scss */
   #main-menu-container #main-menu nav ul li a i.me-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -120px;
@@ -178,7 +169,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 225, main.scss */
+/* line 71, menu.scss */
 #main-menu-container #main-menu nav ul li a i.help-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -188,7 +179,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 225, main.scss */
+  /* line 71, menu.scss */
   #main-menu-container #main-menu nav ul li a i.help-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -60px;
@@ -197,7 +188,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 228, main.scss */
+/* line 74, menu.scss */
 #main-menu-container #main-menu nav ul li a i.FB-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -207,7 +198,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 228, main.scss */
+  /* line 74, menu.scss */
   #main-menu-container #main-menu nav ul li a i.FB-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -30px;
@@ -216,7 +207,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 231, main.scss */
+/* line 77, menu.scss */
 #main-menu-container #main-menu nav ul li a i.flag-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -226,7 +217,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 231, main.scss */
+  /* line 77, menu.scss */
   #main-menu-container #main-menu nav ul li a i.flag-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -180px;
@@ -235,7 +226,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 234, main.scss */
+/* line 80, menu.scss */
 #main-menu-container #main-menu nav ul li a i.logout-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -245,7 +236,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 234, main.scss */
+  /* line 80, menu.scss */
   #main-menu-container #main-menu nav ul li a i.logout-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -150px;
@@ -254,7 +245,7 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 237, main.scss */
+/* line 83, menu.scss */
 #main-menu-container #main-menu nav ul li a i.exit-ico {
   background-repeat: no-repeat;
   background-image: url('../img/menu/normal-s940e24f06f.png');
@@ -264,7 +255,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 237, main.scss */
+  /* line 83, menu.scss */
   #main-menu-container #main-menu nav ul li a i.exit-ico {
     background-image: url('../img/menu/retina-s36709941a2.png');
     background-position: 0 -210px;
@@ -273,19 +264,19 @@ body {
     background-size: 40px auto;
   }
 }
-/* line 243, main.scss */
+/* line 89, menu.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher {
   display: inline-block;
   margin-right: 5px;
 }
-/* line 246, main.scss */
+/* line 92, menu.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button {
   padding-top: 6px;
   margin-left: 15px;
   border-width: 0;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1240px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1372px;
   height: 21px;
   width: 25px;
   background-color: transparent;
@@ -293,66 +284,66 @@ body {
   color: white;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 246, main.scss */
+  /* line 92, menu.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -694px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -826px;
     height: 21px;
     width: 26px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 255, main.scss */
+/* line 101, menu.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1261px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1393px;
   height: 21px;
   width: 25px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 255, main.scss */
+  /* line 101, menu.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button:nth-child(odd) {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -835px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -967px;
     height: 21px;
     width: 26px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 258, main.scss */
+/* line 104, menu.scss */
 #main-menu-container #main-menu nav ul li #lang-switcher button.active {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1129px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1261px;
   height: 21px;
   width: 25px;
   background-color: transparent;
   color: #373334;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 258, main.scss */
+  /* line 104, menu.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button.active {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -632px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -764px;
     height: 21px;
     width: 26px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 @media (max-width: 460px), (max-height: 700px) {
-  /* line 243, main.scss */
+  /* line 89, menu.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher {
     margin-top: -5px;
     margin-bottom: 5px;
   }
-  /* line 266, main.scss */
+  /* line 112, menu.scss */
   #main-menu-container #main-menu nav ul li #lang-switcher button {
     margin-left: 5px;
   }
 }
-/* line 272, main.scss */
+/* line 118, menu.scss */
 #main-menu-container #main-menu nav ul li .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -364,7 +355,7 @@ body {
   width: 100%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 272, main.scss */
+  /* line 118, menu.scss */
   #main-menu-container #main-menu nav ul li .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -85px;
@@ -373,7 +364,7 @@ body {
     background-size: 262px auto;
   }
 }
-/* line 277, main.scss */
+/* line 123, menu.scss */
 #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -385,7 +376,7 @@ body {
   width: 100%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 277, main.scss */
+  /* line 123, menu.scss */
   #main-menu-container #main-menu nav ul li:nth-child(2n+2) .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -25px;
@@ -394,7 +385,7 @@ body {
     background-size: 262px auto;
   }
 }
-/* line 282, main.scss */
+/* line 128, menu.scss */
 #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -406,7 +397,7 @@ body {
   width: 100%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 282, main.scss */
+  /* line 128, menu.scss */
   #main-menu-container #main-menu nav ul li:nth-child(2n+3) .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -65px;
@@ -415,7 +406,7 @@ body {
     background-size: 262px auto;
   }
 }
-/* line 287, main.scss */
+/* line 133, menu.scss */
 #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -427,7 +418,7 @@ body {
   width: 100%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 287, main.scss */
+  /* line 133, menu.scss */
   #main-menu-container #main-menu nav ul li:nth-child(2n+4) .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -45px;
@@ -436,331 +427,26 @@ body {
     background-size: 262px auto;
   }
 }
-/* line 293, main.scss */
+/* line 139, menu.scss */
 #main-menu-container #main-menu nav ul.pull-bottom {
   position: absolute;
   bottom: 10px;
 }
 
-/* line 302, main.scss */
-#header-container {
-  top: 0;
-  left: 0;
-  width: 100%;
-  min-width: 300px;
-}
-/* line 307, main.scss */
-#header-container #header {
-  top: 0;
-  height: 47px;
-  left: 0;
-  width: 100%;
-  background-color: white;
-  text-align: center;
-  box-shadow: #E8DDC4 0px 5px 15px;
-}
-/* line 315, main.scss */
-#header-container #header > * {
-  vertical-align: top;
-}
-/* line 318, main.scss */
-#header-container #header #menu-btn {
-  background-color: transparent;
-  border-width: 0;
-  padding: 13px 15px;
-  margin: 0;
-  float: left;
-}
-@media (max-width: 460px) {
-  /* line 318, main.scss */
-  #header-container #header #menu-btn {
-    padding: 13px 7px;
-  }
-}
-/* line 327, main.scss */
-#header-container #header #menu-btn .img {
-  display: block;
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1322px;
-  height: 19px;
-  width: 26px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 327, main.scss */
-  #header-container #header #menu-btn .img {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -958px;
-    height: 19px;
-    width: 26px;
-    background-size: 88px auto;
-  }
-}
-/* line 332, main.scss */
-#header-container #header #logo-container {
-  width: 115px;
-  height: 47px;
-  display: block;
-  margin: 0 auto;
-}
-/* line 337, main.scss */
-#header-container #header #logo-container > * {
-  vertical-align: top;
-  display: inline-block;
-}
-/* line 341, main.scss */
-#header-container #header #logo-container > .info {
-  margin-top: -10px;
-  display: inherit;
-}
-/* line 345, main.scss */
-#header-container #header #logo-container #logo {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -662px;
-  height: 29px;
-  width: 88px;
-  background-color: transparent;
-  margin: 8px 0;
-  overflow: hidden;
-  display: inline-block;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 345, main.scss */
-  #header-container #header #logo-container #logo {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -245px;
-    height: 30px;
-    width: 88px;
-    background-size: 88px auto;
-  }
-}
-/* line 350, main.scss */
-#header-container #header #logo-container #logo .text {
-  display: block;
-  margin-left: -200px;
-}
-/* line 356, main.scss */
-#header-container #header #logo-container #notification-btn {
-  display: inline-block;
-  margin: 10px 0;
-  text-align: center;
-  font-size: 1.2em;
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1341px;
-  height: 22px;
-  width: 23px;
-  background-color: transparent;
-  border-width: 0;
-  color: white;
-  font-weight: bold;
-  outline: none;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 356, main.scss */
-  #header-container #header #logo-container #notification-btn {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -896px;
-    height: 22px;
-    width: 24px;
-    background-size: 88px auto;
-  }
-}
-/* line 369, main.scss */
-#header-container #header #contact-list-btn {
-  float: right;
-  background-color: transparent;
-  border-width: 0;
-  padding: 11px 12px;
-  margin: 0;
-}
-@media (max-width: 460px) {
-  /* line 369, main.scss */
-  #header-container #header #contact-list-btn {
-    padding: 11px 8px;
-  }
-}
-/* line 378, main.scss */
-#header-container #header #contact-list-btn .img {
-  display: block;
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -784px;
-  height: 27px;
-  width: 39px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 378, main.scss */
-  #header-container #header #contact-list-btn .img {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -448px;
-    height: 27px;
-    width: 39px;
-    background-size: 88px auto;
-  }
-}
-/* line 383, main.scss */
-#header-container #header #contact-list-exit-btn {
-  float: right;
-  background-color: transparent;
-  border-width: 0;
-  padding: 14px 15px;
-  margin: 0;
-}
-@media (max-width: 460px) {
-  /* line 383, main.scss */
-  #header-container #header #contact-list-exit-btn {
-    padding: 14px 8px;
-  }
-}
-/* line 392, main.scss */
-#header-container #header #contact-list-exit-btn .img {
-  display: block;
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -691px;
-  height: 27px;
-  width: 32px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 392, main.scss */
-  #header-container #header #contact-list-exit-btn .img {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -351px;
-    height: 27px;
-    width: 32px;
-    background-size: 88px auto;
-  }
-}
-
-/* line 400, main.scss */
-#container {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-  z-index: 2;
-  overflow: auto;
-}
-/* line 410, main.scss */
-#container #menu-mask {
-  position: absolute;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-/* line 421, main.scss */
-#content-container {
-  background: transparent url("../img/backgrounds/low-yellow.png") repeat top left;
-  width: 100%;
-  min-width: 300px;
-  min-height: 100%;
-  left: 0;
-  padding-top: 5px;
-}
-@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 421, main.scss */
-  #content-container {
-    background-image: url("../img/backgrounds/high-yellow.png");
-  }
-}
-/* line 432, main.scss */
-#content-container #content {
-  position: relative;
-  left: 0;
-  padding: 0 10px;
-  min-height: 100%;
-}
-
-/* end base site */
-/* timeline */
-/* line 445, main.scss */
-#dialog-background-mask {
-  position: fixed;
-  z-index: 99;
-  left: 0;
-  top: -90px;
-  width: 100%;
-  height: 200%;
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-/* line 455, main.scss */
-.checkbox {
-  background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
-  background-position: 0 -386px;
-  height: 32px;
-  width: 33px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 455, main.scss */
-  .checkbox {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
-    background-position: 0 -384px;
-    height: 32px;
-    width: 33px;
-    background-size: 37px auto;
-  }
-}
-
-/* line 459, main.scss */
-input[type=checkbox]:checked + label .checkbox {
-  background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
-  background-position: 0 -354px;
-  height: 32px;
-  width: 33px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 459, main.scss */
-  input[type=checkbox]:checked + label .checkbox {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
-    background-position: 0 -352px;
-    height: 32px;
-    width: 33px;
-    background-size: 37px auto;
-  }
-}
-
-/* line 463, main.scss */
-input[type='checkbox']:checked .checkbox {
-  background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
-  background-position: 0 -354px;
-  height: 32px;
-  width: 33px;
-  background-color: transparent;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 463, main.scss */
-  input[type='checkbox']:checked .checkbox {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
-    background-position: 0 -352px;
-    height: 32px;
-    width: 33px;
-    background-size: 37px auto;
-  }
-}
-
-/* line 467, main.scss */
+/**
+ * Contains the styles used in filters pop-up dialog
+ * this is a modification of the standard share detail...
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+/* line 10, filters.scss */
 #filters-container {
   max-width: 460px;
   margin: 15px auto;
 }
-/* line 471, main.scss */
+/* line 14, filters.scss */
 #filters-container .filters-inner {
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
   position: absolute;
@@ -772,34 +458,34 @@ input[type='checkbox']:checked .checkbox {
   height: 720px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 471, main.scss */
+  /* line 14, filters.scss */
   #filters-container .filters-inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 485, main.scss */
+/* line 28, filters.scss */
 #filters-container .filters-inner.active {
   display: block;
 }
-/* line 488, main.scss */
+/* line 31, filters.scss */
 #filters-container .filters-inner ul {
   list-style: none;
   margin: 5px 10px;
   padding: 0;
 }
-/* line 494, main.scss */
+/* line 37, filters.scss */
 #filters-container .filters-inner ul li input[type='checkbox'] {
   visibility: hidden;
   height: 0;
   width: 0;
 }
-/* line 500, main.scss */
+/* line 43, filters.scss */
 #filters-container .filters-inner ul li label .ico {
   height: 52px;
   width: 52px;
   display: inline-block;
 }
-/* line 505, main.scss */
+/* line 48, filters.scss */
 #filters-container .filters-inner ul li label .text {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -809,13 +495,13 @@ input[type='checkbox']:checked .checkbox {
   margin-top: 10px;
   margin-left: 10px;
 }
-/* line 512, main.scss */
+/* line 55, filters.scss */
 #filters-container .filters-inner ul li label .checkbox {
   display: inline-block;
   float: right;
   margin-right: 10px;
 }
-/* line 519, main.scss */
+/* line 62, filters.scss */
 #filters-container .filters-inner ul li .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -827,7 +513,7 @@ input[type='checkbox']:checked .checkbox {
   background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 519, main.scss */
+  /* line 62, filters.scss */
   #filters-container .filters-inner ul li .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -836,197 +522,197 @@ input[type='checkbox']:checked .checkbox {
     background-size: 262px auto;
   }
 }
-/* line 526, main.scss */
+/* line 69, filters.scss */
 #filters-container .filters-inner ul li label[for='things-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -36px;
   height: 35px;
   width: 35px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 526, main.scss */
+  /* line 69, filters.scss */
   #filters-container .filters-inner ul li label[for='things-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -36px;
     height: 35px;
     width: 35px;
     background-size: 37px auto;
   }
 }
-/* line 532, main.scss */
+/* line 75, filters.scss */
 #filters-container .filters-inner ul li label[for='time-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 0;
   height: 36px;
   width: 36px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 532, main.scss */
+  /* line 75, filters.scss */
   #filters-container .filters-inner ul li label[for='time-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 0;
     height: 36px;
     width: 36px;
     background-size: 37px auto;
   }
 }
-/* line 538, main.scss */
+/* line 81, filters.scss */
 #filters-container .filters-inner ul li label[for='promises-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -176px;
   height: 34px;
   width: 34px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 538, main.scss */
+  /* line 81, filters.scss */
   #filters-container .filters-inner ul li label[for='promises-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -212px;
     height: 34px;
     width: 34px;
     background-size: 37px auto;
   }
 }
-/* line 544, main.scss */
+/* line 87, filters.scss */
 #filters-container .filters-inner ul li label[for='to-me-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -245px;
   height: 37px;
   width: 37px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 544, main.scss */
+  /* line 87, filters.scss */
   #filters-container .filters-inner ul li label[for='to-me-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -280px;
     height: 38px;
     width: 37px;
     background-size: 37px auto;
   }
 }
-/* line 550, main.scss */
+/* line 93, filters.scss */
 #filters-container .filters-inner ul li label[for='from-me-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -282px;
   height: 37px;
   width: 37px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 550, main.scss */
+  /* line 93, filters.scss */
   #filters-container .filters-inner ul li label[for='from-me-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -174px;
     height: 38px;
     width: 37px;
     background-size: 37px auto;
   }
 }
-/* line 556, main.scss */
+/* line 99, filters.scss */
 #filters-container .filters-inner ul li label[for='returned-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -71px;
   height: 35px;
   width: 35px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 556, main.scss */
+  /* line 99, filters.scss */
   #filters-container .filters-inner ul li label[for='returned-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -105px;
     height: 35px;
     width: 35px;
     background-size: 37px auto;
   }
 }
-/* line 562, main.scss */
+/* line 105, filters.scss */
 #filters-container .filters-inner ul li label[for='accepted-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -210px;
   height: 35px;
   width: 35px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 562, main.scss */
+  /* line 105, filters.scss */
   #filters-container .filters-inner ul li label[for='accepted-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -246px;
     height: 35px;
     width: 35px;
     background-size: 37px auto;
   }
 }
-/* line 568, main.scss */
+/* line 111, filters.scss */
 #filters-container .filters-inner ul li label[for='rejected-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -106px;
   height: 35px;
   width: 35px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 568, main.scss */
+  /* line 111, filters.scss */
   #filters-container .filters-inner ul li label[for='rejected-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -140px;
     height: 35px;
     width: 35px;
     background-size: 37px auto;
   }
 }
-/* line 574, main.scss */
+/* line 117, filters.scss */
 #filters-container .filters-inner ul li label[for='awaiting-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -319px;
   height: 35px;
   width: 35px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 574, main.scss */
+  /* line 117, filters.scss */
   #filters-container .filters-inner ul li label[for='awaiting-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -318px;
     height: 35px;
     width: 35px;
     background-size: 37px auto;
   }
 }
-/* line 580, main.scss */
+/* line 123, filters.scss */
 #filters-container .filters-inner ul li label[for='return-awaiting-checkbox'] .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/filters/normal-sac0f5ac357.png');
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
   background-position: 0 -141px;
   height: 35px;
   width: 35px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 580, main.scss */
+  /* line 123, filters.scss */
   #filters-container .filters-inner ul li label[for='return-awaiting-checkbox'] .ico {
-    background-image: url('../img/filters/retina-s63991f7b9b.png');
+    background-image: url('../img/filters/retina-sba33fab988.png');
     background-position: 0 -71px;
     height: 35px;
     width: 35px;
     background-size: 37px auto;
   }
 }
-/* line 588, main.scss */
+/* line 131, filters.scss */
 #filters-container #filters-btn {
   width: 100%;
   height: 42px;
@@ -1036,12 +722,12 @@ input[type='checkbox']:checked .checkbox {
   text-align: left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 588, main.scss */
+  /* line 131, filters.scss */
   #filters-container #filters-btn {
     background-image: url("../img/high-search.png");
   }
 }
-/* line 599, main.scss */
+/* line 142, filters.scss */
 #filters-container #filters-btn .text {
   font-size: 2.4em;
   line-height: 0.8em;
@@ -1053,11 +739,11 @@ input[type='checkbox']:checked .checkbox {
   font-family: 'Shadows Into Light Two', cursive;
   font-weight: bold;
 }
-/* line 610, main.scss */
+/* line 153, filters.scss */
 #filters-container #filters-btn .magnifying-glass-ico {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -887px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1019px;
   height: 27px;
   width: 24px;
   background-color: transparent;
@@ -1067,17 +753,523 @@ input[type='checkbox']:checked .checkbox {
   margin-top: 5px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 610, main.scss */
+  /* line 153, filters.scss */
   #filters-container #filters-btn .magnifying-glass-ico {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -400px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -532px;
     height: 27px;
     width: 24px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 
-/* line 622, main.scss */
+/**
+ * Contains the styles used in newShare.html view for creating a new share.
+ * this is a modification of the standard share detail...
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+/* line 11, newShare-view.scss */
+#new-share .share-placeholder {
+  height: 230px;
+}
+/* line 15, newShare-view.scss */
+#new-share .file-input-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  color: white;
+}
+/* line 22, newShare-view.scss */
+#new-share .file-input-container input {
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  text-align: right;
+  z-index: 2;
+}
+/* line 31, newShare-view.scss */
+#new-share .file-input-container .file-input {
+  cursor: pointer;
+  height: 40px;
+  z-index: 1;
+  /* margin-left:auto; // VV - for some reason this is not centering this thing... no idea why... it should. ah, bugger it...
+   margin-right: auto;*/
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  position: absolute;
+}
+/* line 46, newShare-view.scss */
+#new-share .file-input-container .text {
+  margin-top: 8px;
+}
+/* line 52, newShare-view.scss */
+#new-share .content {
+  padding: 0 25px;
+}
+/* line 54, newShare-view.scss */
+#new-share .content input, #new-share .content textarea, #new-share .content label {
+  font-family: 'Shadows Into Light Two', cursive;
+  line-height: 1.6em;
+  font-size: 2.4em;
+  background-color: transparent;
+  border-width: 0;
+}
+/* line 59, newShare-view.scss */
+#new-share .content input[type='checkbox'] {
+  visibility: hidden;
+  height: 0;
+  width: 0;
+}
+/* line 66, newShare-view.scss */
+#new-share .content label .text {
+  font-family: 'Shadows Into Light Two', cursive;
+  line-height: 1.6em;
+  font-size: 2.4em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+/* line 73, newShare-view.scss */
+#new-share .content label .checkbox {
+  display: inline-block;
+}
+/* line 77, newShare-view.scss */
+#new-share .content textarea {
+  line-height: 1.4em;
+  line-height: 1.4em;
+  height: 60px;
+  width: 100%;
+  margin: 0;
+  resize: vertical;
+}
+/* line 86, newShare-view.scss */
+#new-share .toolbar {
+  padding: 0 25px 10px 25px;
+}
+/* line 90, newShare-view.scss */
+#new-share .share-item:after {
+  margin-top: 10px;
+}
+/* line 94, newShare-view.scss */
+#new-share .shareit {
+  margin: 0 auto;
+}
+/* line 98, newShare-view.scss */
+#new-share label[for='share-postfb-flag-checkbox'] {
+  float: right;
+}
+/* line 103, newShare-view.scss */
+#new-share .promise-type .shareit {
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -706px;
+  height: 44px;
+  width: 131px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 103, newShare-view.scss */
+  #new-share .promise-type .shareit {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -240px;
+    height: 44px;
+    width: 131px;
+    background-size: 131px auto;
+  }
+}
+/* line 108, newShare-view.scss */
+#new-share .thing-type .shareit {
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -750px;
+  height: 44px;
+  width: 131px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 108, newShare-view.scss */
+  #new-share .thing-type .shareit {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -284px;
+    height: 44px;
+    width: 131px;
+    background-size: 131px auto;
+  }
+}
+/* line 113, newShare-view.scss */
+#new-share .time-type .shareit {
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -613px;
+  height: 44px;
+  width: 131px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 113, newShare-view.scss */
+  #new-share .time-type .shareit {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -196px;
+    height: 44px;
+    width: 131px;
+    background-size: 131px auto;
+  }
+}
+
+/* end new share */
+/* line 15, main.scss */
+.title {
+  font-family: 'Shadows Into Light Two', cursive;
+  line-height: 1.6em;
+  font-size: 2.4em;
+}
+
+/* line 20, main.scss */
+.checkbox {
+  background-repeat: no-repeat;
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
+  background-position: 0 -379px;
+  height: 25px;
+  width: 26px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 20, main.scss */
+  .checkbox {
+    background-image: url('../img/filters/retina-sba33fab988.png');
+    background-position: 0 -375px;
+    height: 23px;
+    width: 23px;
+    background-size: 37px auto;
+  }
+}
+
+/* line 24, main.scss */
+input[type=checkbox]:checked + label .checkbox {
+  background-repeat: no-repeat;
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
+  background-position: 0 -354px;
+  height: 25px;
+  width: 26px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 24, main.scss */
+  input[type=checkbox]:checked + label .checkbox {
+    background-image: url('../img/filters/retina-sba33fab988.png');
+    background-position: 0 -352px;
+    height: 23px;
+    width: 23px;
+    background-size: 37px auto;
+  }
+}
+
+/* line 28, main.scss */
+input[type='checkbox']:checked .checkbox {
+  background-repeat: no-repeat;
+  background-image: url('../img/filters/normal-s8fd38f4653.png');
+  background-position: 0 -354px;
+  height: 25px;
+  width: 26px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 28, main.scss */
+  input[type='checkbox']:checked .checkbox {
+    background-image: url('../img/filters/retina-sba33fab988.png');
+    background-position: 0 -352px;
+    height: 23px;
+    width: 23px;
+    background-size: 37px auto;
+  }
+}
+
+/* base site */
+/* line 34, main.scss */
+body {
+  font-family: 'Neucha', cursive;
+  font-size: 10px;
+  line-height: 16px;
+  min-width: 300px;
+}
+
+@media (max-width: 460px) {
+  /* line 42, main.scss */
+  body {
+    font-size: 9px;
+    line-height: 14px;
+  }
+}
+@media (max-width: 340px) {
+  /* line 49, main.scss */
+  body {
+    font-size: 8px;
+    line-height: 12px;
+  }
+}
+/* line 56, main.scss */
+#header-container {
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 300px;
+}
+/* line 61, main.scss */
+#header-container #header {
+  top: 0;
+  height: 47px;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  box-shadow: #E8DDC4 0px 5px 15px;
+}
+/* line 69, main.scss */
+#header-container #header > * {
+  vertical-align: top;
+}
+/* line 72, main.scss */
+#header-container #header #menu-btn {
+  background-color: transparent;
+  border-width: 0;
+  padding: 13px 15px;
+  margin: 0;
+  float: left;
+}
+@media (max-width: 460px) {
+  /* line 72, main.scss */
+  #header-container #header #menu-btn {
+    padding: 13px 7px;
+  }
+}
+/* line 81, main.scss */
+#header-container #header #menu-btn .img {
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1454px;
+  height: 19px;
+  width: 26px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 81, main.scss */
+  #header-container #header #menu-btn .img {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -1090px;
+    height: 19px;
+    width: 26px;
+    background-size: 131px auto;
+  }
+}
+/* line 86, main.scss */
+#header-container #header #logo-container {
+  width: 115px;
+  height: 47px;
+  display: block;
+  margin: 0 auto;
+}
+/* line 91, main.scss */
+#header-container #header #logo-container > * {
+  vertical-align: top;
+  display: inline-block;
+}
+/* line 95, main.scss */
+#header-container #header #logo-container > .info {
+  margin-top: -10px;
+  display: inherit;
+}
+/* line 99, main.scss */
+#header-container #header #logo-container #logo {
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -794px;
+  height: 29px;
+  width: 88px;
+  background-color: transparent;
+  margin: 8px 0;
+  overflow: hidden;
+  display: inline-block;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 99, main.scss */
+  #header-container #header #logo-container #logo {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -377px;
+    height: 30px;
+    width: 88px;
+    background-size: 131px auto;
+  }
+}
+/* line 104, main.scss */
+#header-container #header #logo-container #logo .text {
+  display: block;
+  margin-left: -200px;
+}
+/* line 110, main.scss */
+#header-container #header #logo-container #notification-btn {
+  display: inline-block;
+  margin: 10px 0;
+  text-align: center;
+  font-size: 1.2em;
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1473px;
+  height: 22px;
+  width: 23px;
+  background-color: transparent;
+  border-width: 0;
+  color: white;
+  font-weight: bold;
+  outline: none;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 110, main.scss */
+  #header-container #header #logo-container #notification-btn {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -1028px;
+    height: 22px;
+    width: 24px;
+    background-size: 131px auto;
+  }
+}
+/* line 123, main.scss */
+#header-container #header #contact-list-btn {
+  float: right;
+  background-color: transparent;
+  border-width: 0;
+  padding: 11px 12px;
+  margin: 0;
+}
+@media (max-width: 460px) {
+  /* line 123, main.scss */
+  #header-container #header #contact-list-btn {
+    padding: 11px 8px;
+  }
+}
+/* line 132, main.scss */
+#header-container #header #contact-list-btn .img {
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -916px;
+  height: 27px;
+  width: 39px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 132, main.scss */
+  #header-container #header #contact-list-btn .img {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -580px;
+    height: 27px;
+    width: 39px;
+    background-size: 131px auto;
+  }
+}
+/* line 137, main.scss */
+#header-container #header #contact-list-exit-btn {
+  float: right;
+  background-color: transparent;
+  border-width: 0;
+  padding: 14px 15px;
+  margin: 0;
+}
+@media (max-width: 460px) {
+  /* line 137, main.scss */
+  #header-container #header #contact-list-exit-btn {
+    padding: 14px 8px;
+  }
+}
+/* line 146, main.scss */
+#header-container #header #contact-list-exit-btn .img {
+  display: block;
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -823px;
+  height: 27px;
+  width: 32px;
+  background-color: transparent;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 146, main.scss */
+  #header-container #header #contact-list-exit-btn .img {
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -483px;
+    height: 27px;
+    width: 32px;
+    background-size: 131px auto;
+  }
+}
+
+/* line 154, main.scss */
+#container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  z-index: 2;
+  overflow: auto;
+}
+/* line 164, main.scss */
+#container #menu-mask {
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 175, main.scss */
+#content-container {
+  background: transparent url("../img/backgrounds/low-yellow.png") repeat top left;
+  width: 100%;
+  min-width: 300px;
+  min-height: 100%;
+  left: 0;
+  padding-top: 5px;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
+  /* line 175, main.scss */
+  #content-container {
+    background-image: url("../img/backgrounds/high-yellow.png");
+  }
+}
+/* line 186, main.scss */
+#content-container #content {
+  position: relative;
+  left: 0;
+  padding: 0 10px;
+  min-height: 100%;
+}
+
+/* end base site */
+/* timeline */
+/* line 199, main.scss */
+#dialog-background-mask {
+  position: fixed;
+  z-index: 99;
+  left: 0;
+  top: -90px;
+  width: 100%;
+  height: 200%;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* line 210, main.scss */
 #shares {
   list-style: none;
   margin: 0;
@@ -1085,7 +1277,7 @@ input[type='checkbox']:checked .checkbox {
   display: block;
 }
 
-/* line 629, main.scss */
+/* line 217, main.scss */
 #no-shares {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1095,43 +1287,43 @@ input[type='checkbox']:checked .checkbox {
 
 /* end timeline */
 /* friends list */
-/* line 638, main.scss */
+/* line 226, main.scss */
 #friends-list {
   list-style: none;
   margin: 0;
   padding: 0 0 0 30px;
 }
-/* line 642, main.scss */
+/* line 230, main.scss */
 #friends-list > li > a {
   text-decoration: none;
 }
-/* line 646, main.scss */
+/* line 234, main.scss */
 #friends-list > li {
   padding: 10px 0;
 }
-/* line 648, main.scss */
+/* line 236, main.scss */
 #friends-list > li .profile-picture-container {
   width: 44px;
   height: 44px;
 }
-/* line 654, main.scss */
+/* line 242, main.scss */
 #friends-list .name {
   color: black;
   font-size: 2.4em;
   margin-bottom: 2px;
 }
-/* line 659, main.scss */
+/* line 247, main.scss */
 #friends-list .profile-picture-container {
   float: left;
   margin-top: 10px;
 }
-/* line 664, main.scss */
+/* line 252, main.scss */
 #friends-list .friend-shares-list {
   display: block;
   list-style: none;
   padding-left: 80px;
 }
-/* line 668, main.scss */
+/* line 256, main.scss */
 #friends-list .friend-shares-list li {
   vertical-align: top;
   display: inline-block;
@@ -1140,7 +1332,7 @@ input[type='checkbox']:checked .checkbox {
 
 /* end friends list */
 /* notifications pop-up (see notifications.html) */
-/* line 680, main.scss */
+/* line 268, main.scss */
 #notifications-frame-container {
   overflow: hidden;
   top: 60px;
@@ -1151,13 +1343,13 @@ input[type='checkbox']:checked .checkbox {
   z-index: 999;
 }
 @media (min-width: 550px) {
-  /* line 680, main.scss */
+  /* line 268, main.scss */
   #notifications-frame-container {
     width: 500px;
     margin-left: -250px;
   }
 }
-/* line 692, main.scss */
+/* line 280, main.scss */
 #notifications-frame-container:before {
   content: "";
   height: 100px;
@@ -1167,12 +1359,12 @@ input[type='checkbox']:checked .checkbox {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 692, main.scss */
+  /* line 280, main.scss */
   #notifications-frame-container:before {
     background-image: url("../img/high-notifications-top.png");
   }
 }
-/* line 704, main.scss */
+/* line 292, main.scss */
 #notifications-frame-container:after {
   height: 40px;
   width: 100%;
@@ -1183,29 +1375,29 @@ input[type='checkbox']:checked .checkbox {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 704, main.scss */
+  /* line 292, main.scss */
   #notifications-frame-container:after {
     background-image: url("../img/high-notifications-bottom.png");
   }
 }
-/* line 717, main.scss */
+/* line 305, main.scss */
 #notifications-frame-container #notifications-frame {
   margin-top: -75px;
 }
-/* line 720, main.scss */
+/* line 308, main.scss */
 #notifications-frame-container #notifications-frame .header {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 723, main.scss */
+/* line 311, main.scss */
 #notifications-frame-container #notifications-frame .description {
   line-height: 1.2em;
   font-size: 1.5em;
   font-family: Arial;
   color: #9C9E9D;
 }
-/* line 727, main.scss */
+/* line 315, main.scss */
 #notifications-frame-container #notifications-frame .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -1221,7 +1413,7 @@ input[type='checkbox']:checked .checkbox {
   position: relative;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 727, main.scss */
+  /* line 315, main.scss */
   #notifications-frame-container #notifications-frame .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -1230,7 +1422,7 @@ input[type='checkbox']:checked .checkbox {
     background-size: 262px auto;
   }
 }
-/* line 736, main.scss */
+/* line 324, main.scss */
 #notifications-frame-container #notifications-frame ul {
   background: transparent url("../img/backgrounds/low-white.png") no-repeat;
   background-size: 100% 100%;
@@ -1239,12 +1431,12 @@ input[type='checkbox']:checked .checkbox {
   list-style: none;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 736, main.scss */
+  /* line 324, main.scss */
   #notifications-frame-container #notifications-frame ul {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 747, main.scss */
+/* line 335, main.scss */
 #notifications-frame-container #notifications-frame ul li.item {
   margin: 0;
   padding: 0;
@@ -1253,7 +1445,7 @@ input[type='checkbox']:checked .checkbox {
   white-space: nowrap;
   position: relative;
 }
-/* line 754, main.scss */
+/* line 342, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .mask {
   display: block;
   width: 100%;
@@ -1263,7 +1455,7 @@ input[type='checkbox']:checked .checkbox {
   left: 0;
   z-index: 1005;
 }
-/* line 764, main.scss */
+/* line 352, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-right,
 #notifications-frame-container #notifications-frame ul li.item .swiped-right + .container {
   -webkit-transform: translate3d(150px, 0, 0);
@@ -1272,7 +1464,7 @@ input[type='checkbox']:checked .checkbox {
   -o-transform: translate3d(150px, 0, 0);
   transform: translate3d(150px, 0, 0);
 }
-/* line 768, main.scss */
+/* line 356, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-left,
 #notifications-frame-container #notifications-frame ul li.item .swiped-left + .container {
   -webkit-transform: translate3d(0, 0, 0);
@@ -1281,7 +1473,7 @@ input[type='checkbox']:checked .checkbox {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 771, main.scss */
+/* line 359, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container {
   padding: 0 7px;
   -webkit-transition: all 0.1s linear;
@@ -1289,114 +1481,114 @@ input[type='checkbox']:checked .checkbox {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 775, main.scss */
+/* line 363, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions {
   float: left;
   margin-left: -150px;
   width: 150px;
 }
-/* line 779, main.scss */
+/* line 367, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button {
   border-width: 0;
   margin: 25px 10px 0 10px;
 }
-/* line 782, main.scss */
+/* line 370, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1300px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1432px;
   height: 22px;
   width: 29px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 782, main.scss */
+  /* line 370, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -874px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -1006px;
     height: 22px;
     width: 30px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 785, main.scss */
+/* line 373, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1177px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1309px;
   height: 20px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 785, main.scss */
+  /* line 373, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -674px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -806px;
     height: 20px;
     width: 21px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 789, main.scss */
+/* line 377, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions .info {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   margin-top: 25px;
 }
-/* line 794, main.scss */
+/* line 382, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content {
   text-align: left;
   min-height: 70px;
 }
-/* line 798, main.scss */
+/* line 386, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .profile-picture-container,
 #notifications-frame-container #notifications-frame ul li.item .container .content .small-share-item {
   border-color: #FFFFFF;
 }
-/* line 801, main.scss */
+/* line 389, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   margin-top: 8px;
 }
-/* line 805, main.scss */
+/* line 393, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content small-share-item,
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   display: block;
   float: left;
   margin-right: 10px;
 }
-/* line 53, main.scss */
+/* line 26, mixins.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .friend-name {
   text-decoration: none;
   font-style: normal;
   color: black;
 }
-/* line 59, main.scss */
+/* line 32, mixins.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content.promise-type .thing {
   color: #c08fe1;
 }
-/* line 64, main.scss */
+/* line 37, mixins.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content.thing-type .thing {
   color: #eb9c75;
 }
-/* line 69, main.scss */
+/* line 42, mixins.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content.time-type .thing {
   color: #4fbca7;
 }
-/* line 73, main.scss */
+/* line 46, mixins.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .title {
   word-break: break-all;
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 76, main.scss */
+/* line 49, mixins.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .title span, #notifications-frame-container #notifications-frame ul li.item .container .content .title a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 813, main.scss */
+/* line 401, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container {
   word-break: normal;
   white-space: normal;
@@ -1404,13 +1596,13 @@ input[type='checkbox']:checked .checkbox {
   height: 100%;
   display: inline;
 }
-/* line 819, main.scss */
+/* line 407, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 823, main.scss */
+/* line 411, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title > .title-inner {
   display: table-cell;
   vertical-align: middle;
@@ -1420,7 +1612,7 @@ input[type='checkbox']:checked .checkbox {
 
 /* end notifications */
 /* select friend */
-/* line 842, main.scss */
+/* line 430, main.scss */
 #friend-select {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -1428,7 +1620,7 @@ input[type='checkbox']:checked .checkbox {
   padding: 0;
   margin: 40px auto 0 auto;
 }
-/* line 88, main.scss */
+/* line 61, mixins.scss */
 #friend-select:after {
   height: 85px;
   max-width: 460px;
@@ -1439,12 +1631,12 @@ input[type='checkbox']:checked .checkbox {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 88, main.scss */
+  /* line 61, mixins.scss */
   #friend-select:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
-/* line 101, main.scss */
+/* line 74, mixins.scss */
 #friend-select:before {
   height: 60px;
   max-width: 460px;
@@ -1455,93 +1647,93 @@ input[type='checkbox']:checked .checkbox {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 101, main.scss */
+  /* line 74, mixins.scss */
   #friend-select:before {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 845, main.scss */
+/* line 433, main.scss */
 #friend-select .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 845, main.scss */
+  /* line 433, main.scss */
   #friend-select .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 847, main.scss */
+/* line 435, main.scss */
 #friend-select .inner input {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   font-size: 2em;
 }
-/* line 852, main.scss */
+/* line 440, main.scss */
 #friend-select .inner .header {
   text-align: center;
   height: 74px;
 }
-/* line 856, main.scss */
+/* line 444, main.scss */
 #friend-select .inner .header .share-direction {
   float: left;
   padding: 0;
   border-width: 0;
 }
-/* line 857, main.scss */
+/* line 445, main.scss */
 #friend-select .inner .header .share-direction.right {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
+  background-image: url('../img/icons/normal-se11a5a9658.png');
   background-position: 0 -466px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 857, main.scss */
+  /* line 445, main.scss */
   #friend-select .inner .header .share-direction.right {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
     background-position: 0 -98px;
     height: 50px;
     width: 50px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 860, main.scss */
+/* line 448, main.scss */
 #friend-select .inner .header .share-direction.left {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
+  background-image: url('../img/icons/normal-se11a5a9658.png');
   background-position: 0 -515px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 860, main.scss */
+  /* line 448, main.scss */
   #friend-select .inner .header .share-direction.left {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
     background-position: 0 -49px;
     height: 50px;
     width: 50px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 867, main.scss */
+/* line 455, main.scss */
 #friend-select .inner .header .search-container {
   display: block;
   overflow: hidden;
   margin: 0 0 0 3%;
   position: relative;
 }
-/* line 872, main.scss */
+/* line 460, main.scss */
 #friend-select .inner .header .search-container .ico {
   position: absolute;
   left: 4%;
   top: 14px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -887px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1019px;
   height: 27px;
   width: 24px;
   background-color: transparent;
@@ -1549,16 +1741,16 @@ input[type='checkbox']:checked .checkbox {
   z-index: 300;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 872, main.scss */
+  /* line 460, main.scss */
   #friend-select .inner .header .search-container .ico {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -400px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -532px;
     height: 27px;
     width: 24px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 880, main.scss */
+/* line 468, main.scss */
 #friend-select .inner .header .search-container input.search {
   width: 70%;
   padding: 0 3% 0 23%;
@@ -1568,14 +1760,14 @@ input[type='checkbox']:checked .checkbox {
   background: transparent url("../img/search-friend.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 891, main.scss */
+/* line 479, main.scss */
 #friend-select .inner #friends-sorting {
   position: relative;
   width: 100%;
   margin: 7px 0;
   text-align: center;
 }
-/* line 896, main.scss */
+/* line 484, main.scss */
 #friend-select .inner #friends-sorting .item {
   background-repeat: no-repeat;
   background-image: url('../img/friends-sorting/normal-s3929cf2e59.png');
@@ -1594,7 +1786,7 @@ input[type='checkbox']:checked .checkbox {
   display: inline-block;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 896, main.scss */
+  /* line 484, main.scss */
   #friend-select .inner #friends-sorting .item {
     background-image: url('../img/friends-sorting/retina-s180bfc220e.png');
     background-position: 0 -30px;
@@ -1603,7 +1795,7 @@ input[type='checkbox']:checked .checkbox {
     background-size: 119px auto;
   }
 }
-/* line 907, main.scss */
+/* line 495, main.scss */
 #friend-select .inner #friends-sorting .item.active {
   color: white;
   background-repeat: no-repeat;
@@ -1616,7 +1808,7 @@ input[type='checkbox']:checked .checkbox {
   max-width: 25%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 907, main.scss */
+  /* line 495, main.scss */
   #friend-select .inner #friends-sorting .item.active {
     background-image: url('../img/friends-sorting/retina-s180bfc220e.png');
     background-position: 0 0;
@@ -1625,168 +1817,119 @@ input[type='checkbox']:checked .checkbox {
     background-size: 119px auto;
   }
 }
-/* line 915, main.scss */
+/* line 503, main.scss */
 #friend-select .inner .friend-select-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 919, main.scss */
+/* line 507, main.scss */
 #friend-select .inner .friend-select-list li {
   height: 80px;
 }
-/* line 921, main.scss */
+/* line 509, main.scss */
 #friend-select .inner .friend-select-list li a {
   display: block;
   text-decoration: none;
   color: black;
 }
-/* line 925, main.scss */
+/* line 513, main.scss */
 #friend-select .inner .friend-select-list li a fb-profile-picture {
   float: left;
   margin-right: 12px;
   height: 44px;
   margin-top: 13px;
 }
-/* line 931, main.scss */
+/* line 519, main.scss */
 #friend-select .inner .friend-select-list li a .title-container {
   display: block;
   width: 100%;
 }
-/* line 934, main.scss */
+/* line 522, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 938, main.scss */
+/* line 526, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper .title {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 945, main.scss */
+/* line 533, main.scss */
 #friend-select .inner .friend-select-list li a.selected {
   background-color: rgba(100, 0, 100, 0.5);
 }
-/* line 949, main.scss */
+/* line 537, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container {
   display: inline-block;
 }
-/* line 952, main.scss */
+/* line 540, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container img {
   width: 44px;
   height: 44px;
 }
 
 /* end select friend */
-/* new share */
-/* line 967, main.scss */
-#new-share .content {
-  padding: 0 25px;
-}
-/* line 969, main.scss */
-#new-share .content input, #new-share .content textarea, #new-share .content label {
-  font-family: 'Shadows Into Light Two', cursive;
-  line-height: 1.6em;
-  font-size: 2.4em;
-  background-color: transparent;
-  border-width: 0;
-}
-/* line 974, main.scss */
-#new-share .content input[type='checkbox'] {
-  visibility: hidden;
-  height: 0;
-  width: 0;
-}
-/* line 981, main.scss */
-#new-share .content label .text {
-  font-family: 'Shadows Into Light Two', cursive;
-  line-height: 1.6em;
-  font-size: 2.4em;
-  display: inline-block;
-  vertical-align: middle;
-  margin-top: 10px;
-  margin-left: 10px;
-}
-/* line 988, main.scss */
-#new-share .content label .checkbox {
-  display: inline-block;
-  margin-right: 10px;
-}
-/* line 993, main.scss */
-#new-share .content textarea {
-  line-height: 1.4em;
-  line-height: 1.4em;
-  height: 120px;
-  width: 100%;
-  margin: 0;
-  resize: vertical;
-}
-/* line 1002, main.scss */
-#new-share .toolbar {
-  padding: 0 25px 10px 25px;
-}
-
-/* end new share */
 /* share details */
-/* line 1011, main.scss */
+/* line 555, main.scss */
 #share-details {
   margin-top: 20px;
 }
-/* line 1013, main.scss */
+/* line 557, main.scss */
 #share-details .content {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
 }
-/* line 1017, main.scss */
+/* line 561, main.scss */
 #share-details .content .amount-container {
   float: right;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 1022, main.scss */
+/* line 566, main.scss */
 #share-details .content .amount-container > span {
   border-bottom: 1px solid #DDD9CD;
 }
-/* line 1026, main.scss */
+/* line 570, main.scss */
 #share-details .content .date-container {
   float: left;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 1033, main.scss */
+/* line 577, main.scss */
 #share-details .toolbar {
   padding: 0 15px 0px 15px;
 }
-/* line 1036, main.scss */
+/* line 580, main.scss */
 #share-details .fb-comments {
   text-align: center;
   display: block;
   margin-top: 20px;
 }
 
-/* line 1047, main.scss */
+/* line 591, main.scss */
 fb-comments {
   color: red !important;
 }
-/* line 1048, main.scss */
+/* line 592, main.scss */
 fb-comments a {
   color: red !important;
 }
 
 /* end share details */
 /* friend details */
-/* line 1059, main.scss */
+/* line 603, main.scss */
 #friend-details #friend-profile {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
   max-width: 460px;
   padding: 0;
 }
-/* line 88, main.scss */
+/* line 61, mixins.scss */
 #friend-details #friend-profile:after {
   height: 85px;
   max-width: 460px;
@@ -1797,12 +1940,12 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 88, main.scss */
+  /* line 61, mixins.scss */
   #friend-details #friend-profile:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
-/* line 101, main.scss */
+/* line 74, mixins.scss */
 #friend-details #friend-profile:before {
   height: 60px;
   max-width: 460px;
@@ -1813,28 +1956,28 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 101, main.scss */
+  /* line 74, mixins.scss */
   #friend-details #friend-profile:before {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 1061, main.scss */
+/* line 605, main.scss */
 #friend-details #friend-profile .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1061, main.scss */
+  /* line 605, main.scss */
   #friend-details #friend-profile .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 1064, main.scss */
+/* line 608, main.scss */
 #friend-details #friend-profile .profile-picture-container {
   float: left;
   margin-right: 10px;
 }
-/* line 1068, main.scss */
+/* line 612, main.scss */
 #friend-details #friend-profile .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1842,27 +1985,27 @@ fb-comments a {
   margin-top: -5px;
   display: inline-block;
 }
-/* line 1073, main.scss */
+/* line 617, main.scss */
 #friend-details #friend-profile .counter-container {
   color: #959796;
   font-size: 2em;
   margin-top: 5px;
 }
-/* line 1077, main.scss */
+/* line 621, main.scss */
 #friend-details #friend-profile .counter-container .counter {
   font-size: 1.1em;
 }
 
 /* end friend details */
 /* login */
-/* line 1088, main.scss */
+/* line 632, main.scss */
 #login {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
   max-width: 460px;
   padding: 0;
 }
-/* line 88, main.scss */
+/* line 61, mixins.scss */
 #login:after {
   height: 85px;
   max-width: 460px;
@@ -1873,12 +2016,12 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 88, main.scss */
+  /* line 61, mixins.scss */
   #login:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
-/* line 101, main.scss */
+/* line 74, mixins.scss */
 #login:before {
   height: 60px;
   max-width: 460px;
@@ -1889,24 +2032,24 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 101, main.scss */
+  /* line 74, mixins.scss */
   #login:before {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 1090, main.scss */
+/* line 634, main.scss */
 #login .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
   text-align: center;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1090, main.scss */
+  /* line 634, main.scss */
   #login .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 1093, main.scss */
+/* line 637, main.scss */
 #login .inner .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1916,17 +2059,17 @@ fb-comments a {
   color: #666666;
   font-size: 3.2em;
 }
-/* line 1100, main.scss */
+/* line 644, main.scss */
 #login .inner .logo {
   display: inline-block;
   margin: 10px auto 30px auto;
   max-width: 90%;
 }
-/* line 1104, main.scss */
+/* line 648, main.scss */
 #login .inner .logo img {
   width: 100%;
 }
-/* line 1108, main.scss */
+/* line 652, main.scss */
 #login .inner .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -1940,7 +2083,7 @@ fb-comments a {
   margin-bottom: 10px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1108, main.scss */
+  /* line 652, main.scss */
   #login .inner .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -1949,7 +2092,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1115, main.scss */
+/* line 659, main.scss */
 #login .inner .separator-rev {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -1963,7 +2106,7 @@ fb-comments a {
   margin-bottom: 10px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1115, main.scss */
+  /* line 659, main.scss */
   #login .inner .separator-rev {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -13px;
@@ -1972,7 +2115,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1122, main.scss */
+/* line 666, main.scss */
 #login .inner button.login-btn {
   background-image: url("../img/fb-background.jpg");
   background-repeat: repeat no-repeat;
@@ -1987,7 +2130,7 @@ fb-comments a {
   line-height: 30px;
   border-radius: 3px;
 }
-/* line 1135, main.scss */
+/* line 679, main.scss */
 #login .inner button.login-btn img {
   height: 32px;
   padding: 0 10px 0 0;
@@ -1996,14 +2139,14 @@ fb-comments a {
 
 /* end login */
 /* misc */
-/* line 1148, main.scss */
+/* line 692, main.scss */
 .profile-picture-container {
   display: inline-block;
   border: 2.5px solid #F0F2F1;
   border-radius: 45%;
   overflow: hidden;
 }
-/* line 1153, main.scss */
+/* line 697, main.scss */
 .profile-picture-container img {
   display: block;
   border-radius: 45%;
@@ -2011,21 +2154,21 @@ fb-comments a {
   height: 44px;
 }
 
-/* line 1161, main.scss */
+/* line 705, main.scss */
 .small-share-item-container {
   position: relative;
   height: 67px;
   width: 60px;
 }
-/* line 1165, main.scss */
+/* line 709, main.scss */
 .small-share-item-container .left {
   left: 0px;
 }
-/* line 1168, main.scss */
+/* line 712, main.scss */
 .small-share-item-container .right {
   left: 40px;
 }
-/* line 1171, main.scss */
+/* line 715, main.scss */
 .small-share-item-container .item-counter {
   width: 20px;
   height: 12px;
@@ -2043,70 +2186,70 @@ fb-comments a {
   text-align: center;
   overflow: hidden;
 }
-/* line 1188, main.scss */
+/* line 732, main.scss */
 .small-share-item-container .type-ico-container {
   position: absolute;
   top: 0;
   z-index: 31;
 }
-/* line 1194, main.scss */
+/* line 738, main.scss */
 .small-share-item-container.promise-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -861px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -993px;
   height: 26px;
   width: 26px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1194, main.scss */
+  /* line 738, main.scss */
   .small-share-item-container.promise-type .type-ico-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -325px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -457px;
     height: 26px;
     width: 26px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1199, main.scss */
+/* line 743, main.scss */
 .small-share-item-container.thing-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -836px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -968px;
   height: 25px;
   width: 25px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1199, main.scss */
+  /* line 743, main.scss */
   .small-share-item-container.thing-type .type-ico-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -300px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -432px;
     height: 26px;
     width: 26px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1204, main.scss */
+/* line 748, main.scss */
 .small-share-item-container.time-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -811px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -943px;
   height: 25px;
   width: 26px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1204, main.scss */
+  /* line 748, main.scss */
   .small-share-item-container.time-type .type-ico-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -274px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -406px;
     height: 26px;
     width: 26px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1209, main.scss */
+/* line 753, main.scss */
 .small-share-item-container .small-share-item {
   overflow: hidden;
   display: inline-block;
@@ -2122,7 +2265,7 @@ fb-comments a {
   margin-top: 8px;
   margin-left: 9px;
 }
-/* line 1224, main.scss */
+/* line 768, main.scss */
 .small-share-item-container .small-share-item img {
   border-radius: 45%;
   display: block;
@@ -2130,7 +2273,7 @@ fb-comments a {
   margin: 0 auto 0 auto;
   visibility: hidden;
 }
-/* line 1232, main.scss */
+/* line 776, main.scss */
 .small-share-item-container .small-share-item .text-container {
   width: 38px;
   padding: 3px 4px 2px 4px;
@@ -2138,7 +2281,7 @@ fb-comments a {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 1239, main.scss */
+/* line 783, main.scss */
 .small-share-item-container .small-share-item .text {
   display: block;
   max-height: 40px;
@@ -2148,80 +2291,80 @@ fb-comments a {
   word-break: break-word;
 }
 
-/* line 1250, main.scss */
+/* line 794, main.scss */
 .grayed {
   color: #9D9D9D;
 }
 
 /* Big icons - used in timeline, share details and create pop-up dialog*/
-/* line 1255, main.scss */
+/* line 799, main.scss */
 .type-ico-container {
   width: 49px;
   height: 49px;
 }
 
-/* line 1261, main.scss */
+/* line 805, main.scss */
 .promise-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -613px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -657px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1261, main.scss */
+  /* line 805, main.scss */
   .promise-type .type-ico-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -196px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -328px;
     height: 49px;
     width: 49px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 
-/* line 1267, main.scss */
+/* line 811, main.scss */
 .thing-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
+  background-image: url('../img/icons/normal-se11a5a9658.png');
   background-position: 0 -564px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1267, main.scss */
+  /* line 811, main.scss */
   .thing-type .type-ico-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
     background-position: 0 -148px;
     height: 49px;
     width: 49px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 
-/* line 1273, main.scss */
+/* line 817, main.scss */
 .time-type .type-ico-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
+  background-image: url('../img/icons/normal-se11a5a9658.png');
   background-position: 0 -417px;
   height: 49px;
   width: 49px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1273, main.scss */
+  /* line 817, main.scss */
   .time-type .type-ico-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
     background-position: 0 0;
     height: 49px;
     width: 49px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 
 /* Used both in timeline display of shares and in share detail */
-/* line 1279, main.scss */
+/* line 823, main.scss */
 .share-item {
   margin: 20px auto 0 auto;
   position: relative;
@@ -2229,27 +2372,27 @@ fb-comments a {
   max-width: 460px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
-/* line 1287, main.scss */
+/* line 831, main.scss */
 .share-item.confirmed-state .confirmed-state-indicator-container {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1167px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1299px;
   height: 10px;
   width: 10px;
   background-color: transparent;
   display: inline-block;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1287, main.scss */
+  /* line 831, main.scss */
   .share-item.confirmed-state .confirmed-state-indicator-container {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -986px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -1118px;
     height: 10px;
     width: 10px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1294, main.scss */
+/* line 838, main.scss */
 .share-item .type-ico-container {
   position: absolute;
   left: 50%;
@@ -2257,7 +2400,7 @@ fb-comments a {
   top: -3px;
   z-index: 3;
 }
-/* line 1302, main.scss */
+/* line 846, main.scss */
 .share-item .people-ico-container {
   font-family: 'Shadows Into Light Two', cursive;
   position: absolute;
@@ -2265,7 +2408,7 @@ fb-comments a {
   text-decoration: none;
   z-index: 10;
 }
-/* line 1308, main.scss */
+/* line 852, main.scss */
 .share-item .people-ico-container .name {
   color: white;
   font-size: 2.6em;
@@ -2274,17 +2417,17 @@ fb-comments a {
   vertical-align: top;
   display: inline-block;
 }
-/* line 1317, main.scss */
+/* line 861, main.scss */
 .share-item .people-ico-container.left {
   top: 40px;
   left: 15px;
 }
-/* line 1321, main.scss */
+/* line 865, main.scss */
 .share-item .people-ico-container.right {
   top: 40px;
   right: 15px;
 }
-/* line 1326, main.scss */
+/* line 870, main.scss */
 .share-item .img-container {
   width: 100%;
   min-height: 130px;
@@ -2292,7 +2435,7 @@ fb-comments a {
   position: relative;
   max-height: 309px;
 }
-/* line 1332, main.scss */
+/* line 876, main.scss */
 .share-item .img-container .share-img {
   display: block;
   max-width: 100%;
@@ -2302,7 +2445,7 @@ fb-comments a {
   position: relative;
   pointer-events: none;
 }
-/* line 1341, main.scss */
+/* line 885, main.scss */
 .share-item .img-container .preloader-container {
   position: absolute;
   width: 100%;
@@ -2313,7 +2456,7 @@ fb-comments a {
   left: 0;
   display: none;
 }
-/* line 1350, main.scss */
+/* line 894, main.scss */
 .share-item .img-container .preloader-container .preloader {
   width: 66px;
   height: 66px;
@@ -2324,13 +2467,13 @@ fb-comments a {
   margin-left: -33px;
   margin-top: -33px;
 }
-/* line 1361, main.scss */
+/* line 905, main.scss */
 .share-item .img-container .share-placeholder {
   display: block;
   width: 100%;
   height: 130px;
 }
-/* line 1366, main.scss */
+/* line 910, main.scss */
 .share-item .img-container .share-frame {
   position: absolute;
   top: 0;
@@ -2340,55 +2483,50 @@ fb-comments a {
   z-index: 2;
   pointer-events: none;
 }
-/* line 1374, main.scss */
-.share-item .img-container .share-frame.gradient {
-  background-image: linear-gradient(#000000 30px, transparent 150px);
-  background-image: -webkit-linear-gradient(black 30px, transparent 150px);
-}
-/* line 53, main.scss */
+/* line 26, mixins.scss */
 .share-item .friend-name {
   text-decoration: none;
   font-style: normal;
   color: black;
 }
-/* line 59, main.scss */
+/* line 32, mixins.scss */
 .share-item.promise-type .thing {
   color: #c08fe1;
 }
-/* line 64, main.scss */
+/* line 37, mixins.scss */
 .share-item.thing-type .thing {
   color: #eb9c75;
 }
-/* line 69, main.scss */
+/* line 42, mixins.scss */
 .share-item.time-type .thing {
   color: #4fbca7;
 }
-/* line 73, main.scss */
+/* line 46, mixins.scss */
 .share-item .title {
   word-break: break-all;
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 76, main.scss */
+/* line 49, mixins.scss */
 .share-item .title span, .share-item .title a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 1382, main.scss */
+/* line 923, main.scss */
 .share-item .content {
   padding: 5px 25px 0px 25px;
   z-index: 9;
 }
-/* line 1385, main.scss */
+/* line 926, main.scss */
 .share-item .content .time {
   margin-top: 10px;
 }
-/* line 1387, main.scss */
+/* line 928, main.scss */
 .share-item .content .time .ico {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1425px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1557px;
   height: 10px;
   width: 10px;
   background-color: transparent;
@@ -2396,16 +2534,16 @@ fb-comments a {
   vertical-align: top;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1387, main.scss */
+  /* line 928, main.scss */
   .share-item .content .time .ico {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -976px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -1108px;
     height: 10px;
     width: 10px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1392, main.scss */
+/* line 933, main.scss */
 .share-item .content .time .text {
   margin-left: 3px;
   margin-top: -1px;
@@ -2415,13 +2553,13 @@ fb-comments a {
   display: inline-block;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1279, main.scss */
+  /* line 823, main.scss */
   .share-item {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
 
-/* line 1409, main.scss */
+/* line 950, main.scss */
 .share-item:after {
   height: 85px;
   max-width: 460px;
@@ -2432,16 +2570,15 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 1409, main.scss */
+  /* line 950, main.scss */
   .share-item:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
 
-/* line 1424, main.scss */
+/* line 965, main.scss */
 .btn {
   height: 40px;
-  color: #4fbca7;
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
@@ -2449,216 +2586,181 @@ fb-comments a {
   white-space: nowrap;
   cursor: pointer;
 }
-/* line 1431, main.scss */
+/* line 971, main.scss */
 .btn .icon {
   display: inline-block;
   vertical-align: middle;
   margin-left: 7px;
   margin-top: 2px;
 }
-/* line 1437, main.scss */
+/* line 977, main.scss */
 .btn .text {
   vertical-align: middle;
   display: inline-block;
   margin: 2px 10px;
 }
-/* line 1443, main.scss */
+/* line 983, main.scss */
 .btn.photo {
   float: left;
   margin-left: 10px;
 }
-/* line 1446, main.scss */
+/* line 986, main.scss */
 .btn.photo .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -762px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -894px;
   height: 22px;
   width: 31px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1446, main.scss */
+  /* line 986, main.scss */
   .btn.photo .icon {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -426px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -558px;
     height: 22px;
     width: 32px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1450, main.scss */
+/* line 990, main.scss */
 .btn.txt {
-  float: right;
-  margin-right: 10px;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto;
 }
-/* line 1453, main.scss */
+/* line 994, main.scss */
 .btn.txt .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -914px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1046px;
   height: 23px;
   width: 24px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1453, main.scss */
+  /* line 994, main.scss */
   .btn.txt .icon {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -527px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -659px;
     height: 24px;
     width: 24px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1458, main.scss */
+/* line 999, main.scss */
 .btn.confirm {
   margin-top: 5px;
   padding: 10px 5px 0 5px;
 }
-/* line 1461, main.scss */
+/* line 1002, main.scss */
 .btn.confirm .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -718px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -850px;
   height: 22px;
   width: 30px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1461, main.scss */
+  /* line 1002, main.scss */
   .btn.confirm .icon {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -652px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -784px;
     height: 22px;
     width: 30px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1465, main.scss */
+/* line 1006, main.scss */
 .btn.search {
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1468, main.scss */
+/* line 1009, main.scss */
 .btn.search .icon {
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1197px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1329px;
   height: 23px;
   width: 23px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1468, main.scss */
+  /* line 1009, main.scss */
   .btn.search .icon {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -609px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -741px;
     height: 23px;
     width: 23px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1472, main.scss */
+/* line 1013, main.scss */
 .btn.close {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1475, main.scss */
+/* line 1016, main.scss */
 .btn.close .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1220px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1352px;
   height: 20px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1475, main.scss */
+  /* line 1016, main.scss */
   .btn.close .icon {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -815px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -947px;
     height: 20px;
     width: 21px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
-/* line 1480, main.scss */
+/* line 1021, main.scss */
 .btn.return {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
 }
-/* line 1483, main.scss */
+/* line 1024, main.scss */
 .btn.demand-return {
   background: transparent url("../img/green-btn.png") no-repeat top left;
 }
-/* line 1486, main.scss */
+/* line 1027, main.scss */
 .btn.return, .btn.demand-return {
   background-size: 100% 100%;
 }
-/* line 1488, main.scss */
+/* line 1029, main.scss */
 .btn.return .icon, .btn.demand-return .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1282px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1414px;
   height: 18px;
   width: 21px;
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1488, main.scss */
+  /* line 1029, main.scss */
   .btn.return .icon, .btn.demand-return .icon {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -856px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -988px;
     height: 18px;
     width: 21px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 
-/* line 1495, main.scss */
+/* line 1036, main.scss */
 .toolbar {
   text-align: center;
   padding: 0;
   margin-bottom: -65px;
 }
-/* line 1500, main.scss */
-.toolbar .btn,
-.toolbar .file-input-container {
-  border-width: 0;
-  margin: 0;
-}
-/* line 1506, main.scss */
-.toolbar .file-input-container {
-  float: left;
-  margin-left: 10px;
-  position: relative;
-}
-/* line 1511, main.scss */
-.toolbar .file-input-container input {
-  opacity: 0;
-  width: 130px;
-  height: 40px;
-  cursor: pointer;
-  position: relative;
-  text-align: right;
-  z-index: 2;
-}
-/* line 1520, main.scss */
-.toolbar .file-input-container .file-input {
-  cursor: pointer;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  height: 40px;
-  z-index: 1;
-  margin: 0;
-}
-/* line 1529, main.scss */
-.toolbar .file-input-container .text {
-  margin-top: 8px;
-}
-/* line 1533, main.scss */
+/* line 1041, main.scss */
 .toolbar .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2671,7 +2773,7 @@ fb-comments a {
   margin-top: 15px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1533, main.scss */
+  /* line 1041, main.scss */
   .toolbar .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -2683,7 +2785,7 @@ fb-comments a {
 
 /* end misc */
 /* new share button & pop-up dialog... */
-/* line 1544, main.scss */
+/* line 1052, main.scss */
 .new-share-button-container {
   width: 100px;
   height: 100px;
@@ -2694,20 +2796,20 @@ fb-comments a {
   z-index: 90;
   text-indent: -9999em;
 }
-/* line 1554, main.scss */
+/* line 1062, main.scss */
 .new-share-button-container:hover {
   height: 150px;
   width: 150px;
 }
-/* line 1559, main.scss */
+/* line 1067, main.scss */
 .new-share-button-container .new-share-button {
   position: absolute;
   bottom: 20px;
   left: 20px;
   cursor: context-menu;
   background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-s9ac55efbfa.png');
-  background-position: 0 -1363px;
+  background-image: url('../img/icons/normal-se11a5a9658.png');
+  background-position: 0 -1495px;
   height: 40px;
   width: 40px;
   background-color: transparent;
@@ -2716,18 +2818,18 @@ fb-comments a {
   z-index: 91;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1559, main.scss */
+  /* line 1067, main.scss */
   .new-share-button-container .new-share-button {
-    background-image: url('../img/icons/retina-sf6d045c385.png');
-    background-position: 0 -918px;
+    background-image: url('../img/icons/retina-s7dbd7f4507.png');
+    background-position: 0 -1050px;
     height: 40px;
     width: 40px;
-    background-size: 88px auto;
+    background-size: 131px auto;
   }
 }
 
 /* the new share pop-up dialog */
-/* line 1572, main.scss */
+/* line 1080, main.scss */
 #new-share-frame-container {
   overflow: hidden;
   bottom: 60px;
@@ -2739,18 +2841,18 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (min-width: 500px) {
-  /* line 1572, main.scss */
+  /* line 1080, main.scss */
   #new-share-frame-container {
     width: 450px;
     left: 30px;
   }
 }
-/* line 1586, main.scss */
+/* line 1094, main.scss */
 #new-share-frame-container #new-share-frame {
   display: table;
   width: 100%;
 }
-/* line 1590, main.scss */
+/* line 1098, main.scss */
 #new-share-frame-container #new-share-frame .column {
   display: table-cell;
   width: 30%;
@@ -2758,12 +2860,12 @@ fb-comments a {
   text-align: center;
   padding: 20px 0;
 }
-/* line 1595, main.scss */
+/* line 1103, main.scss */
 #new-share-frame-container #new-share-frame .column .type-ico-container {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 1601, main.scss */
+/* line 1109, main.scss */
 #new-share-frame-container #new-share-frame .divider {
   display: table-cell;
   width: 3%;
@@ -2771,27 +2873,27 @@ fb-comments a {
   background: transparent url("../img/separators/create-share-divider.png") no-repeat top left;
   background-size: auto 100%;
 }
-/* line 1608, main.scss */
+/* line 1116, main.scss */
 #new-share-frame-container #new-share-frame .btn {
   padding: 20px 5px;
 }
-/* line 1611, main.scss */
+/* line 1119, main.scss */
 #new-share-frame-container #new-share-frame .btn-line-bottom {
   margin: 0 auto 5px auto;
   width: 100%;
   background-position: center;
 }
-/* line 1616, main.scss */
+/* line 1124, main.scss */
 #new-share-frame-container #new-share-frame .btn-line-top {
   margin: 5px auto 0 auto;
   width: 100%;
   background-position: center;
 }
-/* line 1622, main.scss */
+/* line 1130, main.scss */
 #new-share-frame-container #new-share-frame .thing-type .btn {
   color: #eb9c75;
 }
-/* line 1625, main.scss */
+/* line 1133, main.scss */
 #new-share-frame-container #new-share-frame .thing-type .btn-line-bottom {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2799,10 +2901,9 @@ fb-comments a {
   height: 20px;
   width: 117px;
   background-color: transparent;
-  background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1625, main.scss */
+  /* line 1133, main.scss */
   #new-share-frame-container #new-share-frame .thing-type .btn-line-bottom {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -115px;
@@ -2811,7 +2912,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1629, main.scss */
+/* line 1136, main.scss */
 #new-share-frame-container #new-share-frame .thing-type .btn-line-top {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2819,10 +2920,9 @@ fb-comments a {
   height: 20px;
   width: 117px;
   background-color: transparent;
-  background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1629, main.scss */
+  /* line 1136, main.scss */
   #new-share-frame-container #new-share-frame .thing-type .btn-line-top {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -115px;
@@ -2831,11 +2931,11 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1635, main.scss */
+/* line 1141, main.scss */
 #new-share-frame-container #new-share-frame .time-type .btn {
   color: #4fbca7;
 }
-/* line 1638, main.scss */
+/* line 1144, main.scss */
 #new-share-frame-container #new-share-frame .time-type .btn-line-bottom {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2843,10 +2943,9 @@ fb-comments a {
   height: 20px;
   width: 107px;
   background-color: transparent;
-  background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1638, main.scss */
+  /* line 1144, main.scss */
   #new-share-frame-container #new-share-frame .time-type .btn-line-bottom {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -125px;
@@ -2855,7 +2954,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1642, main.scss */
+/* line 1147, main.scss */
 #new-share-frame-container #new-share-frame .time-type .btn-line-top {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2863,10 +2962,9 @@ fb-comments a {
   height: 20px;
   width: 107px;
   background-color: transparent;
-  background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1642, main.scss */
+  /* line 1147, main.scss */
   #new-share-frame-container #new-share-frame .time-type .btn-line-top {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -125px;
@@ -2875,11 +2973,11 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1648, main.scss */
+/* line 1152, main.scss */
 #new-share-frame-container #new-share-frame .promise-type .btn {
   color: #c08fe1;
 }
-/* line 1651, main.scss */
+/* line 1155, main.scss */
 #new-share-frame-container #new-share-frame .promise-type .btn-line-bottom {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2887,10 +2985,9 @@ fb-comments a {
   height: 20px;
   width: 118px;
   background-color: transparent;
-  background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1651, main.scss */
+  /* line 1155, main.scss */
   #new-share-frame-container #new-share-frame .promise-type .btn-line-bottom {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -105px;
@@ -2899,7 +2996,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1655, main.scss */
+/* line 1158, main.scss */
 #new-share-frame-container #new-share-frame .promise-type .btn-line-top {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2907,10 +3004,9 @@ fb-comments a {
   height: 20px;
   width: 118px;
   background-color: transparent;
-  background-size: 100% 165px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1655, main.scss */
+  /* line 1158, main.scss */
   #new-share-frame-container #new-share-frame .promise-type .btn-line-top {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -105px;

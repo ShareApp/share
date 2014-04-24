@@ -1,0 +1,18 @@
+/**
+ * Contains the basic constants used throughout the CSS
+ *
+ * @license Share❣ v0.0.1
+ * (c) 2013 VorskiImagineering http://share.url
+ * License: MIT
+ */
+@font-face {
+  font-family: 'Shadows Into Light Two';
+  src: url("fonts/ShadowsIntoLightTwo-Regular.eot");
+  src: url("fonts/ShadowsIntoLightTwo-Regular.eot?#iefix") format("embedded-opentype"), url("fonts/ShadowsIntoLightTwo-Regular.woff") format("woff"), url("fonts/ShadowsIntoLightTwo-Regular.ttf") format("truetype"), url("fonts/ShadowsIntoLightTwo-Regular.svg#ShadowsIntoLightTwo-Regular") format("svg");
+}
+
+@font-face {
+  font-family: 'Neucha';
+  src: url("fonts/Neucha.eot");
+  src: url("fonts/Neucha.eot?#iefix") format("embedded-opentype"), url("fonts/Neucha.woff") format("woff"), url("fonts/Neucha.ttf") format("truetype"), url("fonts/Neucha.svg#Neucha") format("svg");
+}

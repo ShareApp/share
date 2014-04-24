@@ -17,18 +17,29 @@
                 <fb-profile-picture user-id="toUser.get('facebookid')"></fb-profile-picture>
             </a>
             <div ng-switch on="share.type" class="img-container">
-                <img ng-show="share.img" src="img/low-share-top-big.png" srcset="img/high-share-top-big.png 1.5x" class="share-frame gradient"/>
-                <img ng-hide="share.img" src="img/low-share-top-small.png" srcset="img/high-share-top-small.png 1.5x" class="share-frame"/>
+                <img src="img/low-share-top-big.png" srcset="img/high-share-top-big.png 1.5x" class="share-frame gradient"/>
+
+                <div class="file-input-container">
+                    <input onchange="angular.element(this).scope().uploadPhoto(this.files)" type="file" accept="image/*;capture=camera">
+                    <div class="btn photo file-input">
+                        <span class="icon"></span><span class="text">{{ 'Tap to upload Photo' | translate }}</span>
+                    </div>
+                </div>
+
                 <img ng-show="share.img" class="share-img" ng-src="{{ share.img.urlOrData() }}" vertically-positioned preloader alt="{{ share.text }}"/>
-                <div class='preloader-container'><div class='preloader'></div></div>
+                <div class='preloader-container'>
+                    <div class='preloader'></div>
+                </div>
+
                 <img ng-hide="share.img" ng-switch-when="0" class="share-placeholder" ng-src="img/backgrounds/green.jpg" alt="{{ share.text }}"/>
                 <img ng-hide="share.img" ng-switch-when="1" class="share-placeholder" ng-src="img/backgrounds/orange.jpg" alt="{{ share.text }}"/>
                 <img ng-hide="share.img" ng-switch-when="2" class="share-placeholder" ng-src="img/backgrounds/purple.jpg" alt="{{ share.text }}"/>
             </div>
             <div class="content">
 
-                <textarea required scroll-after-focus name="text" placeholder="Text of your share" ng-model="share.text"></textarea>
-                <input id="share-public-flag-checkbox" "scroll-after-focus type="checkbox" ng-model="share.isPublic">
+                <textarea required scroll-after-focus name="text"
+                          placeholder="{{ 'Input share text' | translate }}" ng-model="share.text"></textarea>
+                <input id="share-public-flag-checkbox" scroll-after-focus type="checkbox" ng-model="share.isPublic">
                 <label for="share-public-flag-checkbox">
                     {{ 'Public' | translate }}
                     <span class="checkbox"></span>
@@ -41,12 +52,10 @@
             </div>
             <div class="toolbar clearfix">
                 <div class="separator"></div>
-                <div class="file-input-container">
-                    <input onchange="angular.element(this).scope().uploadPhoto(this.files)" type="file" accept="image/*;capture=camera">
-                    <div class="btn photo file-input"><span class="icon"></span><span class="text">{{ 'Photo' | translate }}</span></div>
+                <div class="btn txt shareit" ng-click="saving || share.saveShare(postOnFB); saving=true">
+                    <span></span>
                 </div>
-                <button class="btn txt" ng-click="saving || share.saveShare(postOnFB); saving=true"><span class="text">{{ 'Share❣' | translate }}</span></button>
             </div>
         </div>
     </div>
-</div>s
+</div>
