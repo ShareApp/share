@@ -14,13 +14,12 @@
  */
 var ShNewShareSelectFriendCtrl = angular.module('shareApp')
   .controller('ShNewShareSelectFriendCtrl', function ($scope, $state, $location, $translate, shUser, shShare) {
-    shShare.setDefaults();
+    shShare.setDefaults(parseInt($state.params.type, 10));
 
     $scope.user = shUser;
     $scope.share = shShare;
     $scope.visibleFriends = 10;
     $scope.sorting = 'frequent';
-    $scope.share.type = parseInt($state.params.type, 10);
     $scope.share.direction = parseInt($state.params.direction, 10);
 
     // TODO: probably there is better way to construct path...

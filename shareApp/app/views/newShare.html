@@ -36,9 +36,17 @@
                 <img ng-hide="share.img" ng-switch-when="2" class="share-placeholder" ng-src="img/backgrounds/purple.jpg" alt="{{ share.text }}"/>
             </div>
             <div class="content">
+                <div class="time-input time" ng-show="share.type==0">
+                     <div class="ico"></div>
+
+                    <input id="num-hours" scroll-after-focus type="number" min="0" max="999" ng-model="share.hours">
+                    <span class="title">:</span>
+                    <input id="num-minutes" scroll-after-focus type="number" min="0" max="45" step="15" ng-model="share.minutes">
+
+                </div>
 
                 <textarea required scroll-after-focus name="text"
-                          placeholder="{{ 'Input share text' | translate }}" ng-model="share.text"></textarea>
+                          placeholder="{{ 'Description' | translate }}" ng-model="share.text"></textarea>
                 <input id="share-public-flag-checkbox" scroll-after-focus type="checkbox" ng-model="share.isPublic">
                 <label for="share-public-flag-checkbox">
                     {{ 'Public' | translate }}

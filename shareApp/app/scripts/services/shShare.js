@@ -101,16 +101,7 @@ angular.module('shareApp')
        * Text content of share.
        */
       text: '',
-      /**
-       * @ngdoc property
-       * @name shShare#amount
-       * @propertyOf shShare
-       * @returns {number} amount
-       *
-       * @description
-       * Amount of items in share.
-       */
-      amount: 1,
+
       /**
        * @ngdoc property
        * @name shShare#date
@@ -139,15 +130,18 @@ angular.module('shareApp')
        * @description
        * Sets default values when user wants add another Share
        */
-      setDefaults: function () {
+      setDefaults: function (type) {
         myShare.direction = globals.SHARE_DIRECTION_ENUM.TO_FRIEND
-        myShare.type = globals.SHARE_TYPE_ENUM.TIME;
+        myShare.type = type;
         myShare.text = '';
-        myShare.amount = 1;
         myShare.isPublic = true;
         myShare.date = getToday();
         myShare.img = null;
         myShare.targetUser = null;
+          if(type == globals.SHARE_TYPE_ENUM.TIME) {
+              myShare.hours = 1;
+              myShare.minutes = 3;
+          }
       },
       /**
        * @ngdoc method
@@ -169,9 +163,15 @@ angular.module('shareApp')
         sharedItem.set('text', myShare.text);
         sharedItem.set('img', myShare.img);
         sharedItem.set('type', myShare.type);
-        sharedItem.set('amount', myShare.amount.toString());
+        // VV2014Apr: amount unused currently sharedItem.set('amount', myShare.amount.toString());
         sharedItem.set('date', myShare.date);
         sharedItem.set('isPublic', myShare.isPublic);
+
+          if(myShare.type == globals.SHARE_TYPE_ENUM.TIME) {
+              sharedItem.set('hours',myShare.hours);
+              sharedItem.set('minutes',myShare.minutes);
+          }
+
         // set ACL only if share is not public
         if (myShare.isPublic === false) {
           acl.setReadAccess(myShare.currentUser, true);
