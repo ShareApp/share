@@ -7,9 +7,8 @@ cloudCode/config/global.json
 dist
 .sass-cache
 parse_app_name.txt
-settings/settings.js
-settings/settings_test.js
-settings/settings_local.js
+settings/settings*.js
+!settings/settings_example.js
 docs/build
 .jshintrc
 .editorconfig
