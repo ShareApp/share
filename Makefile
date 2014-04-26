@@ -15,15 +15,16 @@ makemessages:
 	cd shareApp; \
 	grunt i18nextract;
 
-manifest: build
-	( echo "# version "`date +"%s"`;\
-	cd shareApp/app ; \
+manifest:
+	( 	cd shareApp/app ; \
 	cat manifest-top.txt ;\
 	ls img/*/normal-*.png; \
 	ls img/*/retina-*.png;  ls i18n/*.js; ls img/*png; \
 	ls img/*gif; ls img/*jpg; ls img/favicons/* ; \
 	ls img/backgrounds/* ; ls views/*html ; ls styles/fonts/*; \
-	echo ""; echo "NETWORK:"; echo "*"; echo ""; echo "SETTINGS:"; echo "prefer-online" ) | cat > manfest
+	echo ""; echo "NETWORK:"; echo "*"; echo ""; echo "SETTINGS:"; echo "prefer-online";\
+	echo "# version "`date +"%s"` ) | cat > manfest
+
 	echo "Manifest changes are.... "
 	-diff cloudCode/cloud/views/manifest.ejs manfest
 	mv manfest cloudCode/cloud/views/manifest.ejs
