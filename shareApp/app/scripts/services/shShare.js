@@ -140,7 +140,7 @@ angular.module('shareApp')
         myShare.targetUser = null;
           if(type == globals.SHARE_TYPE_ENUM.TIME) {
               myShare.hours = 1;
-              myShare.minutes = 3;
+              myShare.minutes = 0;
           }
       },
       /**
