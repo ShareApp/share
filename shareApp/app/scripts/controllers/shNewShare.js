@@ -31,7 +31,6 @@ var ShNewShareCtrl = angular.module('shareApp')
     $scope.isOnline = shSync.isOnline;
     setUsers();
 
-    $scope.timehours = $scope.share.amount
     // Set targetUser from state (url).
     $scope.$watch('user.friendsList', function () {
       angular.forEach(shUser.friendsList, function (friend) {
