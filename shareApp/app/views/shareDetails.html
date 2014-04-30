@@ -29,19 +29,15 @@
                      ng-src="img/backgrounds/purple.jpg" alt="{{ sharedItem.get('text') }}"/>
             </div>
             <div class="content">
+                <div class="time time-display" ng-show="sharedItem.get('type')==0">
+                     <div class="ico"></div>
+                    <span class="title">{{sharedItem.get('hours')}}:{{sharedItem.get('minutes')}}</span>
+                </div>
                 <div class="title">
-                    <div class="amount-container">
-                        <span class="amount">x {{ sharedItem.get('amount') }}</span>
-                    </div>
-                    <div class="date-container">
-                        <span class="date">{{ sharedItem.get('date') }}</span>
-                    </div>
-                    <div class="clearfix"></div>
                     <span class="text">{{ sharedItem.get('text') }}</span>
                 </div>
-                <div class="time">
-                    <div class="ico"></div>
-                    <div class="text">{{ sharedItem.createdAt | timeDifference }}</div>
+                <div class="time time-created">
+                    <div class="text">{{ sharedItem.get('date') }}</div>
                 </div>
             </div>
             <div class="toolbar">

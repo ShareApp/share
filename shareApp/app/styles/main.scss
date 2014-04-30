@@ -29,6 +29,22 @@ input[type='checkbox']:checked .checkbox {
   @include retina-sprite-background(checked, $filters-normal, $filters-retina);
 }
 
+/* Icon next to time display */
+  .time {
+    .ico {
+      vertical-align: middle;
+      margin-bottom: 10px;
+        @include retina-sprite-background(clock, $icons-normal, $icons-retina);
+        display: inline-block;
+    }
+  }
+  .time-display {
+	  text-align: right;
+  }
+  .time-created {
+	  
+  }
+
 /* base site */
 
 body {
@@ -924,12 +940,6 @@ fb-comments {
     padding: 5px 25px 0px 25px;
     z-index: 9;
     .time {
-      margin-top: 10px;
-      .ico {
-        @include retina-sprite-background(clock, $icons-normal, $icons-retina);
-        display: inline-block;
-        vertical-align: top;
-      }
       .text {
         margin-left: 3px;
         margin-top: -1px;

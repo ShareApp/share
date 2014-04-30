@@ -36,6 +36,10 @@
             <div class="content">
 
 
+				<div class="time time-display" ng-show="share.get('type')==0">
+                     <div class="ico"></div>
+                    <span class="title">{{share.get('hours')}}:{{share.get('minutes')}}</span>
+                </div>
                 <div class="title">
 
                     <a href="#/sharedItem/{{ share.id }}" class="thing">{{ share.get('text') }}

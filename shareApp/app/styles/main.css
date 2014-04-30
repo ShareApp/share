@@ -936,11 +936,6 @@
   border-bottom: 1px #3d3a3b dotted;
   text-align: right;
 }
-/* line 131, newShare-view.scss */
-#new-share .time .ico {
-  vertical-align: middle;
-  margin-bottom: 10px;
-}
 
 /* end new share */
 /* line 15, main.scss */
@@ -1010,8 +1005,37 @@ input[type='checkbox']:checked .checkbox {
   }
 }
 
-/* base site */
+/* Icon next to time display */
 /* line 34, main.scss */
+.time .ico {
+  vertical-align: middle;
+  margin-bottom: 10px;
+  background-repeat: no-repeat;
+  background-image: url('../img/icons/normal-seda29218af.png');
+  background-position: 0 -993px;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  display: inline-block;
+}
+@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
+  /* line 34, main.scss */
+  .time .ico {
+    background-image: url('../img/icons/retina-s02a7ab5e12.png');
+    background-position: 0 -826px;
+    height: 20px;
+    width: 20px;
+    background-size: 131px auto;
+  }
+}
+
+/* line 41, main.scss */
+.time-display {
+  text-align: right;
+}
+
+/* base site */
+/* line 50, main.scss */
 body {
   font-family: 'Neucha', cursive;
   font-size: 10px;
@@ -1020,27 +1044,27 @@ body {
 }
 
 @media (max-width: 460px) {
-  /* line 42, main.scss */
+  /* line 58, main.scss */
   body {
     font-size: 9px;
     line-height: 14px;
   }
 }
 @media (max-width: 340px) {
-  /* line 49, main.scss */
+  /* line 65, main.scss */
   body {
     font-size: 8px;
     line-height: 12px;
   }
 }
-/* line 56, main.scss */
+/* line 72, main.scss */
 #header-container {
   top: 0;
   left: 0;
   width: 100%;
   min-width: 300px;
 }
-/* line 61, main.scss */
+/* line 77, main.scss */
 #header-container #header {
   top: 0;
   height: 47px;
@@ -1050,11 +1074,11 @@ body {
   text-align: center;
   box-shadow: #E8DDC4 0px 5px 15px;
 }
-/* line 69, main.scss */
+/* line 85, main.scss */
 #header-container #header > * {
   vertical-align: top;
 }
-/* line 72, main.scss */
+/* line 88, main.scss */
 #header-container #header #menu-btn {
   background-color: transparent;
   border-width: 0;
@@ -1063,12 +1087,12 @@ body {
   float: left;
 }
 @media (max-width: 460px) {
-  /* line 72, main.scss */
+  /* line 88, main.scss */
   #header-container #header #menu-btn {
     padding: 13px 7px;
   }
 }
-/* line 81, main.scss */
+/* line 97, main.scss */
 #header-container #header #menu-btn .img {
   display: block;
   background-repeat: no-repeat;
@@ -1079,7 +1103,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 81, main.scss */
+  /* line 97, main.scss */
   #header-container #header #menu-btn .img {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -1110px;
@@ -1088,24 +1112,24 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 86, main.scss */
+/* line 102, main.scss */
 #header-container #header #logo-container {
   width: 115px;
   height: 47px;
   display: block;
   margin: 0 auto;
 }
-/* line 91, main.scss */
+/* line 107, main.scss */
 #header-container #header #logo-container > * {
   vertical-align: top;
   display: inline-block;
 }
-/* line 95, main.scss */
+/* line 111, main.scss */
 #header-container #header #logo-container > .info {
   margin-top: -10px;
   display: inherit;
 }
-/* line 99, main.scss */
+/* line 115, main.scss */
 #header-container #header #logo-container #logo {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -1118,7 +1142,7 @@ body {
   display: inline-block;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 99, main.scss */
+  /* line 115, main.scss */
   #header-container #header #logo-container #logo {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -377px;
@@ -1127,12 +1151,12 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 104, main.scss */
+/* line 120, main.scss */
 #header-container #header #logo-container #logo .text {
   display: block;
   margin-left: -200px;
 }
-/* line 110, main.scss */
+/* line 126, main.scss */
 #header-container #header #logo-container #notification-btn {
   display: inline-block;
   margin: 10px 0;
@@ -1150,7 +1174,7 @@ body {
   outline: none;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 110, main.scss */
+  /* line 126, main.scss */
   #header-container #header #logo-container #notification-btn {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -1048px;
@@ -1159,7 +1183,7 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 123, main.scss */
+/* line 139, main.scss */
 #header-container #header #contact-list-btn {
   float: right;
   background-color: transparent;
@@ -1168,12 +1192,12 @@ body {
   margin: 0;
 }
 @media (max-width: 460px) {
-  /* line 123, main.scss */
+  /* line 139, main.scss */
   #header-container #header #contact-list-btn {
     padding: 11px 8px;
   }
 }
-/* line 132, main.scss */
+/* line 148, main.scss */
 #header-container #header #contact-list-btn .img {
   display: block;
   background-repeat: no-repeat;
@@ -1184,7 +1208,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 132, main.scss */
+  /* line 148, main.scss */
   #header-container #header #contact-list-btn .img {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -580px;
@@ -1193,7 +1217,7 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 137, main.scss */
+/* line 153, main.scss */
 #header-container #header #contact-list-exit-btn {
   float: right;
   background-color: transparent;
@@ -1202,12 +1226,12 @@ body {
   margin: 0;
 }
 @media (max-width: 460px) {
-  /* line 137, main.scss */
+  /* line 153, main.scss */
   #header-container #header #contact-list-exit-btn {
     padding: 14px 8px;
   }
 }
-/* line 146, main.scss */
+/* line 162, main.scss */
 #header-container #header #contact-list-exit-btn .img {
   display: block;
   background-repeat: no-repeat;
@@ -1218,7 +1242,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 146, main.scss */
+  /* line 162, main.scss */
   #header-container #header #contact-list-exit-btn .img {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -483px;
@@ -1228,7 +1252,7 @@ body {
   }
 }
 
-/* line 154, main.scss */
+/* line 170, main.scss */
 #container {
   position: absolute;
   top: 0;
@@ -1240,7 +1264,7 @@ body {
   z-index: 2;
   overflow: auto;
 }
-/* line 164, main.scss */
+/* line 180, main.scss */
 #container #menu-mask {
   position: absolute;
   z-index: 9999;
@@ -1250,7 +1274,7 @@ body {
   height: 100%;
 }
 
-/* line 175, main.scss */
+/* line 191, main.scss */
 #content-container {
   background: transparent url("../img/backgrounds/low-yellow.png") repeat top left;
   width: 100%;
@@ -1260,12 +1284,12 @@ body {
   padding-top: 5px;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 175, main.scss */
+  /* line 191, main.scss */
   #content-container {
     background-image: url("../img/backgrounds/high-yellow.png");
   }
 }
-/* line 186, main.scss */
+/* line 202, main.scss */
 #content-container #content {
   position: relative;
   left: 0;
@@ -1275,7 +1299,7 @@ body {
 
 /* end base site */
 /* timeline */
-/* line 199, main.scss */
+/* line 215, main.scss */
 #dialog-background-mask {
   position: fixed;
   z-index: 99;
@@ -1286,7 +1310,7 @@ body {
   background-color: rgba(0, 0, 0, 0.75);
 }
 
-/* line 210, main.scss */
+/* line 226, main.scss */
 #shares {
   list-style: none;
   margin: 0;
@@ -1294,7 +1318,7 @@ body {
   display: block;
 }
 
-/* line 217, main.scss */
+/* line 233, main.scss */
 #no-shares {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -1304,43 +1328,43 @@ body {
 
 /* end timeline */
 /* friends list */
-/* line 226, main.scss */
+/* line 242, main.scss */
 #friends-list {
   list-style: none;
   margin: 0;
   padding: 0 0 0 30px;
 }
-/* line 230, main.scss */
+/* line 246, main.scss */
 #friends-list > li > a {
   text-decoration: none;
 }
-/* line 234, main.scss */
+/* line 250, main.scss */
 #friends-list > li {
   padding: 10px 0;
 }
-/* line 236, main.scss */
+/* line 252, main.scss */
 #friends-list > li .profile-picture-container {
   width: 44px;
   height: 44px;
 }
-/* line 242, main.scss */
+/* line 258, main.scss */
 #friends-list .name {
   color: black;
   font-size: 2.4em;
   margin-bottom: 2px;
 }
-/* line 247, main.scss */
+/* line 263, main.scss */
 #friends-list .profile-picture-container {
   float: left;
   margin-top: 10px;
 }
-/* line 252, main.scss */
+/* line 268, main.scss */
 #friends-list .friend-shares-list {
   display: block;
   list-style: none;
   padding-left: 80px;
 }
-/* line 256, main.scss */
+/* line 272, main.scss */
 #friends-list .friend-shares-list li {
   vertical-align: top;
   display: inline-block;
@@ -1349,7 +1373,7 @@ body {
 
 /* end friends list */
 /* notifications pop-up (see notifications.html) */
-/* line 268, main.scss */
+/* line 284, main.scss */
 #notifications-frame-container {
   overflow: hidden;
   top: 60px;
@@ -1360,13 +1384,13 @@ body {
   z-index: 999;
 }
 @media (min-width: 550px) {
-  /* line 268, main.scss */
+  /* line 284, main.scss */
   #notifications-frame-container {
     width: 500px;
     margin-left: -250px;
   }
 }
-/* line 280, main.scss */
+/* line 296, main.scss */
 #notifications-frame-container:before {
   content: "";
   height: 100px;
@@ -1376,12 +1400,12 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 280, main.scss */
+  /* line 296, main.scss */
   #notifications-frame-container:before {
     background-image: url("../img/high-notifications-top.png");
   }
 }
-/* line 292, main.scss */
+/* line 308, main.scss */
 #notifications-frame-container:after {
   height: 40px;
   width: 100%;
@@ -1392,29 +1416,29 @@ body {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 292, main.scss */
+  /* line 308, main.scss */
   #notifications-frame-container:after {
     background-image: url("../img/high-notifications-bottom.png");
   }
 }
-/* line 305, main.scss */
+/* line 321, main.scss */
 #notifications-frame-container #notifications-frame {
   margin-top: -75px;
 }
-/* line 308, main.scss */
+/* line 324, main.scss */
 #notifications-frame-container #notifications-frame .header {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
 }
-/* line 311, main.scss */
+/* line 327, main.scss */
 #notifications-frame-container #notifications-frame .description {
   line-height: 1.2em;
   font-size: 1.5em;
   font-family: Arial;
   color: #9C9E9D;
 }
-/* line 315, main.scss */
+/* line 331, main.scss */
 #notifications-frame-container #notifications-frame .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -1430,7 +1454,7 @@ body {
   position: relative;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 315, main.scss */
+  /* line 331, main.scss */
   #notifications-frame-container #notifications-frame .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -1439,7 +1463,7 @@ body {
     background-size: 262px auto;
   }
 }
-/* line 324, main.scss */
+/* line 340, main.scss */
 #notifications-frame-container #notifications-frame ul {
   background: transparent url("../img/backgrounds/low-white.png") no-repeat;
   background-size: 100% 100%;
@@ -1448,12 +1472,12 @@ body {
   list-style: none;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 324, main.scss */
+  /* line 340, main.scss */
   #notifications-frame-container #notifications-frame ul {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 335, main.scss */
+/* line 351, main.scss */
 #notifications-frame-container #notifications-frame ul li.item {
   margin: 0;
   padding: 0;
@@ -1462,7 +1486,7 @@ body {
   white-space: nowrap;
   position: relative;
 }
-/* line 342, main.scss */
+/* line 358, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .mask {
   display: block;
   width: 100%;
@@ -1472,7 +1496,7 @@ body {
   left: 0;
   z-index: 1005;
 }
-/* line 352, main.scss */
+/* line 368, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-right,
 #notifications-frame-container #notifications-frame ul li.item .swiped-right + .container {
   -webkit-transform: translate3d(150px, 0, 0);
@@ -1481,7 +1505,7 @@ body {
   -o-transform: translate3d(150px, 0, 0);
   transform: translate3d(150px, 0, 0);
 }
-/* line 356, main.scss */
+/* line 372, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .swiped-left,
 #notifications-frame-container #notifications-frame ul li.item .swiped-left + .container {
   -webkit-transform: translate3d(0, 0, 0);
@@ -1490,7 +1514,7 @@ body {
   -o-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
-/* line 359, main.scss */
+/* line 375, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container {
   padding: 0 7px;
   -webkit-transition: all 0.1s linear;
@@ -1498,18 +1522,18 @@ body {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-/* line 363, main.scss */
+/* line 379, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions {
   float: left;
   margin-left: -150px;
   width: 150px;
 }
-/* line 367, main.scss */
+/* line 383, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button {
   border-width: 0;
   margin: 25px 10px 0 10px;
 }
-/* line 370, main.scss */
+/* line 386, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -1519,7 +1543,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 370, main.scss */
+  /* line 386, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.agree-btn {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -1026px;
@@ -1528,7 +1552,7 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 373, main.scss */
+/* line 389, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -1538,7 +1562,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 373, main.scss */
+  /* line 389, main.scss */
   #notifications-frame-container #notifications-frame ul li.item .container .actions > button.disagree-btn {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -806px;
@@ -1547,28 +1571,28 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 377, main.scss */
+/* line 393, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .actions .info {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   margin-top: 25px;
 }
-/* line 382, main.scss */
+/* line 398, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content {
   text-align: left;
   min-height: 70px;
 }
-/* line 386, main.scss */
+/* line 402, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content .profile-picture-container,
 #notifications-frame-container #notifications-frame ul li.item .container .content .small-share-item {
   border-color: #FFFFFF;
 }
-/* line 389, main.scss */
+/* line 405, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   margin-top: 8px;
 }
-/* line 393, main.scss */
+/* line 409, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content small-share-item,
 #notifications-frame-container #notifications-frame ul li.item .container .content fb-profile-picture {
   display: block;
@@ -1605,7 +1629,7 @@ body {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 401, main.scss */
+/* line 417, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container {
   word-break: normal;
   white-space: normal;
@@ -1613,13 +1637,13 @@ body {
   height: 100%;
   display: inline;
 }
-/* line 407, main.scss */
+/* line 423, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 411, main.scss */
+/* line 427, main.scss */
 #notifications-frame-container #notifications-frame ul li.item .container .content > .title-container > .title > .title-inner {
   display: table-cell;
   vertical-align: middle;
@@ -1629,7 +1653,7 @@ body {
 
 /* end notifications */
 /* select friend */
-/* line 430, main.scss */
+/* line 446, main.scss */
 #friend-select {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -1669,36 +1693,36 @@ body {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 433, main.scss */
+/* line 449, main.scss */
 #friend-select .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 433, main.scss */
+  /* line 449, main.scss */
   #friend-select .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 435, main.scss */
+/* line 451, main.scss */
 #friend-select .inner input {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
   font-size: 2.4em;
   font-size: 2em;
 }
-/* line 440, main.scss */
+/* line 456, main.scss */
 #friend-select .inner .header {
   text-align: center;
   height: 74px;
 }
-/* line 444, main.scss */
+/* line 460, main.scss */
 #friend-select .inner .header .share-direction {
   float: left;
   padding: 0;
   border-width: 0;
 }
-/* line 445, main.scss */
+/* line 461, main.scss */
 #friend-select .inner .header .share-direction.right {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -1708,7 +1732,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 445, main.scss */
+  /* line 461, main.scss */
   #friend-select .inner .header .share-direction.right {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -98px;
@@ -1717,7 +1741,7 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 448, main.scss */
+/* line 464, main.scss */
 #friend-select .inner .header .share-direction.left {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -1727,7 +1751,7 @@ body {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 448, main.scss */
+  /* line 464, main.scss */
   #friend-select .inner .header .share-direction.left {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -49px;
@@ -1736,14 +1760,14 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 455, main.scss */
+/* line 471, main.scss */
 #friend-select .inner .header .search-container {
   display: block;
   overflow: hidden;
   margin: 0 0 0 3%;
   position: relative;
 }
-/* line 460, main.scss */
+/* line 476, main.scss */
 #friend-select .inner .header .search-container .ico {
   position: absolute;
   left: 4%;
@@ -1758,7 +1782,7 @@ body {
   z-index: 300;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 460, main.scss */
+  /* line 476, main.scss */
   #friend-select .inner .header .search-container .ico {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -532px;
@@ -1767,7 +1791,7 @@ body {
     background-size: 131px auto;
   }
 }
-/* line 468, main.scss */
+/* line 484, main.scss */
 #friend-select .inner .header .search-container input.search {
   width: 70%;
   padding: 0 3% 0 23%;
@@ -1777,14 +1801,14 @@ body {
   background: transparent url("../img/search-friend.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 479, main.scss */
+/* line 495, main.scss */
 #friend-select .inner #friends-sorting {
   position: relative;
   width: 100%;
   margin: 7px 0;
   text-align: center;
 }
-/* line 484, main.scss */
+/* line 500, main.scss */
 #friend-select .inner #friends-sorting .item {
   background-repeat: no-repeat;
   background-image: url('../img/friends-sorting/normal-s3929cf2e59.png');
@@ -1803,7 +1827,7 @@ body {
   display: inline-block;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 484, main.scss */
+  /* line 500, main.scss */
   #friend-select .inner #friends-sorting .item {
     background-image: url('../img/friends-sorting/retina-s180bfc220e.png');
     background-position: 0 -30px;
@@ -1812,7 +1836,7 @@ body {
     background-size: 119px auto;
   }
 }
-/* line 495, main.scss */
+/* line 511, main.scss */
 #friend-select .inner #friends-sorting .item.active {
   color: white;
   background-repeat: no-repeat;
@@ -1825,7 +1849,7 @@ body {
   max-width: 25%;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 495, main.scss */
+  /* line 511, main.scss */
   #friend-select .inner #friends-sorting .item.active {
     background-image: url('../img/friends-sorting/retina-s180bfc220e.png');
     background-position: 0 0;
@@ -1834,54 +1858,54 @@ body {
     background-size: 119px auto;
   }
 }
-/* line 503, main.scss */
+/* line 519, main.scss */
 #friend-select .inner .friend-select-list {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-/* line 507, main.scss */
+/* line 523, main.scss */
 #friend-select .inner .friend-select-list li {
   height: 80px;
 }
-/* line 509, main.scss */
+/* line 525, main.scss */
 #friend-select .inner .friend-select-list li a {
   display: block;
   text-decoration: none;
   color: black;
 }
-/* line 513, main.scss */
+/* line 529, main.scss */
 #friend-select .inner .friend-select-list li a fb-profile-picture {
   float: left;
   margin-right: 12px;
   height: 44px;
   margin-top: 13px;
 }
-/* line 519, main.scss */
+/* line 535, main.scss */
 #friend-select .inner .friend-select-list li a .title-container {
   display: block;
   width: 100%;
 }
-/* line 522, main.scss */
+/* line 538, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper {
   word-break: break-word;
   display: table;
   height: 73px;
 }
-/* line 526, main.scss */
+/* line 542, main.scss */
 #friend-select .inner .friend-select-list li a .title-container .title-wrapper .title {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 533, main.scss */
+/* line 549, main.scss */
 #friend-select .inner .friend-select-list li a.selected {
   background-color: rgba(100, 0, 100, 0.5);
 }
-/* line 537, main.scss */
+/* line 553, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container {
   display: inline-block;
 }
-/* line 540, main.scss */
+/* line 556, main.scss */
 #friend-select .inner .friend-select-list li .profile-picture-container img {
   width: 44px;
   height: 44px;
@@ -1889,57 +1913,57 @@ body {
 
 /* end select friend */
 /* share details */
-/* line 555, main.scss */
+/* line 571, main.scss */
 #share-details {
   margin-top: 20px;
 }
-/* line 557, main.scss */
+/* line 573, main.scss */
 #share-details .content {
   padding-left: 40px;
   padding-right: 40px;
   padding-bottom: 20px;
 }
-/* line 561, main.scss */
+/* line 577, main.scss */
 #share-details .content .amount-container {
   float: right;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 566, main.scss */
+/* line 582, main.scss */
 #share-details .content .amount-container > span {
   border-bottom: 1px solid #DDD9CD;
 }
-/* line 570, main.scss */
+/* line 586, main.scss */
 #share-details .content .date-container {
   float: left;
   display: block;
   width: 40%;
   height: 40px;
 }
-/* line 577, main.scss */
+/* line 593, main.scss */
 #share-details .toolbar {
   padding: 0 15px 0px 15px;
 }
-/* line 580, main.scss */
+/* line 596, main.scss */
 #share-details .fb-comments {
   text-align: center;
   display: block;
   margin-top: 20px;
 }
 
-/* line 591, main.scss */
+/* line 607, main.scss */
 fb-comments {
   color: red !important;
 }
-/* line 592, main.scss */
+/* line 608, main.scss */
 fb-comments a {
   color: red !important;
 }
 
 /* end share details */
 /* friend details */
-/* line 603, main.scss */
+/* line 619, main.scss */
 #friend-details #friend-profile {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -1978,23 +2002,23 @@ fb-comments a {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 605, main.scss */
+/* line 621, main.scss */
 #friend-details #friend-profile .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 605, main.scss */
+  /* line 621, main.scss */
   #friend-details #friend-profile .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 608, main.scss */
+/* line 624, main.scss */
 #friend-details #friend-profile .profile-picture-container {
   float: left;
   margin-right: 10px;
 }
-/* line 612, main.scss */
+/* line 628, main.scss */
 #friend-details #friend-profile .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -2002,20 +2026,20 @@ fb-comments a {
   margin-top: -5px;
   display: inline-block;
 }
-/* line 617, main.scss */
+/* line 633, main.scss */
 #friend-details #friend-profile .counter-container {
   color: #959796;
   font-size: 2em;
   margin-top: 5px;
 }
-/* line 621, main.scss */
+/* line 637, main.scss */
 #friend-details #friend-profile .counter-container .counter {
   font-size: 1.1em;
 }
 
 /* end friend details */
 /* login */
-/* line 632, main.scss */
+/* line 648, main.scss */
 #login {
   background-size: 100% 100%;
   margin: 40px auto 0 auto;
@@ -2054,19 +2078,19 @@ fb-comments a {
     background-image: url("../img/high-share-top.png");
   }
 }
-/* line 634, main.scss */
+/* line 650, main.scss */
 #login .inner {
   padding: 0 20px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
   text-align: center;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 634, main.scss */
+  /* line 650, main.scss */
   #login .inner {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
-/* line 637, main.scss */
+/* line 653, main.scss */
 #login .inner .title {
   font-family: 'Shadows Into Light Two', cursive;
   line-height: 1.6em;
@@ -2076,17 +2100,17 @@ fb-comments a {
   color: #666666;
   font-size: 3.2em;
 }
-/* line 644, main.scss */
+/* line 660, main.scss */
 #login .inner .logo {
   display: inline-block;
   margin: 10px auto 30px auto;
   max-width: 90%;
 }
-/* line 648, main.scss */
+/* line 664, main.scss */
 #login .inner .logo img {
   width: 100%;
 }
-/* line 652, main.scss */
+/* line 668, main.scss */
 #login .inner .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2100,7 +2124,7 @@ fb-comments a {
   margin-bottom: 10px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 652, main.scss */
+  /* line 668, main.scss */
   #login .inner .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -2109,7 +2133,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 659, main.scss */
+/* line 675, main.scss */
 #login .inner .separator-rev {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2123,7 +2147,7 @@ fb-comments a {
   margin-bottom: 10px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 659, main.scss */
+  /* line 675, main.scss */
   #login .inner .separator-rev {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -13px;
@@ -2132,7 +2156,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 666, main.scss */
+/* line 682, main.scss */
 #login .inner button.login-btn {
   background-image: url("../img/fb-background.jpg");
   background-repeat: repeat no-repeat;
@@ -2147,7 +2171,7 @@ fb-comments a {
   line-height: 30px;
   border-radius: 3px;
 }
-/* line 679, main.scss */
+/* line 695, main.scss */
 #login .inner button.login-btn img {
   height: 32px;
   padding: 0 10px 0 0;
@@ -2156,14 +2180,14 @@ fb-comments a {
 
 /* end login */
 /* misc */
-/* line 692, main.scss */
+/* line 708, main.scss */
 .profile-picture-container {
   display: inline-block;
   border: 2.5px solid #F0F2F1;
   border-radius: 45%;
   overflow: hidden;
 }
-/* line 697, main.scss */
+/* line 713, main.scss */
 .profile-picture-container img {
   display: block;
   border-radius: 45%;
@@ -2171,21 +2195,21 @@ fb-comments a {
   height: 44px;
 }
 
-/* line 705, main.scss */
+/* line 721, main.scss */
 .small-share-item-container {
   position: relative;
   height: 67px;
   width: 60px;
 }
-/* line 709, main.scss */
+/* line 725, main.scss */
 .small-share-item-container .left {
   left: 0px;
 }
-/* line 712, main.scss */
+/* line 728, main.scss */
 .small-share-item-container .right {
   left: 40px;
 }
-/* line 715, main.scss */
+/* line 731, main.scss */
 .small-share-item-container .item-counter {
   width: 20px;
   height: 12px;
@@ -2203,13 +2227,13 @@ fb-comments a {
   text-align: center;
   overflow: hidden;
 }
-/* line 732, main.scss */
+/* line 748, main.scss */
 .small-share-item-container .type-ico-container {
   position: absolute;
   top: 0;
   z-index: 31;
 }
-/* line 738, main.scss */
+/* line 754, main.scss */
 .small-share-item-container.promise-type .type-ico-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2219,7 +2243,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 738, main.scss */
+  /* line 754, main.scss */
   .small-share-item-container.promise-type .type-ico-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -457px;
@@ -2228,7 +2252,7 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 743, main.scss */
+/* line 759, main.scss */
 .small-share-item-container.thing-type .type-ico-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2238,7 +2262,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 743, main.scss */
+  /* line 759, main.scss */
   .small-share-item-container.thing-type .type-ico-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -432px;
@@ -2247,7 +2271,7 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 748, main.scss */
+/* line 764, main.scss */
 .small-share-item-container.time-type .type-ico-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2257,7 +2281,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 748, main.scss */
+  /* line 764, main.scss */
   .small-share-item-container.time-type .type-ico-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -406px;
@@ -2266,7 +2290,7 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 753, main.scss */
+/* line 769, main.scss */
 .small-share-item-container .small-share-item {
   overflow: hidden;
   display: inline-block;
@@ -2282,7 +2306,7 @@ fb-comments a {
   margin-top: 8px;
   margin-left: 9px;
 }
-/* line 768, main.scss */
+/* line 784, main.scss */
 .small-share-item-container .small-share-item img {
   border-radius: 45%;
   display: block;
@@ -2290,7 +2314,7 @@ fb-comments a {
   margin: 0 auto 0 auto;
   visibility: hidden;
 }
-/* line 776, main.scss */
+/* line 792, main.scss */
 .small-share-item-container .small-share-item .text-container {
   width: 38px;
   padding: 3px 4px 2px 4px;
@@ -2298,7 +2322,7 @@ fb-comments a {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 783, main.scss */
+/* line 799, main.scss */
 .small-share-item-container .small-share-item .text {
   display: block;
   max-height: 40px;
@@ -2308,19 +2332,19 @@ fb-comments a {
   word-break: break-word;
 }
 
-/* line 794, main.scss */
+/* line 810, main.scss */
 .grayed {
   color: #9D9D9D;
 }
 
 /* Big icons - used in timeline, share details and create pop-up dialog*/
-/* line 799, main.scss */
+/* line 815, main.scss */
 .type-ico-container {
   width: 49px;
   height: 49px;
 }
 
-/* line 805, main.scss */
+/* line 821, main.scss */
 .promise-type .type-ico-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2330,7 +2354,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 805, main.scss */
+  /* line 821, main.scss */
   .promise-type .type-ico-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -328px;
@@ -2340,7 +2364,7 @@ fb-comments a {
   }
 }
 
-/* line 811, main.scss */
+/* line 827, main.scss */
 .thing-type .type-ico-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2350,7 +2374,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 811, main.scss */
+  /* line 827, main.scss */
   .thing-type .type-ico-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -148px;
@@ -2360,7 +2384,7 @@ fb-comments a {
   }
 }
 
-/* line 817, main.scss */
+/* line 833, main.scss */
 .time-type .type-ico-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2370,7 +2394,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 817, main.scss */
+  /* line 833, main.scss */
   .time-type .type-ico-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 0;
@@ -2381,7 +2405,7 @@ fb-comments a {
 }
 
 /* Used both in timeline display of shares and in share detail */
-/* line 823, main.scss */
+/* line 839, main.scss */
 .share-item {
   margin: 20px auto 0 auto;
   position: relative;
@@ -2389,7 +2413,7 @@ fb-comments a {
   max-width: 460px;
   background: transparent url("../img/backgrounds/low-white.png") repeat top left;
 }
-/* line 831, main.scss */
+/* line 847, main.scss */
 .share-item.confirmed-state .confirmed-state-indicator-container {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2400,7 +2424,7 @@ fb-comments a {
   display: inline-block;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 831, main.scss */
+  /* line 847, main.scss */
   .share-item.confirmed-state .confirmed-state-indicator-container {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -1128px;
@@ -2409,7 +2433,7 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 838, main.scss */
+/* line 854, main.scss */
 .share-item .type-ico-container {
   position: absolute;
   left: 50%;
@@ -2417,7 +2441,7 @@ fb-comments a {
   top: -3px;
   z-index: 3;
 }
-/* line 846, main.scss */
+/* line 862, main.scss */
 .share-item .people-ico-container {
   font-family: 'Shadows Into Light Two', cursive;
   position: absolute;
@@ -2425,7 +2449,7 @@ fb-comments a {
   text-decoration: none;
   z-index: 10;
 }
-/* line 852, main.scss */
+/* line 868, main.scss */
 .share-item .people-ico-container .name {
   color: white;
   font-size: 2.6em;
@@ -2434,17 +2458,17 @@ fb-comments a {
   vertical-align: top;
   display: inline-block;
 }
-/* line 861, main.scss */
+/* line 877, main.scss */
 .share-item .people-ico-container.left {
   top: 40px;
   left: 15px;
 }
-/* line 865, main.scss */
+/* line 881, main.scss */
 .share-item .people-ico-container.right {
   top: 40px;
   right: 15px;
 }
-/* line 870, main.scss */
+/* line 886, main.scss */
 .share-item .img-container {
   width: 100%;
   min-height: 130px;
@@ -2452,7 +2476,7 @@ fb-comments a {
   position: relative;
   max-height: 309px;
 }
-/* line 876, main.scss */
+/* line 892, main.scss */
 .share-item .img-container .share-img {
   display: block;
   max-width: 100%;
@@ -2462,7 +2486,7 @@ fb-comments a {
   position: relative;
   pointer-events: none;
 }
-/* line 885, main.scss */
+/* line 901, main.scss */
 .share-item .img-container .preloader-container {
   position: absolute;
   width: 100%;
@@ -2473,7 +2497,7 @@ fb-comments a {
   left: 0;
   display: none;
 }
-/* line 894, main.scss */
+/* line 910, main.scss */
 .share-item .img-container .preloader-container .preloader {
   width: 66px;
   height: 66px;
@@ -2484,13 +2508,13 @@ fb-comments a {
   margin-left: -33px;
   margin-top: -33px;
 }
-/* line 905, main.scss */
+/* line 921, main.scss */
 .share-item .img-container .share-placeholder {
   display: block;
   width: 100%;
   height: 130px;
 }
-/* line 910, main.scss */
+/* line 926, main.scss */
 .share-item .img-container .share-frame {
   position: absolute;
   top: 0;
@@ -2530,37 +2554,12 @@ fb-comments a {
   border-bottom: 1px solid #DDD9CD;
   text-decoration: none;
 }
-/* line 923, main.scss */
+/* line 939, main.scss */
 .share-item .content {
   padding: 5px 25px 0px 25px;
   z-index: 9;
 }
-/* line 926, main.scss */
-.share-item .content .time {
-  margin-top: 10px;
-}
-/* line 928, main.scss */
-.share-item .content .time .ico {
-  background-repeat: no-repeat;
-  background-image: url('../img/icons/normal-seda29218af.png');
-  background-position: 0 -993px;
-  height: 20px;
-  width: 20px;
-  background-color: transparent;
-  display: inline-block;
-  vertical-align: top;
-}
-@media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 928, main.scss */
-  .share-item .content .time .ico {
-    background-image: url('../img/icons/retina-s02a7ab5e12.png');
-    background-position: 0 -826px;
-    height: 20px;
-    width: 20px;
-    background-size: 131px auto;
-  }
-}
-/* line 933, main.scss */
+/* line 943, main.scss */
 .share-item .content .time .text {
   margin-left: 3px;
   margin-top: -1px;
@@ -2570,13 +2569,13 @@ fb-comments a {
   display: inline-block;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 823, main.scss */
+  /* line 839, main.scss */
   .share-item {
     background-image: url("../img/backgrounds/high-white.png");
   }
 }
 
-/* line 950, main.scss */
+/* line 960, main.scss */
 .share-item:after {
   height: 85px;
   max-width: 460px;
@@ -2587,13 +2586,13 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi) {
-  /* line 950, main.scss */
+  /* line 960, main.scss */
   .share-item:after {
     background-image: url("../img/high-share-bottom.png");
   }
 }
 
-/* line 965, main.scss */
+/* line 975, main.scss */
 .btn {
   height: 40px;
   font-family: 'Shadows Into Light Two', cursive;
@@ -2603,25 +2602,25 @@ fb-comments a {
   white-space: nowrap;
   cursor: pointer;
 }
-/* line 971, main.scss */
+/* line 981, main.scss */
 .btn .icon {
   display: inline-block;
   vertical-align: middle;
   margin-left: 7px;
   margin-top: 2px;
 }
-/* line 977, main.scss */
+/* line 987, main.scss */
 .btn .text {
   vertical-align: middle;
   display: inline-block;
   margin: 2px 10px;
 }
-/* line 983, main.scss */
+/* line 993, main.scss */
 .btn.photo {
   float: left;
   margin-left: 10px;
 }
-/* line 986, main.scss */
+/* line 996, main.scss */
 .btn.photo .icon {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2631,7 +2630,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 986, main.scss */
+  /* line 996, main.scss */
   .btn.photo .icon {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -558px;
@@ -2640,13 +2639,13 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 990, main.scss */
+/* line 1000, main.scss */
 .btn.txt {
   position: relative;
   margin-right: auto;
   margin-left: auto;
 }
-/* line 994, main.scss */
+/* line 1004, main.scss */
 .btn.txt .icon {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2656,7 +2655,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 994, main.scss */
+  /* line 1004, main.scss */
   .btn.txt .icon {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -659px;
@@ -2665,12 +2664,12 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 999, main.scss */
+/* line 1009, main.scss */
 .btn.confirm {
   margin-top: 5px;
   padding: 10px 5px 0 5px;
 }
-/* line 1002, main.scss */
+/* line 1012, main.scss */
 .btn.confirm .icon {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2680,7 +2679,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1002, main.scss */
+  /* line 1012, main.scss */
   .btn.confirm .icon {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -784px;
@@ -2689,12 +2688,12 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 1006, main.scss */
+/* line 1016, main.scss */
 .btn.search {
   background: transparent url("../img/green-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1009, main.scss */
+/* line 1019, main.scss */
 .btn.search .icon {
   background-repeat: no-repeat;
   background-image: url('../img/icons/normal-seda29218af.png');
@@ -2704,7 +2703,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1009, main.scss */
+  /* line 1019, main.scss */
   .btn.search .icon {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -741px;
@@ -2713,12 +2712,12 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 1013, main.scss */
+/* line 1023, main.scss */
 .btn.close {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
   background-size: 100% 100%;
 }
-/* line 1016, main.scss */
+/* line 1026, main.scss */
 .btn.close .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
@@ -2729,7 +2728,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1016, main.scss */
+  /* line 1026, main.scss */
   .btn.close .icon {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -967px;
@@ -2738,19 +2737,19 @@ fb-comments a {
     background-size: 131px auto;
   }
 }
-/* line 1021, main.scss */
+/* line 1031, main.scss */
 .btn.return {
   background: transparent url("../img/orange-btn.png") no-repeat top left;
 }
-/* line 1024, main.scss */
+/* line 1034, main.scss */
 .btn.demand-return {
   background: transparent url("../img/green-btn.png") no-repeat top left;
 }
-/* line 1027, main.scss */
+/* line 1037, main.scss */
 .btn.return, .btn.demand-return {
   background-size: 100% 100%;
 }
-/* line 1029, main.scss */
+/* line 1039, main.scss */
 .btn.return .icon, .btn.demand-return .icon {
   margin-top: 2px;
   background-repeat: no-repeat;
@@ -2761,7 +2760,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1029, main.scss */
+  /* line 1039, main.scss */
   .btn.return .icon, .btn.demand-return .icon {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -1008px;
@@ -2771,13 +2770,13 @@ fb-comments a {
   }
 }
 
-/* line 1036, main.scss */
+/* line 1046, main.scss */
 .toolbar {
   text-align: center;
   padding: 0;
   margin-bottom: -65px;
 }
-/* line 1041, main.scss */
+/* line 1051, main.scss */
 .toolbar .separator {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2790,7 +2789,7 @@ fb-comments a {
   margin-top: 15px;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1041, main.scss */
+  /* line 1051, main.scss */
   .toolbar .separator {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 0;
@@ -2802,7 +2801,7 @@ fb-comments a {
 
 /* end misc */
 /* new share button & pop-up dialog... */
-/* line 1052, main.scss */
+/* line 1062, main.scss */
 .new-share-button-container {
   width: 100px;
   height: 100px;
@@ -2813,12 +2812,12 @@ fb-comments a {
   z-index: 90;
   text-indent: -9999em;
 }
-/* line 1062, main.scss */
+/* line 1072, main.scss */
 .new-share-button-container:hover {
   height: 150px;
   width: 150px;
 }
-/* line 1067, main.scss */
+/* line 1077, main.scss */
 .new-share-button-container .new-share-button {
   position: absolute;
   bottom: 20px;
@@ -2835,7 +2834,7 @@ fb-comments a {
   z-index: 91;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1067, main.scss */
+  /* line 1077, main.scss */
   .new-share-button-container .new-share-button {
     background-image: url('../img/icons/retina-s02a7ab5e12.png');
     background-position: 0 -1070px;
@@ -2846,7 +2845,7 @@ fb-comments a {
 }
 
 /* the new share pop-up dialog */
-/* line 1080, main.scss */
+/* line 1090, main.scss */
 #new-share-frame-container {
   overflow: hidden;
   bottom: 60px;
@@ -2858,18 +2857,18 @@ fb-comments a {
   background-size: 100% 100%;
 }
 @media (min-width: 500px) {
-  /* line 1080, main.scss */
+  /* line 1090, main.scss */
   #new-share-frame-container {
     width: 450px;
     left: 30px;
   }
 }
-/* line 1094, main.scss */
+/* line 1104, main.scss */
 #new-share-frame-container #new-share-frame {
   display: table;
   width: 100%;
 }
-/* line 1098, main.scss */
+/* line 1108, main.scss */
 #new-share-frame-container #new-share-frame .column {
   display: table-cell;
   width: 30%;
@@ -2877,12 +2876,12 @@ fb-comments a {
   text-align: center;
   padding: 20px 0;
 }
-/* line 1103, main.scss */
+/* line 1113, main.scss */
 #new-share-frame-container #new-share-frame .column .type-ico-container {
   margin-left: auto;
   margin-right: auto;
 }
-/* line 1109, main.scss */
+/* line 1119, main.scss */
 #new-share-frame-container #new-share-frame .divider {
   display: table-cell;
   width: 3%;
@@ -2890,27 +2889,27 @@ fb-comments a {
   background: transparent url("../img/separators/create-share-divider.png") no-repeat top left;
   background-size: auto 100%;
 }
-/* line 1116, main.scss */
+/* line 1126, main.scss */
 #new-share-frame-container #new-share-frame .btn {
   padding: 20px 5px;
 }
-/* line 1119, main.scss */
+/* line 1129, main.scss */
 #new-share-frame-container #new-share-frame .btn-line-bottom {
   margin: 0 auto 5px auto;
   width: 100%;
   background-position: center;
 }
-/* line 1124, main.scss */
+/* line 1134, main.scss */
 #new-share-frame-container #new-share-frame .btn-line-top {
   margin: 5px auto 0 auto;
   width: 100%;
   background-position: center;
 }
-/* line 1130, main.scss */
+/* line 1140, main.scss */
 #new-share-frame-container #new-share-frame .thing-type .btn {
   color: #eb9c75;
 }
-/* line 1133, main.scss */
+/* line 1143, main.scss */
 #new-share-frame-container #new-share-frame .thing-type .btn-line-bottom {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2920,7 +2919,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1133, main.scss */
+  /* line 1143, main.scss */
   #new-share-frame-container #new-share-frame .thing-type .btn-line-bottom {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -115px;
@@ -2929,7 +2928,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1136, main.scss */
+/* line 1146, main.scss */
 #new-share-frame-container #new-share-frame .thing-type .btn-line-top {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2939,7 +2938,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1136, main.scss */
+  /* line 1146, main.scss */
   #new-share-frame-container #new-share-frame .thing-type .btn-line-top {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -115px;
@@ -2948,11 +2947,11 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1141, main.scss */
+/* line 1151, main.scss */
 #new-share-frame-container #new-share-frame .time-type .btn {
   color: #4fbca7;
 }
-/* line 1144, main.scss */
+/* line 1154, main.scss */
 #new-share-frame-container #new-share-frame .time-type .btn-line-bottom {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2962,7 +2961,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1144, main.scss */
+  /* line 1154, main.scss */
   #new-share-frame-container #new-share-frame .time-type .btn-line-bottom {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -125px;
@@ -2971,7 +2970,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1147, main.scss */
+/* line 1157, main.scss */
 #new-share-frame-container #new-share-frame .time-type .btn-line-top {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -2981,7 +2980,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1147, main.scss */
+  /* line 1157, main.scss */
   #new-share-frame-container #new-share-frame .time-type .btn-line-top {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -125px;
@@ -2990,11 +2989,11 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1152, main.scss */
+/* line 1162, main.scss */
 #new-share-frame-container #new-share-frame .promise-type .btn {
   color: #c08fe1;
 }
-/* line 1155, main.scss */
+/* line 1165, main.scss */
 #new-share-frame-container #new-share-frame .promise-type .btn-line-bottom {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -3004,7 +3003,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1155, main.scss */
+  /* line 1165, main.scss */
   #new-share-frame-container #new-share-frame .promise-type .btn-line-bottom {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -105px;
@@ -3013,7 +3012,7 @@ fb-comments a {
     background-size: 262px auto;
   }
 }
-/* line 1158, main.scss */
+/* line 1168, main.scss */
 #new-share-frame-container #new-share-frame .promise-type .btn-line-top {
   background-repeat: no-repeat;
   background-image: url('../img/separators/normal-s0adc69b06c.png');
@@ -3023,7 +3022,7 @@ fb-comments a {
   background-color: transparent;
 }
 @media (min--moz-device-pixel-ratio: 1.3), (-o-min-device-pixel-ratio: 2.6 / 2), (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3), (min-resolution: 1.3dppx) {
-  /* line 1158, main.scss */
+  /* line 1168, main.scss */
   #new-share-frame-container #new-share-frame .promise-type .btn-line-top {
     background-image: url('../img/separators/retina-sffa7b15b70.png');
     background-position: 0 -105px;
