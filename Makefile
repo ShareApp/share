@@ -6,7 +6,7 @@ build:
 	-rm -rf cloudCode/public/bower_components/
 
 # task which build application and deploy it to Parse.com
-deploy: build manifest
+deploy: manifest build
 	cd cloudCode/; \
 	parse deploy `cat ../parse_app_name.txt`;
 
@@ -23,8 +23,8 @@ manifest:
 	ls img/*gif; ls img/*jpg; ls img/favicons/* ; \
 	ls img/backgrounds/* ; ls views/*html ; ls styles/fonts/*; \
 	echo ""; echo "NETWORK:"; echo "*"; echo ""; echo "SETTINGS:"; echo "prefer-online";\
-	echo "# version "`date +"%s"` ) | cat > manfest
+	echo "# version "`date +"%s"` ) | cat > manifest
 
 	echo "Manifest changes are.... "
-	-diff cloudCode/cloud/views/manifest.ejs manfest
-	mv manfest cloudCode/cloud/views/manifest.ejs
+	-diff shareApp/app/share.appcache manifest
+	mv manifest shareApp/app/share.appcache
