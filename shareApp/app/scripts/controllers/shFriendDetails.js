@@ -105,17 +105,13 @@ var FriendDetailsCtrl = angular.module('shareApp')
     $scope.fetchUserShares = fetchUserShares;
 
     // Get friend's Parse.User and load SharedItems for him.
-    userQuery.get(friendId, {
-      success: function (user) {
-        safeApply($scope, function () {
-          $scope.friend = user;
-        });
-        fetchUserShares();
-      },
-      error: function (object, error) {
-        console.error(object);
-        console.error(error);
-      }
+    $scope.$watch('user.friendsList', function () {
+      angular.forEach(shUser.friendsList, function (friend) {
+        if (friend.id === friendId) {
+          $scope.friend = friend;
+          fetchUserShares();
+        }
+      });
     });
 
     /**
