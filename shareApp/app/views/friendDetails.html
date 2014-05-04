@@ -5,7 +5,8 @@
                 <fb-profile-picture user-id="friend.get('facebookid')"></fb-profile-picture>
                 <div class="title">{{ friend.get('name') }}</div>
                 <div class="counter-container">
-                    <span class="counter">{{ counter }}</span> {{ counter != undefined && "shares" || " " }}
+                    <span class="counter">{{ counter }}</span> {{ counter != undefined && "shares, " || " " }}
+                    <span class="counter">{{ friend.get('totalTime') }}</span> h of spent time
                 </div>
             </div>
         </div>

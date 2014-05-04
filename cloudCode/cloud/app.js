@@ -28,18 +28,6 @@ app.use(express.bodyParser());
 
 app.use(parseExpressCookieSession({ cookie: { maxAge: 3600000 } }));
 
-/**
- * @ngdoc method
- * @name ExpressApp.appcache
- * @methodOf ExpressApp
- * @description
- * Generates dynamic HTML5 Cache Manifest.
- */
-app.get('/share.appcache', function (req, res) {
-  res.type('text/cache-manifest');
-  res.render('manifest', { now: new Date, files: [] });
-});
-
 // redirect for /sharedItem/12313 url. Facebook needs it to connect comments.
 app.get('/sharedItem/:id', function (req, res) {
   res.redirect(301, "/#" + req.path);

@@ -129,6 +129,7 @@ Parse.Cloud.define("returnShare", function (request, response) {
       }
     });
   }
+
   query.first({success: function (sharedItem) {
     console.log("sharedITem state " + sharedItem.get('state'));
     if (sharedItem.get('type') === globals.SHARE_TYPE_ENUM.THING &&
@@ -174,6 +175,7 @@ Parse.Cloud.define("demandReturnShare", function (request, response) {
       }
     });
   }
+
   query.first({success: function (sharedItem) {
     console.log("sharedITem state " + sharedItem.get('state'));
     if (sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED) {
@@ -297,6 +299,18 @@ Parse.Cloud.define("getFriends", function (request, response) {
           var query = Parse.Query.or(sharedItemFromQuery, sharedItemToQuery);
           query.find({
             success: function (data) {
+              // add total time
+              var totalTime = 0;
+              data.forEach(function (share) {
+                if (share.get('hours')) {
+                  totalTime += share.get('hours');
+                }
+                if (share.get('minutes')) {
+                  totalTime += share.get('minutes') / 60;
+                }
+              });
+
+              friends[idx].attributes.totalTime = totalTime;
               // there is no better way to attribute counter to object
               friends[idx].attributes.sharesCounter = data.length;
               finished = finished + 1;

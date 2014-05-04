@@ -257,6 +257,7 @@ var shUser = angular.module('shareApp')
               user.set('firstName', item['name'].split(" ")[0]);
               user.set('fakeUser', true);
               user.set('objectId', item['id']);
+              user.set('totalTime', 0);
               fakeUsers.push(user);
             });
             safeApply($rootScope, function () {
