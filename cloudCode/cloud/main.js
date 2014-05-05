@@ -300,17 +300,30 @@ Parse.Cloud.define("getFriends", function (request, response) {
           query.find({
             success: function (data) {
               // add total time
-              var totalTime = 0;
+              var totalReceivedTime = 0;
+              var totalGivenTime = 0;
+
               data.forEach(function (share) {
+              	var fromMe = share.get('fromUser') == request.user;
                 if (share.get('hours')) {
-                  totalTime += share.get('hours');
+                  if(fromMe) {
+                  	totalGivenTime += share.get('hours');
+                  } else {
+	                  totalReceivedTime += share.get('hours');
+                  }
                 }
                 if (share.get('minutes')) {
-                  totalTime += share.get('minutes') / 60;
+                  if(fromMe) {
+                  	totalGivenTime += share.get('minutes')/60;
+                  } else {
+	                  totalReceivedTime += share.get('minutes')/60;
+                  }
                 }
               });
 
-              friends[idx].attributes.totalTime = totalTime;
+              friends[idx].attributes.totalReceivedTime = totalReceivedTime;
+              friends[idx].attributes.totalGivenTime = totalGivenTime;
+
               // there is no better way to attribute counter to object
               friends[idx].attributes.sharesCounter = data.length;
               finished = finished + 1;

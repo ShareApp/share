@@ -42,15 +42,15 @@ img/high-notifications-top.png
 img/high-search.png
 img/high-share-bottom.png
 img/high-share-top-big.png
-img/high-share-top.png
 img/high-share-top-small.png
+img/high-share-top.png
 img/low-notifications-bottom.png
 img/low-notifications-top.png
 img/low-search.png
 img/low-share-bottom.png
 img/low-share-top-big.png
-img/low-share-top.png
 img/low-share-top-small.png
+img/low-share-top.png
 img/orange-btn.png
 img/search-friend.png
 img/transparent-btn.png
@@ -79,8 +79,8 @@ views/friends.html
 views/header.html
 views/login.html
 views/menu.html
-views/newShareButtons.html
 views/newShare.html
+views/newShareButtons.html
 views/newShareSelectFriend.html
 views/notifications.html
 views/settings.html
@@ -101,4 +101,4 @@ NETWORK:
 
 SETTINGS:
 prefer-online
-# version 1399108856
+# version 1399251996

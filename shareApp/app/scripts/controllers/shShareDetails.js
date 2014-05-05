@@ -20,7 +20,6 @@ var ShShareDetailsCtrl = angular.module('shareApp')
     $scope.share = shShare;
     $scope.user = shUser;
     $scope.showReturn = false;
-    $scope.showDemandReturn = false;
 
     sharedItemQuery.include('fromUser', 'toUser');
 
@@ -30,7 +29,6 @@ var ShShareDetailsCtrl = angular.module('shareApp')
         safeApply($scope, function () {
           $scope.sharedItem = sharedItem;
           $scope.showReturn = $scope.sharedItem && ($scope.sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED || $scope.sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED) && $scope.sharedItem.get('toUser').id === shShare.currentUser.id;
-          $scope.showDemandReturn = $scope.sharedItem && ($scope.sharedItem.get('state') === globals.SHARE_STATE_ENUM.CONFIRMED || $scope.sharedItem.get('state') === globals.SHARE_STATE_ENUM.RETURNED_NOT_CONFIRMED) && $scope.sharedItem.get('fromUser').id === shShare.currentUser.id;
         });
       },
       error: function (object, error) {
