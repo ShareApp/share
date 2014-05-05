@@ -134,7 +134,7 @@ var shUser = angular.module('shareApp')
        */
       logIn: function () {
         $rootScope.$broadcast('progressBar.update', true);
-        Parse.FacebookUtils.logIn('email', {
+        Parse.FacebookUtils.logIn('user_friends,user_friends', {
           success: function (parseUser) {
             if (!parseUser.existed()) {
               console.log('User signed up and logged in through Facebook!');
@@ -177,13 +177,11 @@ var shUser = angular.module('shareApp')
        * Checks if user has changed data on facebook and syncs with copy on parse.com.
        */
       refreshParseUser: function () {
-        if (myUser.currentUser.get('name') !== myUser.fbuser.name || myUser.currentUser.get('email') !== myUser.fbuser.email || myUser.currentUser.get('firstName') !== myUser.fbuser.first_name) {
+        if (myUser.currentUser.get('name') !== myUser.fbuser.name  || myUser.currentUser.get('firstName') !== myUser.fbuser.first_name) {
           console.log("changing user name from ", myUser.currentUser.get('name'), " to ", myUser.fbuser.name);
-          console.log("changing e-mail from ", myUser.currentUser.get('email'), " to ", myUser.fbuser.email);
           console.log("changing first_name from ", myUser.currentUser.get('firstName'), " to ", myUser.fbuser.first_name);
           myUser.currentUser.set('name', myUser.fbuser.name);
           myUser.currentUser.set('firstName', myUser.fbuser.first_name);
-          myUser.currentUser.set('email', myUser.fbuser.email);
           myUser.currentUser.set('facebookid', myUser.fbuser.id);
           PPO.SaveObject(myUser.currentUser);
         } else {
